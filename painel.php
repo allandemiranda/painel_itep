@@ -5,8 +5,10 @@
     <title>Painel ITEP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <script src="js/bootstrap.js"></script>
+    <link href="painel/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="painel/js/bootstrap.js"></script>
+    <link href="painel/css/all.css" rel="stylesheet">
+    <script defer src="painel/js/all.js"></script>
     <style>
         body {
             background-color: #d5e2bb;
