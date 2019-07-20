@@ -3253,8 +3253,8 @@ button.btn.btn-default {
 }
 .btn-danger:hover, .btn-danger:focus, .btn-danger.focus, .btn-danger:active, .btn-danger.active, .open > .dropdown-toggle.btn-danger {
     color: #fff;
-    background-color: #2d2d2d;
-    border-color: #2d2d2d;
+    background-color: #db1711;
+    border-color: #db1711;
 }
 .btn-xs, .btn-group-xs > .btn {
     padding: 3px 8px;

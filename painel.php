@@ -18,6 +18,17 @@
             line-height: 1.3;
             margin-top: 3%;
         }
+
+        .footer {
+            background: #fff;
+            padding: 1em;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.21);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -73,6 +84,12 @@
             </div>
         </div>
     </div>
+    <!--footer-->
+    <div class="footer">
+        <p>&copy; 2019 All Rights Reserved | Design by <a href="http://allandemiranda.eti.br/" target="_blank">Allan
+                de Miranda</a></p>
+    </div>
+    <!--//footer-->
 </body>
 
 </html>
