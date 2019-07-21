@@ -54,21 +54,47 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 							<input type="email" class="user" name="email" placeholder="Seu Usuário" required="">
 							<input type="password" name="password" class="lock" placeholder="Senha" required="">
 							<div class="forgot-grid">
-								<label class="checkbox"><input type="checkbox" name="checkbox"
-										checked=""><i></i>Lembre de mim</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Lembre
+									de mim</label>
 								<div class="forgot">
-									<a href="">Esqueceu a senha?</a>
+									<a data-toggle="modal" data-target="#erroModal">Esqueceu a senha?</a>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
-							<input type="submit" name="Sign In" value="Entrar">
+							<input type="submit" name="Sign In" value="ENTRAR">
 							<div class="registration">
-									Você não tem uma conta ?
-								<a class="" href="">
+								Você não tem uma conta ?
+								<a class="" data-toggle="modal" data-target="#erroModal">
 									Crie a sua conta aqui
 								</a>
 							</div>
+							<br>
+							<div class="col-md-12">
+								<button type="button" class="btn btn-success col-md-5">Painel Hall</button>
+								<div class="col-md-1" style="width: 16%;"> </div>
+								<button type="button" class="btn btn-info col-md-5">Painel Ficha</button>
+							</div>							
 						</form>
+						<!-- Modal -->
+						<div class="modal fade" id="erroModal" tabindex="-1" role="dialog" aria-labelledby="erroLabel"
+							aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"
+											aria-hidden="true">×</button>
+										<h2 class="modal-title">Erro</h2>
+									</div>
+									<div class="modal-body">
+										<p>
+											Não foi possível, de maneira altomática, processar sua solicitação. Entre
+											em contato com o setor de Informática.
+										</p>
+									</div>									
+								</div>
+							</div>
+						</div>
+						<!-- Fim Modal -->
 					</div>
 				</div>
 			</div>
