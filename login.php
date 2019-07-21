@@ -50,18 +50,18 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<h2 class="title1">Login</h2>
 				<div class="widget-shadow">
 					<div class="login-body">
-						<form action="" method="">
-							<input type="email" class="user" name="email" placeholder="Seu Usuário" required="">
-							<input type="password" name="password" class="lock" placeholder="Senha" required="">
+						<form action="valida.php" method="POST">
+							<input type="text" class="user" name="usuario_login" placeholder="Seu Usuário" required>
+							<input type="password" class="lock" name="usuario_senha" placeholder="Senha" required>
 							<div class="forgot-grid">
-								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Lembre
+								<label class="checkbox"><input type="checkbox" checked=""><i></i>Lembre
 									de mim</label>
 								<div class="forgot">
 									<a data-toggle="modal" data-target="#erroModal">Esqueceu a senha?</a>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
-							<input type="submit" name="Sign In" value="ENTRAR">
+							<input type="submit" value="ENTRAR">
 							<div class="registration">
 								Você não tem uma conta ?
 								<a class="" data-toggle="modal" data-target="#erroModal">
