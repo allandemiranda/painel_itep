@@ -1,6 +1,7 @@
 <?php
 include("seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
+exigirAdmin();
 ?>
 <?php
 function test_input($data)
@@ -23,6 +24,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario_nome_array = explode(" ", $usuario_nome_low);
     $usuario_login = $usuario_nome_array[0] . "." . end($usuario_nome_array);
 
+    $cont_login_erro = 1;
+    $usuario_login_temp = $usuario_login;
+    while (true) {
+        $sql_logn_temp = "SELECT `usuario_id` FROM `usuarios_tb` WHERE `usuario_login`='" . $usuario_login_temp . "'";
+        $result_login_temp = mysqli_query($_SG['link'], sql_logn_temp);
+        if (mysqli_num_rows($result_login_temp) > 0) {
+            $usuario_login_temp = $usuario_login . "." . $cont_login_erro;
+            $cont_login_erro++;
+        } else {
+            $usuario_login = $usuario_login_temp;
+            break;
+        }
+    }
+
     $usuario_update_data = date('Y-m-d H:i:s');
 
     $sql_adicionar_novo_usurio = "INSERT INTO `usuarios_tb`(`usuario_nome`, `usuario_cargo`, `usuario_setor_id`, `usuario_login`, `usuario_senha`, `usuario_update_data`) VALUES ('" . $usuario_nome . "','" . $usuario_cargo . "','" . $usuario_setor_id . "','" . $usuario_login . "','" . $usuario_senha . "','" . $usuario_update_data . "')";
@@ -30,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_query($_SG['link'], $sql_adicionar_novo_usurio)) {
         $_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
         $_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
-        $_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Usuário <b>' . $usuario_nome . '</b> adicionado.';
+        $_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Usuário <b>' . $usuario_nome . '</b> adicionado. Seu login é <b>' . $usuario_login . '</b> .';
         $_SG['status-alert'] = $_SG['status-alert'] . '</div>';
     } else {
         $_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';

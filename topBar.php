@@ -42,12 +42,7 @@ if (mysqli_num_rows($result) == 1) {
                     </a>
                     <ul class="dropdown-menu drp-mnu">
                         <li> <a href="perfilUsuario.php"><i class="fa fa-suitcase"></i> Perfil</a> </li>
-                        <li> <a href="?status=logout"><i class="fa fa-sign-out"></i> Logout </a> </li>
-                        <?php
-                        if ($_REQUEST["status"] == "logout") {
-                            expulsaVisitanteOff();
-                        }
-                        ?>
+                        <li> <a href="index.php?status=logout"><i class="fa fa-sign-out"></i> Logout </a> </li>                        
                     </ul>
                 </li>
             </ul>

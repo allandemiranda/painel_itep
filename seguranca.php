@@ -18,7 +18,7 @@ $_SG['tabela'] = 'usuarios_tb';       // Nome da tabela onde os usuários são s
 // ======================================
 // Verifica se precisa fazer a conexão com o MySQL
 if ($_SG['conectaServidor'] == true) {
-    $_SG['link'] = mysqli_connect($_SG['servidor'], $_SG['usuario'], $_SG['senha'],$_SG['banco']) or die("MySQL: Não foi possível conectar-se ao servidor [" . $_SG['servidor'] . "].");
+    $_SG['link'] = mysqli_connect($_SG['servidor'], $_SG['usuario'], $_SG['senha'], $_SG['banco']) or die("MySQL: Não foi possível conectar-se ao servidor [" . $_SG['servidor'] . "].");
     //mysqli_select_db($_SG['banco'], $_SG['link']) or die("MySQL: Não foi possível conectar-se ao banco de dados [" . $_SG['banco'] . "].");
 }
 // Verifica se precisa iniciar a sessão
@@ -79,6 +79,9 @@ function protegePagina()
             }
         }
     }
+    if ($_REQUEST["status"] == "logout") {
+        expulsaVisitanteOff();
+    }
 }
 /**
  * Função para expulsar um visitante
@@ -101,4 +104,15 @@ function expulsaVisitanteErro()
     unset($_SESSION['usuarioID'], $_SESSION['usuarioNome'], $_SESSION['usuarioLogin'], $_SESSION['usuarioSenha']);
     // Manda pra tela de login
     header("Location: " . $_SG['paginaLogin'] . "?status=erro");
+}
+
+function exigirAdmin()
+{
+    global $_SG;
+    $sql_exigirAdmin = "SELECT `setor_admin` FROM `setores_tb` WHERE `setor_id`=(SELECT`usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "')";
+    $query_exigirAdmin = mysqli_query($_SG['link'], $sql_exigirAdmin);
+    $row_exigirAdmin = mysqli_fetch_assoc($query_exigirAdmin);
+    if ($row_exigirAdmin['setor_admin'] == "0") {
+        header("Location: 404.php");
+    }
 }
