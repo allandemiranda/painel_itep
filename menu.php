@@ -39,8 +39,8 @@
                             <ul class="treeview-menu">
                                 <li><a href="listaUsuario.php"><i class="fa fa-angle-right"></i> Usuários </a></li>
                                 <li><a href="adicionarUsuario.php"><i class="fa fa-angle-right"></i> Novo Usuário </a></li>
-                                <li><a href=""><i class="fa fa-angle-right"></i> Setores </a></li>
-                                <li><a href=""><i class="fa fa-angle-right"></i> Novo Setor </a></li>
+                                <li><a href="listaSetor.php"><i class="fa fa-angle-right"></i> Setores </a></li>
+                                <li><a href="adicionarSetor.php"><i class="fa fa-angle-right"></i> Novo Setor </a></li>
                                 <li><a href=""><i class="fa fa-angle-right"></i> Logs </a></li>
                             </ul>
                         </li>

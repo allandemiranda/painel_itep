@@ -14,7 +14,7 @@ function test_input($data)
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario_nome = test_input($_POST["usuario_nome"]);
     $usuario_cargo = test_input($_POST["usuario_cargo"]);
-    $usuario_setor = test_input($_POST["usuario_setor"]);
+    $usuario_setor_id = test_input($_POST["usuario_setor_id"]);
     $usuario_senha = test_input($_POST["usuario_senha"]);
 
     $usuario_senha = md5($usuario_senha);
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $usuario_update_data = date('Y-m-d H:i:s');
 
-    $sql_adicionar_novo_usurio = "INSERT INTO `usuarios_tb`(`usuario_nome`, `usuario_cargo`, `usuario_setor_id`, `usuario_login`, `usuario_senha`, `usuario_update_data`) VALUES ('" . $usuario_nome . "','" . $usuario_cargo . "','" . $usuario_setor . "','" . $usuario_login . "','" . $usuario_senha . "','" . $usuario_update_data . "')";
+    $sql_adicionar_novo_usurio = "INSERT INTO `usuarios_tb`(`usuario_nome`, `usuario_cargo`, `usuario_setor_id`, `usuario_login`, `usuario_senha`, `usuario_update_data`) VALUES ('" . $usuario_nome . "','" . $usuario_cargo . "','" . $usuario_setor_id . "','" . $usuario_login . "','" . $usuario_senha . "','" . $usuario_update_data . "')";
 
     if (mysqli_query($_SG['link'], $sql_adicionar_novo_usurio)) {
         $_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </div>
                                 <div class="form-group">
                                     <label>Setor</label>
-                                    <select name="usuario_setor" class="form-control" type="text">
+                                    <select name="usuario_setor_id" class="form-control" type="text">
                                         <?php
                                         $sql_lista_setores = "SELECT `setor_id`, `setor_nome` FROM `setores_tb`";
                                         $query_lista_setores = mysqli_query($_SG['link'], $sql_lista_setores);
@@ -90,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <input name="usuario_senha" type="password" class="form-control" placeholder="Senha" value="" required>
                                 </div>
                                 <button type="submit" class="btn btn-success">Criar</button>
-                                <a href="/"><button type="button" class="btn btn-danger">Cancelar</button></a>
+                                <a href="listaUsuario.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
                             </form>
                         </div>
                     </div>
