@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: 22-Jul-2019 às 07:48
+-- Generation Time: 23-Jul-2019 às 18:00
 -- Versão do servidor: 5.7.26-0ubuntu0.18.04.1
 -- PHP Version: 7.2.19-0ubuntu0.18.04.1
 
@@ -70,6 +70,28 @@ CREATE TABLE `mails_tb` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `painel_tb`
+--
+
+CREATE TABLE `painel_tb` (
+  `painel_id` bigint(20) NOT NULL,
+  `painel_senha` text NOT NULL,
+  `painel_nome` text NOT NULL,
+  `painel_sala` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `painel_tb`
+--
+
+INSERT INTO `painel_tb` (`painel_id`, `painel_senha`, `painel_nome`, `painel_sala`) VALUES
+(1, '0', 'NULL', 'NULL'),
+(2, '0', 'NULL', 'NULL'),
+(3, '0', 'NULL', 'NULL');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `setores_tb`
 --
 
@@ -78,15 +100,16 @@ CREATE TABLE `setores_tb` (
   `setor_nome` text NOT NULL,
   `setor_sala` text NOT NULL,
   `setor_hall` tinyint(1) NOT NULL,
-  `setor_admin` tinyint(1) NOT NULL
+  `setor_admin` tinyint(1) NOT NULL,
+  `setor_ficha_preferencial` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `setores_tb`
 --
 
-INSERT INTO `setores_tb` (`setor_id`, `setor_nome`, `setor_sala`, `setor_hall`, `setor_admin`) VALUES
-(1, 'TECNOLOGIA DA INFORMAÇÃO', 'INFORMÁTICA', 0, 1);
+INSERT INTO `setores_tb` (`setor_id`, `setor_nome`, `setor_sala`, `setor_hall`, `setor_admin`, `setor_ficha_preferencial`) VALUES
+(1, 'TECNOLOGIA DA INFORMAÃ‡ÃƒO', 'INFORMÃTICA - SEGUNDO ANDAR', 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -109,7 +132,7 @@ CREATE TABLE `usuarios_tb` (
 --
 
 INSERT INTO `usuarios_tb` (`usuario_id`, `usuario_nome`, `usuario_cargo`, `usuario_setor_id`, `usuario_login`, `usuario_senha`, `usuario_update_data`) VALUES
-(1, 'ALLAN DE MIRANDA SILVA', 'ESTAGIÁRIO EM T.I.', 1, 'allan.silva', 'e10adc3949ba59abbe56e057f20f883e', '2019-07-21 00:00:00');
+(1, 'ALLAN DE MIRANDA SILVA', 'ESTAGIÃGIO EM TI', 1, 'allan.silva', 'e10adc3949ba59abbe56e057f20f883e', '2019-07-22 15:29:26');
 
 --
 -- Indexes for dumped tables
@@ -132,6 +155,12 @@ ALTER TABLE `logs_tb`
 --
 ALTER TABLE `mails_tb`
   ADD PRIMARY KEY (`mail_id`);
+
+--
+-- Indexes for table `painel_tb`
+--
+ALTER TABLE `painel_tb`
+  ADD PRIMARY KEY (`painel_id`);
 
 --
 -- Indexes for table `setores_tb`
@@ -164,6 +193,11 @@ ALTER TABLE `logs_tb`
 --
 ALTER TABLE `mails_tb`
   MODIFY `mail_id` bigint(20) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `painel_tb`
+--
+ALTER TABLE `painel_tb`
+  MODIFY `painel_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `setores_tb`
 --

@@ -11,6 +11,22 @@ function test_input($data)
 	return $data;
 }
 
+function chamar_painel($ficha_id, $conn)
+{
+	$sql_select = "SELECT `ficha_nome`,`ficha_setor_id` FROM `fichas_tb` WHERE `ficha_id`='" . $ficha_id . "'";
+	$result = mysqli_query($conn, $sql_select);
+	$row = mysqli_fetch_assoc($result);
+	$ficha_nome = $row["ficha_nome"];
+
+	$sql_select = "SELECT `setor_sala` FROM `setores_tb` WHERE `setor_id`='".$row["ficha_setor_id"]."'";
+	$result = mysqli_query($conn, $sql_select);
+	$row = mysqli_fetch_assoc($result);
+	$sala = $row["setor_sala"];
+
+	$sql_insert = "INSERT INTO `painel_tb`(`painel_senha`, `painel_nome`, `painel_sala`) VALUES ('" . $ficha_id . "','" . $ficha_nome . "','" . $sala . "')";
+	mysqli_query($conn, $sql_insert);
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if ($_POST["submit"] == "encaminhar") {
 		$ficha_id = test_input($_POST["ficha_id"]);
@@ -66,6 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
 					$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Ficha <b>' . $row_um["ficha_id"] . '</b> chamada.';
 					$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+					chamar_painel($row_um["ficha_id"], $_SG['link']);
 				} else {
 					$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
 					$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
@@ -93,6 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					}
 					$sql_update = "UPDATE `setores_tb` SET `setor_ficha_preferencial`='1' WHERE `setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "')";
 					mysqli_query($_SG['link'], $sql_update);
+					chamar_painel($row_dois["ficha_id"], $_SG['link']);
 				} else {
 					$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
 					$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
@@ -119,6 +137,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				}
 				$sql_update = "UPDATE `setores_tb` SET `setor_ficha_preferencial`='1' WHERE `setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "')";
 				mysqli_query($_SG['link'], $sql_update);
+				chamar_painel($row_um["ficha_id"], $_SG['link']);
 			} else {
 				$sql_dois = "SELECT `ficha_id` FROM `fichas_tb` WHERE `ficha_status` IN ('não atendido','encaminhado') AND `ficha_preferencial`='1' AND `ficha_setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "') ORDER BY `ficha_data` ASC LIMIT 1";
 				$result_dois = mysqli_query($_SG['link'], $sql_dois);
@@ -135,9 +154,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
 						$_SG['status-alert'] = $_SG['status-alert'] . " Error updating record: " . mysqli_error($_SG['link']);
 						$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
-					}
+					}					
 					$sql_update = "UPDATE `setores_tb` SET `setor_ficha_preferencial`='0' WHERE `setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "')";
 					mysqli_query($_SG['link'], $sql_update);
+					chamar_painel($row_dois["ficha_id"], $_SG['link']);
 				} else {
 					$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
 					$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
