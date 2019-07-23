@@ -17,12 +17,19 @@
                     <li class="treeview">
                         <a href="#">
                             <i class="fa fa-envelope"></i> <span>Mailbox </span>
-                            <i class="fa fa-angle-left pull-right"></i><small name="mailInbox" class="label label-primary1 pull-right">02</small></a>
-                        <ul class="treeview-menu">
-                            <li><a href=""><i class="fa fa-angle-right"></i> Mail Inbox </a></li>
-                            <li><a href=""><i class="fa fa-angle-right"></i> Mail Outbox </a></li>
-                            <li><a href=""><i class="fa fa-angle-right"></i> Enviar Mail </a></li>
-                        </ul>
+                            <i class="fa fa-angle-left pull-right"></i>
+                            <?php
+                            $sql_index_widget_painel_mail_aberto = "SELECT `mail_id` FROM `mails_tb` WHERE `mail_para_setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "') AND `mail_status_caixa_entrada`='1'";
+                            $query_index_widget_painel_mail_aberto = mysqli_query($_SG['link'], $sql_index_widget_painel_mail_aberto);
+                            if (mysqli_num_rows($query_index_widget_painel_mail_aberto) != 0) {
+                                echo '<small name="mailInbox" class="label label-primary1 pull-right">' . str_pad(mysqli_num_rows($query_index_widget_painel_mail_aberto), 2, '0', STR_PAD_LEFT) . '</small></a>';
+                            }
+                            ?>
+                            <ul class="treeview-menu">
+                                <li><a href=""><i class="fa fa-angle-right"></i> Mail Inbox </a></li>
+                                <li><a href=""><i class="fa fa-angle-right"></i> Mail Outbox </a></li>
+                                <li><a href=""><i class="fa fa-angle-right"></i> Enviar Mail </a></li>
+                            </ul>
                     </li>
                     <?php
                     $sql_menu_configuracos_aba_pegarSetor = "SELECT `setor_admin` FROM `setores_tb` WHERE `setor_id`=(SELECT`usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "')";

@@ -88,17 +88,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input name="setor_hall" type="checkbox" class="checkbox" placeholder="Sala do Setor" onChange="javascript:this.value=this.value.toUpperCase();" <?php if ($row_perfil_setor_selecionar['setor_hall']) {
-                                                                                                                                                                                                echo "checked";
-                                                                                                                                                                                            } ?>>
+                                        <input name="setor_hall" type="checkbox" class="checkbox" placeholder="Sala do Setor" <?php if ($row_perfil_setor_selecionar['setor_hall']) {
+                                                                                                                                    echo "checked";
+                                                                                                                                } ?>>
                                         Atendimento Hall
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input name="setor_admin" type="checkbox" class="checkbox" placeholder="Sala do Setor" onChange="javascript:this.value=this.value.toUpperCase();" <?php if ($row_perfil_setor_selecionar['setor_admin']) {
-                                                                                                                                                                                                echo "checked";
-                                                                                                                                                                                            } ?>>
+                                        <input name="setor_admin" type="checkbox" class="checkbox" placeholder="Sala do Setor" <?php if ($row_perfil_setor_selecionar['setor_admin']) {
+                                                                                                                                    echo "checked";
+                                                                                                                                } ?>>
                                         Setor administrador do sistema
                                     </label>
                                 </div>
