@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $setor_admin = "0";
     }
 
-    $sql_perfil_setor_novo = "INSERT INTO `setores_tb`(`setor_nome`, `setor_sala`, `setor_hall`, `setor_admin`) VALUES ('" . $setor_nome . "','" . $setor_sala . "','" . $setor_hall . "','" . $setor_admin . "')";
+    $sql_perfil_setor_novo = "INSERT INTO `setores_tb`(`setor_nome`, `setor_sala`, `setor_hall`, `setor_admin`,`setor_ficha_preferencial`) VALUES ('" . $setor_nome . "','" . $setor_sala . "','" . $setor_hall . "','" . $setor_admin . "','0')";
 
     if (mysqli_query($_SG['link'], $sql_perfil_setor_novo)) {
         $_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';

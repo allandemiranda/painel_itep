@@ -18,12 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 		$ficha_data = date('Y-m-d H:i:s');
 
-		$sql_atualizar_ficha = "UPDATE `fichas_tb` SET `ficha_status`='encaminhado',`ficha_data`='" . $ficha_data . "',`ficha_encaminhado_setor_id`='" . $ficha_setor_id . "' WHERE `ficha_id`='" . $ficha_id . "'";
+		$sql_atualizar_ficha = "UPDATE `fichas_tb` SET `ficha_status`='encaminhado',`ficha_data`='" . $ficha_data . "',`ficha_setor_id`='" . $ficha_setor_id . "', `ficha_encaminhado_setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "') WHERE `ficha_id`='" . $ficha_id . "'";
 
 		if (mysqli_query($_SG['link'], $sql_atualizar_ficha)) {
 			$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
 			$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
-			$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Ficha emcaminhada.';
+			$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Ficha <b>' . $ficha_id . '</b> encaminhada.';
 			$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
 		} else {
 			$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
@@ -52,20 +52,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 
 	if ($_POST["submit"] == "chamarProximo") {
-		$sql_chamar_proximo_um = "SELECT `ficha_preferencial` FROM `fichas_tb` WHERE `ficha_status`='não atendido' AND `ficha_status`='encaminhado' AND `ficha_setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "') LIMIT 1 ";
-		$query_chamar_proximo_um =  mysqli_query($_SG['link'], $sql_chamar_proximo_um);
-		if (mysqli_num_rows($query_chamar_proximo_um) > 0) {
-			$row_chamar_proximo_um = mysqli_fetch_assoc($query_chamar_proximo_um);
-			if ($row_chamar_proximo_um["ficha_preferencial"] == 0) {
-				$sql_chamar_proximo_dois = "SELECT `ficha_id` FROM `fichas_tb` WHERE `ficha_preferencial`='1' AND `ficha_status`='não atendido' AND `ficha_status`='encaminhado' AND `ficha_setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "') ORDER BY `ficha_data` ASC LIMIT 1 ";
-				$query_chamar_proximo_dois =  mysqli_query($_SG['link'], $sql_chamar_proximo_dois);
-				if (mysqli_num_rows($query_chamar_proximo_dois) > 0) {
-					$row_chamar_proximo_dois = mysqli_fetch_assoc($query_chamar_proximo_dois);
-					$sql_update_proxima_dois = "UPDATE `fichas_tb` SET `ficha_status`='em atendimento' WHERE `ficha_id`='" . $row_chamar_proximo_dois['ficha_id'] . "'";
-					if (mysqli_query($_SG['link'], $sql_update_proxima_dois)) {
+		$sql_temp = "SELECT `setor_ficha_preferencial` FROM `setores_tb` WHERE `setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "')";
+		$result_temp = mysqli_query($_SG['link'], $sql_temp);
+		$row_temp = mysqli_fetch_assoc($result_temp);
+		if ($row_temp["setor_ficha_preferencial"] == "1") {
+			$sql_um = "SELECT `ficha_id` FROM `fichas_tb` WHERE `ficha_status` IN ('não atendido','encaminhado') AND `ficha_preferencial`='1' AND `ficha_setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "') ORDER BY `ficha_data` ASC LIMIT 1";
+			$result_um = mysqli_query($_SG['link'], $sql_um);
+			if (mysqli_num_rows($result_um) > 0) {
+				$row_um = mysqli_fetch_assoc($result_um);
+				$sql_update = "UPDATE `fichas_tb` SET `ficha_status`='em atendimento' WHERE `ficha_id`='" . $row_um['ficha_id'] . "'";
+				if (mysqli_query($_SG['link'], $sql_update)) {
+					$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
+					$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
+					$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Ficha <b>' . $row_um["ficha_id"] . '</b> chamada.';
+					$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+				} else {
+					$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
+					$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
+					$_SG['status-alert'] = $_SG['status-alert'] . " Error updating record: " . mysqli_error($_SG['link']);
+					$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+				}
+				$sql_update = "UPDATE `setores_tb` SET `setor_ficha_preferencial`='0' WHERE `setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "')";
+				mysqli_query($_SG['link'], $sql_update);
+			} else {
+				$sql_dois = "SELECT `ficha_id` FROM `fichas_tb` WHERE `ficha_status` IN ('não atendido','encaminhado') AND `ficha_preferencial`='0' AND `ficha_setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "') ORDER BY `ficha_data` ASC LIMIT 1";
+				$result_dois = mysqli_query($_SG['link'], $sql_dois);
+				if (mysqli_num_rows($result_dois) > 0) {
+					$row_dois = mysqli_fetch_assoc($result_dois);
+					$sql_update = "UPDATE `fichas_tb` SET `ficha_status`='em atendimento' WHERE `ficha_id`='" . $row_dois['ficha_id'] . "'";
+					if (mysqli_query($_SG['link'], $sql_update)) {
 						$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
 						$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
-						$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Ficha <b>' . $row_chamar_proximo_dois['ficha_id'] . '</b> em antendimento.';
+						$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Ficha <b>' . $row_dois["ficha_id"] . '</b> chamada.';
 						$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
 					} else {
 						$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
@@ -73,45 +91,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						$_SG['status-alert'] = $_SG['status-alert'] . " Error updating record: " . mysqli_error($_SG['link']);
 						$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
 					}
+					$sql_update = "UPDATE `setores_tb` SET `setor_ficha_preferencial`='1' WHERE `setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "')";
+					mysqli_query($_SG['link'], $sql_update);
 				} else {
-					$sql_chamar_proximo_dois = "SELECT `ficha_id` FROM `fichas_tb` WHERE `ficha_preferencial`='0' AND `ficha_status`='não atendido' AND `ficha_setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "') ORDER BY `ficha_data` ASC LIMIT 1 ";
-					$query_chamar_proximo_dois =  mysqli_query($_SG['link'], $sql_chamar_proximo_dois);
-					if (mysqli_num_rows($query_chamar_proximo_dois) > 0) {
-						$row_chamar_proximo_dois = mysqli_fetch_assoc($query_chamar_proximo_dois);
-						$sql_update_proxima_dois = "UPDATE `fichas_tb` SET `ficha_status`='em atendimento' WHERE `ficha_id`='" . $row_chamar_proximo_dois['ficha_id'] . "'";
-						if (mysqli_query($_SG['link'], $sql_update_proxima_dois)) {
-							$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
-							$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
-							$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Ficha <b>' . $row_chamar_proximo_dois['ficha_id'] . '</b> em antendimento.';
-							$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
-						} else {
-							$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
-							$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
-							$_SG['status-alert'] = $_SG['status-alert'] . " Error updating record: " . mysqli_error($_SG['link']);
-							$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
-						}
-					} else {
-						$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
-						$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
-						$_SG['status-alert'] = $_SG['status-alert'] . " Error updating record: " . mysqli_error($_SG['link']);
-						$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
-					}
+					$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
+					$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
+					$_SG['status-alert'] = $_SG['status-alert'] . " Error! Não existem fichas para chamar. ";
+					$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
 				}
 			}
 		} else {
-			$sql_chamar_proximo_um = "SELECT `ficha_preferencial` FROM `fichas_tb` WHERE `ficha_status`='atendido' AND `ficha_setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "') LIMIT 1 ";
-			$query_chamar_proximo_um =  mysqli_query($_SG['link'], $sql_chamar_proximo_um);
-			$row_chamar_proximo_um = mysqli_fetch_assoc($query_chamar_proximo_um);
-			if ($row_chamar_proximo_um["ficha_preferencial"] == 0) {
-				$sql_chamar_proximo_dois = "SELECT `ficha_id` FROM `fichas_tb` WHERE `ficha_preferencial`='1' AND `ficha_status`='atendido' AND `ficha_setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "') ORDER BY `ficha_data` ASC LIMIT 1 ";
-				$query_chamar_proximo_dois =  mysqli_query($_SG['link'], $sql_chamar_proximo_dois);
-				if (mysqli_num_rows($query_chamar_proximo_dois) > 0) {
-					$row_chamar_proximo_dois = mysqli_fetch_assoc($query_chamar_proximo_dois);
-					$sql_update_proxima_dois = "UPDATE `fichas_tb` SET `ficha_status`='em atendimento' WHERE `ficha_id`='" . $row_chamar_proximo_dois['ficha_id'] . "'";
-					if (mysqli_query($_SG['link'], $sql_update_proxima_dois)) {
+			$sql_um = "SELECT `ficha_id` FROM `fichas_tb` WHERE `ficha_status` IN ('não atendido','encaminhado') AND `ficha_preferencial`='0' AND `ficha_setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "') ORDER BY `ficha_data` ASC LIMIT 1";
+			$result_um = mysqli_query($_SG['link'], $sql_um);
+			if (mysqli_num_rows($result_um) > 0) {
+				$row_um = mysqli_fetch_assoc($result_um);
+				$sql_update = "UPDATE `fichas_tb` SET `ficha_status`='em atendimento' WHERE `ficha_id`='" . $row_um['ficha_id'] . "'";
+				if (mysqli_query($_SG['link'], $sql_update)) {
+					$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
+					$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
+					$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Ficha <b>' . $row_um["ficha_id"] . '</b> chamada.';
+					$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+				} else {
+					$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
+					$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
+					$_SG['status-alert'] = $_SG['status-alert'] . " Error updating record: " . mysqli_error($_SG['link']);
+					$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+				}
+				$sql_update = "UPDATE `setores_tb` SET `setor_ficha_preferencial`='1' WHERE `setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "')";
+				mysqli_query($_SG['link'], $sql_update);
+			} else {
+				$sql_dois = "SELECT `ficha_id` FROM `fichas_tb` WHERE `ficha_status` IN ('não atendido','encaminhado') AND `ficha_preferencial`='1' AND `ficha_setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "') ORDER BY `ficha_data` ASC LIMIT 1";
+				$result_dois = mysqli_query($_SG['link'], $sql_dois);
+				if (mysqli_num_rows($result_dois) > 0) {
+					$row_dois = mysqli_fetch_assoc($result_dois);
+					$sql_update = "UPDATE `fichas_tb` SET `ficha_status`='em atendimento' WHERE `ficha_id`='" . $row_dois['ficha_id'] . "'";
+					if (mysqli_query($_SG['link'], $sql_update)) {
 						$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
 						$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
-						$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Ficha <b>' . $row_chamar_proximo_dois['ficha_id'] . '</b> em antendimento.';
+						$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Ficha <b>' . $row_dois["ficha_id"] . '</b> chamada.';
 						$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
 					} else {
 						$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
@@ -119,29 +136,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						$_SG['status-alert'] = $_SG['status-alert'] . " Error updating record: " . mysqli_error($_SG['link']);
 						$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
 					}
+					$sql_update = "UPDATE `setores_tb` SET `setor_ficha_preferencial`='0' WHERE `setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "')";
+					mysqli_query($_SG['link'], $sql_update);
 				} else {
-					$sql_chamar_proximo_dois = "SELECT `ficha_id` FROM `fichas_tb` WHERE `ficha_preferencial`='0' AND `ficha_status`='atendido' AND `ficha_setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "') ORDER BY `ficha_data` ASC LIMIT 1 ";
-					$query_chamar_proximo_dois =  mysqli_query($_SG['link'], $sql_chamar_proximo_dois);
-					if (mysqli_num_rows($query_chamar_proximo_dois) > 0) {
-						$row_chamar_proximo_dois = mysqli_fetch_assoc($query_chamar_proximo_dois);
-						$sql_update_proxima_dois = "UPDATE `fichas_tb` SET `ficha_status`='em atendimento' WHERE `ficha_id`='" . $row_chamar_proximo_dois['ficha_id'] . "'";
-						if (mysqli_query($_SG['link'], $sql_update_proxima_dois)) {
-							$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
-							$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
-							$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Ficha <b>' . $row_chamar_proximo_dois['ficha_id'] . '</b> em antendimento.';
-							$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
-						} else {
-							$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
-							$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
-							$_SG['status-alert'] = $_SG['status-alert'] . " Error updating record: " . mysqli_error($_SG['link']);
-							$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
-						}
-					} else {
-						$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
-						$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
-						$_SG['status-alert'] = $_SG['status-alert'] . " Error updating record: " . mysqli_error($_SG['link']);
-						$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
-					}
+					$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
+					$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
+					$_SG['status-alert'] = $_SG['status-alert'] . " Error! Não existem fichas para chamar. ";
+					$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
 				}
 			}
 		}
@@ -172,6 +173,7 @@ if ($_GET["submit"] == "naoAtendido") {
 
 <head>
 	<?php include 'head.php'; ?>
+	<meta http-equiv="refresh" content="60;url=<?php echo $_SERVER["REQUEST_URI"]; ?>">
 </head>
 
 <body class="cbp-spmenu-push">

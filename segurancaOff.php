@@ -1,8 +1,8 @@
 <?php
 
 $servername = "localhost";
-$username = "root";
-$password = "itep123";
+$username = "allandemiranda";
+$password = "senha1234";
 $dbname = "sistema_itep";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
