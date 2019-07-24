@@ -53,120 +53,37 @@ if (mysqli_num_rows($result) > 0) {
             width: 100%;
         }
     </style>
-    <script type='text/javascript' src='http://code.jquery.com/jquery-2.1.4.min.js'></script>
-    <script type='text/javascript' src='/voice/1.3.8/responsivevoice.js'></script>
-    <script>
-        var windowReady = false;
-        var voiceReady = false;
 
-        $(window).load(function() {
-
-            windowReady = true;
-
-            $('#voicetestdiv').hide();
-            $('#waitingdiv').show();
-
-            playbutton.onclick = function() {
-
-                responsiveVoice.speak($('#text').val(), $('#voiceselection').val());
-
-            };
-
-            stopbutton.onclick = function() {
-
-                responsiveVoice.cancel();
-
-            };
-
-            responsiveVoice.AddEventListener("OnLoad", function() {
-                console.log("ResponsiveVoice Loaded Callback");
-            });
-
-
-            CheckLoading();
-
-
-
-        });
-
-        responsiveVoice.OnVoiceReady = function() {
-
-            voiceReady = true;
-            CheckLoading();
-        }
-
-
-        function CheckLoading() {
-
-            if (voiceReady && windowReady) {
-
-                $('#voicetestdiv').fadeIn(0.5);
-                $('#waitingdiv').fadeOut(0.5);
-
-                //Populate voice selection dropdown
-                var voicelist = responsiveVoice.getVoices();
-
-                var vselect = $("#voiceselection");
-                $.each(voicelist, function() {
-                    vselect.append($("<option />").val(this.name).text(this.name));
-                });
-
-
-                getIframeWindow(document.getElementById('framelogo')).responsiveVoice = responsiveVoice;
-
-            }
-
-        }
-
-        function getIframeWindow(iframe_object) {
-            var doc;
-
-            if (iframe_object.contentWindow) {
-                return iframe_object.contentWindow;
-            }
-
-            if (iframe_object.window) {
-                return iframe_object.window;
-            }
-
-            if (!doc && iframe_object.contentDocument) {
-                doc = iframe_object.contentDocument;
-            }
-
-            if (!doc && iframe_object.document) {
-                doc = iframe_object.document;
-            }
-
-            if (doc && doc.defaultView) {
-                return doc.defaultView;
-            }
-
-            if (doc && doc.parentWindow) {
-                return doc.parentWindow;
-            }
-
-            return undefined;
-        }
-    </script>
 </head>
 
 <body>
-    <div class="inline">
-        <h1> ResponsiveVoice Example </h1>
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <input id="text" value="<?php echo $nome[0]; ?>" hidden>
+    <select id="voiceselection" hidden></select>
+    <script>
+        teste = true;
+        $.get("painel.php", function(data, status){ 
+            console.log(data);
+            console.log(status);
+        });
+        if (teste) {
+            $(document).ready(function() {
+                responsiveVoice.speak($('#text').val(), $('#voiceselection').val());
+            });
 
-        <div id='waitingdiv'>
-            Loading ResponsiveVoice...<br />
-            If it doesn't load please <a href="http://caniuse.com/#feat=speech-synthesis" target="_blank">check your browser compatibility</a>
-        </div>
-
-        <div id='voicetestdiv'>
-            <textarea id="text" cols="45" rows="3">The voice consists of sound made by a human being using the vocal folds for talking, reading, singing, laughing, crying, screaming etc. The human voice is specifically a part of human sound production in which the vocal folds (vocal cords) are the primary sound source.</textarea>
-            <br />
-            <select id="voiceselection"></select>
-            <input id="playbutton" type="button" value="Play" />
-            <input id="stopbutton" type="button" value="Stop" />
-        </div>
-    </div>
+            //Populate voice selection dropdown
+            var voicelist = responsiveVoice.getVoices();
+            var vselect = $("#voiceselection");
+            $.each(voicelist, function() {
+                if (this.name == "Brazilian Portuguese Male") {
+                    vselect.append($("<option selected/>").val(this.name).text(this.name));
+                } else {
+                    vselect.append($("<option />").val(this.name).text(this.name));
+                }
+            });
+        }
+    </script>
     <?php
     if ($painel_id[0] != $_GET["painel_id"]) {
         echo '<audio autoplay>';
