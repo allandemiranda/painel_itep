@@ -53,9 +53,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 							</div>
 							<br>
 							<div class="col-md-12">
-								<button type="button" class="btn btn-success col-md-5">Painel Hall</button>
+								<a href="painel.php"><button type="button" class="btn btn-success col-md-5">Painel Hall</button></a>
 								<div class="col-md-1" style="width: 16%;"> </div>
-								<button type="button" class="btn btn-info col-md-5">Painel Ficha</button>
+								<a href="painelFicha.php"><button type="button" class="btn btn-info col-md-5">Painel Ficha</button></a>
 							</div>
 						</form>
 						<!-- Modal -->
@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 									</div>
 									<div class="modal-body">
 										<p>
-											Não foi possível, de maneira altomática, processar sua solicitação. Entre
+											Não foi possível processar sua solicitação. Entre
 											em contato com o setor de Informática.
 										</p>
 									</div>

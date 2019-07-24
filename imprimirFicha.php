@@ -107,3 +107,6 @@ if ($_GET['fichaID'] != "") {
 </body>
 
 </html>
+<script>
+    window.print();
+</script>

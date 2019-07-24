@@ -1,45 +1,11 @@
+<?php
+include("segurancaOff.php");
+?>
 <!DOCTYPE HTML>
 <html>
 
 <head>
-    <title>Glance Design Dashboard an Admin Panel Category Flat Bootstrap Responsive Website Template | Login Page ::
-        w3layouts</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Glance Design Dashboard Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-    <script
-        type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-
-    <!-- Custom CSS -->
-    <link href="css/style.css" rel='stylesheet' type='text/css' />
-
-    <!-- font-awesome icons CSS-->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <!-- //font-awesome icons CSS-->
-
-    <!-- side nav css file -->
-    <link href='css/SidebarNav.min.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- side nav css file -->
-
-    <!-- js-->
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/modernizr.custom.js"></script>
-
-    <!--webfonts-->
-    <link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext"
-        rel="stylesheet">
-    <!--//webfonts-->
-
-    <!-- Metis Menu -->
-    <script src="js/metisMenu.min.js"></script>
-    <script src="js/custom.js"></script>
-    <link href="css/custom.css" rel="stylesheet">
-    <!--//Metis Menu -->
-
+    <?php include 'head.php'; ?>
 </head>
 
 <body class="">
@@ -47,17 +13,16 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
         <!-- main content start-->
         <div id="page-wrapper">
             <div class="tables">
+                <a href="painelFicha.php" class="hvr-icon-spin" style="float: right;">Atualizar página</a>
                 <div class="bs-example widget-shadow" data-example-id="hoverable-table">
                     <h4>
                         Painel Geral
-                        <button type="button" class="btn btn-primary" style="float: right;" data-toggle="modal"
-                            data-target="#novaFichaModal">
+                        <button type="button" class="btn btn-primary" style="float: right;" data-toggle="modal" data-target="#novaFichaModal">
                             Nova Ficha
                         </button>
                     </h4>
                     <!-- Modal -->
-                    <div class="modal fade" id="novaFichaModal" tabindex="-1" role="dialog"
-                        aria-labelledby="novaFichaModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="novaFichaModal" tabindex="-1" role="dialog" aria-labelledby="novaFichaModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="forms">
@@ -66,38 +31,35 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                                             <h4>Nova Ficha </h4>
                                         </div>
                                         <div class="form-body">
-                                            <form action="" method="">
+                                            <form target="_blank" action="imprimirFicha.php" method="POST">
                                                 <div class="form-group">
                                                     <label>Nome </label>
-                                                    <input name="ficha_nome" type="text" class="form-control"
-                                                        placeholder="Nome Completo"
-                                                        onChange="javascript:this.value=this.value.toUpperCase();"
-                                                        value="" required>
+                                                    <input name="ficha_nome" type="text" class="form-control" placeholder="Nome Completo" onChange="javascript:this.value=this.value.toUpperCase();" value="" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Telefone</label>
-                                                    <input name="ficha_telefone" type="tel" class="form-control"
-                                                        value="" placeholder="(84) 00000-0000" required>
+                                                    <input name="ficha_telefone" type="tel" class="form-control" value="" placeholder="(84) 00000-0000" required>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Atendiemnto em</label>
-                                                    <select name="ficha_setor" class="form-control" type="text">
-                                                        <option value="SETOR UM" selected>SETOR UM</option>
-                                                        <option value="SETOR DOIS">SETOR DOIS</option>
-                                                        <option value="SETOR TRÊS">SETOR TRÊS</option>
+                                                    <label>Atendimento em</label>
+                                                    <select name="ficha_setor_id" class="form-control" type="text">
+                                                        <?php
+                                                        $sql_lista_setores = "SELECT `setor_id`, `setor_nome` FROM `setores_tb`";
+                                                        $query_lista_setores = mysqli_query($conn, $sql_lista_setores);
+                                                        while ($row_lista_setores = mysqli_fetch_assoc($query_lista_setores)) {
+                                                            echo '<option value="' . $row_lista_setores["setor_id"] . '">' . $row_lista_setores["setor_nome"] . '</option>';
+                                                        }
+                                                        ?>
                                                     </select>
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input name="ficha_preferencial" type="checkbox"
-                                                            class="checkbox" placeholder="Sala do Setor"
-                                                            onChange="javascript:this.value=this.value.toUpperCase();">
+                                                        <input name="ficha_preferencial" type="checkbox" class="checkbox" placeholder="Sala do Setor">
                                                         Preferencial (idosos, gestantes e deficientes)
                                                     </label>
                                                 </div>
                                                 <button type="submit" class="btn btn-success">Imprimir</button>
-                                                <button type="button" class="btn btn-danger"
-                                                    data-dismiss="modal">Cancelar</button>
+                                                <a href="painelFicha.php"><button type="button" class="btn btn-danger">Voltar</button></a>
                                             </form>
                                         </div>
                                     </div>
@@ -121,104 +83,57 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row" style="text-align: center;">1</th>
-                                <td style="text-align: center;">ALLAN DE MIRANDA</td>
-                                <td style="text-align: center;">(84)991151610</td>
-                                <td style="text-align: center;">R.H.</td>
-                                <td style="text-align: center;"><button type="button" class="btn btn-danger">Não
-                                        atendido</button></td>
-                                <td style="text-align: center;">00/00/0000 00:00</td>
-                                <td style="text-align: center;"><span class="label label-warning">SIM</span></td>
-                                <td style="text-align: center;"><a class="fa fa-print"></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row" style="text-align: center;">1</th>
-                                <td style="text-align: center;">ALLAN DE MIRANDA</td>
-                                <td style="text-align: center;">(84)991151610</td>
-                                <td style="text-align: center;">R.H.</td>
-                                <td style="text-align: center;"><button type="button" class="btn btn-warning"
-                                        data-toggle="tooltip" data-placement="top" title="SECRETARIA"
-                                        data-original-title="">Encaminhado</button></td>
-                                <td style="text-align: center;">00/00/0000 00:00</td>
-                                <td style="text-align: center;"><span class="label label-success">NÃO</span></td>
-                                <td style="text-align: center;"><a class="fa fa-print"></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row" style="text-align: center;">1</th>
-                                <td style="text-align: center;">ALLAN DE MIRANDA</td>
-                                <td style="text-align: center;">(84)991151610</td>
-                                <td style="text-align: center;">R.H.</td>
-                                <td style="text-align: center;"><button type="button" class="btn btn-success">Em
-                                        antendimento</button></td>
-                                <td style="text-align: center;">00/00/0000 00:00</td>
-                                <td style="text-align: center;"><span class="label label-success">NÃO</span></td>
-                                <td style="text-align: center;"><a class="fa fa-print"></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row" style="text-align: center;">1</th>
-                                <td style="text-align: center;">ALLAN DE MIRANDA</td>
-                                <td style="text-align: center;">(84)991151610</td>
-                                <td style="text-align: center;">R.H.</td>
-                                <td style="text-align: center;"><button type="button"
-                                        class="btn btn-info">Atendido</button></td>
-                                <td style="text-align: center;">00/00/0000 00:00</td>
-                                <td style="text-align: center;"><span class="label label-warning">SIM</span></td>
-                                <td style="text-align: center;"><a class="fa fa-print"></a></td>
-                            </tr>
+                            <?php
+                            $sql_lista_fichas_geral = "SELECT `ficha_id`, `ficha_nome`, `ficha_telefone`, `ficha_setor_id`, `ficha_status`, `ficha_data`, `ficha_preferencial`, `ficha_encaminhado_setor_id` FROM `fichas_tb` ORDER BY `ficha_id` DESC LIMIT 1000";
+                            $query_lista_fichas_geral = mysqli_query($conn, $sql_lista_fichas_geral);
+                            $cont_lista_fichas_geral = 0;
+                            while ($row_lista_fichas_geral = mysqli_fetch_assoc($query_lista_fichas_geral)) {
+                                echo '<tr>';
+                                $ultimos3id = substr($row_lista_fichas_geral["ficha_id"], -3);
+                                echo '<th scope="row" style="text-align: center;">' . str_pad($ultimos3id, 3, '0', STR_PAD_LEFT) . '</th>';
+                                echo '<td style="text-align: center;">' . $row_lista_fichas_geral["ficha_nome"] . '</td>';
+                                echo '<td style="text-align: center;">' . $row_lista_fichas_geral["ficha_telefone"] . '</td>';
+                                $sql_setor_painel = "SELECT `setor_nome` FROM `setores_tb` WHERE `setor_id`='" . $row_lista_fichas_geral["ficha_setor_id"] . "'";
+                                $query_setor_painel = mysqli_query($conn, $sql_setor_painel);
+                                $row_setor_painel = mysqli_fetch_assoc($query_setor_painel);
+                                echo '<td style="text-align: center;">' . $row_setor_painel["setor_nome"] . '</td>';
+                                if ($row_lista_fichas_geral["ficha_status"] == "não atendido") {
+                                    echo '<td style="text-align: center;"><button type="button" class="btn btn-danger">Não atendido</button></td>';
+                                }
+                                if ($row_lista_fichas_geral["ficha_status"] == "encaminhado") {
+                                    $sql_encaminhado_painel = "SELECT `setor_nome` FROM `setores_tb` WHERE `setor_id`='" . $row_lista_fichas_geral['ficha_encaminhado_setor_id'] . "'";
+                                    $query_encaminhado_painel = mysqli_query($conn, $sql_encaminhado_painel);
+                                    $row_encaminhado_painel = mysqli_fetch_assoc($query_encaminhado_painel);
+                                    echo '<td style="text-align: center;"><button type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="' . $row_encaminhado_painel["setor_nome"] . '" data-original-title="">Encaminhado</button></td>';
+                                }
+                                if ($row_lista_fichas_geral["ficha_status"] == "em atendimento") {
+                                    echo '<td style="text-align: center;"><button type="button" class="btn btn-success">Em antendimento</button></td>';
+                                }
+                                if ($row_lista_fichas_geral["ficha_status"] == "atendido") {
+                                    echo '<td style="text-align: center;"><button type="button" class="btn btn-info">Atendido</button></td>';
+                                }
+                                $data_quebrada = explode(" ", $row_lista_fichas_geral["ficha_data"]);
+                                $data_final = date('d/m/Y',  strtotime($data_quebrada[0]));
+                                echo '<td style="text-align: center;">' . $data_final . " " . $data_quebrada[1] . '</td>';
+                                if ($row_lista_fichas_geral["ficha_preferencial"] == "1") {
+                                    echo '<td style="text-align: center;"><span class="label label-warning">SIM</span></td>';
+                                } else {
+                                    echo '<td style="text-align: center;"><span class="label label-success">NÃO</span></td>';
+                                }
+                                echo '<td style="text-align: center;"><a class="fa fa-print" href="imprimirFicha.php?fichaID=' . $row_lista_fichas_geral["ficha_id"] . '" target="_blank"></a></td>';
+                                echo '</tr>';
+                            }
+                            ?>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
         <!--footer-->
-        <div class="footer">
-            <p>&copy; 2018 Glance Design Dashboard. All Rights Reserved | Design by <a href="https://w3layouts.com/"
-                    target="_blank">w3layouts</a></p>
-        </div>
+        <?php include 'footer.php'; ?>
         <!--//footer-->
     </div>
-
-    <!-- side nav js -->
-    <script src='js/SidebarNav.min.js' type='text/javascript'></script>
-    <script>
-        $('.sidebar-menu').SidebarNav()
-    </script>
-    <!-- //side nav js -->
-
-    <!-- Classie -->
-    <!-- for toggle left push menu script -->
-    <script src="js/classie.js"></script>
-    <script>
-        var menuLeft = document.getElementById('cbp-spmenu-s1'),
-            showLeftPush = document.getElementById('showLeftPush'),
-            body = document.body;
-
-        showLeftPush.onclick = function () {
-            classie.toggle(this, 'active');
-            classie.toggle(body, 'cbp-spmenu-push-toright');
-            classie.toggle(menuLeft, 'cbp-spmenu-open');
-            disableOther('showLeftPush');
-        };
-
-        function disableOther(button) {
-            if (button !== 'showLeftPush') {
-                classie.toggle(showLeftPush, 'disabled');
-            }
-        }
-    </script>
-    <!-- //Classie -->
-    <!-- //for toggle left push menu script -->
-
-    <!--scrolling js-->
-    <script src="js/jquery.nicescroll.js"></script>
-    <script src="js/scripts.js"></script>
-    <!--//scrolling js-->
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.js"> </script>
-    <!-- //Bootstrap Core JavaScript -->
-
+    <?php include 'scriptEnd.php'; ?>
 </body>
 
 </html>
