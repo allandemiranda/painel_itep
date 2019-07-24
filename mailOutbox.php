@@ -61,7 +61,7 @@ if ($_GET["d"] != "") {
                             <h4>Hoje</h4>
                             <?php
                             $data_hoje = date("Y-m-d") . " 00:00:00";
-                            $sql_hoje = "SELECT `mail_id`, `mail_assunto`, `mail_de_usuario_id`, `mail_conteudo`, `mail_status_caixa_entrada`, `mail_data` FROM `mails_tb` WHERE `mail_status_caixa_saida`='1' AND `mail_data`>'" . $data_hoje . "' ORDER BY `mail_data` DESC";
+                            $sql_hoje = "SELECT `mail_id`, `mail_assunto`, `mail_para_setor_id`, `mail_de_usuario_id`, `mail_conteudo`, `mail_status_caixa_entrada`, `mail_data` FROM `mails_tb` WHERE `mail_status_caixa_saida`='1' AND `mail_data`>'" . $data_hoje . "' ORDER BY `mail_data` DESC";
                             $query_hoje = mysqli_query($_SG['link'], $sql_hoje);
                             if (mysqli_num_rows($query_hoje) > 0) {
                                 // output data of each row
@@ -74,7 +74,7 @@ if ($_GET["d"] != "") {
                                     $query_verificacao_um = mysqli_query($_SG['link'], $sql_verificacao_um);
                                     $row_verificacao_um = mysqli_fetch_assoc($query_verificacao_um);
 
-                                    if($row_verificacao["usuario_setor_id"] != $row_verificacao_um["usuario_setor_id"]){
+                                    if ($row_verificacao["usuario_setor_id"] != $row_verificacao_um["usuario_setor_id"]) {
                                         continue;
                                     }
 
@@ -94,7 +94,10 @@ if ($_GET["d"] != "") {
                                     echo '</div>';
                                     echo '<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' . $row_hoje["mail_id"] . 'o" aria-expanded="true" aria-controls="collapse' . $row_hoje["mail_id"] . 'o">';
                                     echo '<div class="mail">';
-                                    echo '<p>' . $row_hoje["mail_assunto"] . '</p>';
+                                    $sql_setor = "SELECT `setor_nome` FROM `setores_tb` WHERE `setor_id`='" . $row_hoje['mail_para_setor_id'] . "'";
+                                    $query_setor = mysqli_query($_SG['link'], $sql_setor);
+                                    $row_setor = mysqli_fetch_assoc($query_setor);
+                                    echo '<p>Para: ' . $row_setor["setor_nome"] . ' - ' . $row_hoje["mail_assunto"] . '</p>';
                                     echo '</div>';
                                     echo '</a>';
                                     echo '<div class="mail-right dots_drop">';
@@ -132,7 +135,7 @@ if ($_GET["d"] != "") {
                             <h4>Outras Mensagens</h4>
                             <?php
                             $data_hoje = date("Y-m-d") . " 00:00:00";
-                            $sql_hoje = "SELECT `mail_id`, `mail_assunto`, `mail_de_usuario_id`, `mail_conteudo`, `mail_status_caixa_entrada`, `mail_data` FROM `mails_tb` WHERE `mail_status_caixa_saida`='1' AND `mail_data`<'" . $data_hoje . "' ORDER BY `mail_data` DESC";
+                            $sql_hoje = "SELECT `mail_id`, `mail_assunto`, `mail_de_usuario_id`, `mail_para_setor_id`, `mail_conteudo`, `mail_status_caixa_entrada`, `mail_data` FROM `mails_tb` WHERE `mail_status_caixa_saida`='1' AND `mail_data`<'" . $data_hoje . "' ORDER BY `mail_data` DESC";
                             $query_hoje = mysqli_query($_SG['link'], $sql_hoje);
                             if (mysqli_num_rows($query_hoje) > 0) {
                                 // output data of each row
@@ -145,7 +148,7 @@ if ($_GET["d"] != "") {
                                     $query_verificacao_um = mysqli_query($_SG['link'], $sql_verificacao_um);
                                     $row_verificacao_um = mysqli_fetch_assoc($query_verificacao_um);
 
-                                    if($row_verificacao["usuario_setor_id"] != $row_verificacao_um["usuario_setor_id"]){
+                                    if ($row_verificacao["usuario_setor_id"] != $row_verificacao_um["usuario_setor_id"]) {
                                         continue;
                                     }
 
@@ -165,7 +168,10 @@ if ($_GET["d"] != "") {
                                     echo '</div>';
                                     echo '<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' . $row_hoje["mail_id"] . 'o" aria-expanded="true" aria-controls="collapse' . $row_hoje["mail_id"] . 'o">';
                                     echo '<div class="mail">';
-                                    echo '<p>' . $row_hoje["mail_assunto"] . '</p>';
+                                    $sql_setor = "SELECT `setor_nome` FROM `setores_tb` WHERE `setor_id`='" . $row_hoje['mail_para_setor_id'] . "'";
+                                    $query_setor = mysqli_query($_SG['link'], $sql_setor);
+                                    $row_setor = mysqli_fetch_assoc($query_setor);
+                                    echo '<p>Para: ' . $row_setor["setor_nome"] . ' - ' . $row_hoje["mail_assunto"] . '</p>';
                                     echo '</div>';
                                     echo '</a>';
                                     echo '<div class="mail-right dots_drop">';
