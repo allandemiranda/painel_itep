@@ -68,8 +68,8 @@ if (mysqli_num_rows($result) > 0) {
     ?>
     <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <input id="text" value="<?php echo $nome[0]; ?>" hidden>
-    <select id="voiceselection" hidden></select>    
+    <input id="text" value="<?php echo $nome[0] . ' ' . $sala[0]; ?>" hidden>
+    <select id="voiceselection" hidden></select>
     <script>
         teste = $("#teste").val();
         console.log(teste);

@@ -174,17 +174,22 @@ if ($_GET["submit"] == "naoAtendido") {
 
 	$sql_atualizar_ficha = "UPDATE `fichas_tb` SET `ficha_status`='em atendimento' WHERE `ficha_id`='" . $ficha_id . "'";
 
-	if (mysqli_query($_SG['link'], $sql_atualizar_ficha)) {
-		$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
-		$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
-		$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Ficha em antendimento.';
-		$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+	$sql_temp = "SELECT `ficha_status` FROM `fichas_tb` WHERE `ficha_id`='" . $ficha_id . "'";
+	$sql_query = mysqli_query($_SG['link'], $sql_temp);
+	$row_temp = mysqli_fetch_assoc($sql_query);
+	if ($row_temp["ficha_status"] != 'em atendimento') {
 		chamar_painel($ficha_id, $_SG['link']);
-	} else {
-		$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
-		$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
-		$_SG['status-alert'] = $_SG['status-alert'] . " Error updating record: " . mysqli_error($_SG['link']);
-		$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+		if (mysqli_query($_SG['link'], $sql_atualizar_ficha)) {
+			$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
+			$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
+			$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Ficha em antendimento.';
+			$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+		} else {
+			$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
+			$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
+			$_SG['status-alert'] = $_SG['status-alert'] . " Error updating record: " . mysqli_error($_SG['link']);
+			$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+		}
 	}
 }
 
