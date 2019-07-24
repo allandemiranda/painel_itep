@@ -179,6 +179,7 @@ if ($_GET["submit"] == "naoAtendido") {
 		$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
 		$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Ficha em antendimento.';
 		$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+		chamar_painel($ficha_id, $_SG['link']);
 	} else {
 		$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
 		$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
