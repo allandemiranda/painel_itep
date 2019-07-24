@@ -1004,6 +1004,7 @@ ul.dropdown-menu {
   font-size: 1.6em;
 }
 
+/*
 span.prfil-img img, .activity-img img, .media>.pull-left img, .inbox-page img {
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -1011,6 +1012,7 @@ span.prfil-img img, .activity-img img, .media>.pull-left img, .inbox-page img {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+*/
 
 .profile_details ul li ul.dropdown-menu.drp-mnu {
   padding: 1em;
@@ -2918,10 +2920,12 @@ li.head i.fa {
   margin: 13px 0 0;
 }
 
+/*
 .inbox-page img {
   width: 100%;
   vertical-align: bottom;
 }
+*/
 
 .inbox-page p {
   font-size: 1em;

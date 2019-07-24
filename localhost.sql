@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: 23-Jul-2019 às 18:00
+-- Generation Time: 23-Jul-2019 às 23:44
 -- Versão do servidor: 5.7.26-0ubuntu0.18.04.1
 -- PHP Version: 7.2.19-0ubuntu0.18.04.1
 
@@ -64,7 +64,8 @@ CREATE TABLE `mails_tb` (
   `mail_para_setor_id` bigint(20) NOT NULL,
   `mail_conteudo` longtext NOT NULL,
   `mail_status_caixa_entrada` tinyint(1) NOT NULL,
-  `mail_status_caixa_saida` tinyint(1) NOT NULL
+  `mail_status_caixa_saida` tinyint(1) NOT NULL,
+  `mail_data` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -87,7 +88,8 @@ CREATE TABLE `painel_tb` (
 INSERT INTO `painel_tb` (`painel_id`, `painel_senha`, `painel_nome`, `painel_sala`) VALUES
 (1, '0', 'NULL', 'NULL'),
 (2, '0', 'NULL', 'NULL'),
-(3, '0', 'NULL', 'NULL');
+(3, '0', 'NULL', 'NULL'),
+(4, '0', 'NULL', 'NULL');
 
 -- --------------------------------------------------------
 
@@ -109,7 +111,7 @@ CREATE TABLE `setores_tb` (
 --
 
 INSERT INTO `setores_tb` (`setor_id`, `setor_nome`, `setor_sala`, `setor_hall`, `setor_admin`, `setor_ficha_preferencial`) VALUES
-(1, 'TECNOLOGIA DA INFORMAÃ‡ÃƒO', 'INFORMÃTICA - SEGUNDO ANDAR', 0, 1, 1);
+(1, 'TECNOLOGIA DA INFORMAÃ‡ÃƒO', 'INFORMÃTICA - SEGUNDO ANDAR', 0, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -197,7 +199,7 @@ ALTER TABLE `mails_tb`
 -- AUTO_INCREMENT for table `painel_tb`
 --
 ALTER TABLE `painel_tb`
-  MODIFY `painel_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `painel_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `setores_tb`
 --

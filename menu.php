@@ -26,9 +26,9 @@
                             }
                             ?>
                             <ul class="treeview-menu">
-                                <li><a href=""><i class="fa fa-angle-right"></i> Mail Inbox </a></li>
-                                <li><a href=""><i class="fa fa-angle-right"></i> Mail Outbox </a></li>
-                                <li><a href=""><i class="fa fa-angle-right"></i> Enviar Mail </a></li>
+                                <li><a href="mailInbox.php"><i class="fa fa-angle-right"></i> Mail Inbox </a></li>
+                                <li><a href="mailOutbox.php"><i class="fa fa-angle-right"></i> Mail Outbox </a></li>
+                                <li><a href="novoMail.php"><i class="fa fa-angle-right"></i> Enviar Mail </a></li>
                             </ul>
                     </li>
                     <?php
