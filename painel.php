@@ -23,7 +23,7 @@ if (mysqli_num_rows($result) > 0) {
 
 
 <head>
-    <meta http-equiv="refresh" content="99;url=http://<?php echo $_SERVER["SERVER_NAME"];
+    <meta http-equiv="refresh" content="6;url=http://<?php echo $_SERVER["SERVER_NAME"];
                                                         echo $_SERVER["PHP_SELF"]; ?>?painel_id=<?php echo $painel_id[0]; ?>">
     <title>Painel ITEP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -57,17 +57,23 @@ if (mysqli_num_rows($result) > 0) {
 </head>
 
 <body>
+    <?php
+    if ($painel_id[0] != $_GET["painel_id"]) {
+        echo '<audio autoplay>';
+        echo '<source src="/painel/som-alerta.mp3" type="audio/mpeg">';
+        echo 'Your browser does not support the audio tag.';
+        echo '</audio>';
+        echo '<input id="teste" value="true" hidden>';
+    }
+    ?>
     <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <input id="text" value="<?php echo $nome[0]; ?>" hidden>
-    <select id="voiceselection" hidden></select>
+    <select id="voiceselection" hidden></select>    
     <script>
-        teste = true;
-        $.get("painel.php", function(data, status){ 
-            console.log(data);
-            console.log(status);
-        });
-        if (teste) {
+        teste = $("#teste").val();
+        console.log(teste);
+        if (teste == "true") {
             $(document).ready(function() {
                 responsiveVoice.speak($('#text').val(), $('#voiceselection').val());
             });
@@ -84,14 +90,6 @@ if (mysqli_num_rows($result) > 0) {
             });
         }
     </script>
-    <?php
-    if ($painel_id[0] != $_GET["painel_id"]) {
-        echo '<audio autoplay>';
-        echo '<source src="/painel/som-alerta.mp3" type="audio/mpeg">';
-        echo 'Your browser does not support the audio tag.';
-        echo '</audio>';
-    }
-    ?>
     <?php
     if ($painel_id[0] != $_GET["painel_id"]) {
         echo '<div class="container text-center h-100 shadow p-3 mb-5 bg-white rounded" style="background-color: #19d518 !important;">';
