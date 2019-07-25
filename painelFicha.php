@@ -44,10 +44,10 @@ include("segurancaOff.php");
                                                     <label>Atendimento em</label>
                                                     <select name="ficha_setor_id" class="form-control" type="text">
                                                         <?php
-                                                        $sql_lista_setores = "SELECT `setor_id`, `setor_nome` FROM `setores_tb`";
+                                                        $sql_lista_setores = "SELECT `setor_id`, `setor_nome`, `setor_sala` FROM `setores_tb` ORDER BY `setor_nome` ASC";
                                                         $query_lista_setores = mysqli_query($conn, $sql_lista_setores);
                                                         while ($row_lista_setores = mysqli_fetch_assoc($query_lista_setores)) {
-                                                            echo '<option value="' . $row_lista_setores["setor_id"] . '">' . $row_lista_setores["setor_nome"] . '</option>';
+                                                            echo '<option value="' . $row_lista_setores["setor_id"] . '">' . $row_lista_setores["setor_nome"] . ' (' . $row_lista_setores["setor_sala"] . ')</option>';
                                                         }
                                                         ?>
                                                     </select>

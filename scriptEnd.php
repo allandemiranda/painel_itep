@@ -712,3 +712,4 @@
 <!-- //Bootstrap Core JavaScript -->
 
 <?php mysqli_close($_SG['link']); ?>
+<?php mysqli_close($conn); ?>

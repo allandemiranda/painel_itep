@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: 23-Jul-2019 às 23:44
--- Versão do servidor: 5.7.26-0ubuntu0.18.04.1
+-- Generation Time: 24-Jul-2019 às 19:29
+-- Versão do servidor: 5.7.27-0ubuntu0.18.04.1
 -- PHP Version: 7.2.19-0ubuntu0.18.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -126,15 +126,16 @@ CREATE TABLE `usuarios_tb` (
   `usuario_setor_id` bigint(20) NOT NULL,
   `usuario_login` text NOT NULL,
   `usuario_senha` text NOT NULL,
-  `usuario_update_data` datetime NOT NULL
+  `usuario_update_data` datetime DEFAULT NULL,
+  `usuario_cadastrado` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `usuarios_tb`
 --
 
-INSERT INTO `usuarios_tb` (`usuario_id`, `usuario_nome`, `usuario_cargo`, `usuario_setor_id`, `usuario_login`, `usuario_senha`, `usuario_update_data`) VALUES
-(1, 'ALLAN DE MIRANDA SILVA', 'ESTAGIÃGIO EM TI', 1, 'allan.silva', 'e10adc3949ba59abbe56e057f20f883e', '2019-07-22 15:29:26');
+INSERT INTO `usuarios_tb` (`usuario_id`, `usuario_nome`, `usuario_cargo`, `usuario_setor_id`, `usuario_login`, `usuario_senha`, `usuario_update_data`, `usuario_cadastrado`) VALUES
+(1, 'ALLAN DE MIRANDA SILVA', 'ESTAGIÃGIO EM TI', 1, 'allan.silva', 'e10adc3949ba59abbe56e057f20f883e', '2019-07-24 18:52:40', 1);
 
 --
 -- Indexes for dumped tables

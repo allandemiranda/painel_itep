@@ -40,7 +40,7 @@ function validaUsuario($usuario, $senha)
     $nusuario = addslashes($usuario);
     $nsenha = $senha;
     // Monta uma consulta SQL (query) para procurar um usuário
-    $sql = "SELECT `usuario_id`, `usuario_nome` FROM `" . $_SG['tabela'] . "` WHERE " . $cS . " `usuario_login` = '" . $nusuario . "' AND " . $cS . " `usuario_senha` = '" . $nsenha . "' LIMIT 1";
+    $sql = "SELECT `usuario_id`, `usuario_nome` , `usuario_cadastrado` FROM `" . $_SG['tabela'] . "` WHERE " . $cS . " `usuario_login` = '" . $nusuario . "' AND " . $cS . " `usuario_senha` = '" . $nsenha . "' LIMIT 1";
     $query = mysqli_query($_SG['link'], $sql);
     $resultado = mysqli_fetch_assoc($query);
     // Verifica se encontrou algum registro
@@ -51,6 +51,7 @@ function validaUsuario($usuario, $senha)
         // Definimos dois valores na sessão com os dados do usuário
         $_SESSION['usuarioID'] = $resultado['usuario_id']; // Pega o valor da coluna 'id do registro encontrado no MySQL
         $_SESSION['usuarioNome'] = $resultado['usuario_nome']; // Pega o valor da coluna 'nome' do registro encontrado no MySQL
+        $_SESSION['usuario_cadastrado'] = $resultado['usuario_cadastrado'];
         // Verifica a opção se sempre validar o login
         if ($_SG['validaSempre'] == true) {
             // Definimos dois valores na sessão com os dados do login
@@ -82,6 +83,11 @@ function protegePagina()
     if ($_REQUEST["status"] == "logout") {
         expulsaVisitanteOff();
     }
+    if ($_REQUEST["status"] == "") {
+        if ($_SESSION["usuario_cadastrado"] == 0) {
+            header("Location: cadastro.php?status=on");
+        }
+    }
 }
 /**
  * Função para expulsar um visitante
@@ -104,6 +110,17 @@ function expulsaVisitanteErro()
     unset($_SESSION['usuarioID'], $_SESSION['usuarioNome'], $_SESSION['usuarioLogin'], $_SESSION['usuarioSenha']);
     // Manda pra tela de login
     header("Location: " . $_SG['paginaLogin'] . "?status=erro");
+}
+/**
+ * Função para expulsar um visitante
+ */
+function expulsaVisitanteCadastro()
+{
+    global $_SG;
+    // Remove as variáveis da sessão (caso elas existam)
+    unset($_SESSION['usuarioID'], $_SESSION['usuarioNome'], $_SESSION['usuarioLogin'], $_SESSION['usuarioSenha']);
+    // Manda pra tela de login
+    header("Location: " . $_SG['paginaLogin'] . "?status=cadastroOK");
 }
 
 function exigirAdmin()
