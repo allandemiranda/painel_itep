@@ -17,10 +17,63 @@ include("segurancaOff.php");
                 <div class="bs-example widget-shadow" data-example-id="hoverable-table">
                     <h4>
                         Painel Geral
+                        <button type="button" class="btn btn-danger" style="float: right;" data-toggle="modal" data-target="#novaAcessibilidadeModal">
+                            Acessibilidade
+                        </button>
                         <button type="button" class="btn btn-primary" style="float: right;" data-toggle="modal" data-target="#novaFichaModal">
                             Nova Ficha
                         </button>
                     </h4>
+                    <!-- Modal -->
+                    <div class="modal fade" id="novaAcessibilidadeModal" tabindex="-1" role="dialog" aria-labelledby="novaAcessibilidadeModal" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="forms">
+                                    <div class="form-grids row widget-shadow" data-example-id="basic-forms">
+                                        <div class="form-title">
+                                            <h4>Nova Ficha </h4>
+                                        </div>
+                                        <div class="form-body">
+                                            <form target="_blank" action="imprimirFicha.php" method="POST" name="formulario">
+                                                <div class="col-md-6">
+                                                    <label>Normal </label>
+                                                    <div class="form-group">
+                                                        <?php
+                                                        $sql_lista_setores = "SELECT `setor_id`, `setor_nome`, `setor_sala`,`setor_acessibilidade_cor`, `setor_acessibilidade_check` FROM `setores_tb` ORDER BY `setor_nome` ASC";
+                                                        $query_lista_setores = mysqli_query($conn, $sql_lista_setores);
+                                                        while ($row_lista_setores = mysqli_fetch_assoc($query_lista_setores)) {
+                                                            if ($row_lista_setores["setor_acessibilidade_check"]) {
+                                                                echo '<button class="btn" name="submitNormal" value="' . $row_lista_setores["setor_id"] . '" type="submit" style="color: white; background-color: ' . $row_lista_setores["setor_acessibilidade_cor"] . '">' . $row_lista_setores["setor_nome"] . '</button>';
+                                                                echo '<br><br>';
+                                                            }
+                                                        }
+                                                        ?>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Preferêncial </label>
+                                                    <div class="form-group">
+                                                        <?php
+                                                        $sql_lista_setores = "SELECT `setor_id`, `setor_nome`, `setor_sala`,`setor_acessibilidade_cor`, `setor_acessibilidade_check` FROM `setores_tb` ORDER BY `setor_nome` ASC";
+                                                        $query_lista_setores = mysqli_query($conn, $sql_lista_setores);
+                                                        while ($row_lista_setores = mysqli_fetch_assoc($query_lista_setores)) {
+                                                            if ($row_lista_setores["setor_acessibilidade_check"]) {
+                                                                echo '<button class="btn" name="submitPreferencial" value="' . $row_lista_setores["setor_id"] . '" type="submit" style="color: white; background-color: ' . $row_lista_setores["setor_acessibilidade_cor"] . '">' . $row_lista_setores["setor_nome"] . '</button>';
+                                                                echo '<br><br>';
+                                                            }
+                                                        }
+                                                        ?>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Modal -->
                     <!-- Modal -->
                     <div class="modal fade" id="novaFichaModal" tabindex="-1" role="dialog" aria-labelledby="novaFichaModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
@@ -58,7 +111,7 @@ include("segurancaOff.php");
                                                         Preferencial (idosos, gestantes e deficientes)
                                                     </label>
                                                 </div>
-                                                <button type="submit" class="btn btn-success">Imprimir</button>
+                                                <button name="submit" value="fichaNormal" type="submit" class="btn btn-success">Imprimir</button>
                                                 <a href="painelFicha.php"><button type="button" class="btn btn-danger">Voltar</button></a>
                                             </form>
                                         </div>

@@ -10,22 +10,60 @@ function test_input($data)
     return $data;
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $ficha_nome = test_input($_POST["ficha_nome"]);
-    $ficha_telefone = test_input($_POST["ficha_telefone"]);
-    $ficha_setor_id = test_input($_POST["ficha_setor_id"]);
-    $ficha_preferencial = $_POST["ficha_preferencial"];
+    if ($_POST["submit"] == "fichaNormal") {
+        $ficha_nome = test_input($_POST["ficha_nome"]);
+        $ficha_telefone = test_input($_POST["ficha_telefone"]);
+        $ficha_setor_id = test_input($_POST["ficha_setor_id"]);
+        $ficha_preferencial = $_POST["ficha_preferencial"];
 
-    if ($ficha_preferencial == "on") {
-        $ficha_preferencial = "1";
-    } else {
-        $ficha_preferencial = "0";
+        if ($ficha_preferencial == "on") {
+            $ficha_preferencial = "1";
+        } else {
+            $ficha_preferencial = "0";
+        }
+
+        $ficha_status = "não atendido";
+        $ficha_data = date('Y-m-d H:i:s');
+
+        $sql_nova_ficha = "INSERT INTO `fichas_tb`(`ficha_nome`, `ficha_telefone`, `ficha_setor_id`, `ficha_status`, `ficha_data`, `ficha_preferencial`) VALUES ('" . $ficha_nome . "','" . $ficha_telefone . "','" . $ficha_setor_id . "','" . $ficha_status . "','" . $ficha_data . "','" . $ficha_preferencial . "')";
+        mysqli_query($conn, $sql_nova_ficha);
     }
+    if ($_POST["submitNormal"] != "") {
+        $ficha_nome = "-";
+        $ficha_telefone = "-";
+        $ficha_setor_id = test_input($_POST["submitNormal"]);
+        $ficha_preferencial = "off";
 
-    $ficha_status = "não atendido";
-    $ficha_data = date('Y-m-d H:i:s');
+        if ($ficha_preferencial == "on") {
+            $ficha_preferencial = "1";
+        } else {
+            $ficha_preferencial = "0";
+        }
 
-    $sql_nova_ficha = "INSERT INTO `fichas_tb`(`ficha_nome`, `ficha_telefone`, `ficha_setor_id`, `ficha_status`, `ficha_data`, `ficha_preferencial`) VALUES ('" . $ficha_nome . "','" . $ficha_telefone . "','" . $ficha_setor_id . "','" . $ficha_status . "','" . $ficha_data . "','" . $ficha_preferencial . "')";
-    mysqli_query($conn, $sql_nova_ficha);
+        $ficha_status = "não atendido";
+        $ficha_data = date('Y-m-d H:i:s');
+
+        $sql_nova_ficha = "INSERT INTO `fichas_tb`(`ficha_nome`, `ficha_telefone`, `ficha_setor_id`, `ficha_status`, `ficha_data`, `ficha_preferencial`) VALUES ('" . $ficha_nome . "','" . $ficha_telefone . "','" . $ficha_setor_id . "','" . $ficha_status . "','" . $ficha_data . "','" . $ficha_preferencial . "')";
+        mysqli_query($conn, $sql_nova_ficha);
+    }
+    if ($_POST["submitPreferencial"] != "") {
+        $ficha_nome = "-";
+        $ficha_telefone = "-";
+        $ficha_setor_id = test_input($_POST["submitPreferencial"]);
+        $ficha_preferencial = "on";
+
+        if ($ficha_preferencial == "on") {
+            $ficha_preferencial = "1";
+        } else {
+            $ficha_preferencial = "0";
+        }
+
+        $ficha_status = "não atendido";
+        $ficha_data = date('Y-m-d H:i:s');
+
+        $sql_nova_ficha = "INSERT INTO `fichas_tb`(`ficha_nome`, `ficha_telefone`, `ficha_setor_id`, `ficha_status`, `ficha_data`, `ficha_preferencial`) VALUES ('" . $ficha_nome . "','" . $ficha_telefone . "','" . $ficha_setor_id . "','" . $ficha_status . "','" . $ficha_data . "','" . $ficha_preferencial . "')";
+        mysqli_query($conn, $sql_nova_ficha);
+    }
 }
 ?>
 <?php
