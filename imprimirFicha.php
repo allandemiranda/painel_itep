@@ -107,9 +107,21 @@ if ($_GET['fichaID'] != "") {
             word-wrap: break-word;
         }
     </style>
+    <script>
+        function ClosePrint() {
+            setTimeout(function() {
+                window.print();
+            }, 500);
+            window.onfocus = function() {
+                setTimeout(function() {
+                    window.close();
+                }, 500);
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body onload="ClosePrint()">
     <div>
         <div>
             <?php
@@ -145,6 +157,3 @@ if ($_GET['fichaID'] != "") {
 </body>
 
 </html>
-<script>
-    window.print();
-</script>

@@ -87,15 +87,15 @@ include("segurancaOff.php");
                                             <form target="_blank" action="imprimirFicha.php" method="POST">
                                                 <div class="form-group">
                                                     <label>Nome </label>
-                                                    <input name="ficha_nome" type="text" class="form-control" placeholder="Nome Completo" onChange="javascript:this.value=this.value.toUpperCase();" value="" required>
+                                                    <input name="ficha_nome" type="text" class="col-md-12 form-control" placeholder="Nome Completo" onChange="javascript:this.value=this.value.toUpperCase();" value="" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Telefone</label>
-                                                    <input name="ficha_telefone" type="tel" class="form-control" value="" placeholder="(84) 00000-0000" required>
+                                                    <input name="ficha_telefone" type="tel" class="col-md-12 form-control" value="" placeholder="(84) 00000-0000" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Atendimento em</label>
-                                                    <select name="ficha_setor_id" class="form-control" type="text">
+                                                    <select name="ficha_setor_id" class="col-md-12 form-control" type="text">
                                                         <?php
                                                         $sql_lista_setores = "SELECT `setor_id`, `setor_nome`, `setor_sala` FROM `setores_tb` ORDER BY `setor_nome` ASC";
                                                         $query_lista_setores = mysqli_query($conn, $sql_lista_setores);
@@ -105,6 +105,7 @@ include("segurancaOff.php");
                                                         ?>
                                                     </select>
                                                 </div>
+                                                <br>
                                                 <div class="checkbox">
                                                     <label>
                                                         <input name="ficha_preferencial" type="checkbox" class="checkbox" placeholder="Sala do Setor">

@@ -88,11 +88,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <input name="setor_id" value="<?php echo $row_perfil_setor_selecionar['setor_id']; ?>" hidden>
                                 <div class="form-group">
                                     <label>Nome do Setor</label>
-                                    <input name="setor_nome" type="text" class="form-control" placeholder="Nome do Setor" onChange="javascript:this.value=this.value.toUpperCase();" value="<?php echo $row_perfil_setor_selecionar['setor_nome']; ?>" required>
+                                    <input name="setor_nome" type="text" class="col-md-12 form-control" placeholder="Nome do Setor" onChange="javascript:this.value=this.value.toUpperCase();" value="<?php echo $row_perfil_setor_selecionar['setor_nome']; ?>" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Sala</label>
-                                    <input name="setor_sala" type="text" class="form-control" value="<?php echo $row_perfil_setor_selecionar['setor_sala']; ?>" placeholder="Sala do Setor" onChange="javascript:this.value=this.value.toUpperCase();" required>
+                                    <input name="setor_sala" type="text" class="col-md-12 form-control" value="<?php echo $row_perfil_setor_selecionar['setor_sala']; ?>" placeholder="Sala do Setor" onChange="javascript:this.value=this.value.toUpperCase();" required>
                                 </div>
                                 <div class="checkbox">
                                     <label>

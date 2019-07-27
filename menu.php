@@ -1,3 +1,17 @@
+<?php
+function verificarSetorNecropapiloscopia()
+{
+    global $_SG;
+    $sql_user = "SELECT `setor_nome` FROM `setores_tb` WHERE `setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "')";
+    $query_user = mysqli_query($_SG['link'], $sql_user);
+    $row_user = mysqli_fetch_assoc($query_user);
+    if ($row_user["setor_nome"] == "NECROPAPILOSCOPIA") {
+        return true;
+    } else {
+        return false;
+    }
+}
+?>
 <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
     <!--left-fixed -navigation-->
     <aside class="sidebar-left">
@@ -30,6 +44,21 @@
                                 <li><a href="mailOutbox.php"><i class="fa fa-angle-right"></i> Mail Outbox </a></li>
                                 <li><a href="novoMail.php"><i class="fa fa-angle-right"></i> Enviar Mail </a></li>
                             </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-pagelines"></i> <span>Necropapiloscopia </span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                            <small class="label label-primary1 pull-right"></small></a>
+                        <ul class="treeview-menu">
+                            <?php
+                            if (verificarSetorNecropapiloscopia()) {
+                                echo '<li><a href="necropapiloscopiaNovo.php"><i class="fa fa-angle-right"></i> Novo </a></li>';
+                            }
+                            ?>
+                            <li><a href="necropapiloscopiaLista.php"><i class="fa fa-angle-right"></i> Documentos </a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Pesquisar </a></li>
+                        </ul>
                     </li>
                     <?php
                     $sql_menu_configuracos_aba_pegarSetor = "SELECT `setor_admin` FROM `setores_tb` WHERE `setor_id`=(SELECT`usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "')";

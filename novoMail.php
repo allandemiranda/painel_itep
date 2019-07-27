@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
                             <form action="" method="POST" class="com-mail">
                                 <div class="form-group">
-                                    <select name="mail_para_setor_id" class="form-control" type="text">
+                                    <select name="mail_para_setor_id" class="form-control" type="text" style="width: 100%;">
                                         <?php
                                         $sql_lista_setores = "SELECT `setor_id`, `setor_nome` FROM `setores_tb`";
                                         $query_lista_setores = mysqli_query($_SG['link'], $sql_lista_setores);

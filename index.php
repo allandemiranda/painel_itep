@@ -293,15 +293,15 @@ if ($_GET["submit"] == "naoAtendido") {
 												</div>
 												<div class="form-body">
 													<form target="_blank" action="imprimirFicha.php" method="POST">
-														<div class="form-group">
+														<div class="col-md-12 form-group">
 															<label>Nome </label>
 															<input name="ficha_nome" type="text" class="form-control" placeholder="Nome Completo" onChange="javascript:this.value=this.value.toUpperCase();" value="" required>
 														</div>
-														<div class="form-group">
+														<div class="col-md-12 form-group">
 															<label>Telefone</label>
 															<input name="ficha_telefone" type="tel" class="form-control" value="" placeholder="(84) 00000-0000" required>
 														</div>
-														<div class="form-group">
+														<div class="col-md-12 form-group">
 															<label>Atendimento em</label>
 															<select name="ficha_setor_id" class="form-control" type="text">
 																<?php
@@ -313,6 +313,7 @@ if ($_GET["submit"] == "naoAtendido") {
 																?>
 															</select>
 														</div>
+														<br>
 														<div class="checkbox">
 															<label>
 																<input name="ficha_preferencial" type="checkbox" class="checkbox" placeholder="Sala do Setor">
@@ -522,15 +523,15 @@ if ($_GET["submit"] == "naoAtendido") {
 													echo '<form action="' . htmlspecialchars($_SERVER["PHP_SELF"]) . '" method="POST">';
 													echo '<div class="form-group">';
 													echo '<label>Nome </label>';
-													echo '<input name="ficha_nome" type="text" class="form-control" value="' . $row_lista_fichas_geral["ficha_nome"] . '" disabled>';
+													echo '<input name="ficha_nome" type="text" class="col-md-12 form-control" value="' . $row_lista_fichas_geral["ficha_nome"] . '" disabled>';
 													echo '</div>';
 													echo '<div class="form-group">';
 													echo '<label>Telefone</label>';
-													echo '<input name="ficha_telefone" type="tel" class="form-control" value="' . $row_lista_fichas_geral["ficha_telefone"] . '" disabled>';
+													echo '<input name="ficha_telefone" type="tel" class="col-md-12 form-control" value="' . $row_lista_fichas_geral["ficha_telefone"] . '" disabled>';
 													echo '</div>';
 													echo '<div class="form-group">';
 													echo '<label>Atendimento em</label>';
-													echo '<select name="ficha_setor_id" class="form-control" type="text">';
+													echo '<select name="ficha_setor_id" class="col-md-12 form-control" type="text">';
 													$sql_lista_setores = "SELECT `setor_id`, `setor_nome` FROM `setores_tb`";
 													$query_lista_setores = mysqli_query($_SG['link'], $sql_lista_setores);
 													while ($row_lista_setores = mysqli_fetch_assoc($query_lista_setores)) {
@@ -543,9 +544,12 @@ if ($_GET["submit"] == "naoAtendido") {
 													echo '</select>';
 													echo '</div>';
 													echo '<input type="" name="ficha_id" value="' . $row_lista_fichas_geral["ficha_id"] . '" hidden>';
+													echo '<br>';
+													echo '<div clase="col-md-12">';
 													echo '<button type="submit" name="submit" value="encaminhar" class="btn btn-warning">Encaminhar</button>';
 													echo '<button type="submit" name="submit" value="finalizar" class="btn btn-success">Finalizar</button>';
 													echo '<a href="/"><button type="button" class="btn btn-danger" data-dismiss="modal">Voltar</button></a>';
+													echo '</div>';
 													echo '</form>';
 													echo '</div>';
 													echo '</div>';

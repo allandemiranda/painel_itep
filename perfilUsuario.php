@@ -16,12 +16,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $usuario_cargo = test_input($_POST["usuario_cargo"]);
         $usuario_setor_id = test_input($_POST["usuario_setor_id"]);
         $usuario_senha = test_input($_POST["usuario_senha"]);
+        $usuario_matricula = test_input(($_POST["usuario_matricula"]));
 
-        $usuario_senha = md5($usuario_senha);        
+        $usuario_senha = md5($usuario_senha);
 
         $usuario_update_data = date('Y-m-d H:i:s');
 
-        $sql_adicionar_novo_usurio = "UPDATE `usuarios_tb` SET `usuario_cargo`='" . $usuario_cargo . "',`usuario_setor_id`='" . $usuario_setor_id . "',`usuario_senha`='" . $usuario_senha . "',`usuario_update_data`='" . $usuario_update_data . "' WHERE usuario_id='" . $_SESSION['usuarioID'] . "'";
+        $sql_adicionar_novo_usurio = "UPDATE `usuarios_tb` SET `usuario_matricula` = '" . $usuario_matricula . "', `usuario_cargo`='" . $usuario_cargo . "',`usuario_setor_id`='" . $usuario_setor_id . "',`usuario_senha`='" . $usuario_senha . "',`usuario_update_data`='" . $usuario_update_data . "' WHERE usuario_id='" . $_SESSION['usuarioID'] . "'";
 
         if (mysqli_query($_SG['link'], $sql_adicionar_novo_usurio)) {
             $_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
@@ -68,21 +69,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="form-body">
                             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                                 <?php
-                                $sql_perfilUsuario = "SELECT `usuario_nome`, `usuario_cargo`, `usuario_setor_id`, `usuario_login` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "'";
+                                $sql_perfilUsuario = "SELECT `usuario_matricula`, `usuario_nome`, `usuario_cargo`, `usuario_setor_id`, `usuario_login` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "'";
                                 $query_perfilUsuario = mysqli_query($_SG['link'], $sql_perfilUsuario);
                                 $row_perfilUsuario = mysqli_fetch_assoc($query_perfilUsuario);
                                 ?>
-                                <div class="form-group">
+                                <div class="col-md-12 form-group">
                                     <label>Nome</label>
-                                    <input name="usuario_nome" type="text" class="form-control" placeholder="Nome completo" onChange="javascript:this.value=this.value.toUpperCase();" value="<?php echo $row_perfilUsuario['usuario_nome']; ?>" disabled>
+                                    <input name="usuario_nome" type="text" class="col-md-12 form-control" placeholder="Nome completo" onChange="javascript:this.value=this.value.toUpperCase();" value="<?php echo $row_perfilUsuario['usuario_nome']; ?>" disabled>
                                 </div>
-                                <div class="form-group">
+                                <div class="col-md-12 form-group">
                                     <label>Cargo</label>
-                                    <input name="usuario_cargo" type="text" class="form-control" placeholder="Cargo" onChange="javascript:this.value=this.value.toUpperCase();" value="<?php echo $row_perfilUsuario['usuario_cargo']; ?>" required>
+                                    <input name="usuario_cargo" type="text" class="col-md-12 form-control" placeholder="Cargo" onChange="javascript:this.value=this.value.toUpperCase();" value="<?php echo $row_perfilUsuario['usuario_cargo']; ?>" required>
                                 </div>
-                                <div class="form-group">
+                                <div class="col-md-12 form-group">
                                     <label>Setor</label>
-                                    <select name="usuario_setor_id" class="form-control" type="text">
+                                    <select name="usuario_setor_id" class="col-md-12 form-control" type="text">
                                         <?php
                                         $sql_lista_setores = "SELECT `setor_id`, `setor_nome`, `setor_sala` FROM `setores_tb` ORDER BY `setor_nome` ASC";
                                         $query_lista_setores = mysqli_query($_SG['link'], $sql_lista_setores);
@@ -96,16 +97,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         ?>
                                     </select>
                                 </div>
-                                <div class="form-group">
+                                <div class="col-md-4 form-group">
+                                    <label>Matrícula</label>
+                                    <input name="usuario_matricula" type="text" class="col-md-12 form-control" value="<?php echo $row_perfilUsuario['usuario_matricula']; ?>" placeholder="000.00-0" required>
+                                </div>
+                                <div class="col-md-4 form-group">
                                     <label>Login</label>
                                     <input name="usuario_login" type="text" class="form-control" placeholder="Nome completo" onChange="javascript:this.value=this.value.toUpperCase();" value="<?php echo $row_perfilUsuario['usuario_login']; ?>" disabled>
                                 </div>
-                                <div class="form-group">
+                                <div class="col-md-4 form-group">
                                     <label>Senha</label>
                                     <input name="usuario_senha" type="password" class="form-control" placeholder="Senha" value="" required>
                                 </div>
-                                <button type="submit" class="btn btn-success">Salvar</button>
-                                <a href="/"><button type="button" class="btn btn-danger">Voltar</button></a>
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-success">Salvar</button>
+                                    <a href="/"><button type="button" class="btn btn-danger">Voltar</button></a>
+                                    <br><br>
+                                </div>
                             </form>
                         </div>
                     </div>

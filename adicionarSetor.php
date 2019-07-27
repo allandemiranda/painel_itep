@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $setor_acessibilidade_check = "0";
     }
 
-    $sql_perfil_setor_novo = "INSERT INTO `setores_tb`(`setor_nome`, `setor_sala`, `setor_hall`, `setor_admin`,`setor_ficha_preferencial`,`setor_acessibilidade_cor`, `setor_acessibilidade_check`) VALUES ('" . $setor_nome . "','" . $setor_sala . "','" . $setor_hall . "','" . $setor_admin . "','0','".$setor_acessibilidade_cor."','".$setor_acessibilidade_check."')";
+    $sql_perfil_setor_novo = "INSERT INTO `setores_tb`(`setor_nome`, `setor_sala`, `setor_hall`, `setor_admin`,`setor_ficha_preferencial`,`setor_acessibilidade_cor`, `setor_acessibilidade_check`) VALUES ('" . $setor_nome . "','" . $setor_sala . "','" . $setor_hall . "','" . $setor_admin . "','0','" . $setor_acessibilidade_cor . "','" . $setor_acessibilidade_check . "')";
 
     if (mysqli_query($_SG['link'], $sql_perfil_setor_novo)) {
         $_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
@@ -78,33 +78,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="form-body">
                             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                                 <input name="setor_id" value="<?php echo $row_perfil_setor_selecionar['setor_id']; ?>" hidden>
-                                <div class="form-group">
+                                <div class="form-group col-md-12">
                                     <label>Nome do Setor</label>
-                                    <input name="setor_nome" type="text" class="form-control" placeholder="Nome do Setor" onChange="javascript:this.value=this.value.toUpperCase();" value="" required>
+                                    <input name="setor_nome" type="text" class="col-md-12 form-control" placeholder="Nome do Setor" onChange="javascript:this.value=this.value.toUpperCase();" value="" required>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group col-md-12">
                                     <label>Sala</label>
-                                    <input name="setor_sala" type="text" class="form-control" value="" placeholder="Sala do Setor" onChange="javascript:this.value=this.value.toUpperCase();" required>
+                                    <input name="setor_sala" type="text" class="col-md-12 form-control" value="" placeholder="Sala do Setor" onChange="javascript:this.value=this.value.toUpperCase();" required>
                                 </div>
-                                <div class="checkbox">
+                                <div class="checkbox col-md-12">
                                     <label>
                                         <input name="setor_hall" type="checkbox" class="checkbox" placeholder="Sala do Setor">
                                         Atendimento Hall
                                     </label>
                                 </div>
-                                <div class="checkbox">
+                                <div class="checkbox col-md-12">
                                     <label>
                                         <input name="setor_admin" type="checkbox" class="checkbox" placeholder="Sala do Setor">
                                         Setor administrador do sistema
                                     </label>
                                 </div>
-                                <div class="checkbox">
+                                <div class="checkbox col-md-12">
                                     <label>
                                         <input name="setor_acessibilidade_check" type="checkbox" class="checkbox" placeholder="Sala do Setor">
                                         Chamador com acessibilidade
                                     </label>
                                 </div>
-                                <div class="form-group" id="acessibilidade">
+                                <div class="form-group col-md-12" id="acessibilidade">
                                     <label>
                                         Cor do botão:
                                     </label>
@@ -119,8 +119,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         <input type="radio" name="setor_acessibilidade_cor" value="#5B479F"> <a style="color:white; background-color: #5B479F;">#5B479F</a>
                                     </label>
                                 </div>
-                                <button type="submit" class="btn btn-success">Salvar</button>
-                                <a href="listaSetor.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-success">Salvar</button>
+                                    <a href="listaSetor.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
+                                    <br><br>
+                                </div>
                             </form>
                         </div>
                     </div>

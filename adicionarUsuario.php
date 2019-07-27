@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario_cargo = test_input($_POST["usuario_cargo"]);
     $usuario_setor_id = test_input($_POST["usuario_setor_id"]);
     $usuario_senha = test_input($_POST["usuario_senha"]);
+    $usuario_matricula = test_input(($_POST["usuario_matricula"]));
 
     $usuario_senha = md5($usuario_senha);
 
@@ -40,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $usuario_update_data = date('Y-m-d H:i:s');
 
-    $sql_adicionar_novo_usurio = "INSERT INTO `usuarios_tb`(`usuario_nome`, `usuario_cargo`, `usuario_setor_id`, `usuario_login`, `usuario_senha`, `usuario_update_data`) VALUES ('" . $usuario_nome . "','" . $usuario_cargo . "','" . $usuario_setor_id . "','" . $usuario_login . "','" . $usuario_senha . "','" . $usuario_update_data . "')";
+    $sql_adicionar_novo_usurio = "INSERT INTO `usuarios_tb`(`usuario_nome`, `usuario_cargo`, `usuario_matricula`, `usuario_setor_id`, `usuario_login`, `usuario_senha`, `usuario_update_data`) VALUES ('" . $usuario_nome . "','" . $usuario_cargo . "','" . $usuario_matricula . "','" . $usuario_setor_id . "','" . $usuario_login . "','" . $usuario_senha . "','" . $usuario_update_data . "')";
 
     if (mysqli_query($_SG['link'], $sql_adicionar_novo_usurio)) {
         $_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
@@ -80,17 +81,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
                         <div class="form-body">
                             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-                                <div class="form-group">
+                                <div class="form-group col-md-12">
                                     <label>Nome</label>
-                                    <input name="usuario_nome" type="text" class="form-control" placeholder="Nome completo" onChange="javascript:this.value=this.value.toUpperCase();" value="" required>
+                                    <input name="usuario_nome" type="text" class="col-md-12 form-control" placeholder="Nome completo" onChange="javascript:this.value=this.value.toUpperCase();" value="" required>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group col-md-12">
                                     <label>Cargo</label>
-                                    <input name="usuario_cargo" type="text" class="form-control" value="" placeholder="Cargo" onChange="javascript:this.value=this.value.toUpperCase();" required>
+                                    <input name="usuario_cargo" type="text" class="col-md-12 form-control" value="" placeholder="Cargo" onChange="javascript:this.value=this.value.toUpperCase();" required>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group col-md-12">
+                                    <label>Matrícula</label>
+                                    <input name="usuario_matricula" type="text" class="col-md-12 form-control" value="" placeholder="000.00-0" onChange="javascript:this.value=this.value.toUpperCase();" required>
+                                </div>
+                                <div class="form-group col-md-12">
                                     <label>Setor</label>
-                                    <select name="usuario_setor_id" class="form-control" type="text">
+                                    <select name="usuario_setor_id" class="col-md-12 form-control" type="text">
                                         <?php
                                         $sql_lista_setores = "SELECT `setor_id`, `setor_nome`, `setor_sala` FROM `setores_tb` ORDER BY `setor_nome` ASC";
                                         $query_lista_setores = mysqli_query($_SG['link'], $sql_lista_setores);
@@ -100,12 +105,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         ?>
                                     </select>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group col-md-12">
                                     <label>Senha</label>
                                     <input name="usuario_senha" type="password" class="form-control" placeholder="Senha" value="" required>
                                 </div>
-                                <button type="submit" class="btn btn-success">Criar</button>
-                                <a href="listaUsuario.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-success">Criar</button>
+                                    <a href="listaUsuario.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
+                                    <br><br>
+                                </div>
                             </form>
                         </div>
                     </div>
