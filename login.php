@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 						?>
 						<form action="valida.php" method="POST">
 							<input type="text" class="user" name="usuario_login" placeholder="Seu Usuário" required>
-							<input type="password" class="lock" name="usuario_senha" placeholder="Senha" required>
+							<input type="password" minlength="5" class="lock" name="usuario_senha" placeholder="Senha" required>
 							<div class="forgot-grid">
 								<label class="checkbox"><input type="checkbox" checked=""><i></i>Lembre
 									de mim</label>

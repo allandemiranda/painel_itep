@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $usuario_update_data = date('Y-m-d H:i:s');
 
-        $sql_adicionar_novo_usurio = "UPDATE `usuarios_tb` SET `usuario_matricula` = '" . $usuario_matricula . "', `usuario_cargo`='" . $usuario_cargo . "',`usuario_setor_id`='" . $usuario_setor_id . "',`usuario_senha`='" . $usuario_senha . "',`usuario_update_data`='" . $usuario_update_data . "' WHERE usuario_id='" . $_SESSION['usuarioID'] . "'";
+        $sql_adicionar_novo_usurio = "UPDATE `usuarios_tb` SET `usuario_matricula` = '" . $usuario_matricula . "', `usuario_cargo`='" . $usuario_cargo . "',`usuario_setor_id`='" . $usuario_setor_id . "',`usuario_senha`='" . $usuario_senha . "',`usuario_update_data`='" . $usuario_update_data . "', `usuario_setor_edit`='0' WHERE usuario_id='" . $_SESSION['usuarioID'] . "'";
 
         if (mysqli_query($_SG['link'], $sql_adicionar_novo_usurio)) {
             $_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="form-body">
                             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                                 <?php
-                                $sql_perfilUsuario = "SELECT `usuario_matricula`, `usuario_nome`, `usuario_cargo`, `usuario_setor_id`, `usuario_login` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "'";
+                                $sql_perfilUsuario = "SELECT `usuario_id`, `usuario_nome`, `usuario_cargo`, `usuario_matricula`, `usuario_setor_id`, `usuario_setor_edit`, `usuario_login`, `usuario_senha` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "'";
                                 $query_perfilUsuario = mysqli_query($_SG['link'], $sql_perfilUsuario);
                                 $row_perfilUsuario = mysqli_fetch_assoc($query_perfilUsuario);
                                 ?>
@@ -83,19 +83,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </div>
                                 <div class="col-md-12 form-group">
                                     <label>Setor</label>
-                                    <select name="usuario_setor_id" class="col-md-12 form-control" type="text">
-                                        <?php
-                                        $sql_lista_setores = "SELECT `setor_id`, `setor_nome`, `setor_sala` FROM `setores_tb` ORDER BY `setor_nome` ASC";
-                                        $query_lista_setores = mysqli_query($_SG['link'], $sql_lista_setores);
-                                        while ($row_lista_setores = mysqli_fetch_assoc($query_lista_setores)) {
-                                            if ($row_lista_setores["setor_id"] == $row_perfilUsuario['usuario_setor_id']) {
-                                                echo '<option value="' . $row_lista_setores["setor_id"] . '" selected>' . $row_lista_setores["setor_nome"] . ' (' . $row_lista_setores["setor_sala"] . ')</option>';
-                                            } else {
-                                                echo '<option value="' . $row_lista_setores["setor_id"] . '">' . $row_lista_setores["setor_nome"] . ' (' . $row_lista_setores["setor_sala"] . ')</option>';
-                                            }
+                                    <?php
+                                    if ($row_perfilUsuario["usuario_setor_edit"] == 1) {
+                                        echo '<select name="usuario_setor_id" class="col-md-12 form-control" type="text">';
+                                    } else {
+                                        echo '<select name="usuario_setor_id" class="col-md-12 form-control" type="text" disabled>';
+                                    }
+                                    $sql_lista_setores = "SELECT `setor_id`, `setor_nome`, `setor_sala` FROM `setores_tb` ORDER BY `setor_nome` ASC";
+                                    $query_lista_setores = mysqli_query($_SG['link'], $sql_lista_setores);
+                                    while ($row_lista_setores = mysqli_fetch_assoc($query_lista_setores)) {
+                                        if ($row_lista_setores["setor_id"] == $row_perfilUsuario['usuario_setor_id']) {
+                                            echo '<option value="' . $row_lista_setores["setor_id"] . '" selected>' . $row_lista_setores["setor_nome"] . ' (' . $row_lista_setores["setor_sala"] . ')</option>';
+                                            $selecionado = $row_lista_setores["setor_id"];
+                                        } else {
+                                            echo '<option value="' . $row_lista_setores["setor_id"] . '">' . $row_lista_setores["setor_nome"] . ' (' . $row_lista_setores["setor_sala"] . ')</option>';
                                         }
-                                        ?>
-                                    </select>
+                                    }
+                                    echo '</select>';
+                                    if ($row_perfilUsuario["usuario_setor_edit"] != 1) {
+                                        echo '<input name="usuario_setor_id" value="' . $selecionado . '" hidden>';
+                                    }
+                                    ?>
                                 </div>
                                 <div class="col-md-4 form-group">
                                     <label>Matrícula</label>
@@ -107,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </div>
                                 <div class="col-md-4 form-group">
                                     <label>Senha</label>
-                                    <input name="usuario_senha" type="password" class="form-control" placeholder="Senha" value="" required>
+                                    <input name="usuario_senha" type="password" minlength="5" class="form-control" placeholder="Senha" value="" required>
                                 </div>
                                 <div class="col-md-12">
                                     <button type="submit" class="btn btn-success">Salvar</button>

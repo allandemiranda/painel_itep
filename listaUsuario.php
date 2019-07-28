@@ -5,12 +5,26 @@ exigirAdmin();
 ?>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-	if ($_GET["requisicao"] == "senha") {
-		$sql_lista_usuarios_nova_senha = "UPDATE `usuarios_tb` SET `usuario_senha`='" . md5('1234') . "' WHERE `usuario_id`='" . $_GET["usuarioID"] . "'";
+	if ($_GET["requisicao"] == "setor") {
+		$sql_lista_usuarios_nova_senha = "UPDATE `usuarios_tb` SET `usuario_setor_edit`='1' WHERE `usuario_id`='" . $_GET["usuarioID"] . "'";
 		if (mysqli_query($_SG['link'], $sql_lista_usuarios_nova_senha)) {
 			$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
 			$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
-			$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Usuário com senha 1234.';
+			$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Usuário de ID ' . $_GET["usuarioID"] . ' com modificação de setor ativado.';
+			$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+		} else {
+			$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
+			$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
+			$_SG['status-alert'] = $_SG['status-alert'] . " Error updating record: " . mysqli_error($_SG['link']);
+			$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+		}
+	}
+	if ($_GET["requisicao"] == "senha") {
+		$sql_lista_usuarios_nova_senha = "UPDATE `usuarios_tb` SET `usuario_senha`='" . md5('123456') . "' WHERE `usuario_id`='" . $_GET["usuarioID"] . "'";
+		if (mysqli_query($_SG['link'], $sql_lista_usuarios_nova_senha)) {
+			$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
+			$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
+			$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Usuário de ID ' . $_GET["usuarioID"] . ' com senha 123456.';
 			$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
 		} else {
 			$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
@@ -24,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 		if (mysqli_query($_SG['link'], $sql_lista_usuarios_nova_deletar)) {
 			$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-success alert-dismissable">';
 			$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
-			$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Usuário deletado.';
+			$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Usuário de ID ' . $_GET["usuarioID"] . ' deletado.';
 			$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
 		} else {
 			$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
@@ -64,6 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 									<th style="text-align: center;">Setor</th>
 									<th style="text-align: center;">Usuário</th>
 									<th style="text-align: center;">Senha</th>
+									<th style="text-align: center;">Setor</th>
 									<th style="text-align: center;">Excluir</th>
 								</tr>
 							</thead>
@@ -88,8 +103,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 									if ($row_lista_usuarios["usuario_id"] == $_SESSION['usuarioID']) {
 										echo '<td></td>';
 										echo '<td></td>';
+										echo '<td></td>';
 									} else {
 										echo '<td style="text-align: center;"><a href="?requisicao=senha&usuarioID=' . $row_lista_usuarios["usuario_id"] . '"><i class="glyphicon glyphicon-info-sign"></i></td>';
+										echo '<td style="text-align: center;"><a href="?requisicao=setor&usuarioID=' . $row_lista_usuarios["usuario_id"] . '"><i class="fa fa-coffee"></i></a></td>';
 										echo '<td style="text-align: center;"><a href="?requisicao=deletar&usuarioID=' . $row_lista_usuarios["usuario_id"] . '"><i class="glyphicon glyphicon-remove-circle"></i></a></td>';
 									}
 									echo '</tr>';

@@ -134,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                         echo '<th scope="row" style="text-align: center;"><a href="necropapiloscopiaDocumento.php?necropapiloscopia_protocolo=' . $row_lista["necropapiloscopia_protocolo"] . '">' . $row_lista["necropapiloscopia_protocolo"] . '</a></th>';
                                         echo '<th style="text-align: center;">' . $row_lista["necropapiloscopia_nic_numero"] . '</th>';
                                         echo '<th style="text-align: center;">' . $row_lista["necropapiloscopia_nome"] . '</th>';
-                                        $necropapiloscopia_documento = $row_lista["necropapiloscopia_documento_tipo"] . " " . $row_lista["necropapiloscopia_documento_numero"] . " " . $row_lista["necropapiloscopia_documento_uf"];
+                                        $necropapiloscopia_documento = $row_lista["necropapiloscopia_documento_tipo"] . " " . $row_lista["necropapiloscopia_documento_numero"] . " " . $row_lista["necropapiloscopia_documento_orgao"] . " " . $row_lista["necropapiloscopia_documento_uf"];
                                         echo '<th style="text-align: center;">' . $necropapiloscopia_documento . '</th>';
                                         echo '<th style="text-align: center;">' . montarDivStatus($row_lista["necropapiloscopia_protocolo"]) . '</th>';
                                         echo '<th style="text-align: center;">' . corrigirData($row_lista["necropapiloscopia_entrada_data"]) . '</th>';

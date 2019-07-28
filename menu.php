@@ -57,7 +57,7 @@ function verificarSetorNecropapiloscopia()
                             }
                             ?>
                             <li><a href="necropapiloscopiaLista.php"><i class="fa fa-angle-right"></i> Documentos </a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Pesquisar </a></li>
+                            <li><a href="necropapiloscopiaPesquisar.php"><i class="fa fa-angle-right"></i> Pesquisar </a></li>
                         </ul>
                     </li>
                     <?php
