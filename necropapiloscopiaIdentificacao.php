@@ -128,12 +128,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <label style="width: 100%">Documento apresentado</label>
                                     <select name="necropapiloscopia_documento_tipo" class=" col-md-3 form-control">
                                         <?php
-                                        $array_tipos_documentos = ["RG", "CTPS", "PRONT.CIVIL", "RESERVISTA", "OUTRO"];
+                                        $array_tipos_documentos = ["RG", "CTPS", "PRONT. CIVIL", "RESERVISTA", "OUTRO"];
                                         for ($i = 0; $i < sizeof($array_tipos_documentos); ++$i) {
                                             if ($necropapiloscopia_documento_tipo == $array_tipos_documentos[$i]) {
-                                                echo '<option value=' . $array_tipos_documentos[$i] . ' selected>' . $array_tipos_documentos[$i] . '</option>';
+                                                echo '<option value="' . $array_tipos_documentos[$i] . '" selected>' . $array_tipos_documentos[$i] . '</option>';
                                             } else {
-                                                echo '<option value=' . $array_tipos_documentos[$i] . '>' . $array_tipos_documentos[$i] . '</option>';
+                                                echo '<option value="' . $array_tipos_documentos[$i] . '">' . $array_tipos_documentos[$i] . '</option>';
                                             }
                                         }
                                         ?>
