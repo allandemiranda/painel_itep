@@ -115,7 +115,19 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             <tbody>
                                 <form action="necropapiloscopiaIdentificacao.php" method="POST">
                                     <?php
-                                    $sql_lista = "SELECT `necropapiloscopia_protocolo`, `necropapiloscopia_doc_criacao_data`, `necropapiloscopia_doc_criacao_perito_nome`, `necropapiloscopia_doc_modificacao_data`, `necropapiloscopia_doc_modificacao_perito_nome`, `necropapiloscopia_nic_numero`, `necropapiloscopia_entrada_data`, `necropapiloscopia_fato_data`, `necropapiloscopia_sei_protocolo`, `necropapiloscopia_nome`, `necropapiloscopia_documento_tipo`, `necropapiloscopia_documento_numero`, `necropapiloscopia_documento_orgao`, `necropapiloscopia_documento_uf` FROM `necropapiloscopia_tb` ORDER BY `necropapiloscopia_id` DESC";
+                                    $pg_num = $_GET["pg_num"];
+                                    if ($_GET["pg_num"] == "") {
+                                        $pg_num = 1;
+                                    }
+                                    $sql_num_of_doc = "SELECT `necropapiloscopia_id` FROM `necropapiloscopia_tb` ORDER BY `necropapiloscopia_id` DESC LIMIT 1";
+                                    $query_num_of_doc = mysqli_query($_SG['link'], $sql_num_of_doc);
+                                    $row_num_of_doc = mysqli_fetch_assoc($query_num_of_doc);
+                                    $pg_num_of_doc = $row_num_of_doc["necropapiloscopia_id"];
+                                    $size_page = 11; //(-1)
+                                    $primeiro_doc = $pg_num_of_doc - (($pg_num - 1) * $size_page);
+                                    $ultimo_doc = $primeiro_doc - $size_page + 1;
+
+                                    $sql_lista = "SELECT `necropapiloscopia_id`, `necropapiloscopia_protocolo`, `necropapiloscopia_doc_criacao_data`, `necropapiloscopia_doc_criacao_perito_nome`, `necropapiloscopia_doc_modificacao_data`, `necropapiloscopia_doc_modificacao_perito_nome`, `necropapiloscopia_nic_numero`, `necropapiloscopia_entrada_data`, `necropapiloscopia_fato_data`, `necropapiloscopia_sei_protocolo`, `necropapiloscopia_nome`, `necropapiloscopia_documento_tipo`, `necropapiloscopia_documento_numero`, `necropapiloscopia_documento_orgao`, `necropapiloscopia_documento_uf` FROM `necropapiloscopia_tb` WHERE `necropapiloscopia_id` BETWEEN '" . $ultimo_doc . "' AND '" . $primeiro_doc . "' ORDER BY `necropapiloscopia_id` DESC";
                                     $query_lista = mysqli_query($_SG['link'], $sql_lista);
                                     while ($row_lista = mysqli_fetch_assoc($query_lista)) {
                                         echo '<tr>';
@@ -140,6 +152,22 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                 </form>
                             </tbody>
                         </table>
+                        <nav>
+                            <ul class="pagination">
+                                <?php
+                                if ($pg_num == 1) {
+                                    echo '<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>';
+                                } else {
+                                    echo '<li><a href="?pg_num=' . ($pg_num - 1) . '" aria-label="Previous"><span aria-hidden="true">«</span></a></li>';
+                                }
+                                if ($ultimo_doc <= 1) {
+                                    echo '<li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>';
+                                } else {
+                                    echo '<li><a href="?pg_num=' . ($pg_num + 1) . '" aria-label="Next"><span aria-hidden="true">»</span></a></li>';
+                                }
+                                ?>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
                 <div class="clearfix"> </div>
