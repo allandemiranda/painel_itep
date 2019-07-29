@@ -38,12 +38,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $necropapiloscopia_doc_criacao_data = date("Y-m-d H:i:s");
     $necropapiloscopia_doc_criacao_perito_nome = $row_pegar_usuario["usuario_nome"];
 
+    $imagem = $_FILES['necropapiloscopia_digitais_folha_um']['tmp_name'];
+    $tamanho = $_FILES['necropapiloscopia_digitais_folha_um']['size'];
+    $fp = fopen($imagem, "rb");
+    $necropapiloscopia_digitais_folha_um = fread($fp, $tamanho);
+    $necropapiloscopia_digitais_folha_um = addslashes($necropapiloscopia_digitais_folha_um);
+    fclose($fp);
+    $imagem = $_FILES['necropapiloscopia_digitais_folha_dois']['tmp_name'];
+    $tamanho = $_FILES['necropapiloscopia_digitais_folha_dois']['size'];
+    $fp = fopen($imagem, "rb");
+    $necropapiloscopia_digitais_folha_dois = fread($fp, $tamanho);
+    $necropapiloscopia_digitais_folha_dois = addslashes($necropapiloscopia_digitais_folha_dois);
+    fclose($fp);
+
     if ($necropapiloscopia_coleta_check == "on") {
         $necropapiloscopia_coleta_check = "1";
-        $sql_novo_doc = "INSERT INTO `necropapiloscopia_tb`(`necropapiloscopia_perito_id`, `necropapiloscopia_perito_nome`, `necropapiloscopia_perito_matricula`, `necropapiloscopia_perito_cargo`, `necropapiloscopia_doc_criacao_data`, `necropapiloscopia_doc_criacao_perito_nome`, `necropapiloscopia_nic_numero`, `necropapiloscopia_entrada_data`, `necropapiloscopia_fato_data`, `necropapiloscopia_sei_protocolo`, `necropapiloscopia_procedente_bairro`, `necropapiloscopia_procedente_cidade`, `necropapiloscopia_procedente_uf`, `necropapiloscopia_informacoes`, `necropapiloscopia_situacao`, `necropapiloscopia_guia_numero`, `necropapiloscopia_causa_morte`, `necropapiloscopia_exame_destino`, `necropapiloscopia_coleta_check`, `necropapiloscopia_coleta_motivo`) VALUES ('" . $necropapiloscopia_perito_id . "','" . $necropapiloscopia_perito_nome . "','" . $necropapiloscopia_perito_matricula . "','" . $necropapiloscopia_perito_cargo . "','" . $necropapiloscopia_doc_criacao_data . "','" . $necropapiloscopia_doc_criacao_perito_nome . "','" . $necropapiloscopia_nic_numero . "', '" . $necropapiloscopia_entrada_data . "', '" . $necropapiloscopia_fato_data . "', '" . $necropapiloscopia_sei_protocolo . "', '" . $necropapiloscopia_procedente_bairro . "', '" . $necropapiloscopia_procedente_cidade . "', '" . $necropapiloscopia_procedente_uf . "', '" . $necropapiloscopia_informacoes . "', '" . $necropapiloscopia_situacao . "', '" . $necropapiloscopia_guia_numero . "', '" . $necropapiloscopia_causa_morte . "', '" . $necropapiloscopia_exame_destino . "', '" . $necropapiloscopia_coleta_check . "', '" . $necropapiloscopia_coleta_motivo . "')";
+        $sql_novo_doc = "INSERT INTO `necropapiloscopia_tb`(`necropapiloscopia_perito_id`, `necropapiloscopia_perito_nome`, `necropapiloscopia_perito_matricula`, `necropapiloscopia_perito_cargo`, `necropapiloscopia_doc_criacao_data`, `necropapiloscopia_doc_criacao_perito_nome`, `necropapiloscopia_nic_numero`, `necropapiloscopia_entrada_data`, `necropapiloscopia_fato_data`, `necropapiloscopia_sei_protocolo`, `necropapiloscopia_procedente_bairro`, `necropapiloscopia_procedente_cidade`, `necropapiloscopia_procedente_uf`, `necropapiloscopia_informacoes`, `necropapiloscopia_situacao`, `necropapiloscopia_guia_numero`, `necropapiloscopia_causa_morte`, `necropapiloscopia_exame_destino`, `necropapiloscopia_coleta_check`, `necropapiloscopia_coleta_motivo`,`necropapiloscopia_digitais_folha_um`,`necropapiloscopia_digitais_folha_dois`) VALUES ('" . $necropapiloscopia_perito_id . "','" . $necropapiloscopia_perito_nome . "','" . $necropapiloscopia_perito_matricula . "','" . $necropapiloscopia_perito_cargo . "','" . $necropapiloscopia_doc_criacao_data . "','" . $necropapiloscopia_doc_criacao_perito_nome . "','" . $necropapiloscopia_nic_numero . "', '" . $necropapiloscopia_entrada_data . "', '" . $necropapiloscopia_fato_data . "', '" . $necropapiloscopia_sei_protocolo . "', '" . $necropapiloscopia_procedente_bairro . "', '" . $necropapiloscopia_procedente_cidade . "', '" . $necropapiloscopia_procedente_uf . "', '" . $necropapiloscopia_informacoes . "', '" . $necropapiloscopia_situacao . "', '" . $necropapiloscopia_guia_numero . "', '" . $necropapiloscopia_causa_morte . "', '" . $necropapiloscopia_exame_destino . "', '" . $necropapiloscopia_coleta_check . "', '" . $necropapiloscopia_coleta_motivo . "','" . $necropapiloscopia_digitais_folha_um . "','" . $necropapiloscopia_digitais_folha_dois . "')";
     } else {
         $necropapiloscopia_coleta_check = "0";
-        $sql_novo_doc = "INSERT INTO `necropapiloscopia_tb`(`necropapiloscopia_perito_id`, `necropapiloscopia_perito_nome`, `necropapiloscopia_perito_matricula`, `necropapiloscopia_perito_cargo`, `necropapiloscopia_doc_criacao_data`, `necropapiloscopia_doc_criacao_perito_nome`,`necropapiloscopia_nic_numero`, `necropapiloscopia_entrada_data`, `necropapiloscopia_fato_data`, `necropapiloscopia_sei_protocolo`, `necropapiloscopia_procedente_bairro`, `necropapiloscopia_procedente_cidade`, `necropapiloscopia_procedente_uf`, `necropapiloscopia_informacoes`, `necropapiloscopia_situacao`, `necropapiloscopia_guia_numero`, `necropapiloscopia_causa_morte`, `necropapiloscopia_exame_destino`, `necropapiloscopia_coleta_check`) VALUES ('" . $necropapiloscopia_perito_id . "','" . $necropapiloscopia_perito_nome . "','" . $necropapiloscopia_perito_matricula . "','" . $necropapiloscopia_perito_cargo . "','" . $necropapiloscopia_doc_criacao_data . "','" . $necropapiloscopia_doc_criacao_perito_nome . "','" . $necropapiloscopia_nic_numero . "', '" . $necropapiloscopia_entrada_data . "', '" . $necropapiloscopia_fato_data . "', '" . $necropapiloscopia_sei_protocolo . "', '" . $necropapiloscopia_procedente_bairro . "', '" . $necropapiloscopia_procedente_cidade . "', '" . $necropapiloscopia_procedente_uf . "', '" . $necropapiloscopia_informacoes . "', '" . $necropapiloscopia_situacao . "', '" . $necropapiloscopia_guia_numero . "', '" . $necropapiloscopia_causa_morte . "', '" . $necropapiloscopia_exame_destino . "', '" . $necropapiloscopia_coleta_check . "')";
+        $sql_novo_doc = "INSERT INTO `necropapiloscopia_tb`(`necropapiloscopia_perito_id`, `necropapiloscopia_perito_nome`, `necropapiloscopia_perito_matricula`, `necropapiloscopia_perito_cargo`, `necropapiloscopia_doc_criacao_data`, `necropapiloscopia_doc_criacao_perito_nome`,`necropapiloscopia_nic_numero`, `necropapiloscopia_entrada_data`, `necropapiloscopia_fato_data`, `necropapiloscopia_sei_protocolo`, `necropapiloscopia_procedente_bairro`, `necropapiloscopia_procedente_cidade`, `necropapiloscopia_procedente_uf`, `necropapiloscopia_informacoes`, `necropapiloscopia_situacao`, `necropapiloscopia_guia_numero`, `necropapiloscopia_causa_morte`, `necropapiloscopia_exame_destino`, `necropapiloscopia_coleta_check`,`necropapiloscopia_digitais_folha_um`,`necropapiloscopia_digitais_folha_dois`) VALUES ('" . $necropapiloscopia_perito_id . "','" . $necropapiloscopia_perito_nome . "','" . $necropapiloscopia_perito_matricula . "','" . $necropapiloscopia_perito_cargo . "','" . $necropapiloscopia_doc_criacao_data . "','" . $necropapiloscopia_doc_criacao_perito_nome . "','" . $necropapiloscopia_nic_numero . "', '" . $necropapiloscopia_entrada_data . "', '" . $necropapiloscopia_fato_data . "', '" . $necropapiloscopia_sei_protocolo . "', '" . $necropapiloscopia_procedente_bairro . "', '" . $necropapiloscopia_procedente_cidade . "', '" . $necropapiloscopia_procedente_uf . "', '" . $necropapiloscopia_informacoes . "', '" . $necropapiloscopia_situacao . "', '" . $necropapiloscopia_guia_numero . "', '" . $necropapiloscopia_causa_morte . "', '" . $necropapiloscopia_exame_destino . "', '" . $necropapiloscopia_coleta_check . "','" . $necropapiloscopia_digitais_folha_um . "','" . $necropapiloscopia_digitais_folha_dois . "')";
     }
 
     if (mysqli_query($_SG['link'], $sql_novo_doc)) {
@@ -87,7 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <h4>Novo Documento </h4>
                         </div>
                         <div class="form-body">
-                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+                            <form action="" method="POST" enctype="multipart/form-data">
                                 <div class="form-group col-md-3">
                                     <label>Nº NIC</label>
                                     <input name="necropapiloscopia_nic_numero" type="text" class="form-control" placeholder="0000" value="" required>
@@ -132,14 +145,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </div>
                                 <div class="checkbox col-md-12">
                                     <label class="col-md-12">
-                                        <input name="necropapiloscopia_coleta_check" type="checkbox" class="checkbox">
+                                        <input id="necropapiloscopia_coleta_check" name="necropapiloscopia_coleta_check" type="checkbox" class="checkbox">
                                         Não apresenta condições de coleta de Impressões Digitais
                                         <input name="necropapiloscopia_coleta_motivo" type="text" class="col-md-12 form-control" placeholder="Informe aqui o motivo devido" onChange="javascript:this.value=this.value.toUpperCase();" value="">
                                     </label>
                                 </div>
+                                <div class="form-group col-md-12">
+                                    <label style="width: 100%;">Digitais</label>
+                                    <input id="necropapiloscopia_digitais_folha_um" type="file" name="necropapiloscopia_digitais_folha_um" class="col-md-6">
+                                    <p class="help-block"> Documento com as Digitais Frente.</p>
+                                    <input id="necropapiloscopia_digitais_folha_dois" type="file" name="necropapiloscopia_digitais_folha_dois" class="col-md-6">
+                                    <p class="help-block"> Documento com as Digitais Verso.</p>
+                                </div>
                                 <div class="col-md-12">
                                     <br>
-                                    <button type="submit" class="btn btn-success">Criar</button>
+                                    <input type="submit" class="btn btn-success" value="Criar">
                                     <a href="/"><button type="button" class="btn btn-danger">Cancelar</button></a>
                                     <br><br>
                                 </div>

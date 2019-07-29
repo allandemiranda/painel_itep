@@ -107,6 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                     <?php
                                     if (verificarSetorNecropapiloscopia()) {
                                         echo '<th style="text-align: center;">Excluir</th>';
+                                        echo '<th style="text-align: center;">Digitais</th>';
                                     }
                                     ?>
                                     <th style="text-align: center;">Imprimir</th>
@@ -127,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                     $primeiro_doc = $pg_num_of_doc - (($pg_num - 1) * $size_page);
                                     $ultimo_doc = $primeiro_doc - $size_page + 1;
 
-                                    $sql_lista = "SELECT `necropapiloscopia_id`, `necropapiloscopia_protocolo`, `necropapiloscopia_doc_criacao_data`, `necropapiloscopia_doc_criacao_perito_nome`, `necropapiloscopia_doc_modificacao_data`, `necropapiloscopia_doc_modificacao_perito_nome`, `necropapiloscopia_nic_numero`, `necropapiloscopia_entrada_data`, `necropapiloscopia_fato_data`, `necropapiloscopia_sei_protocolo`, `necropapiloscopia_nome`, `necropapiloscopia_documento_tipo`, `necropapiloscopia_documento_numero`, `necropapiloscopia_documento_orgao`, `necropapiloscopia_documento_uf` FROM `necropapiloscopia_tb` WHERE `necropapiloscopia_id` BETWEEN '" . $ultimo_doc . "' AND '" . $primeiro_doc . "' ORDER BY `necropapiloscopia_id` DESC";
+                                    $sql_lista = "SELECT * FROM `necropapiloscopia_tb` WHERE `necropapiloscopia_id` BETWEEN '" . $ultimo_doc . "' AND '" . $primeiro_doc . "' ORDER BY `necropapiloscopia_id` DESC";
                                     $query_lista = mysqli_query($_SG['link'], $sql_lista);
                                     while ($row_lista = mysqli_fetch_assoc($query_lista)) {
                                         echo '<tr>';
@@ -143,7 +144,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                         $necropapiloscopia_doc_modificacao = peritoAbreviado($row_lista["necropapiloscopia_doc_modificacao_perito_nome"]) . " " . corrigirDataCompleta($row_lista["necropapiloscopia_doc_modificacao_data"]);
                                         echo '<th style="text-align: center;">' . $necropapiloscopia_doc_modificacao . '</th>';
                                         if (verificarSetorNecropapiloscopia()) {
-                                            echo '<th style="text-align: center;"><a href="?delete=' . $row_lista["necropapiloscopia_protocolo"] . '"><i class=" glyphicon glyphicon-trash "></a></th>';
+                                            echo '<th style="text-align: center;"><a href="?delete=' . $row_lista["necropapiloscopia_protocolo"] . '"><i class="glyphicon glyphicon-trash"></i></a></th>';
+                                            echo '<th style="text-align: center;">';
+                                            echo '<a target="_blank" href="necropapiloscopiaVerDigitais.php?necropapiloscopia_digitais_folha_um=' . $row_lista["necropapiloscopia_protocolo"] . '"><i class="glyphicon glyphicon-hand-up"></i></a>';
+                                            echo ' <a target="_blank" href="necropapiloscopiaVerDigitais.php?necropapiloscopia_digitais_folha_dois=' . $row_lista["necropapiloscopia_protocolo"] . '"><i class="glyphicon glyphicon-hand-down"></i></a>';
+                                            echo '</th>';
                                         }
                                         echo '<th style="text-align: center;">' . montarDivImpressora($row_lista["necropapiloscopia_protocolo"]) . '</th>';
                                         echo '</tr>';

@@ -371,6 +371,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <?php
                                     if (verificarSetorNecropapiloscopia()) {
                                         echo '<th style="text-align: center;">Excluir</th>';
+                                        echo '<th style="text-align: center;">Digitais</th>';
                                     }
                                     ?>
                                     <th style="text-align: center;">Imprimir</th>
@@ -393,7 +394,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         $necropapiloscopia_doc_modificacao = peritoAbreviado($row_lista["necropapiloscopia_doc_modificacao_perito_nome"]) . " " . corrigirDataCompleta($row_lista["necropapiloscopia_doc_modificacao_data"]);
                                         echo '<th style="text-align: center;">' . $necropapiloscopia_doc_modificacao . '</th>';
                                         if (verificarSetorNecropapiloscopia()) {
-                                            echo '<th style="text-align: center;"><a href="necropapiloscopiaLista.php?delete=' . $row_lista["necropapiloscopia_protocolo"] . '"><i class=" glyphicon glyphicon-trash "></a></th>';
+                                            echo '<th style="text-align: center;"><a href="?delete=' . $row_lista["necropapiloscopia_protocolo"] . '"><i class="glyphicon glyphicon-trash"></i></a></th>';
+                                            echo '<th style="text-align: center;">';
+                                            echo '<a target="_blank" href="necropapiloscopiaVerDigitais.php?necropapiloscopia_digitais_folha_um=' . $row_lista["necropapiloscopia_protocolo"] . '"><i class="glyphicon glyphicon-hand-up"></i></a>';
+                                            echo ' <a target="_blank" href="necropapiloscopiaVerDigitais.php?necropapiloscopia_digitais_folha_dois=' . $row_lista["necropapiloscopia_protocolo"] . '"><i class="glyphicon glyphicon-hand-down"></i></a>';
+                                            echo '</th>';
                                         }
                                         echo '<th style="text-align: center;">' . montarDivImpressora($row_lista["necropapiloscopia_protocolo"]) . '</th>';
                                         echo '</tr>';

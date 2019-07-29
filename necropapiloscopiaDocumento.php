@@ -73,6 +73,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SG['status-alert'] = $_SG['status-alert'] . " Error: " . $sql_editar_doc . "<br>" . mysqli_error($_SG['link']);
         $_SG['status-alert'] = $_SG['status-alert'] . '</div>';
     }
+
+    if ($_FILES['necropapiloscopia_digitais_folha_um']['tmp_name'] != "") {
+        $imagem = $_FILES['necropapiloscopia_digitais_folha_um']['tmp_name'];
+        $tamanho = $_FILES['necropapiloscopia_digitais_folha_um']['size'];
+        $fp = fopen($imagem, "rb");
+        $necropapiloscopia_digitais_folha_um = fread($fp, $tamanho);
+        $necropapiloscopia_digitais_folha_um = addslashes($necropapiloscopia_digitais_folha_um);
+        fclose($fp);
+        $sql = "UPDATE `necropapiloscopia_tb` SET necropapiloscopia_digitais_folha_um='" . $necropapiloscopia_digitais_folha_um . "' WHERE `necropapiloscopia_protocolo`='" . $necropapiloscopia_protocolo . "'";
+        mysqli_query($_SG['link'], $sql);
+    }
+    if ($_FILES['necropapiloscopia_digitais_folha_dois']['tmp_name'] != "") {
+        $imagem = $_FILES['necropapiloscopia_digitais_folha_dois']['tmp_name'];
+        $tamanho = $_FILES['necropapiloscopia_digitais_folha_dois']['size'];
+        $fp = fopen($imagem, "rb");
+        $necropapiloscopia_digitais_folha_dois = fread($fp, $tamanho);
+        $necropapiloscopia_digitais_folha_dois = addslashes($necropapiloscopia_digitais_folha_dois);
+        fclose($fp);
+        $sql = "UPDATE `necropapiloscopia_tb` SET necropapiloscopia_digitais_folha_dois='" . $necropapiloscopia_digitais_folha_dois . "' WHERE `necropapiloscopia_protocolo`='" . $necropapiloscopia_protocolo . "'";
+        mysqli_query($_SG['link'], $sql);
+    }
 }
 ?>
 <!DOCTYPE HTML>
@@ -101,7 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <h4>Modificar Documento - Protocolo <b><?php echo $necropapiloscopia_protocolo; ?></b> </h4>
                         </div>
                         <div class="form-body">
-                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>?necropapiloscopia_protocolo=<?php echo $necropapiloscopia_protocolo; ?>" method="POST">
+                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>?necropapiloscopia_protocolo=<?php echo $necropapiloscopia_protocolo; ?>" method="POST" enctype="multipart/form-data">
                                 <?php
                                 $sql_select_protocolo = "SELECT * FROM `necropapiloscopia_tb` WHERE `necropapiloscopia_protocolo`='" . $necropapiloscopia_protocolo . "'";
                                 $query_select_protocolo = mysqli_query($_SG['link'], $sql_select_protocolo);
@@ -293,6 +314,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <?php
                                 }
                                 ?>
+                                <div class="form-group col-md-12">
+                                    <label style="width: 100%;">Digitais</label>
+                                    <input type="file" name="necropapiloscopia_digitais_folha_um" class="col-md-6" <?php if (!verificarSetorNecropapiloscopia()) {
+                                                                                                                        echo "disabled";
+                                                                                                                    } ?>>
+                                    <p class="help-block"> Documento com as Digitais Frente.</p>
+                                    <input type="file" name="necropapiloscopia_digitais_folha_dois" class="col-md-6" <?php if (!verificarSetorNecropapiloscopia()) {
+                                                                                                                            echo "disabled";
+                                                                                                                        } ?>>
+                                    <p class="help-block"> Documento com as Digitais Verso.</p>
+                                </div>
                                 <div class="col-md-12">
                                     <br>
                                     <?php if (verificarSetorNecropapiloscopia()) {
