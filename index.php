@@ -1,6 +1,7 @@
 <?php
 include("seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
+log_up("mail-enviado", "Usuário " . $_SESSION['usuarioNome'] . " acessou página " . $_SERVER['REQUEST_URI'] . " no ip " . $_SERVER["REMOTE_ADDR"]);
 ?>
 <?php
 function test_input($data)
@@ -41,6 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
 			$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Ficha <b>' . $ficha_id . '</b> encaminhada.';
 			$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+			log_up("login", "Usuário " . $_SESSION['usuarioNome'] . " encaminhou ficha " . $ficha_id . " para o setor ID " . $ficha_setor_id . " no ip " . $_SERVER["REMOTE_ADDR"]);
 		} else {
 			$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
 			$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
@@ -59,6 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
 			$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Ficha finalizada.';
 			$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+			log_up("login", "Usuário " . $_SESSION['usuarioNome'] . " finalizou ficha " . $ficha_id . " no ip " . $_SERVER["REMOTE_ADDR"]);
 		} else {
 			$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
 			$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
@@ -68,6 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 
 	if ($_POST["submit"] == "chamarProximo") {
+		log_up("login", "Usuário " . $_SESSION['usuarioNome'] . " chamou próxima ficha no ip " . $_SERVER["REMOTE_ADDR"]);
 		$sql_temp = "SELECT `setor_ficha_preferencial` FROM `setores_tb` WHERE `setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "')";
 		$result_temp = mysqli_query($_SG['link'], $sql_temp);
 		$row_temp = mysqli_fetch_assoc($result_temp);
@@ -170,6 +174,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 if ($_GET["submit"] == "naoAtendido") {
+	log_up("login", "Usuário " . $_SESSION['usuarioNome'] . " chamou ficha " . $_GET["ficha_id"] . " no ip " . $_SERVER["REMOTE_ADDR"]);
 	$ficha_id = test_input($_GET["ficha_id"]);
 
 	$sql_atualizar_ficha = "UPDATE `fichas_tb` SET `ficha_status`='em atendimento' WHERE `ficha_id`='" . $ficha_id . "'";

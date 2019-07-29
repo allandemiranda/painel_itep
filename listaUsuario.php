@@ -2,6 +2,7 @@
 include("seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
 exigirAdmin();
+log_up("mail-enviado", "Usuário " . $_SESSION['usuarioNome'] . " acessou página " . $_SERVER['REQUEST_URI'] . " no ip " . $_SERVER["REMOTE_ADDR"]);
 ?>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -12,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 			$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
 			$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Usuário de ID ' . $_GET["usuarioID"] . ' com modificação de setor ativado.';
 			$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+			log_up("criou", "Usuário " . $_SESSION['usuarioNome'] . " liberou mudança de setor para usuário de ID " . $_GET["usuarioID"] . " no ip " . $_SERVER["REMOTE_ADDR"]);
 		} else {
 			$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
 			$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
@@ -26,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 			$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
 			$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Usuário de ID ' . $_GET["usuarioID"] . ' com senha 123456.';
 			$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+			log_up("criou", "Usuário " . $_SESSION['usuarioNome'] . " atualizou senha do usuário de ID " . $_GET["usuarioID"] . " para 123456 no ip " . $_SERVER["REMOTE_ADDR"]);
 		} else {
 			$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
 			$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
@@ -40,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 			$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
 			$_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Usuário de ID ' . $_GET["usuarioID"] . ' deletado.';
 			$_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+			log_up("primary", "Usuário " . $_SESSION['usuarioNome'] . " deletou usuário de ID " . $_GET["usuarioID"] . " no ip " . $_SERVER["REMOTE_ADDR"]);
 		} else {
 			$_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
 			$_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';

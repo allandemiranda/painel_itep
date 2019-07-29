@@ -86,6 +86,23 @@ if ($_GET['fichaID'] != "") {
     mysqli_close($conn);
 }
 ?>
+<?php
+function log_up($conn, $class, $msg)
+{
+    $div_final = '<div class="sl-item sl-' . $class . '">';
+    $div_final .= '<div class="sl-content">';
+    $explode_data_completa = explode(" ", date('Y-m-d H:i:s'));
+    $explode_data = explode("-", $explode_data_completa[0]);
+    $data_final =  $explode_data[2] . "/" . $explode_data[1] . "/" . $explode_data[0] . " " . $explode_data_completa[1];
+    $div_final .= '<small class="text-muted">' . $data_final . '</small>';
+    $div_final .= '<p>' . $msg . '</p>';
+    $div_final .= '</div>';
+    $div_final .= '</div>';
+    $sql = "INSERT INTO `logs_tb`(`log_data`, `log_div`) VALUES ('" . date('Y-m-d H:i:s') . "', '" . $div_final . "')";
+    mysqli_query($conn, $sql);
+}
+log_up($conn, "login", "Foi impresso ficha para " . $row["ficha_nome"] . " no ip " . $_SERVER["REMOTE_ADDR"]);
+?>
 <!DOCTYPE HTML>
 <html>
 

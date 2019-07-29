@@ -1,6 +1,7 @@
 <?php
 include("seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
+log_up("login", "Usuário " . $_SESSION['usuarioNome'] . " acessou página de impreção de documento da necropapiloscopia no endereço " . $_SERVER['REQUEST_URI'] . " no ip " . $_SERVER["REMOTE_ADDR"]);
 ?>
 <?php
 /**
@@ -172,13 +173,6 @@ $dia_explode = explode(" ", $data_explode[2]);
             line-height: 0.2;
         }
     </style>
-    <script>
-        function ClosePrint() {
-            setTimeout(function() {
-                window.print();
-            }, 500);            
-        }
-    </script>
 </head>
 
 <body class="A4" onload="ClosePrint()">

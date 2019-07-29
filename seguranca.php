@@ -133,3 +133,19 @@ function exigirAdmin()
         header("Location: 404.php");
     }
 }
+// LOGS AQUI
+function log_up($class, $msg)
+{
+    global $_SG;
+    $div_final = '<div class="sl-item sl-' . $class . '">';
+    $div_final .= '<div class="sl-content">';
+    $explode_data_completa = explode(" ", date('Y-m-d H:i:s'));
+    $explode_data = explode("-", $explode_data_completa[0]);
+    $data_final =  $explode_data[2] . "/" . $explode_data[1] . "/" . $explode_data[0] . " " . $explode_data_completa[1];
+    $div_final .= '<small class="text-muted">' . $data_final . '</small>';
+    $div_final .= '<p>' . $msg . '</p>';
+    $div_final .= '</div>';
+    $div_final .= '</div>';
+    $sql = "INSERT INTO `logs_tb`(`log_data`, `log_div`) VALUES ('" . date('Y-m-d H:i:s') . "', '" . $div_final . "')";
+    mysqli_query($_SG["link"], $sql);
+}

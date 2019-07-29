@@ -1,6 +1,7 @@
 <?php
 include("seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
+log_up("mail-enviado", "Usuário " . $_SESSION['usuarioNome'] . " acessou página " . $_SERVER['REQUEST_URI'] . " no ip " . $_SERVER["REMOTE_ADDR"]);
 ?>
 <?php
 function test_input($data)
@@ -30,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';
         $_SG['status-alert'] = $_SG['status-alert'] . ' Sucesso! Mail enviado.';
         $_SG['status-alert'] = $_SG['status-alert'] . '</div>';
+        log_up("success", "Usuário " . $_SESSION['usuarioNome'] . " criou maio Mail para setor " . $mail_para_setor_id . " no ip " . $_SERVER["REMOTE_ADDR"]);
     } else {
         $_SG['status-alert'] = $_SG['status-alert'] . '<div class="alert alert-danger alert-dismissablee">';
         $_SG['status-alert'] = $_SG['status-alert'] . '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>';

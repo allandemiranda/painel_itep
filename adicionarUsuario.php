@@ -2,6 +2,7 @@
 include("seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
 exigirAdmin();
+log_up("mail-enviado", "Usuário " . $_SESSION['usuarioNome'] . " acessou página " . $_SERVER['REQUEST_URI'] . " no ip " . $_SERVER["REMOTE_ADDR"]);
 ?>
 <?php
 function test_input($data)
@@ -54,6 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SG['status-alert'] = $_SG['status-alert'] . " Error: " . $sql_adicionar_novo_usurio . "<br>" . mysqli_error($_SG['link']);
         $_SG['status-alert'] = $_SG['status-alert'] . '</div>';
     }
+
+    log_up("success", "Usuário " . $_SG['topBar']['usuario_nome'] . " criou usuário " . $usuario_nom . " de login " . $usuario_login . ". IP:" . $_SERVER["REMOTE_ADDR"]);
 }
 
 ?>
