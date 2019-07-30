@@ -2,6 +2,18 @@
 include("seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
 log_up("login", "Usuário " . $_SESSION['usuarioNome'] . " acessou página de impreção de documento da necropapiloscopia no endereço " . $_SERVER['REQUEST_URI'] . " no ip " . $_SERVER["REMOTE_ADDR"]);
+function verificarSetorNecropapiloscopia()
+{
+    global $_SG;
+    $sql_user = "SELECT `setor_nome` FROM `setores_tb` WHERE `setor_id`=(SELECT `usuario_setor_id` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "')";
+    $query_user = mysqli_query($_SG['link'], $sql_user);
+    $row_user = mysqli_fetch_assoc($query_user);
+    if ($row_user["setor_nome"] == "NECROPAPILOSCOPIA") {
+        return true;
+    } else {
+        return false;
+    }
+}
 ?>
 <?php
 /**
