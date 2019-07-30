@@ -207,13 +207,37 @@ $dia_explode = explode(" ", $data_explode[2]);
         <br>
         <div class="row ">
             <div class="col assinatura">
+                <?php
+                if (!verificarSetorNecropapiloscopia()) {
+                    echo '<p style="color: red;">NÃO ASSINAR</p>';
+                }
+                ?>
                 <p>_______________________________________</p>
                 <br><br>
                 <p><b><?php echo $row["necropapiloscopia_perito_nome"]; ?></b></p>
                 <p><?php echo $row["necropapiloscopia_perito_cargo"]; ?></p>
-                <p>Mat <?php echo $row["necropapiloscopia_perito_matricula"]; ?></p>
+                <p>Matr. <?php echo $row["necropapiloscopia_perito_matricula"]; ?></p>
             </div>
+            <?php
+            if ($_SESSION['usuarioNome'] != $row["necropapiloscopia_perito_nome"]) {
+                $sql_nao_necro = "SELECT `usuario_nome`, `usuario_cargo`, `usuario_matricula` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "'";
+                $query_nao_necro = mysqli_query($_SG["link"], $sql_nao_necro);
+                $row_nao_necro = mysqli_fetch_assoc($query_nao_necro);
+                echo '<div class="col assinatura">';
+                echo '<p>Este documento foi impresso por:</p>';
+                echo '<br><br>';
+                echo '<p><b>' . $row_nao_necro["usuario_nome"] . '</b></p>';
+                echo '<p>' . $row_nao_necro["usuario_cargo"] . '</p>';
+                echo '<p>Matr. ' . $row_nao_necro["usuario_matricula"] . '</p>';
+                echo '<p>Natal/RN, ' . dataEmPortugues(time()) . ',</p>';
+                echo '<p> às ' . date("H:i:s") . ' horas</p>';
+                echo '<p style="color: red;">Atenção! Este não é um usuário do setor da Necropapiloscopia</p>';
+                echo '<br><br><br><br>';
+                echo '</div>';
+            }
+            ?>
         </div>
+        <br><br>
     </div>
 </body>
 
