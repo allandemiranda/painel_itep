@@ -17,6 +17,12 @@ function verificarSetorNecropapiloscopia()
     <aside class="sidebar-left">
         <nav class="navbar navbar-inverse">
             <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <img src="images/itep-logo-mini.png" style="width: 30%; float: left;" />
                 <h1 class="navbar-brand" href="/" style="margin-top: 5%;"> ITEP RN</h1>
             </div>
