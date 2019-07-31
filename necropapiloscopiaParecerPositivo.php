@@ -16,6 +16,10 @@ function verificarSetorNecropapiloscopia()
 }
 ?>
 <?php
+$caracter_max_p = 55;
+date_default_timezone_set("America/Recife");
+?>
+<?php
 /**
  * Converter TimeStamp para data em Português
  *
@@ -25,7 +29,7 @@ function verificarSetorNecropapiloscopia()
  *
  * @return string
  */
-function dataEmPortugues($timestamp, $hours = FALSE, $timeZone = "Europe/Lisbon")
+function dataEmPortugues($timestamp, $hours = FALSE, $timeZone = "America/Recife")
 {
 
     $dia_num = date("w", $timestamp); // Dia da semana.
@@ -228,106 +232,145 @@ $dia_explode = explode(" ", $data_explode[2]);
             <div class="col-sm-4">
                 <p><b>PROCEDÊNCIA:</b></p>
             </div>
-            <div class="col-sm-8">
-                <p><?php echo $row["necropapiloscopia_procedente_bairro"] . " " . $row["necropapiloscopia_procedente_cidade"] . " " . $row["necropapiloscopia_procedente_uf"]; ?></p>
-            </div>
-            <div class="col-sm-4">
-                <p><b>NOME COMPLETO:</b></p>
-            </div>
-            <div class="col-sm-8">
-                <p><?php echo $row["necropapiloscopia_nome"]; ?></p>
-            </div>
-            <div class="col-sm-4">
-                <p><b>NOME DO PAI:</b></p>
-            </div>
-            <div class="col-sm-8">
-                <p><?php echo $row["necropapiloscopia_pai_nome"]; ?></p>
-            </div>
-            <div class="col-sm-4">
-                <p><b>NOME DA MÃE:</b></p>
-            </div>
-            <div class="col-sm-8">
-                <p><?php echo $row["necropapiloscopia_mae_nome"]; ?></p>
-            </div>
-            <div class="col-sm-4">
-                <p><b>NATURALIDADE:</b></p>
-            </div>
-            <div class="col-sm-8">
-                <p><?php echo $row["necropapiloscopia_naturalidade_cidade"] . " " . $row["necropapiloscopia_naturalidade_uf"]; ?> </p>
-            </div>
-            <div class="col-sm-4">
-                <p><b>DATA DE NASCIMENTO:</b></p>
-            </div>
-            <div class="col-sm-8">
-                <p><?php echo corrigirData($row["necropapiloscopia_nascimento_data"]); ?></p>
-            </div>
-            <div class="col-sm-4">
-                <p><b>DOC. APRESENTADO:</b></p>
-            </div>
-            <div class="col-sm-8">
-                <p><?php echo $row["necropapiloscopia_documento_tipo"] . " " . $row["necropapiloscopia_documento_numero"] . " " . $row["necropapiloscopia_documento_orgao"] . "/" . $row["necropapiloscopia_documento_uf"]; ?></p>
-            </div>
             <?php
-            if ($row["necropapiloscopia_observacoes"] != "") {
-                echo '<div class="col-sm-4" style="color: red">';
-                echo '<p><b><u>OBSERVAÇÃO:</u></b></p>';
-                echo '</div>';
-                echo '<div class="col-sm-8" style="color: red">';
-                echo '<p>' . $row["necropapiloscopia_observacoes"] . '</p>';
-                echo '</div>';
+            $procedencia = $row["necropapiloscopia_procedente_bairro"] . " " . $row["necropapiloscopia_procedente_cidade"] . " " . $row["necropapiloscopia_procedente_uf"];
+            if (strlen($procedencia) > $caracter_max_p) {
+                echo '<div class="col-sm-8" style="line-height: 1;">';
+            } else {
+                echo '<div class="col-sm-8"">';
             }
             ?>
+            <p><?php echo $procedencia; ?></p>
         </div>
-        <div class="row">
-            <div class="col-sm-12 paragrafo">
-                <p>
-                    Diante dos exames realizados o signatário conclui que <u><b>foram encontrados padrões
-                            dactiloscópicos que confirmam a Identidade Civil do mesmo.</b></u>
-                </p>
-            </div>
+        <div class="col-sm-4">
+            <p><b>NOME COMPLETO:</b></p>
         </div>
-        <br><br>
-        <div class="row">
-            <div class="col datacao">
-                <p>Natal/RN, <?php echo dataEmPortugues(time()); ?></p>
-            </div>
+        <?php
+        $nomeCompleto = $row["necropapiloscopia_nome"];
+        if (strlen($nomeCompleto) > $caracter_max_p) {
+            echo '<div class="col-sm-8" style="line-height: 1;">';
+        } else {
+            echo '<div class="col-sm-8"">';
+        }
+        ?>
+        <p><?php echo $nomeCompleto; ?></p>
+    </div>
+    <div class="col-sm-4">
+        <p><b>NOME DO PAI:</b></p>
+    </div>
+    <?php
+    $nomePai = $row["necropapiloscopia_pai_nome"];
+    if (strlen($nomePai) > $caracter_max_p) {
+        echo '<div class="col-sm-8" style="line-height: 1;">';
+    } else {
+        echo '<div class="col-sm-8"">';
+    }
+    ?>
+    <p><?php echo $nomePai; ?></p>
+    </div>
+    <div class="col-sm-4">
+        <p><b>NOME DA MÃE:</b></p>
+    </div>
+    <?php
+    $nomeMae = $row["necropapiloscopia_mae_nome"];
+    if (strlen($nomeMae) > $caracter_max_p) {
+        echo '<div class="col-sm-8" style="line-height: 1;">';
+    } else {
+        echo '<div class="col-sm-8"">';
+    }
+    ?>
+    <p><?php echo $nomeMae; ?></p>
+    </div>
+    <div class="col-sm-4">
+        <p><b>NATURALIDADE:</b></p>
+    </div>
+    <?php
+    $naturalidade = $row["necropapiloscopia_naturalidade_cidade"] . " " . $row["necropapiloscopia_naturalidade_uf"];;
+    if (strlen($naturalidade) > $caracter_max_p) {
+        echo '<div class="col-sm-8" style="line-height: 1;">';
+    } else {
+        echo '<div class="col-sm-8"">';
+    }
+    ?>
+    <p><?php echo $naturalidade; ?> </p>
+    </div>
+    <div class="col-sm-4">
+        <p><b>DATA DE NASCIMENTO:</b></p>
+    </div>
+    <div class="col-sm-8">
+        <p><?php echo corrigirData($row["necropapiloscopia_nascimento_data"]); ?></p>
+    </div>
+    <div class="col-sm-4">
+        <p><b>DOC. APRESENTADO:</b></p>
+    </div>
+    <div class="col-sm-8">
+        <p><?php echo $row["necropapiloscopia_documento_tipo"] . " " . $row["necropapiloscopia_documento_numero"] . " " . $row["necropapiloscopia_documento_orgao"] . "/" . $row["necropapiloscopia_documento_uf"]; ?></p>
+    </div>
+    <?php
+    if ($row["necropapiloscopia_observacoes"] != "") {
+        echo '<div class="col-sm-4" style="color: red">';
+        echo '<p><b><u>OBSERVAÇÃO:</u></b></p>';
+        echo '</div>';
+        if (strlen($naturalidade) > $caracter_max_p) {
+            echo '<div class="col-sm-8" style="line-height: 1;">';
+        } else {
+            echo '<div class="col-sm-8" style="line-height: 1; color: red;">';
+        }
+        echo '<p>' . $row["necropapiloscopia_observacoes"] . '</p>';
+        echo '</div>';
+    }
+    ?>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 paragrafo">
+            <p>
+                Diante dos exames realizados o signatário conclui que <u><b>foram encontrados padrões
+                        dactiloscópicos que confirmam a Identidade Civil do mesmo.</b></u>
+            </p>
         </div>
-        <br>
-        <div class="row ">
-            <div class="col assinatura">
-                <?php
-                if (!verificarSetorNecropapiloscopia()) {
-                    echo '<p style="color: red;">NÃO ASSINAR</p>';
-                }
-                ?>
-                <p>_______________________________________</p>
-                <br><br>
-                <p><b><?php echo $row["necropapiloscopia_perito_nome"]; ?></b></p>
-                <p><?php echo $row["necropapiloscopia_perito_cargo"]; ?></p>
-                <p>Matr. <?php echo $row["necropapiloscopia_perito_matricula"]; ?></p>
-            </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col datacao">
+            <p>Natal/RN, <?php echo dataEmPortugues(time()); ?></p>
+        </div>
+    </div>
+    <br>
+    <div class="row ">
+        <div class="col assinatura">
             <?php
-            if ($_SESSION['usuarioNome'] != $row["necropapiloscopia_perito_nome"]) {
-                $sql_nao_necro = "SELECT `usuario_nome`, `usuario_cargo`, `usuario_matricula` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "'";
-                $query_nao_necro = mysqli_query($_SG["link"], $sql_nao_necro);
-                $row_nao_necro = mysqli_fetch_assoc($query_nao_necro);
-                echo '<div class="col assinatura">';
-                echo '<p>Este documento foi impresso por:</p>';
-                echo '<br><br>';
-                echo '<p><b>' . $row_nao_necro["usuario_nome"] . '</b></p>';
-                echo '<p>' . $row_nao_necro["usuario_cargo"] . '</p>';
-                echo '<p>Matr. ' . $row_nao_necro["usuario_matricula"] . '</p>';
-                echo '<p>Natal/RN, ' . dataEmPortugues(time()) . ',</p>';
-                echo '<p> às ' . date("H:i:s") . ' horas</p>';
-                if (!verificarSetorNecropapiloscopia()) {
-                    echo '<p style="color: red;">Atenção! Este não é um usuário do setor da Necropapiloscopia</p>';
-                }
-                echo '<br><br><br><br>';
-                echo '</div>';
+            if (!verificarSetorNecropapiloscopia()) {
+                echo '<p style="color: red;">NÃO ASSINAR</p>';
             }
             ?>
+            <p>_______________________________________</p>
+            <br><br>
+            <p><b><?php echo $row["necropapiloscopia_perito_nome"]; ?></b></p>
+            <p><?php echo $row["necropapiloscopia_perito_cargo"]; ?></p>
+            <p>Matr. <?php echo $row["necropapiloscopia_perito_matricula"]; ?></p>
         </div>
-        <br><br>
+        <?php
+        if ($_SESSION['usuarioNome'] != $row["necropapiloscopia_perito_nome"]) {
+            $sql_nao_necro = "SELECT `usuario_nome`, `usuario_cargo`, `usuario_matricula` FROM `usuarios_tb` WHERE `usuario_id`='" . $_SESSION['usuarioID'] . "'";
+            $query_nao_necro = mysqli_query($_SG["link"], $sql_nao_necro);
+            $row_nao_necro = mysqli_fetch_assoc($query_nao_necro);
+            echo '<div class="col assinatura">';
+            echo '<p>Este documento foi impresso por:</p>';
+            echo '<br><br>';
+            echo '<p><b>' . $row_nao_necro["usuario_nome"] . '</b></p>';
+            echo '<p>' . $row_nao_necro["usuario_cargo"] . '</p>';
+            echo '<p>Matr. ' . $row_nao_necro["usuario_matricula"] . '</p>';
+            echo '<p>Natal/RN, ' . dataEmPortugues(time()) . ',</p>';
+            echo '<p> às ' . date("H:i:s") . ' horas</p>';
+            if (!verificarSetorNecropapiloscopia()) {
+                echo '<p style="color: red;">Atenção! Este não é um usuário do setor da Necropapiloscopia</p>';
+            }
+            echo '<br><br><br><br>';
+            echo '</div>';
+        }
+        ?>
+    </div>
+    <br><br>
     </div>
 </body>
 

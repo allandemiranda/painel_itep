@@ -16,6 +16,9 @@ function verificarSetorNecropapiloscopia()
 }
 ?>
 <?php
+date_default_timezone_set("America/Recife");
+?>
+<?php
 /**
  * Converter TimeStamp para data em Português
  *
@@ -25,7 +28,7 @@ function verificarSetorNecropapiloscopia()
  *
  * @return string
  */
-function dataEmPortugues($timestamp, $hours = FALSE, $timeZone = "Europe/Lisbon")
+function dataEmPortugues($timestamp, $hours = FALSE, $timeZone = "America/Recife")
 {
 
     $dia_num = date("w", $timestamp); // Dia da semana.
