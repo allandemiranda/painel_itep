@@ -192,7 +192,7 @@ $dia_explode = explode(" ", $data_explode[2]);
                 <div style="font-size: 16pt;"><b>INSTITUTO DE IDENTIFICAÇÃO - II</b></div>
                 <div style="font-size: 16pt;"><i>Setor de Necropapiloscopia</i></div>
             </div>
-            <div class="col-sm-2"><img class="cabecalho-img-direita" src="images/logoITEP.jpg" /></div>
+            <div class="col-sm-2"><img class="cabecalho-img-direita" src="images/logoITEP.png" /></div>
         </div>
         <br>
         <div class="row justify-content-center">
@@ -243,7 +243,9 @@ $dia_explode = explode(" ", $data_explode[2]);
                 echo '<p>Matr. ' . $row_nao_necro["usuario_matricula"] . '</p>';
                 echo '<p>Natal/RN, ' . dataEmPortugues(time()) . ',</p>';
                 echo '<p> às ' . date("H:i:s") . ' horas</p>';
-                echo '<p style="color: red;">Atenção! Este não é um usuário do setor da Necropapiloscopia</p>';
+                if (!verificarSetorNecropapiloscopia()) {
+                    echo '<p style="color: red;">Atenção! Este não é um usuário do setor da Necropapiloscopia</p>';
+                }
                 echo '<br><br><br><br>';
                 echo '</div>';
             }
