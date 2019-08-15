@@ -1,7 +1,6 @@
-<title>Sitema de Chamadas ITEP RN</title>
+<title>Ficha Médica</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="UTF-8"> 
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript">
     addEventListener("load", function() {
         setTimeout(hideURLbar, 0);
@@ -105,3 +104,39 @@
     });
 </script>
 <!-- //requried-jsfiles-for owl -->
+
+<?php
+
+$servername = "localhost";
+$username = "allandemiranda";
+$password = "senha1234";
+$dbname = "medicos_bd";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$paciente_numero_id = 1;
+
+?>
+<?php
+
+function corrigirData($data)
+{
+    $data_ex = explode("-", $data);
+    return $data_ex[2] . "/" . $data_ex[1] . "/" . $data_ex[0];
+}
+
+
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+?>
