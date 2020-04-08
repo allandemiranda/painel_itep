@@ -1,0 +1,211 @@
+\hypertarget{usuarios_2update_8php}{}\section{/var/www/chamador.itep.\+govrn/public/api/menu/configuracoes/usuarios/update.php File Reference}
+\label{usuarios_2update_8php}\index{/var/www/chamador.\+itep.\+govrn/public/api/menu/configuracoes/usuarios/update.\+php@{/var/www/chamador.\+itep.\+govrn/public/api/menu/configuracoes/usuarios/update.\+php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usuarios_2update_8php_a252370d95039a38fa11afab784725d58}{\$dados} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Cabeçalho para conteudo json. \end{DoxyCompactList}\item 
+\hyperlink{usuarios_2update_8php_a26b9f9373f7bb79dfcf8a86dff086b45}{\$body} = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Contem todos os dados a serem enviados. \end{DoxyCompactList}\item 
+\hyperlink{usuarios_2update_8php_acedd13b51401130848ce18f4d5c52605}{\$json} = json\+\_\+decode(\$body, true)
+\begin{DoxyCompactList}\small\item\em Obtém todas as informações requisitadas P\+O\+ST. \end{DoxyCompactList}\item 
+\hyperlink{usuarios_2update_8php_afc31993e855f9631572adfedcfe6f34b}{\$login} = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Decodifica as informações requisitadas. \end{DoxyCompactList}\item 
+\hyperlink{usuarios_2update_8php_a3678c8769c9698fd30581c1016c5f475}{\$senha} = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Login do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{usuarios_2update_8php_ae97941710d863131c700f069b109991e}{\$id} = \$json\mbox{[}\textquotesingle{}id\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Senha criptografada do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{usuarios_2update_8php_a87435a25b7cae617cf284c729b6e835c}{\$setor} = \$json\mbox{[}\textquotesingle{}setor\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em id do usuário que seá atualizado \end{DoxyCompactList}\item 
+\hyperlink{usuarios_2update_8php_abe4cc9788f52e49485473dc699537388}{try}
+\begin{DoxyCompactList}\small\item\em id do novo setor para o usuário \end{DoxyCompactList}\item 
+if(\$credenciais-\/$>$get\+\_\+user() -\/$>$get\+\_\+sector() -\/$>$get\+\_\+admin()==false) \hyperlink{usuarios_2update_8php_a8f5108ee2efdbfcd6f3d53b8abcb6c09}{else}
+\begin{DoxyCompactList}\small\item\em Obter a credencial do usário. \end{DoxyCompactList}\item 
+\hyperlink{usuarios_2update_8php_a0a11223e6e2db053ff44173de3a72d6e}{\$novo\+\_\+setor} = new \hyperlink{class_class_setor}{Class\+Setor}(\$setor)
+\begin{DoxyCompactList}\small\item\em Obter o usuário do id. \end{DoxyCompactList}\item 
+\hyperlink{usuarios_2update_8php_a9a2cf15a653aee8be437f7ae474cd494}{\$log} = new \hyperlink{class_class_logs}{Class\+Logs}(null, \$credenciais-\/$>$get\+\_\+user(), \char`\"{}A\+T\+U\+A\+L\+I\+Z\+OU U\+S\+UÁ\+R\+IO\char`\"{}, \$usuario)
+\item 
+\hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch}(Exception \$e) \hyperlink{usuarios_2update_8php_a1eb47d68a4a4f73debf91b15e179d813}{finally}
+\begin{DoxyCompactList}\small\item\em Criar um log desta operação no sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{usuarios_2update_8php_a26b9f9373f7bb79dfcf8a86dff086b45}\label{usuarios_2update_8php_a26b9f9373f7bb79dfcf8a86dff086b45}} 
+\index{usuarios/update.\+php@{usuarios/update.\+php}!\$body@{\$body}}
+\index{\$body@{\$body}!usuarios/update.\+php@{usuarios/update.\+php}}
+\subsubsection{\texorpdfstring{\$body}{$body}}
+{\footnotesize\ttfamily \$body = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})}
+
+
+
+Contem todos os dados a serem enviados. 
+
+
+
+Definition at line 21 of file update.\+php.
+
+\mbox{\Hypertarget{usuarios_2update_8php_a252370d95039a38fa11afab784725d58}\label{usuarios_2update_8php_a252370d95039a38fa11afab784725d58}} 
+\index{usuarios/update.\+php@{usuarios/update.\+php}!\$dados@{\$dados}}
+\index{\$dados@{\$dados}!usuarios/update.\+php@{usuarios/update.\+php}}
+\subsubsection{\texorpdfstring{\$dados}{$dados}}
+{\footnotesize\ttfamily \$dados = \mbox{[}$\,$\mbox{]}}
+
+
+
+Cabeçalho para conteudo json. 
+
+Cabeçalho com as classes e funções gerias 
+
+Definition at line 19 of file update.\+php.
+
+\mbox{\Hypertarget{usuarios_2update_8php_ae97941710d863131c700f069b109991e}\label{usuarios_2update_8php_ae97941710d863131c700f069b109991e}} 
+\index{usuarios/update.\+php@{usuarios/update.\+php}!\$id@{\$id}}
+\index{\$id@{\$id}!usuarios/update.\+php@{usuarios/update.\+php}}
+\subsubsection{\texorpdfstring{\$id}{$id}}
+{\footnotesize\ttfamily \$id = \$json\mbox{[}\textquotesingle{}id\textquotesingle{}\mbox{]}}
+
+
+
+Senha criptografada do usuário que requisitou a informação. 
+
+
+
+Definition at line 27 of file update.\+php.
+
+\mbox{\Hypertarget{usuarios_2update_8php_acedd13b51401130848ce18f4d5c52605}\label{usuarios_2update_8php_acedd13b51401130848ce18f4d5c52605}} 
+\index{usuarios/update.\+php@{usuarios/update.\+php}!\$json@{\$json}}
+\index{\$json@{\$json}!usuarios/update.\+php@{usuarios/update.\+php}}
+\subsubsection{\texorpdfstring{\$json}{$json}}
+{\footnotesize\ttfamily \$json = json\+\_\+decode(\$body, true)}
+
+
+
+Obtém todas as informações requisitadas P\+O\+ST. 
+
+
+
+Definition at line 22 of file update.\+php.
+
+\mbox{\Hypertarget{usuarios_2update_8php_a9a2cf15a653aee8be437f7ae474cd494}\label{usuarios_2update_8php_a9a2cf15a653aee8be437f7ae474cd494}} 
+\index{usuarios/update.\+php@{usuarios/update.\+php}!\$log@{\$log}}
+\index{\$log@{\$log}!usuarios/update.\+php@{usuarios/update.\+php}}
+\subsubsection{\texorpdfstring{\$log}{$log}}
+{\footnotesize\ttfamily \$log = new \hyperlink{class_class_logs}{Class\+Logs}(null, \$credenciais-\/$>$get\+\_\+user(), \char`\"{}A\+T\+U\+A\+L\+I\+Z\+OU U\+S\+UÁ\+R\+IO\char`\"{}, \$usuario)}
+
+
+
+Definition at line 47 of file update.\+php.
+
+\mbox{\Hypertarget{usuarios_2update_8php_afc31993e855f9631572adfedcfe6f34b}\label{usuarios_2update_8php_afc31993e855f9631572adfedcfe6f34b}} 
+\index{usuarios/update.\+php@{usuarios/update.\+php}!\$login@{\$login}}
+\index{\$login@{\$login}!usuarios/update.\+php@{usuarios/update.\+php}}
+\subsubsection{\texorpdfstring{\$login}{$login}}
+{\footnotesize\ttfamily \$login = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}}
+
+
+
+Decodifica as informações requisitadas. 
+
+
+
+Definition at line 24 of file update.\+php.
+
+\mbox{\Hypertarget{usuarios_2update_8php_a0a11223e6e2db053ff44173de3a72d6e}\label{usuarios_2update_8php_a0a11223e6e2db053ff44173de3a72d6e}} 
+\index{usuarios/update.\+php@{usuarios/update.\+php}!\$novo\+\_\+setor@{\$novo\+\_\+setor}}
+\index{\$novo\+\_\+setor@{\$novo\+\_\+setor}!usuarios/update.\+php@{usuarios/update.\+php}}
+\subsubsection{\texorpdfstring{\$novo\+\_\+setor}{$novo\_setor}}
+{\footnotesize\ttfamily \$novo\+\_\+setor = new \hyperlink{class_class_setor}{Class\+Setor}(\$setor)}
+
+
+
+Obter o usuário do id. 
+
+
+
+Definition at line 38 of file update.\+php.
+
+\mbox{\Hypertarget{usuarios_2update_8php_a3678c8769c9698fd30581c1016c5f475}\label{usuarios_2update_8php_a3678c8769c9698fd30581c1016c5f475}} 
+\index{usuarios/update.\+php@{usuarios/update.\+php}!\$senha@{\$senha}}
+\index{\$senha@{\$senha}!usuarios/update.\+php@{usuarios/update.\+php}}
+\subsubsection{\texorpdfstring{\$senha}{$senha}}
+{\footnotesize\ttfamily \$senha = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}}
+
+
+
+Login do usuário que requisitou a informação. 
+
+
+
+Definition at line 25 of file update.\+php.
+
+\mbox{\Hypertarget{usuarios_2update_8php_a87435a25b7cae617cf284c729b6e835c}\label{usuarios_2update_8php_a87435a25b7cae617cf284c729b6e835c}} 
+\index{usuarios/update.\+php@{usuarios/update.\+php}!\$setor@{\$setor}}
+\index{\$setor@{\$setor}!usuarios/update.\+php@{usuarios/update.\+php}}
+\subsubsection{\texorpdfstring{\$setor}{$setor}}
+{\footnotesize\ttfamily \$setor = \$json\mbox{[}\textquotesingle{}setor\textquotesingle{}\mbox{]}}
+
+
+
+id do usuário que seá atualizado 
+
+
+
+Definition at line 28 of file update.\+php.
+
+\mbox{\Hypertarget{usuarios_2update_8php_a8f5108ee2efdbfcd6f3d53b8abcb6c09}\label{usuarios_2update_8php_a8f5108ee2efdbfcd6f3d53b8abcb6c09}} 
+\index{usuarios/update.\+php@{usuarios/update.\+php}!else@{else}}
+\index{else@{else}!usuarios/update.\+php@{usuarios/update.\+php}}
+\subsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily if ( \$credenciais-\/$>$get\+\_\+user() -\/$>$get\+\_\+sector() -\/$>$get\+\_\+admin()==false) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+        \hyperlink{menu_2configuracoes_2usuarios_2new_8php_a559c8003f481610caf373b85cc607fb6}{$usuario} = \textcolor{keyword}{new} \hyperlink{class_class_usuario}{ClassUsuario}(\hyperlink{setores_2update_8php_ae97941710d863131c700f069b109991e}{$id})
+\end{DoxyCode}
+
+
+Obter a credencial do usário. 
+
+
+
+Definition at line 36 of file update.\+php.
+
+\mbox{\Hypertarget{usuarios_2update_8php_a1eb47d68a4a4f73debf91b15e179d813}\label{usuarios_2update_8php_a1eb47d68a4a4f73debf91b15e179d813}} 
+\index{usuarios/update.\+php@{usuarios/update.\+php}!finally@{finally}}
+\index{finally@{finally}!usuarios/update.\+php@{usuarios/update.\+php}}
+\subsubsection{\texorpdfstring{finally}{finally}}
+{\footnotesize\ttfamily \hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch} (Exception \$e) finally}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    echo json\_encode(\hyperlink{setores_2update_8php_a252370d95039a38fa11afab784725d58}{$dados}[0])
+\end{DoxyCode}
+
+
+Criar um log desta operação no sistema. 
+
+
+
+Definition at line 54 of file update.\+php.
+
+\mbox{\Hypertarget{usuarios_2update_8php_abe4cc9788f52e49485473dc699537388}\label{usuarios_2update_8php_abe4cc9788f52e49485473dc699537388}} 
+\index{usuarios/update.\+php@{usuarios/update.\+php}!try@{try}}
+\index{try@{try}!usuarios/update.\+php@{usuarios/update.\+php}}
+\subsubsection{\texorpdfstring{try}{try}}
+{\footnotesize\ttfamily try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    $credenciais = \textcolor{keyword}{new} \hyperlink{class_class_credenciais}{ClassCredenciais}(\hyperlink{setores_2update_8php_afc31993e855f9631572adfedcfe6f34b}{$login}, \hyperlink{setores_2update_8php_a3678c8769c9698fd30581c1016c5f475}{$senha})
+\end{DoxyCode}
+
+
+id do novo setor para o usuário 
+
+
+
+Definition at line 30 of file update.\+php.
+

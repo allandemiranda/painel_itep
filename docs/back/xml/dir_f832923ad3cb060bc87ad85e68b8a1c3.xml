@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_f832923ad3cb060bc87ad85e68b8a1c3" kind="dir">
+    <compoundname>/var/www/chamador.itep.govrn/public</compoundname>
+    <innerdir refid="dir_f869c6d0a553b01bad735dcd11969da3">/var/www/chamador.itep.govrn/public/api</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/var/www/chamador.itep.govrn/public/"/>
+  </compounddef>
+</doxygen>

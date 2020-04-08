@@ -1,0 +1,212 @@
+.TH "/var/www/chamador.itep.govrn/public/api/menu/configuracoes/usuarios/new.php" 3 "Mon Apr 6 2020" "Chamador ITEP - API" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/var/www/chamador.itep.govrn/public/api/menu/configuracoes/usuarios/new.php
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBmakeLogin\fP ($name)"
+.br
+.RI "Cabeçalho para conteudo json\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fB$dados\fP = []"
+.br
+.ti -1c
+.RI "\fB$body\fP = file_get_contents('php://input')"
+.br
+.RI "Contem todos os dados a serem enviados\&. "
+.ti -1c
+.RI "\fB$json\fP = json_decode($body, true)"
+.br
+.RI "Obtém todas as informações requisitadas POST\&. "
+.ti -1c
+.RI "\fB$login\fP = $json['login']"
+.br
+.RI "Decodifica as informações requisitadas\&. "
+.ti -1c
+.RI "\fB$senha\fP = $json['senha']"
+.br
+.RI "Login do usuário que requisitou a informação\&. "
+.ti -1c
+.RI "\fB$nome\fP = $json['nome']"
+.br
+.RI "Senha criptografada do usuário que requisitou a informação\&. "
+.ti -1c
+.RI "int \fB$setor_id\fP = intval($json['setor'])"
+.br
+.RI "Nome do novo usuário do sistema\&. "
+.ti -1c
+.RI "\fB$password\fP = \fBgeneratorPassword\fP()"
+.br
+.RI "id do setor do novo usuário do sistema "
+.ti -1c
+.RI "\fB$password_crypt\fP = \fBencrypt_password\fP($password)"
+.br
+.RI "Nova senha do novo usuário do sistema\&. "
+.ti -1c
+.RI "\fBtry\fP"
+.br
+.RI "Criptografando a nova senha\&. "
+.ti -1c
+.RI "if($credenciais\->get_user() \->get_sector() \->get_admin()==false) \fBelse\fP"
+.br
+.RI "Obter a credencial do usário\&. "
+.ti -1c
+.RI "\fB$setor\fP = new \fBClassSetor\fP($setor_id)"
+.br
+.RI "Criar um login para o novo usuário\&. "
+.ti -1c
+.RI "\fB$usuario\fP = new \fBClassUsuario\fP(null, strtoupper($nome), $setor, $login_user, $password_crypt)"
+.br
+.RI "Obter o setor do id\&. "
+.ti -1c
+.RI "\fB$log\fP = new \fBClassLogs\fP(null, $credenciais\->get_user(), 'CRIOU USUÁRIO', $usuario)"
+.br
+.ti -1c
+.RI "\fBcatch\fP(Exception $e) \fBfinally\fP"
+.br
+.RI "Criar um log desta operação no sistema\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "makeLogin ( $name)"
+
+.PP
+Cabeçalho para conteudo json\&. Cabeçalho com as classes e funções gerias Gera um login válido a partir do nome do Usuário
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP Nome do usuário do sistema 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String login válido para o usuário 
+.RE
+.PP
+Explode o nome do usuário
+.PP
+Adiciona o primeiro nome a um novo login
+.PP
+Adiciona um ponto ao novo login
+.PP
+Adiciona o último nome do usuário ano novo login
+.PP
+Verifica se algum usuário já possui este login 
+.PP
+Definition at line 25 of file new\&.php\&.
+.SH "Variable Documentation"
+.PP 
+.SS "$body = file_get_contents('php://input')"
+
+.PP
+Contem todos os dados a serem enviados\&. 
+.PP
+Definition at line 59 of file new\&.php\&.
+.SS "$dados = []"
+
+.PP
+Definition at line 57 of file new\&.php\&.
+.SS "$json = json_decode($body, true)"
+
+.PP
+Obtém todas as informações requisitadas POST\&. 
+.PP
+Definition at line 60 of file new\&.php\&.
+.SS "$log = new \fBClassLogs\fP(null, $credenciais\->get_user(), 'CRIOU USUÁRIO', $usuario)"
+
+.PP
+Definition at line 91 of file new\&.php\&.
+.SS "$login = $json['login']"
+
+.PP
+Decodifica as informações requisitadas\&. 
+.PP
+Definition at line 62 of file new\&.php\&.
+.SS "$nome = $json['nome']"
+
+.PP
+Senha criptografada do usuário que requisitou a informação\&. 
+.PP
+Definition at line 65 of file new\&.php\&.
+.SS "$password = \fBgeneratorPassword\fP()"
+
+.PP
+id do setor do novo usuário do sistema 
+.PP
+Definition at line 68 of file new\&.php\&.
+.SS "$password_crypt = \fBencrypt_password\fP($password)"
+
+.PP
+Nova senha do novo usuário do sistema\&. 
+.PP
+Definition at line 69 of file new\&.php\&.
+.SS "$senha = $json['senha']"
+
+.PP
+Login do usuário que requisitou a informação\&. 
+.PP
+Definition at line 63 of file new\&.php\&.
+.SS "$setor = new \fBClassSetor\fP($setor_id)"
+
+.PP
+Criar um login para o novo usuário\&. 
+.PP
+Definition at line 80 of file new\&.php\&.
+.SS "int $setor_id = intval($json['setor'])"
+
+.PP
+Nome do novo usuário do sistema\&. 
+.PP
+Definition at line 66 of file new\&.php\&.
+.SS "$usuario = new \fBClassUsuario\fP(null, strtoupper($nome), $setor, $login_user, $password_crypt)"
+
+.PP
+Obter o setor do id\&. 
+.PP
+Definition at line 82 of file new\&.php\&.
+.SS "if ( $credenciais\->get_user() \->get_sector() \->get_admin()==false) else"
+\fBInitial value:\fP
+.PP
+.nf
+{
+        $login_user = makeLogin(strtolower($nome))
+.fi
+.PP
+Obter a credencial do usário\&. 
+.PP
+Definition at line 77 of file new\&.php\&.
+.SS "\fBcatch\fP (Exception $e) finally"
+\fBInitial value:\fP
+.PP
+.nf
+{
+    echo json_encode($dados[0])
+.fi
+.PP
+Criar um log desta operação no sistema\&. 
+.PP
+Definition at line 98 of file new\&.php\&.
+.SS "try"
+\fBInitial value:\fP
+.PP
+.nf
+{
+    $credenciais = new ClassCredenciais($login, $senha)
+.fi
+.PP
+Criptografando a nova senha\&. 
+.PP
+Definition at line 71 of file new\&.php\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chamador ITEP - API from the source code\&.

@@ -1,0 +1,415 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_class_connection" kind="class" language="PHP" prot="public">
+    <compoundname>ClassConnection</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_class_connection_1ad79b54e31bd1050001133c4d70f850fe" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$servername</definition>
+        <argsstring></argsstring>
+        <name>$servername</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="16" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_connection_1a0eb82aa5f81cf845de4b36cd653c42cf" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$username</definition>
+        <argsstring></argsstring>
+        <name>$username</name>
+        <briefdescription>
+<para>Host do servidor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="17" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_connection_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$password</definition>
+        <argsstring></argsstring>
+        <name>$password</name>
+        <briefdescription>
+<para>Usuário do banco de dados. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="18" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_connection_1ac5111a571fffa2499732833bb7f0d8c1" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$dbname</definition>
+        <argsstring></argsstring>
+        <name>$dbname</name>
+        <briefdescription>
+<para>Senha do usuário do banco de dados. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="19" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_connection_1aa8a5a87b9c1a6a0819b88447cbe41877" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$conn</definition>
+        <argsstring></argsstring>
+        <name>$conn</name>
+        <briefdescription>
+<para>Nome do banco de dados. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="20" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_class_connection_1a095c5d389db211932136b53f25f39685" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>()</argsstring>
+        <name>__construct</name>
+        <briefdescription>
+<para>Conexão com o banco de dados. </para>        </briefdescription>
+        <detaileddescription>
+<para>Construtor da classe atribui as informações da conexão </para>        </detaileddescription>
+        <inbodydescription>
+<para>Host do servidor</para><para>Usuário do banco de dados</para><para>Senha do usuário do banco de dados</para><para>Nome do banco de dados</para><para>Conectar ao banco da dados </para>        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="26" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="26" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_connection_1a421831a265621325e1fdd19aace0c758" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__destruct</definition>
+        <argsstring>()</argsstring>
+        <name>__destruct</name>
+        <briefdescription>
+<para>Destrutor da classe dando commit em query aberta e fecha a conexão. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="39" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="39" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_connection_1a45aa0f36cd2827c49d8341cd34b43aa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>request_query</definition>
+        <argsstring>($sql)</argsstring>
+        <name>request_query</name>
+        <param>
+          <declname>$sql</declname>
+        </param>
+        <briefdescription>
+<para>Solicite uma SQL ao bando de dados e veja sua resposta. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sql</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Query SQL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="183" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="183" bodyend="191"/>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="atendidos_8php_1a047170d6020a882807665812a27e2525" compoundref="atendidos_8php" startline="31">$sql</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_connection_1a278a7a9ce9d5327bf2af66959d9bc723" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rollback_querys</definition>
+        <argsstring>()</argsstring>
+        <name>rollback_querys</name>
+        <briefdescription>
+<para>Remover todas as solicitações SQL já feitas nessa conexão. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="197" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="197" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_connection_1addadc2022e9fe02f49da4f7672fb6819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>last_insert_id</definition>
+        <argsstring>()</argsstring>
+        <name>last_insert_id</name>
+        <briefdescription>
+<para>Retorna o id gerado automaticamente na última consulta. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Int id gerado automaticamente na última consulta </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="224" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="224" bodyend="231"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_class_connection_1ad8a845f59adf93d3504466d99f938864" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_servername</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_servername</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir nome do Host do Serviço MySQL. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>host do Serviço MySQL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="54" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_connection_1a045bfdceb2fe2d7146720134dea21ae8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_servername</definition>
+        <argsstring>()</argsstring>
+        <name>get_servername</name>
+        <briefdescription>
+<para>Obter o host do Serviço MySQL. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Host que está se usando </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="64" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_connection_1acc7a044e3ba0b19bfe997d7cf4e83760" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_username</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_username</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir o Usuário do Serviço MySQL. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>O Usuário do Serviço MySQL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="74" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_connection_1a0e3b415bc657a0a4209274194c826b65" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_username</definition>
+        <argsstring>()</argsstring>
+        <name>get_username</name>
+        <briefdescription>
+<para>Obter o Usuário do Serviço MySQL. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String O Usuário que está se usando </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="84" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_connection_1a48fcdf09611589d13f8832d104aa2f52" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_password</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_password</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir a Senha do Usuário do Serviço MySQL. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Senha do Usuário do Serviço MySQL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="94" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_connection_1aded77192e5da28ea5fd228d2e5ace16a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_password</definition>
+        <argsstring>()</argsstring>
+        <name>get_password</name>
+        <briefdescription>
+<para>Obter a Senha do Usuário do Serviço MySQL. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Senha do Usuário que está se usando </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="104" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_connection_1af103cb10f570aaa7cb6a2b3e208ab77c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_dbname</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_dbname</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir o nome do Banco de Dados do Serviço MySQL. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value Nome do Banco de Dados do Serviço MySQL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="114" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_connection_1a161239651dedfafa4103b35cc5a8ca3e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_dbname</definition>
+        <argsstring>()</argsstring>
+        <name>get_dbname</name>
+        <briefdescription>
+<para>Obter o nome do Banco de Dados do Serviço MySQL. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Nome do Banco de dados que está se usando </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="124" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_connection_1ac46898032ba5106f93ae5a0e084a3416" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_conn</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_conn</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir a Conexão Aberta com o Banco de Dados. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objeto com a conexão aberta com o banco de dados </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="134" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="134" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_connection_1a44068bd49063ef1bc0ad423a944657b2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_conn</definition>
+        <argsstring>()</argsstring>
+        <name>get_conn</name>
+        <briefdescription>
+<para>Obter a Conexão Aberta com o Banco da Dados. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Object Conexão aberta com o Banco de Dados que está sendo usada </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="144" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="144" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_connection_1a7fa48f6882eccec91ea9c433e1ad2a57" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>connection</definition>
+        <argsstring>()</argsstring>
+        <name>connection</name>
+        <briefdescription>
+<para>Conecta a classe ao banco de dados para operar as querys SQL. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Criando conexão com o banco de dados</para><para>Bloqueando entradas de leitura e escrita de outras conexões </para>        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="153" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="153" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_connection_1a937bdfdf70517d6504f37f8950d991ac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>commit_querys</definition>
+        <argsstring>()</argsstring>
+        <name>commit_querys</name>
+        <briefdescription>
+<para>Commita as chamadas já apresentadas. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="210" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="210" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_connection_1a2cd363bf0e126d967962d71e7a2c2a45" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>close_connection</definition>
+        <argsstring>()</argsstring>
+        <name>close_connection</name>
+        <briefdescription>
+<para>Fecha a conexão com o banco de dados e destroi o objeto. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="237" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="237" bodyend="245"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" line="15" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassConnection.php" bodystart="14" bodyend="246"/>
+    <listofallmembers>
+      <member refid="class_class_connection_1aa8a5a87b9c1a6a0819b88447cbe41877" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>$conn</name></member>
+      <member refid="class_class_connection_1ac5111a571fffa2499732833bb7f0d8c1" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>$dbname</name></member>
+      <member refid="class_class_connection_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>$password</name></member>
+      <member refid="class_class_connection_1ad79b54e31bd1050001133c4d70f850fe" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>$servername</name></member>
+      <member refid="class_class_connection_1a0eb82aa5f81cf845de4b36cd653c42cf" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>$username</name></member>
+      <member refid="class_class_connection_1a095c5d389db211932136b53f25f39685" prot="public" virt="non-virtual"><scope>ClassConnection</scope><name>__construct</name></member>
+      <member refid="class_class_connection_1a421831a265621325e1fdd19aace0c758" prot="public" virt="non-virtual"><scope>ClassConnection</scope><name>__destruct</name></member>
+      <member refid="class_class_connection_1a2cd363bf0e126d967962d71e7a2c2a45" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>close_connection</name></member>
+      <member refid="class_class_connection_1a937bdfdf70517d6504f37f8950d991ac" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>commit_querys</name></member>
+      <member refid="class_class_connection_1a7fa48f6882eccec91ea9c433e1ad2a57" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>connection</name></member>
+      <member refid="class_class_connection_1a44068bd49063ef1bc0ad423a944657b2" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>get_conn</name></member>
+      <member refid="class_class_connection_1a161239651dedfafa4103b35cc5a8ca3e" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>get_dbname</name></member>
+      <member refid="class_class_connection_1aded77192e5da28ea5fd228d2e5ace16a" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>get_password</name></member>
+      <member refid="class_class_connection_1a045bfdceb2fe2d7146720134dea21ae8" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>get_servername</name></member>
+      <member refid="class_class_connection_1a0e3b415bc657a0a4209274194c826b65" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>get_username</name></member>
+      <member refid="class_class_connection_1addadc2022e9fe02f49da4f7672fb6819" prot="public" virt="non-virtual"><scope>ClassConnection</scope><name>last_insert_id</name></member>
+      <member refid="class_class_connection_1a45aa0f36cd2827c49d8341cd34b43aa0" prot="public" virt="non-virtual"><scope>ClassConnection</scope><name>request_query</name></member>
+      <member refid="class_class_connection_1a278a7a9ce9d5327bf2af66959d9bc723" prot="public" virt="non-virtual"><scope>ClassConnection</scope><name>rollback_querys</name></member>
+      <member refid="class_class_connection_1ac46898032ba5106f93ae5a0e084a3416" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>set_conn</name></member>
+      <member refid="class_class_connection_1af103cb10f570aaa7cb6a2b3e208ab77c" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>set_dbname</name></member>
+      <member refid="class_class_connection_1a48fcdf09611589d13f8832d104aa2f52" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>set_password</name></member>
+      <member refid="class_class_connection_1ad8a845f59adf93d3504466d99f938864" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>set_servername</name></member>
+      <member refid="class_class_connection_1acc7a044e3ba0b19bfe997d7cf4e83760" prot="private" virt="non-virtual"><scope>ClassConnection</scope><name>set_username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

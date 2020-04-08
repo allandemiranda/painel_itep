@@ -1,0 +1,230 @@
+\hypertarget{main_page_2inicial_2index_8php}{}\section{/var/www/chamador.itep.\+govrn/public/api/main\+Page/inicial/index.php File Reference}
+\label{main_page_2inicial_2index_8php}\index{/var/www/chamador.\+itep.\+govrn/public/api/main\+Page/inicial/index.\+php@{/var/www/chamador.\+itep.\+govrn/public/api/main\+Page/inicial/index.\+php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{main_page_2inicial_2index_8php_a252370d95039a38fa11afab784725d58}{\$dados} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Cabeçalho para conteudo json. \end{DoxyCompactList}\item 
+\hyperlink{main_page_2inicial_2index_8php_a26b9f9373f7bb79dfcf8a86dff086b45}{\$body} = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Contem todos os dados a serem enviados. \end{DoxyCompactList}\item 
+\hyperlink{main_page_2inicial_2index_8php_acedd13b51401130848ce18f4d5c52605}{\$json} = json\+\_\+decode(\$body, true)
+\begin{DoxyCompactList}\small\item\em Obtém todas as informações requisitadas P\+O\+ST. \end{DoxyCompactList}\item 
+\hyperlink{main_page_2inicial_2index_8php_afc31993e855f9631572adfedcfe6f34b}{\$login} = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Decodifica as informações requisitadas. \end{DoxyCompactList}\item 
+\hyperlink{main_page_2inicial_2index_8php_a3678c8769c9698fd30581c1016c5f475}{\$senha} = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Login do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{main_page_2inicial_2index_8php_abe4cc9788f52e49485473dc699537388}{try}
+\begin{DoxyCompactList}\small\item\em Senha criptografada do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{main_page_2inicial_2index_8php_a1fa3127fc82f96b1436d871ef02be319}{\$db} = new \hyperlink{class_class_connection}{Class\+Connection}()
+\begin{DoxyCompactList}\small\item\em Obter a credencial do usário. \end{DoxyCompactList}\item 
+\hyperlink{main_page_2inicial_2index_8php_af1b7fb9d06cdc6d22c14741fc3cc185a}{\$today} = date(\char`\"{}Y-\/m-\/d\char`\"{})
+\item 
+\hyperlink{main_page_2inicial_2index_8php_a047170d6020a882807665812a27e2525}{\$sql} = \char`\"{}S\+E\+L\+E\+CT `ficha\+\_\+id` F\+R\+OM `fichas\+\_\+tb` W\+H\+E\+RE `ficha\+\_\+criacao\+\_\+data`$>$=\textquotesingle{}\char`\"{} . \$today . \char`\"{}\textquotesingle{} A\+ND `ficha\+\_\+setor\+\_\+id`=\char`\"{} . \$credenciais-\/$>$get\+\_\+user()-\/$>$get\+\_\+sector()-\/$>$get\+\_\+id() . \char`\"{} A\+ND `ficha\+\_\+status`=\textquotesingle{}NÃO A\+T\+E\+N\+D\+I\+DO\textquotesingle{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em Data do dia atual. \end{DoxyCompactList}\item 
+\hyperlink{main_page_2inicial_2index_8php_a112ef069ddc0454086e3d1e6d8d55d07}{\$result} = \$db-\/$>$request\+\_\+query(\$sql)
+\item 
+\hyperlink{main_page_2inicial_2index_8php_add4f57f5461e6bdecccd6d1fd7087cdf}{\$nao\+Atendidos} = mysqli\+\_\+num\+\_\+rows(\$result)
+\item 
+\hyperlink{main_page_2inicial_2index_8php_adc5ce818bd9a71cfd2370a6b9fec577c}{\$em\+Atendimento} = mysqli\+\_\+num\+\_\+rows(\$result)
+\item 
+\hyperlink{main_page_2inicial_2index_8php_a7eb9c8628fe0ebfde79ce1edcf149330}{\$encaminhado} = mysqli\+\_\+num\+\_\+rows(\$result)
+\item 
+\hyperlink{main_page_2inicial_2index_8php_a2587833f2f5a0d6fd7af021865381204}{\$finalizado} = mysqli\+\_\+num\+\_\+rows(\$result)
+\item 
+\hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch}(Exception \$e) \hyperlink{main_page_2inicial_2index_8php_a1eb47d68a4a4f73debf91b15e179d813}{finally}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{main_page_2inicial_2index_8php_a26b9f9373f7bb79dfcf8a86dff086b45}\label{main_page_2inicial_2index_8php_a26b9f9373f7bb79dfcf8a86dff086b45}} 
+\index{main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}!\$body@{\$body}}
+\index{\$body@{\$body}!main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}}
+\subsubsection{\texorpdfstring{\$body}{$body}}
+{\footnotesize\ttfamily \$body = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})}
+
+
+
+Contem todos os dados a serem enviados. 
+
+
+
+Definition at line 21 of file index.\+php.
+
+\mbox{\Hypertarget{main_page_2inicial_2index_8php_a252370d95039a38fa11afab784725d58}\label{main_page_2inicial_2index_8php_a252370d95039a38fa11afab784725d58}} 
+\index{main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}!\$dados@{\$dados}}
+\index{\$dados@{\$dados}!main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}}
+\subsubsection{\texorpdfstring{\$dados}{$dados}}
+{\footnotesize\ttfamily \$dados = \mbox{[}$\,$\mbox{]}}
+
+
+
+Cabeçalho para conteudo json. 
+
+Cabeçalho com as classes e funções gerias 
+
+Definition at line 19 of file index.\+php.
+
+\mbox{\Hypertarget{main_page_2inicial_2index_8php_a1fa3127fc82f96b1436d871ef02be319}\label{main_page_2inicial_2index_8php_a1fa3127fc82f96b1436d871ef02be319}} 
+\index{main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}!\$db@{\$db}}
+\index{\$db@{\$db}!main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}}
+\subsubsection{\texorpdfstring{\$db}{$db}}
+{\footnotesize\ttfamily \$db = new \hyperlink{class_class_connection}{Class\+Connection}()}
+
+
+
+Obter a credencial do usário. 
+
+
+
+Definition at line 30 of file index.\+php.
+
+\mbox{\Hypertarget{main_page_2inicial_2index_8php_adc5ce818bd9a71cfd2370a6b9fec577c}\label{main_page_2inicial_2index_8php_adc5ce818bd9a71cfd2370a6b9fec577c}} 
+\index{main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}!\$em\+Atendimento@{\$em\+Atendimento}}
+\index{\$em\+Atendimento@{\$em\+Atendimento}!main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}}
+\subsubsection{\texorpdfstring{\$em\+Atendimento}{$emAtendimento}}
+{\footnotesize\ttfamily \$em\+Atendimento = mysqli\+\_\+num\+\_\+rows(\$result)}
+
+
+
+Definition at line 41 of file index.\+php.
+
+\mbox{\Hypertarget{main_page_2inicial_2index_8php_a7eb9c8628fe0ebfde79ce1edcf149330}\label{main_page_2inicial_2index_8php_a7eb9c8628fe0ebfde79ce1edcf149330}} 
+\index{main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}!\$encaminhado@{\$encaminhado}}
+\index{\$encaminhado@{\$encaminhado}!main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}}
+\subsubsection{\texorpdfstring{\$encaminhado}{$encaminhado}}
+{\footnotesize\ttfamily \$encaminhado = mysqli\+\_\+num\+\_\+rows(\$result)}
+
+
+
+Definition at line 46 of file index.\+php.
+
+\mbox{\Hypertarget{main_page_2inicial_2index_8php_a2587833f2f5a0d6fd7af021865381204}\label{main_page_2inicial_2index_8php_a2587833f2f5a0d6fd7af021865381204}} 
+\index{main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}!\$finalizado@{\$finalizado}}
+\index{\$finalizado@{\$finalizado}!main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}}
+\subsubsection{\texorpdfstring{\$finalizado}{$finalizado}}
+{\footnotesize\ttfamily \$finalizado = mysqli\+\_\+num\+\_\+rows(\$result)}
+
+
+
+Definition at line 51 of file index.\+php.
+
+\mbox{\Hypertarget{main_page_2inicial_2index_8php_acedd13b51401130848ce18f4d5c52605}\label{main_page_2inicial_2index_8php_acedd13b51401130848ce18f4d5c52605}} 
+\index{main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}!\$json@{\$json}}
+\index{\$json@{\$json}!main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}}
+\subsubsection{\texorpdfstring{\$json}{$json}}
+{\footnotesize\ttfamily \$json = json\+\_\+decode(\$body, true)}
+
+
+
+Obtém todas as informações requisitadas P\+O\+ST. 
+
+
+
+Definition at line 22 of file index.\+php.
+
+\mbox{\Hypertarget{main_page_2inicial_2index_8php_afc31993e855f9631572adfedcfe6f34b}\label{main_page_2inicial_2index_8php_afc31993e855f9631572adfedcfe6f34b}} 
+\index{main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}!\$login@{\$login}}
+\index{\$login@{\$login}!main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}}
+\subsubsection{\texorpdfstring{\$login}{$login}}
+{\footnotesize\ttfamily \$login = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}}
+
+
+
+Decodifica as informações requisitadas. 
+
+
+
+Definition at line 24 of file index.\+php.
+
+\mbox{\Hypertarget{main_page_2inicial_2index_8php_add4f57f5461e6bdecccd6d1fd7087cdf}\label{main_page_2inicial_2index_8php_add4f57f5461e6bdecccd6d1fd7087cdf}} 
+\index{main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}!\$nao\+Atendidos@{\$nao\+Atendidos}}
+\index{\$nao\+Atendidos@{\$nao\+Atendidos}!main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}}
+\subsubsection{\texorpdfstring{\$nao\+Atendidos}{$naoAtendidos}}
+{\footnotesize\ttfamily \$nao\+Atendidos = mysqli\+\_\+num\+\_\+rows(\$result)}
+
+
+
+Definition at line 36 of file index.\+php.
+
+\mbox{\Hypertarget{main_page_2inicial_2index_8php_a112ef069ddc0454086e3d1e6d8d55d07}\label{main_page_2inicial_2index_8php_a112ef069ddc0454086e3d1e6d8d55d07}} 
+\index{main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}!\$result@{\$result}}
+\index{\$result@{\$result}!main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}}
+\subsubsection{\texorpdfstring{\$result}{$result}}
+{\footnotesize\ttfamily \$result = \$db-\/$>$request\+\_\+query(\$sql)}
+
+
+
+Definition at line 35 of file index.\+php.
+
+\mbox{\Hypertarget{main_page_2inicial_2index_8php_a3678c8769c9698fd30581c1016c5f475}\label{main_page_2inicial_2index_8php_a3678c8769c9698fd30581c1016c5f475}} 
+\index{main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}!\$senha@{\$senha}}
+\index{\$senha@{\$senha}!main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}}
+\subsubsection{\texorpdfstring{\$senha}{$senha}}
+{\footnotesize\ttfamily \$senha = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}}
+
+
+
+Login do usuário que requisitou a informação. 
+
+
+
+Definition at line 25 of file index.\+php.
+
+\mbox{\Hypertarget{main_page_2inicial_2index_8php_a047170d6020a882807665812a27e2525}\label{main_page_2inicial_2index_8php_a047170d6020a882807665812a27e2525}} 
+\index{main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}}
+\subsubsection{\texorpdfstring{\$sql}{$sql}}
+{\footnotesize\ttfamily \$sql = \char`\"{}S\+E\+L\+E\+CT `ficha\+\_\+id` F\+R\+OM `fichas\+\_\+tb` W\+H\+E\+RE `ficha\+\_\+criacao\+\_\+data`$>$=\textquotesingle{}\char`\"{} . \$today . \char`\"{}\textquotesingle{} A\+ND `ficha\+\_\+setor\+\_\+id`=\char`\"{} . \$credenciais-\/$>$get\+\_\+user()-\/$>$get\+\_\+sector()-\/$>$get\+\_\+id() . \char`\"{} A\+ND `ficha\+\_\+status`=\textquotesingle{}NÃO A\+T\+E\+N\+D\+I\+DO\textquotesingle{}\char`\"{}}
+
+
+
+Data do dia atual. 
+
+
+
+Definition at line 34 of file index.\+php.
+
+\mbox{\Hypertarget{main_page_2inicial_2index_8php_af1b7fb9d06cdc6d22c14741fc3cc185a}\label{main_page_2inicial_2index_8php_af1b7fb9d06cdc6d22c14741fc3cc185a}} 
+\index{main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}!\$today@{\$today}}
+\index{\$today@{\$today}!main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}}
+\subsubsection{\texorpdfstring{\$today}{$today}}
+{\footnotesize\ttfamily \$today = date(\char`\"{}Y-\/m-\/d\char`\"{})}
+
+
+
+Definition at line 31 of file index.\+php.
+
+\mbox{\Hypertarget{main_page_2inicial_2index_8php_a1eb47d68a4a4f73debf91b15e179d813}\label{main_page_2inicial_2index_8php_a1eb47d68a4a4f73debf91b15e179d813}} 
+\index{main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}!finally@{finally}}
+\index{finally@{finally}!main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}}
+\subsubsection{\texorpdfstring{finally}{finally}}
+{\footnotesize\ttfamily \hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch} (Exception \$e) finally}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    echo json\_encode(\hyperlink{login_2index_8php_a252370d95039a38fa11afab784725d58}{$dados}[0])
+\end{DoxyCode}
+
+
+Definition at line 68 of file index.\+php.
+
+\mbox{\Hypertarget{main_page_2inicial_2index_8php_abe4cc9788f52e49485473dc699537388}\label{main_page_2inicial_2index_8php_abe4cc9788f52e49485473dc699537388}} 
+\index{main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}!try@{try}}
+\index{try@{try}!main\+Page/inicial/index.\+php@{main\+Page/inicial/index.\+php}}
+\subsubsection{\texorpdfstring{try}{try}}
+{\footnotesize\ttfamily try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    $credenciais = \textcolor{keyword}{new} \hyperlink{class_class_credenciais}{ClassCredenciais}(\hyperlink{login_2index_8php_afc31993e855f9631572adfedcfe6f34b}{$login}, \hyperlink{login_2index_8php_a3678c8769c9698fd30581c1016c5f475}{$senha})
+\end{DoxyCode}
+
+
+Senha criptografada do usuário que requisitou a informação. 
+
+
+
+Definition at line 27 of file index.\+php.
+

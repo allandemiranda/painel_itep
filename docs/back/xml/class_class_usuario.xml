@@ -1,0 +1,509 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_class_usuario" kind="class" language="PHP" prot="public">
+    <compoundname>ClassUsuario</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_class_usuario_1ae97941710d863131c700f069b109991e" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$id</definition>
+        <argsstring></argsstring>
+        <name>$id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="16" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_usuario_1ab2fc40d43824ea3e1ce5d86dee0d763b" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$name</definition>
+        <argsstring></argsstring>
+        <name>$name</name>
+        <briefdescription>
+<para>id do Funcionário </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="17" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_usuario_1a9902faf2fffc60e027f93771baf73f1e" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$sector</definition>
+        <argsstring></argsstring>
+        <name>$sector</name>
+        <briefdescription>
+<para>Nome do Funcionário. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="18" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_usuario_1afc31993e855f9631572adfedcfe6f34b" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$login</definition>
+        <argsstring></argsstring>
+        <name>$login</name>
+        <briefdescription>
+<para>Objeto Setor do Funcionário. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="19" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_usuario_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$password</definition>
+        <argsstring></argsstring>
+        <name>$password</name>
+        <briefdescription>
+<para>Login do Funcionário. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="20" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_usuario_1a11310b773f3860a19892b3f681f957f1" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$deleted</definition>
+        <argsstring></argsstring>
+        <name>$deleted</name>
+        <briefdescription>
+<para>Senha do Funcionário criptografada em MD5. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="21" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_usuario_1a3c86aaf7b6b422119a459dcd69cb6605" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$created_on_date</definition>
+        <argsstring></argsstring>
+        <name>$created_on_date</name>
+        <briefdescription>
+<para>Se o Funcionário foi deletado do sistema. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="22" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_class_usuario_1a45b276efdfbf14af270d51a7b603fa52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($id=null, $name=null, $sector=null, $login=null, $password=null)</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$id</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <declname>$name</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <declname>$sector</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <declname>$login</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <declname>$password</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Data da criação do Funcionário no sistema. </para>        </briefdescription>
+        <detaileddescription>
+<para>Construtor do Objeto <ref refid="class_class_usuario" kindref="compound">ClassUsuario</ref></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id do Funcionário </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do Funcionário </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Setor que o Funcionário trabalha </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>login</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Login do Funcionário no Sistema </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Senha do Funcionário no Sistema </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deleted</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Se o Funcionário foi deletado do sistema </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>created_on_date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data da criação do Funcionário no Sistema </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="35" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="35" bodyend="84"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_usuario_1a421831a265621325e1fdd19aace0c758" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__destruct</definition>
+        <argsstring>()</argsstring>
+        <name>__destruct</name>
+        <briefdescription>
+<para>Destrutor do Objeto <ref refid="class_class_usuario" kindref="compound">ClassUsuario</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="90" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="90" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_usuario_1a8a94003b9d888b085c68d6eac44be175" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_id</definition>
+        <argsstring>()</argsstring>
+        <name>get_id</name>
+        <briefdescription>
+<para>Obter o id do Funcionário. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Int id do Funcionário </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="106" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="106" bodyend="109"/>
+        <referencedby refid="class_class_usuario_1a53e29da8f1da63502f3e13091fcb74e5" compoundref="_class_usuario_8php" startline="126" endline="138">set_name</referencedby>
+        <referencedby refid="class_class_usuario_1a0d66a3911f396de6d492ac322bf5569d" compoundref="_class_usuario_8php" startline="155" endline="169">set_sector</referencedby>
+        <referencedby refid="class_class_usuario_1a81f9ed4b60bab54c829ad63c6a6134d2" compoundref="_class_usuario_8php" startline="186" endline="198">set_login</referencedby>
+        <referencedby refid="class_class_usuario_1a48fcdf09611589d13f8832d104aa2f52" compoundref="_class_usuario_8php" startline="215" endline="227">set_password</referencedby>
+        <referencedby refid="class_class_usuario_1acd0a4e339896072e5515b8fdcc33344d" compoundref="_class_usuario_8php" startline="244" endline="259">set_deleted</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_usuario_1a4f1149ccbd69d1ac4225b7bc2dd871bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_name</definition>
+        <argsstring>()</argsstring>
+        <name>get_name</name>
+        <briefdescription>
+<para>Obter Nome do Funcionário. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Nome do Funcionário </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="116" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="116" bodyend="119"/>
+        <referencedby refid="class_class_usuario_1a53e29da8f1da63502f3e13091fcb74e5" compoundref="_class_usuario_8php" startline="126" endline="138">set_name</referencedby>
+        <referencedby refid="class_class_usuario_1a0d66a3911f396de6d492ac322bf5569d" compoundref="_class_usuario_8php" startline="155" endline="169">set_sector</referencedby>
+        <referencedby refid="class_class_usuario_1a81f9ed4b60bab54c829ad63c6a6134d2" compoundref="_class_usuario_8php" startline="186" endline="198">set_login</referencedby>
+        <referencedby refid="class_class_usuario_1a48fcdf09611589d13f8832d104aa2f52" compoundref="_class_usuario_8php" startline="215" endline="227">set_password</referencedby>
+        <referencedby refid="class_class_usuario_1acd0a4e339896072e5515b8fdcc33344d" compoundref="_class_usuario_8php" startline="244" endline="259">set_deleted</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_usuario_1a53e29da8f1da63502f3e13091fcb74e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_name</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_name</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir Nome do Funcionário. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Novo Nome do Funcionário </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="126" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="126" bodyend="138"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="class_class_usuario_1a4f1149ccbd69d1ac4225b7bc2dd871bb" compoundref="_class_usuario_8php" startline="116" endline="119">get_name</references>
+        <references refid="class_class_usuario_1a8a94003b9d888b085c68d6eac44be175" compoundref="_class_usuario_8php" startline="106" endline="109">get_id</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_usuario_1a31b79003e5d3bc648bb381b59f0088bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_sector</definition>
+        <argsstring>()</argsstring>
+        <name>get_sector</name>
+        <briefdescription>
+<para>Obter Setor associado ao Funcionário. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="class_class_setor" kindref="compound">ClassSetor</ref> Setor do Funcionário </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="145" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="145" bodyend="148"/>
+        <referencedby refid="class_class_usuario_1a0d66a3911f396de6d492ac322bf5569d" compoundref="_class_usuario_8php" startline="155" endline="169">set_sector</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_usuario_1a0d66a3911f396de6d492ac322bf5569d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_sector</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_sector</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir o Setor associado ao Funcionário. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Setor do Funcionário </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="155" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="155" bodyend="169"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="class_class_usuario_1a31b79003e5d3bc648bb381b59f0088bd" compoundref="_class_usuario_8php" startline="145" endline="148">get_sector</references>
+        <references refid="class_class_usuario_1a8a94003b9d888b085c68d6eac44be175" compoundref="_class_usuario_8php" startline="106" endline="109">get_id</references>
+        <references refid="class_class_usuario_1a4f1149ccbd69d1ac4225b7bc2dd871bb" compoundref="_class_usuario_8php" startline="116" endline="119">get_name</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_usuario_1a09bc68f0d359d44f4f9a38f04fa69b0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_login</definition>
+        <argsstring>()</argsstring>
+        <name>get_login</name>
+        <briefdescription>
+<para>Obter o Login do Funcionário. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Login do Funcionário </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="176" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="176" bodyend="179"/>
+        <referencedby refid="class_class_usuario_1a81f9ed4b60bab54c829ad63c6a6134d2" compoundref="_class_usuario_8php" startline="186" endline="198">set_login</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_usuario_1a81f9ed4b60bab54c829ad63c6a6134d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_login</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_login</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir o Login do Funcioário. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Novo Login do Funcionário </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="186" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="186" bodyend="198"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="class_class_usuario_1a09bc68f0d359d44f4f9a38f04fa69b0e" compoundref="_class_usuario_8php" startline="176" endline="179">get_login</references>
+        <references refid="class_class_usuario_1a8a94003b9d888b085c68d6eac44be175" compoundref="_class_usuario_8php" startline="106" endline="109">get_id</references>
+        <references refid="class_class_usuario_1a4f1149ccbd69d1ac4225b7bc2dd871bb" compoundref="_class_usuario_8php" startline="116" endline="119">get_name</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_usuario_1aded77192e5da28ea5fd228d2e5ace16a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_password</definition>
+        <argsstring>()</argsstring>
+        <name>get_password</name>
+        <briefdescription>
+<para>Obter a Senha do Funcionário na criptografia md5. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>md5 Senha do Funcionário na criptografia md5 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="205" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="205" bodyend="208"/>
+        <referencedby refid="class_class_usuario_1a48fcdf09611589d13f8832d104aa2f52" compoundref="_class_usuario_8php" startline="215" endline="227">set_password</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_usuario_1a48fcdf09611589d13f8832d104aa2f52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_password</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_password</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir a Senha do Funcionário na criptografia md5. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nova Senha do Funcionário na criptografia md5 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="215" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="215" bodyend="227"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="class_class_usuario_1aded77192e5da28ea5fd228d2e5ace16a" compoundref="_class_usuario_8php" startline="205" endline="208">get_password</references>
+        <references refid="class_class_usuario_1a8a94003b9d888b085c68d6eac44be175" compoundref="_class_usuario_8php" startline="106" endline="109">get_id</references>
+        <references refid="class_class_usuario_1a4f1149ccbd69d1ac4225b7bc2dd871bb" compoundref="_class_usuario_8php" startline="116" endline="119">get_name</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_usuario_1ad6172a0f313f12f05c08efc37a9c3656" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_deleted</definition>
+        <argsstring>()</argsstring>
+        <name>get_deleted</name>
+        <briefdescription>
+<para>Obter a informação se o Funcionário já foi deletado. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Bool Se o Funcionário já foi deletado </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="234" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="234" bodyend="237"/>
+        <referencedby refid="class_class_usuario_1acd0a4e339896072e5515b8fdcc33344d" compoundref="_class_usuario_8php" startline="244" endline="259">set_deleted</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_usuario_1acd0a4e339896072e5515b8fdcc33344d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_deleted</definition>
+        <argsstring>(bool $value)</argsstring>
+        <name>set_deleted</name>
+        <param>
+          <type>bool</type>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir se o Funcionário foi deletado. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Se o Funcionário foi deletado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="244" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="244" bodyend="259"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="class_class_usuario_1ad6172a0f313f12f05c08efc37a9c3656" compoundref="_class_usuario_8php" startline="234" endline="237">get_deleted</references>
+        <references refid="class_class_usuario_1a8a94003b9d888b085c68d6eac44be175" compoundref="_class_usuario_8php" startline="106" endline="109">get_id</references>
+        <references refid="class_class_usuario_1a4f1149ccbd69d1ac4225b7bc2dd871bb" compoundref="_class_usuario_8php" startline="116" endline="119">get_name</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_usuario_1a9a1ef394f9aef6ab037f8bb37209242f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_created_on_date</definition>
+        <argsstring>()</argsstring>
+        <name>get_created_on_date</name>
+        <briefdescription>
+<para>Obter a data que o Funcionário foi criado. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Timestamp Data da criação do Funcionário </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="267" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="267" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_usuario_1a792b5876e9d76a4f030e436aeec2a855" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_created_on_date</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_created_on_date</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir a data que o Funcionário foi criado. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data de criação do Funcionário no Sistema em TIMESTAMP </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="277" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="277" bodyend="280"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" line="15" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassUsuario.php" bodystart="14" bodyend="281"/>
+    <listofallmembers>
+      <member refid="class_class_usuario_1a3c86aaf7b6b422119a459dcd69cb6605" prot="private" virt="non-virtual"><scope>ClassUsuario</scope><name>$created_on_date</name></member>
+      <member refid="class_class_usuario_1a11310b773f3860a19892b3f681f957f1" prot="private" virt="non-virtual"><scope>ClassUsuario</scope><name>$deleted</name></member>
+      <member refid="class_class_usuario_1ae97941710d863131c700f069b109991e" prot="private" virt="non-virtual"><scope>ClassUsuario</scope><name>$id</name></member>
+      <member refid="class_class_usuario_1afc31993e855f9631572adfedcfe6f34b" prot="private" virt="non-virtual"><scope>ClassUsuario</scope><name>$login</name></member>
+      <member refid="class_class_usuario_1ab2fc40d43824ea3e1ce5d86dee0d763b" prot="private" virt="non-virtual"><scope>ClassUsuario</scope><name>$name</name></member>
+      <member refid="class_class_usuario_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" prot="private" virt="non-virtual"><scope>ClassUsuario</scope><name>$password</name></member>
+      <member refid="class_class_usuario_1a9902faf2fffc60e027f93771baf73f1e" prot="private" virt="non-virtual"><scope>ClassUsuario</scope><name>$sector</name></member>
+      <member refid="class_class_usuario_1a45b276efdfbf14af270d51a7b603fa52" prot="public" virt="non-virtual"><scope>ClassUsuario</scope><name>__construct</name></member>
+      <member refid="class_class_usuario_1a421831a265621325e1fdd19aace0c758" prot="public" virt="non-virtual"><scope>ClassUsuario</scope><name>__destruct</name></member>
+      <member refid="class_class_usuario_1a9a1ef394f9aef6ab037f8bb37209242f" prot="public" virt="non-virtual"><scope>ClassUsuario</scope><name>get_created_on_date</name></member>
+      <member refid="class_class_usuario_1ad6172a0f313f12f05c08efc37a9c3656" prot="public" virt="non-virtual"><scope>ClassUsuario</scope><name>get_deleted</name></member>
+      <member refid="class_class_usuario_1a8a94003b9d888b085c68d6eac44be175" prot="public" virt="non-virtual"><scope>ClassUsuario</scope><name>get_id</name></member>
+      <member refid="class_class_usuario_1a09bc68f0d359d44f4f9a38f04fa69b0e" prot="public" virt="non-virtual"><scope>ClassUsuario</scope><name>get_login</name></member>
+      <member refid="class_class_usuario_1a4f1149ccbd69d1ac4225b7bc2dd871bb" prot="public" virt="non-virtual"><scope>ClassUsuario</scope><name>get_name</name></member>
+      <member refid="class_class_usuario_1aded77192e5da28ea5fd228d2e5ace16a" prot="public" virt="non-virtual"><scope>ClassUsuario</scope><name>get_password</name></member>
+      <member refid="class_class_usuario_1a31b79003e5d3bc648bb381b59f0088bd" prot="public" virt="non-virtual"><scope>ClassUsuario</scope><name>get_sector</name></member>
+      <member refid="class_class_usuario_1a792b5876e9d76a4f030e436aeec2a855" prot="public" virt="non-virtual"><scope>ClassUsuario</scope><name>set_created_on_date</name></member>
+      <member refid="class_class_usuario_1acd0a4e339896072e5515b8fdcc33344d" prot="public" virt="non-virtual"><scope>ClassUsuario</scope><name>set_deleted</name></member>
+      <member refid="class_class_usuario_1a81f9ed4b60bab54c829ad63c6a6134d2" prot="public" virt="non-virtual"><scope>ClassUsuario</scope><name>set_login</name></member>
+      <member refid="class_class_usuario_1a53e29da8f1da63502f3e13091fcb74e5" prot="public" virt="non-virtual"><scope>ClassUsuario</scope><name>set_name</name></member>
+      <member refid="class_class_usuario_1a48fcdf09611589d13f8832d104aa2f52" prot="public" virt="non-virtual"><scope>ClassUsuario</scope><name>set_password</name></member>
+      <member refid="class_class_usuario_1a0d66a3911f396de6d492ac322bf5569d" prot="public" virt="non-virtual"><scope>ClassUsuario</scope><name>set_sector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

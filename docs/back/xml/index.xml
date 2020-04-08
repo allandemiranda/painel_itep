@@ -1,0 +1,617 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="class_class_company" kind="class"><name>ClassCompany</name>
+    <member refid="class_class_company_1ab2fc40d43824ea3e1ce5d86dee0d763b" kind="variable"><name>$name</name></member>
+    <member refid="class_class_company_1afdcfec3b920e6c03649cae64d4d82996" kind="variable"><name>$company_logo</name></member>
+    <member refid="class_class_company_1a1f2dc5ebdbf37c0ffcc65fdc6cd1f14d" kind="variable"><name>$footer_print</name></member>
+    <member refid="class_class_company_1a095c5d389db211932136b53f25f39685" kind="function"><name>__construct</name></member>
+    <member refid="class_class_company_1a421831a265621325e1fdd19aace0c758" kind="function"><name>__destruct</name></member>
+    <member refid="class_class_company_1a4f1149ccbd69d1ac4225b7bc2dd871bb" kind="function"><name>get_name</name></member>
+    <member refid="class_class_company_1ad4563c95e8eb9b9728663cf81f67156d" kind="function"><name>get_company_logo</name></member>
+    <member refid="class_class_company_1a9e4139240e682431b7c0dc4c2b642cea" kind="function"><name>get_footer_print</name></member>
+    <member refid="class_class_company_1acab5f801a524d772516bd8632dd54cc7" kind="function"><name>set_footer_print</name></member>
+    <member refid="class_class_company_1a53e29da8f1da63502f3e13091fcb74e5" kind="function"><name>set_name</name></member>
+    <member refid="class_class_company_1aca000bc289b09dba047b8b68e694682f" kind="function"><name>set_company_logo</name></member>
+  </compound>
+  <compound refid="class_class_connection" kind="class"><name>ClassConnection</name>
+    <member refid="class_class_connection_1ad79b54e31bd1050001133c4d70f850fe" kind="variable"><name>$servername</name></member>
+    <member refid="class_class_connection_1a0eb82aa5f81cf845de4b36cd653c42cf" kind="variable"><name>$username</name></member>
+    <member refid="class_class_connection_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" kind="variable"><name>$password</name></member>
+    <member refid="class_class_connection_1ac5111a571fffa2499732833bb7f0d8c1" kind="variable"><name>$dbname</name></member>
+    <member refid="class_class_connection_1aa8a5a87b9c1a6a0819b88447cbe41877" kind="variable"><name>$conn</name></member>
+    <member refid="class_class_connection_1a095c5d389db211932136b53f25f39685" kind="function"><name>__construct</name></member>
+    <member refid="class_class_connection_1a421831a265621325e1fdd19aace0c758" kind="function"><name>__destruct</name></member>
+    <member refid="class_class_connection_1a45aa0f36cd2827c49d8341cd34b43aa0" kind="function"><name>request_query</name></member>
+    <member refid="class_class_connection_1a278a7a9ce9d5327bf2af66959d9bc723" kind="function"><name>rollback_querys</name></member>
+    <member refid="class_class_connection_1addadc2022e9fe02f49da4f7672fb6819" kind="function"><name>last_insert_id</name></member>
+    <member refid="class_class_connection_1ad8a845f59adf93d3504466d99f938864" kind="function"><name>set_servername</name></member>
+    <member refid="class_class_connection_1a045bfdceb2fe2d7146720134dea21ae8" kind="function"><name>get_servername</name></member>
+    <member refid="class_class_connection_1acc7a044e3ba0b19bfe997d7cf4e83760" kind="function"><name>set_username</name></member>
+    <member refid="class_class_connection_1a0e3b415bc657a0a4209274194c826b65" kind="function"><name>get_username</name></member>
+    <member refid="class_class_connection_1a48fcdf09611589d13f8832d104aa2f52" kind="function"><name>set_password</name></member>
+    <member refid="class_class_connection_1aded77192e5da28ea5fd228d2e5ace16a" kind="function"><name>get_password</name></member>
+    <member refid="class_class_connection_1af103cb10f570aaa7cb6a2b3e208ab77c" kind="function"><name>set_dbname</name></member>
+    <member refid="class_class_connection_1a161239651dedfafa4103b35cc5a8ca3e" kind="function"><name>get_dbname</name></member>
+    <member refid="class_class_connection_1ac46898032ba5106f93ae5a0e084a3416" kind="function"><name>set_conn</name></member>
+    <member refid="class_class_connection_1a44068bd49063ef1bc0ad423a944657b2" kind="function"><name>get_conn</name></member>
+    <member refid="class_class_connection_1a7fa48f6882eccec91ea9c433e1ad2a57" kind="function"><name>connection</name></member>
+    <member refid="class_class_connection_1a937bdfdf70517d6504f37f8950d991ac" kind="function"><name>commit_querys</name></member>
+    <member refid="class_class_connection_1a2cd363bf0e126d967962d71e7a2c2a45" kind="function"><name>close_connection</name></member>
+  </compound>
+  <compound refid="class_class_credenciais" kind="class"><name>ClassCredenciais</name>
+    <member refid="class_class_credenciais_1a598ca4e71b15a1313ec95f0df1027ca5" kind="variable"><name>$user</name></member>
+    <member refid="class_class_credenciais_1ab1b1798219f1ee41a4a007a6f3cb5437" kind="function"><name>__construct</name></member>
+    <member refid="class_class_credenciais_1af0d0313a713f6caa332e53471a6e92bb" kind="function"><name>get_user</name></member>
+    <member refid="class_class_credenciais_1a9c71e6b0613c31fa70a6ab5af0e30a86" kind="function"><name>set_user</name></member>
+  </compound>
+  <compound refid="class_class_ficha" kind="class"><name>ClassFicha</name>
+    <member refid="class_class_ficha_1ae97941710d863131c700f069b109991e" kind="variable"><name>$id</name></member>
+    <member refid="class_class_ficha_1a1b649fd4bc5bd3d48575e2059dd93fb8" kind="variable"><name>$number</name></member>
+    <member refid="class_class_ficha_1ab2fc40d43824ea3e1ce5d86dee0d763b" kind="variable"><name>$name</name></member>
+    <member refid="class_class_ficha_1afca642079313f7c6c3f8d4368f779882" kind="variable"><name>$phone</name></member>
+    <member refid="class_class_ficha_1a2f6fec8b049055c38f17a4e6fcdebf2e" kind="variable"><name>$attendant_status</name></member>
+    <member refid="class_class_ficha_1a24a7a638b2350b3dc888551d1a677841" kind="variable"><name>$attendant_sector</name></member>
+    <member refid="class_class_ficha_1a0fb37e6836cb5c48349d94791572b3fc" kind="variable"><name>$attendant_user</name></member>
+    <member refid="class_class_ficha_1a2677e505e860db863720ac4e216fd3f2" kind="variable"><name>$priority</name></member>
+    <member refid="class_class_ficha_1a481c918f8d853749e00b5942cabf599a" kind="variable"><name>$date</name></member>
+    <member refid="class_class_ficha_1acbfbda1543e06414c4506af61f7e4c95" kind="variable"><name>$date_update</name></member>
+    <member refid="class_class_ficha_1a3a06b9d4c5367aa8594f8b8a280ba4af" kind="function"><name>__construct</name></member>
+    <member refid="class_class_ficha_1a421831a265621325e1fdd19aace0c758" kind="function"><name>__destruct</name></member>
+    <member refid="class_class_ficha_1a8a94003b9d888b085c68d6eac44be175" kind="function"><name>get_id</name></member>
+    <member refid="class_class_ficha_1a4f7969072fea809005ea1306a8e7ea83" kind="function"><name>get_number</name></member>
+    <member refid="class_class_ficha_1a2d73b58ab74d3f4449797ce66855ba12" kind="function"><name>set_number</name></member>
+    <member refid="class_class_ficha_1a4f1149ccbd69d1ac4225b7bc2dd871bb" kind="function"><name>get_name</name></member>
+    <member refid="class_class_ficha_1a53e29da8f1da63502f3e13091fcb74e5" kind="function"><name>set_name</name></member>
+    <member refid="class_class_ficha_1a34c85b5b59e155044c316cb139684934" kind="function"><name>get_phone</name></member>
+    <member refid="class_class_ficha_1a62e5af292b272f5b6ffd4606bafe7104" kind="function"><name>set_phone</name></member>
+    <member refid="class_class_ficha_1af0d76aee9d27ee2d61843cd94825ee88" kind="function"><name>get_attendant_status</name></member>
+    <member refid="class_class_ficha_1a0d789f7b74b448e59b675b7860f614a4" kind="function"><name>set_attendant_status</name></member>
+    <member refid="class_class_ficha_1a85465890c6a10587eabeac707aa3caf0" kind="function"><name>get_attendant_sector</name></member>
+    <member refid="class_class_ficha_1ab2f464eda89675298cebd70c29a5fe63" kind="function"><name>set_attendant_sector</name></member>
+    <member refid="class_class_ficha_1a29c1686664048f7cd94c207fde913589" kind="function"><name>get_attendant_user</name></member>
+    <member refid="class_class_ficha_1a0aca98dbfbc3b9580208f2ca5690aca3" kind="function"><name>set_attendant_user</name></member>
+    <member refid="class_class_ficha_1a806364a3a299a2b99db62a4393c92855" kind="function"><name>get_priority</name></member>
+    <member refid="class_class_ficha_1ab92929a73f7f8e23561ad86f989a6c80" kind="function"><name>set_priority</name></member>
+    <member refid="class_class_ficha_1a848589b82df6900da2764018f69cd8c4" kind="function"><name>get_date</name></member>
+    <member refid="class_class_ficha_1ab88c852c9268bc8bf4f41240068dc81e" kind="function"><name>get_date_update</name></member>
+    <member refid="class_class_ficha_1acf5fbaf0472de5af1fcc0c7550c87afc" kind="function"><name>get_next_number</name></member>
+  </compound>
+  <compound refid="class_class_logs" kind="class"><name>ClassLogs</name>
+    <member refid="class_class_logs_1ae97941710d863131c700f069b109991e" kind="variable"><name>$id</name></member>
+    <member refid="class_class_logs_1a02185010a350a136ec7fd6eeee5811af" kind="variable"><name>$log_usuario_nome</name></member>
+    <member refid="class_class_logs_1ac3787034f6e907c21e41a67226dd1c19" kind="variable"><name>$log_usuario_setor_nome</name></member>
+    <member refid="class_class_logs_1ae9e279752db8bf5c8b2f6e91a15d5fdd" kind="variable"><name>$log_acao</name></member>
+    <member refid="class_class_logs_1a51c38952aef5c81e4d707f585127b80b" kind="variable"><name>$log_de_nome</name></member>
+    <member refid="class_class_logs_1aed35997d711f037d08c6fe95229a4347" kind="variable"><name>$log_de_setor_nome</name></member>
+    <member refid="class_class_logs_1aff2faf16aae6a9cac8305269de43476c" kind="variable"><name>$log_de_numero</name></member>
+    <member refid="class_class_logs_1af389b73266594d90cce61096f464e1fe" kind="variable"><name>$log_de_telefone</name></member>
+    <member refid="class_class_logs_1ae229155aecd77f2cc23a893be6da7572" kind="variable"><name>$log_para_nome</name></member>
+    <member refid="class_class_logs_1a16cade2b31a07d052b03cd36396e8590" kind="variable"><name>$log_ip</name></member>
+    <member refid="class_class_logs_1a9c10ebace209320b039c89d0b6fb4fd8" kind="variable"><name>$log_data_criacao</name></member>
+    <member refid="class_class_logs_1a0c7ba5a301d60f9335443b0e71bcdbb8" kind="function"><name>__construct</name></member>
+    <member refid="class_class_logs_1a421831a265621325e1fdd19aace0c758" kind="function"><name>__destruct</name></member>
+    <member refid="class_class_logs_1a46fd12a969be663423a41d6320ab1d4a" kind="function"><name>get_log_id</name></member>
+    <member refid="class_class_logs_1ab8ea2a06dc1b1809230c9bb0a5ae929b" kind="function"><name>get_log_acao</name></member>
+    <member refid="class_class_logs_1ac8005c9321ce5ae129c81180a26a3403" kind="function"><name>get_log_usuario_nome</name></member>
+    <member refid="class_class_logs_1ac914a1afc0bfd651798dace25249610c" kind="function"><name>get_log_usuario_setor_nome</name></member>
+    <member refid="class_class_logs_1a407b29a24c5deb4125384b32f92b17db" kind="function"><name>get_log_data_criacao</name></member>
+    <member refid="class_class_logs_1a50549ddf425a8f141dc9e05479611452" kind="function"><name>get_log_de_nome</name></member>
+    <member refid="class_class_logs_1a2d4010eed611f258da9452e07166f475" kind="function"><name>get_log_de_setor_nome</name></member>
+    <member refid="class_class_logs_1a9bc8d06ed7bddb98e3748f8692bf3082" kind="function"><name>get_log_de_numero</name></member>
+    <member refid="class_class_logs_1ac099cce47c31507d7c68b27af923cabd" kind="function"><name>get_log_de_telefone</name></member>
+    <member refid="class_class_logs_1a47f48e084a822dd6a389575e01acea00" kind="function"><name>get_log_para_nome</name></member>
+    <member refid="class_class_logs_1abedfbfb863da4fa609016ce17d504ab3" kind="function"><name>get_log_ip</name></member>
+    <member refid="class_class_logs_1af3d5752cb8752ba5cf073170b1f6e92c" kind="function"><name>set_log_id</name></member>
+    <member refid="class_class_logs_1a5e80a8d6f07811fa9b8106a7f9b19bdb" kind="function"><name>check_action</name></member>
+    <member refid="class_class_logs_1acab89f6172952e7cd93743b754e83632" kind="function"><name>set_log_acao</name></member>
+    <member refid="class_class_logs_1af0e39b8f2341e07cb80ca87b9fbd5ac5" kind="function"><name>set_log_usuario_nome</name></member>
+    <member refid="class_class_logs_1a458929241dfa9623fd78924aa8a39464" kind="function"><name>set_log_usuario_setor_nome</name></member>
+    <member refid="class_class_logs_1a009c68907d60bebe24a101e354286ca7" kind="function"><name>set_log_data_criacao</name></member>
+    <member refid="class_class_logs_1abbed71b52c4f7935610c07747eecde0d" kind="function"><name>set_log_de_nome</name></member>
+    <member refid="class_class_logs_1abfafdc46beafce8d9d84687b73aabd92" kind="function"><name>set_log_de_setor_nome</name></member>
+    <member refid="class_class_logs_1ab6cc9c7385e884c55fb26eefb980ea79" kind="function"><name>set_log_de_numero</name></member>
+    <member refid="class_class_logs_1ae895d704b7ac5523978b3cd3b4d60faf" kind="function"><name>set_log_de_telefone</name></member>
+    <member refid="class_class_logs_1ada8f81d33ce15864d4897ecfa7e5ec7e" kind="function"><name>set_log_para_nome</name></member>
+    <member refid="class_class_logs_1a80625fac20d689dab29800c0c999b181" kind="function"><name>set_log_ip</name></member>
+  </compound>
+  <compound refid="class_class_setor" kind="class"><name>ClassSetor</name>
+    <member refid="class_class_setor_1ae97941710d863131c700f069b109991e" kind="variable"><name>$id</name></member>
+    <member refid="class_class_setor_1ab2fc40d43824ea3e1ce5d86dee0d763b" kind="variable"><name>$name</name></member>
+    <member refid="class_class_setor_1ad3b3c64b25fbbb6aec24407e4333aa71" kind="variable"><name>$admin</name></member>
+    <member refid="class_class_setor_1aab83e7ad10d8c95fdbf231d086b83a1f" kind="variable"><name>$ficha</name></member>
+    <member refid="class_class_setor_1a11310b773f3860a19892b3f681f957f1" kind="variable"><name>$deleted</name></member>
+    <member refid="class_class_setor_1a3c86aaf7b6b422119a459dcd69cb6605" kind="variable"><name>$created_on_date</name></member>
+    <member refid="class_class_setor_1ad06a6c4ff80af97f706cf13d4e472b4f" kind="function"><name>__construct</name></member>
+    <member refid="class_class_setor_1a421831a265621325e1fdd19aace0c758" kind="function"><name>__destruct</name></member>
+    <member refid="class_class_setor_1a8a94003b9d888b085c68d6eac44be175" kind="function"><name>get_id</name></member>
+    <member refid="class_class_setor_1a4f1149ccbd69d1ac4225b7bc2dd871bb" kind="function"><name>get_name</name></member>
+    <member refid="class_class_setor_1a53e29da8f1da63502f3e13091fcb74e5" kind="function"><name>set_name</name></member>
+    <member refid="class_class_setor_1aae367241584b2f61c523f167cbafee01" kind="function"><name>get_admin</name></member>
+    <member refid="class_class_setor_1ab31da576d6d4983080ed6ed0cc9d2ed2" kind="function"><name>set_admin</name></member>
+    <member refid="class_class_setor_1a9a1ef394f9aef6ab037f8bb37209242f" kind="function"><name>get_created_on_date</name></member>
+    <member refid="class_class_setor_1a792b5876e9d76a4f030e436aeec2a855" kind="function"><name>set_created_on_date</name></member>
+    <member refid="class_class_setor_1ad6172a0f313f12f05c08efc37a9c3656" kind="function"><name>get_deleted</name></member>
+    <member refid="class_class_setor_1acd0a4e339896072e5515b8fdcc33344d" kind="function"><name>set_deleted</name></member>
+    <member refid="class_class_setor_1ac2cfa14d360149ee30216aec7e50cb20" kind="function"><name>get_ficha</name></member>
+    <member refid="class_class_setor_1a592f14a6c34825448b303800bf41b1bb" kind="function"><name>set_ficha</name></member>
+  </compound>
+  <compound refid="class_class_usuario" kind="class"><name>ClassUsuario</name>
+    <member refid="class_class_usuario_1ae97941710d863131c700f069b109991e" kind="variable"><name>$id</name></member>
+    <member refid="class_class_usuario_1ab2fc40d43824ea3e1ce5d86dee0d763b" kind="variable"><name>$name</name></member>
+    <member refid="class_class_usuario_1a9902faf2fffc60e027f93771baf73f1e" kind="variable"><name>$sector</name></member>
+    <member refid="class_class_usuario_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="class_class_usuario_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" kind="variable"><name>$password</name></member>
+    <member refid="class_class_usuario_1a11310b773f3860a19892b3f681f957f1" kind="variable"><name>$deleted</name></member>
+    <member refid="class_class_usuario_1a3c86aaf7b6b422119a459dcd69cb6605" kind="variable"><name>$created_on_date</name></member>
+    <member refid="class_class_usuario_1a45b276efdfbf14af270d51a7b603fa52" kind="function"><name>__construct</name></member>
+    <member refid="class_class_usuario_1a421831a265621325e1fdd19aace0c758" kind="function"><name>__destruct</name></member>
+    <member refid="class_class_usuario_1a8a94003b9d888b085c68d6eac44be175" kind="function"><name>get_id</name></member>
+    <member refid="class_class_usuario_1a4f1149ccbd69d1ac4225b7bc2dd871bb" kind="function"><name>get_name</name></member>
+    <member refid="class_class_usuario_1a53e29da8f1da63502f3e13091fcb74e5" kind="function"><name>set_name</name></member>
+    <member refid="class_class_usuario_1a31b79003e5d3bc648bb381b59f0088bd" kind="function"><name>get_sector</name></member>
+    <member refid="class_class_usuario_1a0d66a3911f396de6d492ac322bf5569d" kind="function"><name>set_sector</name></member>
+    <member refid="class_class_usuario_1a09bc68f0d359d44f4f9a38f04fa69b0e" kind="function"><name>get_login</name></member>
+    <member refid="class_class_usuario_1a81f9ed4b60bab54c829ad63c6a6134d2" kind="function"><name>set_login</name></member>
+    <member refid="class_class_usuario_1aded77192e5da28ea5fd228d2e5ace16a" kind="function"><name>get_password</name></member>
+    <member refid="class_class_usuario_1a48fcdf09611589d13f8832d104aa2f52" kind="function"><name>set_password</name></member>
+    <member refid="class_class_usuario_1ad6172a0f313f12f05c08efc37a9c3656" kind="function"><name>get_deleted</name></member>
+    <member refid="class_class_usuario_1acd0a4e339896072e5515b8fdcc33344d" kind="function"><name>set_deleted</name></member>
+    <member refid="class_class_usuario_1a9a1ef394f9aef6ab037f8bb37209242f" kind="function"><name>get_created_on_date</name></member>
+    <member refid="class_class_usuario_1a792b5876e9d76a4f030e436aeec2a855" kind="function"><name>set_created_on_date</name></member>
+  </compound>
+  <compound refid="_class_company_8php" kind="file"><name>ClassCompany.php</name>
+  </compound>
+  <compound refid="_class_connection_8php" kind="file"><name>ClassConnection.php</name>
+  </compound>
+  <compound refid="_class_credenciais_8php" kind="file"><name>ClassCredenciais.php</name>
+  </compound>
+  <compound refid="_class_ficha_8php" kind="file"><name>ClassFicha.php</name>
+  </compound>
+  <compound refid="_class_logs_8php" kind="file"><name>ClassLogs.php</name>
+  </compound>
+  <compound refid="_class_setor_8php" kind="file"><name>ClassSetor.php</name>
+  </compound>
+  <compound refid="_class_usuario_8php" kind="file"><name>ClassUsuario.php</name>
+  </compound>
+  <compound refid="_header_8php" kind="file"><name>Header.php</name>
+    <member refid="_header_8php_1a5455ea8d21f7611dae58e3d4612fb3bd" kind="function"><name>encrypt_password</name></member>
+    <member refid="_header_8php_1a8909d20d656fecf83ebaa2bed0cab2c1" kind="function"><name>input_check</name></member>
+    <member refid="_header_8php_1a8db8ce321ecc739cc840efd11c612b10" kind="function"><name>generatorPassword</name></member>
+  </compound>
+  <compound refid="_header_j_s_o_n_8php" kind="file"><name>HeaderJSON.php</name>
+  </compound>
+  <compound refid="imprimir_2ficha_2index_8php" kind="file"><name>index.php</name>
+    <member refid="imprimir_2ficha_2index_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="imprimir_2ficha_2index_8php_1a4b493c640f7b266035c18cd019fdd275" kind="variable"><name>else</name></member>
+    <member refid="imprimir_2ficha_2index_8php_1a7388a2b9be02ae3a1a6e5bc96d972866" kind="variable"><name>$body_ficha_id</name></member>
+    <member refid="imprimir_2ficha_2index_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" kind="variable"><name>$ficha</name></member>
+    <member refid="imprimir_2ficha_2index_8php_1ae4caa8044246171c958ceab2ed5374ee" kind="variable"><name>$empresa</name></member>
+    <member refid="imprimir_2ficha_2index_8php_1a8104793004944f01dd070fc8b1ade3c4" kind="variable"><name>catch</name></member>
+  </compound>
+  <compound refid="imprimir_2index_8php" kind="file"><name>index.php</name>
+  </compound>
+  <compound refid="index_8php" kind="file"><name>index.php</name>
+  </compound>
+  <compound refid="login_2index_8php" kind="file"><name>index.php</name>
+    <member refid="login_2index_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="login_2index_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="login_2index_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="login_2index_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="login_2index_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="login_2index_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="login_2index_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="main_page_2header_2index_8php" kind="file"><name>index.php</name>
+    <member refid="main_page_2header_2index_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="main_page_2header_2index_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="main_page_2header_2index_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="main_page_2header_2index_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="main_page_2header_2index_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="main_page_2header_2index_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="main_page_2header_2index_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="main_page_2index_8php" kind="file"><name>index.php</name>
+    <member refid="main_page_2index_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="main_page_2index_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="main_page_2index_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="main_page_2index_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="main_page_2index_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="main_page_2index_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="main_page_2index_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="main_page_2inicial_2index_8php" kind="file"><name>index.php</name>
+    <member refid="main_page_2inicial_2index_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="main_page_2inicial_2index_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="main_page_2inicial_2index_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="main_page_2inicial_2index_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="main_page_2inicial_2index_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="main_page_2inicial_2index_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="main_page_2inicial_2index_8php_1a1fa3127fc82f96b1436d871ef02be319" kind="variable"><name>$db</name></member>
+    <member refid="main_page_2inicial_2index_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kind="variable"><name>$today</name></member>
+    <member refid="main_page_2inicial_2index_8php_1a047170d6020a882807665812a27e2525" kind="variable"><name>$sql</name></member>
+    <member refid="main_page_2inicial_2index_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kind="variable"><name>$result</name></member>
+    <member refid="main_page_2inicial_2index_8php_1add4f57f5461e6bdecccd6d1fd7087cdf" kind="variable"><name>$naoAtendidos</name></member>
+    <member refid="main_page_2inicial_2index_8php_1adc5ce818bd9a71cfd2370a6b9fec577c" kind="variable"><name>$emAtendimento</name></member>
+    <member refid="main_page_2inicial_2index_8php_1a7eb9c8628fe0ebfde79ce1edcf149330" kind="variable"><name>$encaminhado</name></member>
+    <member refid="main_page_2inicial_2index_8php_1a2587833f2f5a0d6fd7af021865381204" kind="variable"><name>$finalizado</name></member>
+    <member refid="main_page_2inicial_2index_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="main_page_2painel_geral_2index_8php" kind="file"><name>index.php</name>
+    <member refid="main_page_2painel_geral_2index_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="main_page_2painel_geral_2index_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="main_page_2painel_geral_2index_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="main_page_2painel_geral_2index_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="main_page_2painel_geral_2index_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="main_page_2painel_geral_2index_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="main_page_2painel_geral_2index_8php_1a1fa3127fc82f96b1436d871ef02be319" kind="variable"><name>$db</name></member>
+    <member refid="main_page_2painel_geral_2index_8php_1af62a556436f10f703431108a1a8fc00f" kind="variable"><name>$setores</name></member>
+    <member refid="main_page_2painel_geral_2index_8php_1a047170d6020a882807665812a27e2525" kind="variable"><name>$sql</name></member>
+    <member refid="main_page_2painel_geral_2index_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kind="variable"><name>$result</name></member>
+    <member refid="main_page_2painel_geral_2index_8php_1af7ab0d76cd5b7a6e7898359e07d3deac" kind="variable"><name>$fichas</name></member>
+    <member refid="main_page_2painel_geral_2index_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kind="variable"><name>$today</name></member>
+    <member refid="main_page_2painel_geral_2index_8php_1af7cfe1f8cb9dba05c425311a444e3fb4" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="main_page_2perfil_2index_8php" kind="file"><name>index.php</name>
+    <member refid="main_page_2perfil_2index_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="main_page_2perfil_2index_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="main_page_2perfil_2index_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="main_page_2perfil_2index_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="main_page_2perfil_2index_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="main_page_2perfil_2index_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="main_page_2perfil_2index_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="menu_2configuracoes_2fichas_2index_8php" kind="file"><name>index.php</name>
+    <member refid="menu_2configuracoes_2fichas_2index_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="menu_2configuracoes_2fichas_2index_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="menu_2configuracoes_2fichas_2index_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="menu_2configuracoes_2fichas_2index_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="menu_2configuracoes_2fichas_2index_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="menu_2configuracoes_2fichas_2index_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="menu_2configuracoes_2fichas_2index_8php_1a8f5108ee2efdbfcd6f3d53b8abcb6c09" kind="variable"><name>else</name></member>
+    <member refid="menu_2configuracoes_2fichas_2index_8php_1a1fa3127fc82f96b1436d871ef02be319" kind="variable"><name>$db</name></member>
+    <member refid="menu_2configuracoes_2fichas_2index_8php_1a047170d6020a882807665812a27e2525" kind="variable"><name>$sql</name></member>
+    <member refid="menu_2configuracoes_2fichas_2index_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kind="variable"><name>$result</name></member>
+    <member refid="menu_2configuracoes_2fichas_2index_8php_1af7cfe1f8cb9dba05c425311a444e3fb4" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="menu_2configuracoes_2index_8php" kind="file"><name>index.php</name>
+    <member refid="menu_2configuracoes_2index_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="menu_2configuracoes_2index_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="menu_2configuracoes_2index_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="menu_2configuracoes_2index_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="menu_2configuracoes_2index_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="menu_2configuracoes_2index_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="menu_2configuracoes_2index_8php_1a086427d4b33b22f65d35e4f502150fb6" kind="variable"><name>else</name></member>
+    <member refid="menu_2configuracoes_2index_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="menu_2configuracoes_2logs_2index_8php" kind="file"><name>index.php</name>
+    <member refid="menu_2configuracoes_2logs_2index_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="menu_2configuracoes_2logs_2index_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="menu_2configuracoes_2logs_2index_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="menu_2configuracoes_2logs_2index_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="menu_2configuracoes_2logs_2index_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="menu_2configuracoes_2logs_2index_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="menu_2configuracoes_2logs_2index_8php_1a8f5108ee2efdbfcd6f3d53b8abcb6c09" kind="variable"><name>else</name></member>
+    <member refid="menu_2configuracoes_2logs_2index_8php_1a1fa3127fc82f96b1436d871ef02be319" kind="variable"><name>$db</name></member>
+    <member refid="menu_2configuracoes_2logs_2index_8php_1a047170d6020a882807665812a27e2525" kind="variable"><name>$sql</name></member>
+    <member refid="menu_2configuracoes_2logs_2index_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kind="variable"><name>$result</name></member>
+    <member refid="menu_2configuracoes_2logs_2index_8php_1af7cfe1f8cb9dba05c425311a444e3fb4" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="menu_2configuracoes_2setores_2index_8php" kind="file"><name>index.php</name>
+    <member refid="menu_2configuracoes_2setores_2index_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="menu_2configuracoes_2setores_2index_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="menu_2configuracoes_2setores_2index_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="menu_2configuracoes_2setores_2index_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="menu_2configuracoes_2setores_2index_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="menu_2configuracoes_2setores_2index_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="menu_2configuracoes_2setores_2index_8php_1aabe0fce4e8f9f822b09141ab57d918d9" kind="variable"><name>else</name></member>
+    <member refid="menu_2configuracoes_2setores_2index_8php_1a047170d6020a882807665812a27e2525" kind="variable"><name>$sql</name></member>
+    <member refid="menu_2configuracoes_2setores_2index_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kind="variable"><name>$result</name></member>
+    <member refid="menu_2configuracoes_2setores_2index_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="menu_2configuracoes_2usuarios_2index_8php" kind="file"><name>index.php</name>
+    <member refid="menu_2configuracoes_2usuarios_2index_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2index_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2index_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2index_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2index_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2index_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2index_8php_1aabe0fce4e8f9f822b09141ab57d918d9" kind="variable"><name>else</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2index_8php_1a1fa3127fc82f96b1436d871ef02be319" kind="variable"><name>$db</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2index_8php_1af62a556436f10f703431108a1a8fc00f" kind="variable"><name>$setores</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2index_8php_1a047170d6020a882807665812a27e2525" kind="variable"><name>$sql</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2index_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kind="variable"><name>$result</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2index_8php_1afba4f3b049abbbbcf8229ca2095fef33" kind="variable"><name>$usuarios</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2index_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="menu_2dashboard_2index_8php" kind="file"><name>index.php</name>
+    <member refid="menu_2dashboard_2index_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="menu_2dashboard_2index_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="menu_2dashboard_2index_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="menu_2dashboard_2index_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="menu_2dashboard_2index_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="menu_2dashboard_2index_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="menu_2dashboard_2index_8php_1a8efb3bb69e8df1828b26edf2156dd82a" kind="variable"><name>else</name></member>
+    <member refid="menu_2dashboard_2index_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="menu_2header_2index_8php" kind="file"><name>index.php</name>
+    <member refid="menu_2header_2index_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="menu_2header_2index_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="menu_2header_2index_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="menu_2header_2index_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="menu_2header_2index_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="menu_2header_2index_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="menu_2header_2index_8php_1a3306bb3d7f99fc57bee9e96f928769d4" kind="variable"><name>$company</name></member>
+    <member refid="menu_2header_2index_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="menu_2index_8php" kind="file"><name>index.php</name>
+  </compound>
+  <compound refid="painel_2index_8php" kind="file"><name>index.php</name>
+    <member refid="painel_2index_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="painel_2index_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="painel_2index_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kind="variable"><name>$today</name></member>
+    <member refid="painel_2index_8php_1a047170d6020a882807665812a27e2525" kind="variable"><name>$sql</name></member>
+    <member refid="painel_2index_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kind="variable"><name>$result</name></member>
+    <member refid="painel_2index_8php_1ae62fe817d36572be0d1f9c1b61c4e55c" kind="variable"><name>else</name></member>
+    <member refid="painel_2index_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="atendidos_8php" kind="file"><name>atendidos.php</name>
+    <member refid="atendidos_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="atendidos_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="atendidos_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="atendidos_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="atendidos_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="atendidos_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" kind="variable"><name>$db</name></member>
+    <member refid="atendidos_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kind="variable"><name>$today</name></member>
+    <member refid="atendidos_8php_1a047170d6020a882807665812a27e2525" kind="variable"><name>$sql</name></member>
+    <member refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kind="variable"><name>$result</name></member>
+    <member refid="atendidos_8php_1af7cfe1f8cb9dba05c425311a444e3fb4" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="em_atendimento_8php" kind="file"><name>emAtendimento.php</name>
+    <member refid="em_atendimento_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="em_atendimento_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="em_atendimento_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="em_atendimento_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="em_atendimento_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="em_atendimento_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="em_atendimento_8php_1a1fa3127fc82f96b1436d871ef02be319" kind="variable"><name>$db</name></member>
+    <member refid="em_atendimento_8php_1a047170d6020a882807665812a27e2525" kind="variable"><name>$sql</name></member>
+    <member refid="em_atendimento_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kind="variable"><name>$result</name></member>
+    <member refid="em_atendimento_8php_1af62a556436f10f703431108a1a8fc00f" kind="variable"><name>$setores</name></member>
+    <member refid="em_atendimento_8php_1aabe0fce4e8f9f822b09141ab57d918d9" kind="variable"><name>else</name></member>
+    <member refid="em_atendimento_8php_1a70fe158d19ec254a3949e1d105ffe4ed" kind="variable"><name>$fichas</name></member>
+    <member refid="em_atendimento_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kind="variable"><name>$today</name></member>
+    <member refid="em_atendimento_8php_1af7cfe1f8cb9dba05c425311a444e3fb4" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="encaminhar_8php" kind="file"><name>encaminhar.php</name>
+    <member refid="encaminhar_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="encaminhar_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="encaminhar_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="encaminhar_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="encaminhar_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="encaminhar_8php_1a6224af2851adb741887322ddb4c77102" kind="variable"><name>$ficha_id</name></member>
+    <member refid="encaminhar_8php_1a5b0c7406f0030f61ffba63a25ac8a28e" kind="variable"><name>$setor_id</name></member>
+    <member refid="encaminhar_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="encaminhar_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" kind="variable"><name>$ficha</name></member>
+    <member refid="encaminhar_8php_1a87435a25b7cae617cf284c729b6e835c" kind="variable"><name>$setor</name></member>
+    <member refid="encaminhar_8php_1a9a2cf15a653aee8be437f7ae474cd494" kind="variable"><name>$log</name></member>
+    <member refid="encaminhar_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="finalizar_8php" kind="file"><name>finalizar.php</name>
+    <member refid="finalizar_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="finalizar_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="finalizar_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="finalizar_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="finalizar_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="finalizar_8php_1a6224af2851adb741887322ddb4c77102" kind="variable"><name>$ficha_id</name></member>
+    <member refid="finalizar_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="finalizar_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" kind="variable"><name>$ficha</name></member>
+    <member refid="finalizar_8php_1a9a2cf15a653aee8be437f7ae474cd494" kind="variable"><name>$log</name></member>
+    <member refid="finalizar_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="nao_atendidos_8php" kind="file"><name>naoAtendidos.php</name>
+    <member refid="nao_atendidos_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="nao_atendidos_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="nao_atendidos_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="nao_atendidos_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="nao_atendidos_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="nao_atendidos_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="nao_atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" kind="variable"><name>$db</name></member>
+    <member refid="nao_atendidos_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kind="variable"><name>$today</name></member>
+    <member refid="nao_atendidos_8php_1a047170d6020a882807665812a27e2525" kind="variable"><name>$sql</name></member>
+    <member refid="nao_atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kind="variable"><name>$result</name></member>
+    <member refid="nao_atendidos_8php_1af7cfe1f8cb9dba05c425311a444e3fb4" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="nao_atendidos_proximo_8php" kind="file"><name>naoAtendidosProximo.php</name>
+    <member refid="nao_atendidos_proximo_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="nao_atendidos_proximo_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="nao_atendidos_proximo_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="nao_atendidos_proximo_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="nao_atendidos_proximo_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="nao_atendidos_proximo_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="nao_atendidos_proximo_8php_1a1fa3127fc82f96b1436d871ef02be319" kind="variable"><name>$db</name></member>
+    <member refid="nao_atendidos_proximo_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kind="variable"><name>$today</name></member>
+    <member refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kind="variable"><name>$sql</name></member>
+    <member refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kind="variable"><name>$result</name></member>
+    <member refid="nao_atendidos_proximo_8php_1aabe0fce4e8f9f822b09141ab57d918d9" kind="variable"><name>else</name></member>
+    <member refid="nao_atendidos_proximo_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+    <member refid="nao_atendidos_proximo_8php_1aa053116387f6a1dc0020775d61ef19e0" kind="function"><name>set_emAtendimento</name></member>
+  </compound>
+  <compound refid="nao_atendidos_proximo_individual_8php" kind="file"><name>naoAtendidosProximoIndividual.php</name>
+    <member refid="nao_atendidos_proximo_individual_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="nao_atendidos_proximo_individual_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="nao_atendidos_proximo_individual_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="nao_atendidos_proximo_individual_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="nao_atendidos_proximo_individual_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="nao_atendidos_proximo_individual_8php_1a6224af2851adb741887322ddb4c77102" kind="variable"><name>$ficha_id</name></member>
+    <member refid="nao_atendidos_proximo_individual_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="nao_atendidos_proximo_individual_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" kind="variable"><name>$ficha</name></member>
+    <member refid="nao_atendidos_proximo_individual_8php_1a78fd13ad9c6e0bbd8b5273273c4e2724" kind="variable"><name>else</name></member>
+    <member refid="nao_atendidos_proximo_individual_8php_1a9a2cf15a653aee8be437f7ae474cd494" kind="variable"><name>$log</name></member>
+    <member refid="nao_atendidos_proximo_individual_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="main_page_2painel_geral_2new_8php" kind="file"><name>new.php</name>
+    <member refid="main_page_2painel_geral_2new_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="main_page_2painel_geral_2new_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="main_page_2painel_geral_2new_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="main_page_2painel_geral_2new_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="main_page_2painel_geral_2new_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="main_page_2painel_geral_2new_8php_1ac8c9d9dd5d90fa5854f0cb8397084ebd" kind="variable"><name>$nome</name></member>
+    <member refid="main_page_2painel_geral_2new_8php_1af0677db4542a022e657eba3a67ee9c3c" kind="variable"><name>$telefone</name></member>
+    <member refid="main_page_2painel_geral_2new_8php_1a93c5ed26f2451c1cc65c3dfe545a913b" kind="variable"><name>$setor_id</name></member>
+    <member refid="main_page_2painel_geral_2new_8php_1a03082e938e33de61852b47220d243e91" kind="variable"><name>$prioridade</name></member>
+    <member refid="main_page_2painel_geral_2new_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="main_page_2painel_geral_2new_8php_1a87435a25b7cae617cf284c729b6e835c" kind="variable"><name>$setor</name></member>
+    <member refid="main_page_2painel_geral_2new_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" kind="variable"><name>$ficha</name></member>
+    <member refid="main_page_2painel_geral_2new_8php_1a9a2cf15a653aee8be437f7ae474cd494" kind="variable"><name>$log</name></member>
+    <member refid="main_page_2painel_geral_2new_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="menu_2configuracoes_2setores_2new_8php" kind="file"><name>new.php</name>
+    <member refid="menu_2configuracoes_2setores_2new_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="menu_2configuracoes_2setores_2new_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="menu_2configuracoes_2setores_2new_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="menu_2configuracoes_2setores_2new_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="menu_2configuracoes_2setores_2new_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="menu_2configuracoes_2setores_2new_8php_1ac8c9d9dd5d90fa5854f0cb8397084ebd" kind="variable"><name>$nome</name></member>
+    <member refid="menu_2configuracoes_2setores_2new_8php_1a8d3ccd903d881b48bb755be5d3f314da" kind="variable"><name>$setor_ficha</name></member>
+    <member refid="menu_2configuracoes_2setores_2new_8php_1a3ba57324c35a68927cefc5e241e29d3c" kind="variable"><name>$setor_admin</name></member>
+    <member refid="menu_2configuracoes_2setores_2new_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="menu_2configuracoes_2setores_2new_8php_1a8f5108ee2efdbfcd6f3d53b8abcb6c09" kind="variable"><name>else</name></member>
+    <member refid="menu_2configuracoes_2setores_2new_8php_1a9a2cf15a653aee8be437f7ae474cd494" kind="variable"><name>$log</name></member>
+    <member refid="menu_2configuracoes_2setores_2new_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="menu_2configuracoes_2usuarios_2new_8php" kind="file"><name>new.php</name>
+    <member refid="menu_2configuracoes_2usuarios_2new_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2new_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2new_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2new_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2new_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2new_8php_1ac8c9d9dd5d90fa5854f0cb8397084ebd" kind="variable"><name>$nome</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2new_8php_1a93c5ed26f2451c1cc65c3dfe545a913b" kind="variable"><name>$setor_id</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2new_8php_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" kind="variable"><name>$password</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2new_8php_1a08ad7edf008a5c99d28f03ea033f64f0" kind="variable"><name>$password_crypt</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2new_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2new_8php_1a8f5108ee2efdbfcd6f3d53b8abcb6c09" kind="variable"><name>else</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2new_8php_1a87435a25b7cae617cf284c729b6e835c" kind="variable"><name>$setor</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2new_8php_1a559c8003f481610caf373b85cc607fb6" kind="variable"><name>$usuario</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2new_8php_1a9a2cf15a653aee8be437f7ae474cd494" kind="variable"><name>$log</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2new_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+    <member refid="menu_2configuracoes_2usuarios_2new_8php_1a02b1567052c09d3f736df3ae05496307" kind="function"><name>makeLogin</name></member>
+  </compound>
+  <compound refid="formulario_8php" kind="file"><name>formulario.php</name>
+    <member refid="formulario_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="formulario_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="formulario_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="formulario_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="formulario_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="formulario_8php_1aab85c4ba1c96b0ff4b909aa956efd450" kind="variable"><name>$nova_senha</name></member>
+    <member refid="formulario_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="formulario_8php_1a9a2cf15a653aee8be437f7ae474cd494" kind="variable"><name>$log</name></member>
+    <member refid="formulario_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="setores_2delete_8php" kind="file"><name>delete.php</name>
+    <member refid="setores_2delete_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="setores_2delete_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="setores_2delete_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="setores_2delete_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="setores_2delete_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="setores_2delete_8php_1ae97941710d863131c700f069b109991e" kind="variable"><name>$id</name></member>
+    <member refid="setores_2delete_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="setores_2delete_8php_1a8f5108ee2efdbfcd6f3d53b8abcb6c09" kind="variable"><name>else</name></member>
+    <member refid="setores_2delete_8php_1a9a2cf15a653aee8be437f7ae474cd494" kind="variable"><name>$log</name></member>
+    <member refid="setores_2delete_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="usuarios_2delete_8php" kind="file"><name>delete.php</name>
+    <member refid="usuarios_2delete_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="usuarios_2delete_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="usuarios_2delete_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="usuarios_2delete_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="usuarios_2delete_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="usuarios_2delete_8php_1ae97941710d863131c700f069b109991e" kind="variable"><name>$id</name></member>
+    <member refid="usuarios_2delete_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="usuarios_2delete_8php_1a8f5108ee2efdbfcd6f3d53b8abcb6c09" kind="variable"><name>else</name></member>
+    <member refid="usuarios_2delete_8php_1a9a2cf15a653aee8be437f7ae474cd494" kind="variable"><name>$log</name></member>
+    <member refid="usuarios_2delete_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="setores_2update_8php" kind="file"><name>update.php</name>
+    <member refid="setores_2update_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="setores_2update_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="setores_2update_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="setores_2update_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="setores_2update_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="setores_2update_8php_1ae97941710d863131c700f069b109991e" kind="variable"><name>$id</name></member>
+    <member refid="setores_2update_8php_1ac8c9d9dd5d90fa5854f0cb8397084ebd" kind="variable"><name>$nome</name></member>
+    <member refid="setores_2update_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" kind="variable"><name>$ficha</name></member>
+    <member refid="setores_2update_8php_1ad3b3c64b25fbbb6aec24407e4333aa71" kind="variable"><name>$admin</name></member>
+    <member refid="setores_2update_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="setores_2update_8php_1a96db4ecde3fc28a58d5ddae82826b84c" kind="variable"><name>else</name></member>
+    <member refid="setores_2update_8php_1a9a2cf15a653aee8be437f7ae474cd494" kind="variable"><name>$log</name></member>
+    <member refid="setores_2update_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="usuarios_2update_8php" kind="file"><name>update.php</name>
+    <member refid="usuarios_2update_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="usuarios_2update_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="usuarios_2update_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="usuarios_2update_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="usuarios_2update_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="usuarios_2update_8php_1ae97941710d863131c700f069b109991e" kind="variable"><name>$id</name></member>
+    <member refid="usuarios_2update_8php_1a87435a25b7cae617cf284c729b6e835c" kind="variable"><name>$setor</name></member>
+    <member refid="usuarios_2update_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="usuarios_2update_8php_1a8f5108ee2efdbfcd6f3d53b8abcb6c09" kind="variable"><name>else</name></member>
+    <member refid="usuarios_2update_8php_1a0a11223e6e2db053ff44173de3a72d6e" kind="variable"><name>$novo_setor</name></member>
+    <member refid="usuarios_2update_8php_1a9a2cf15a653aee8be437f7ae474cd494" kind="variable"><name>$log</name></member>
+    <member refid="usuarios_2update_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="password_8php" kind="file"><name>password.php</name>
+    <member refid="password_8php_1a252370d95039a38fa11afab784725d58" kind="variable"><name>$dados</name></member>
+    <member refid="password_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kind="variable"><name>$body</name></member>
+    <member refid="password_8php_1acedd13b51401130848ce18f4d5c52605" kind="variable"><name>$json</name></member>
+    <member refid="password_8php_1afc31993e855f9631572adfedcfe6f34b" kind="variable"><name>$login</name></member>
+    <member refid="password_8php_1a3678c8769c9698fd30581c1016c5f475" kind="variable"><name>$senha</name></member>
+    <member refid="password_8php_1ae97941710d863131c700f069b109991e" kind="variable"><name>$id</name></member>
+    <member refid="password_8php_1af783a443753ce1fd9e40b31f263e10aa" kind="variable"><name>$password_first</name></member>
+    <member refid="password_8php_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" kind="variable"><name>$password</name></member>
+    <member refid="password_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="password_8php_1a8f5108ee2efdbfcd6f3d53b8abcb6c09" kind="variable"><name>else</name></member>
+    <member refid="password_8php_1a9a2cf15a653aee8be437f7ae474cd494" kind="variable"><name>$log</name></member>
+    <member refid="password_8php_1a1eb47d68a4a4f73debf91b15e179d813" kind="variable"><name>finally</name></member>
+  </compound>
+  <compound refid="dir_f869c6d0a553b01bad735dcd11969da3" kind="dir"><name>/var/www/chamador.itep.govrn/public/api</name>
+  </compound>
+  <compound refid="dir_8a9a2cbd99cff96b499f64385a84db48" kind="dir"><name>/var/www/chamador.itep.govrn/public/api/menu/configuracoes</name>
+  </compound>
+  <compound refid="dir_ad4c3b301083f0cc7cee8a3b694d881f" kind="dir"><name>/var/www/chamador.itep.govrn/public/api/menu/dashboard</name>
+  </compound>
+  <compound refid="dir_0ced67e9cf158283cf3c7e68355377a4" kind="dir"><name>/var/www/chamador.itep.govrn/public/api/imprimir/ficha</name>
+  </compound>
+  <compound refid="dir_2678f31ba3fa24ef8445904dd3523b74" kind="dir"><name>/var/www/chamador.itep.govrn/public/api/menu/configuracoes/fichas</name>
+  </compound>
+  <compound refid="dir_6043868ca0e4a995bf838f2b3e64026f" kind="dir"><name>/var/www/chamador.itep.govrn/public/api/menu/header</name>
+  </compound>
+  <compound refid="dir_54503d9adffad38a12aec01ae250fe86" kind="dir"><name>/var/www/chamador.itep.govrn/public/api/mainPage/header</name>
+  </compound>
+  <compound refid="dir_220eb1acf1074f2f42e7cc524c0afa07" kind="dir"><name>/var/www/chamador.itep.govrn/public/api/imprimir</name>
+  </compound>
+  <compound refid="dir_2b43369ba9587401868fc06dda9f2458" kind="dir"><name>/var/www/chamador.itep.govrn/public/api/mainPage/inicial</name>
+  </compound>
+  <compound refid="dir_656464ca771c24f88e99168fd59f2567" kind="dir"><name>/var/www/chamador.itep.govrn/public/api/login</name>
+  </compound>
+  <compound refid="dir_804dc118a19d313bdb2a7e732596c0a0" kind="dir"><name>/var/www/chamador.itep.govrn/public/api/menu/configuracoes/logs</name>
+  </compound>
+  <compound refid="dir_fc839733caf73357d619b8939eddb4a4" kind="dir"><name>/var/www/chamador.itep.govrn/public/api/mainPage</name>
+  </compound>
+  <compound refid="dir_9d57a004e26163c1b1f6e90a33176ace" kind="dir"><name>/var/www/chamador.itep.govrn/public/api/menu</name>
+  </compound>
+  <compound refid="dir_d4ac33ed4925cfd57fc475070759b1fc" kind="dir"><name>/var/www/chamador.itep.govrn/public/api/painel</name>
+  </compound>
+  <compound refid="dir_64643e6bf3069e17e3ca8aeeaa532bb5" kind="dir"><name>/var/www/chamador.itep.govrn/public/api/mainPage/painelGeral</name>
+  </compound>
+  <compound refid="dir_700ddcb9a600b0c429f47363852a79a3" kind="dir"><name>/var/www/chamador.itep.govrn/public/api/mainPage/perfil</name>
+  </compound>
+  <compound refid="dir_f832923ad3cb060bc87ad85e68b8a1c3" kind="dir"><name>/var/www/chamador.itep.govrn/public</name>
+  </compound>
+  <compound refid="dir_e24744a2556add85c010114ccf9b03fe" kind="dir"><name>/var/www/chamador.itep.govrn/public/api/menu/configuracoes/setores</name>
+  </compound>
+  <compound refid="dir_290548eaf5d2e403aa8155f664058831" kind="dir"><name>/var/www/chamador.itep.govrn/public/api/menu/configuracoes/usuarios</name>
+  </compound>
+</doxygenindex>

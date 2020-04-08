@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: componentes/mainPage/Alerts.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: componentes/mainPage/Alerts.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file Alerts.js
+ * @author Allan de Miranda Silva (allandemiranda@gmail.com)
+ * @brief Contem a classe para criação de novos banners de alerta
+ * @version 1.0.0
+ * @date 11-03-2020
+ *
+ * @copyright Copyright (c) 2020 DIGETI ITEP/RN
+ *
+ */
+
+import React, { Component } from 'react'    //! Componente básico
+import { connect } from 'react-redux'       //! Componente Redux
+import parse from 'html-react-parser'       //! Componente para texto em HTML
+
+
+class Alerts extends Component {
+    constructor() {
+        super()
+        this.successDiv = this.successDiv.bind(this)
+        this.infoDiv = this.infoDiv.bind(this)
+        this.warningDiv = this.warningDiv.bind(this)
+        this.dangerDiv = this.dangerDiv.bind(this)
+    }
+
+    /**
+     * @brief Obter banner de sucesso
+     * 
+     * @param {string} mensagem Mensagem do banner
+     */
+    successDiv(mensagem) {
+        return (
+            &lt;div className="alert alert-success" role="alert">
+                &lt;strong>Sucesso!&lt;/strong> {parse(mensagem)} 
+                &lt;button type="button" className="close" data-dismiss="alert" aria-label="Close">
+                    &lt;span aria-hidden="true" onClick={() =>
+                        this.props.dispatch({
+                            type: "REMOVER_ALERTA"
+                        })
+                    }>&amp;times;&lt;/span>
+                &lt;/button>
+            &lt;/div>
+        )
+    }
+
+    /**
+     * @brief Obter banner de informações
+     * 
+     * @param {string} mensagem Mensagem do banner
+     */
+    infoDiv(mensagem) {
+        return (
+            &lt;div className="alert alert-info" role="alert">
+                &lt;strong>Informação!&lt;/strong> {parse(mensagem)}
+                &lt;button type="button" className="close" data-dismiss="alert" aria-label="Close">
+                    &lt;span aria-hidden="true" onClick={() =>
+                        this.props.dispatch({
+                            type: "REMOVER_ALERTA"
+                        })
+                    }>&amp;times;&lt;/span>
+                &lt;/button>
+            &lt;/div>
+        )
+    }
+
+    /**
+     * @brief Obter banner de atenção
+     * 
+     * @param {string} mensagem Mensagem do banner
+     */
+    warningDiv(mensagem) {
+        return (
+            &lt;div className="alert alert-warning" role="alert">
+                &lt;strong>Atenção!&lt;/strong> {parse(mensagem)}
+                &lt;button type="button" className="close" data-dismiss="alert" aria-label="Close">
+                    &lt;span aria-hidden="true" onClick={() =>
+                        this.props.dispatch({
+                            type: "REMOVER_ALERTA"
+                        })
+                    }>&amp;times;&lt;/span>
+                &lt;/button>
+            &lt;/div>
+        )
+    }
+
+    /**
+     * @brief Obter banner de erro fatal
+     * 
+     * @param {string} mensagem Mensagem do banner
+     */
+    dangerDiv(mensagem) {
+        return (
+            &lt;div className="alert alert-danger" role="alert">
+                &lt;strong>Erro!&lt;/strong> {parse(mensagem)}
+                &lt;button type="button" className="close" data-dismiss="alert" aria-label="Close">
+                    &lt;span aria-hidden="true" onClick={() =>
+                        this.props.dispatch({
+                            type: "REMOVER_ALERTA"
+                        })
+                    }>&amp;times;&lt;/span>
+                &lt;/button>
+            &lt;/div>
+        )
+    }
+
+    /**
+     * @brief Renderiza banner de alerta
+     * 
+     * @return {string} HTML do banner de alerta solicitado
+     */
+    render() {
+        switch (this.props.modules.alerta.tipo) {
+            case "success":
+                return (this.successDiv(this.props.modules.alerta.mensagem))
+            case "info":
+                return (this.infoDiv(this.props.modules.alerta.mensagem))
+            case "warning":
+                return (this.warningDiv(this.props.modules.alerta.mensagem))
+            case "danger":
+                return (this.dangerDiv(this.props.modules.alerta.mensagem))
+            default:
+                return (this.dangerDiv("Erro ao abrir o alerta."))
+        }
+
+    }
+}
+
+export default connect(state => ({ modules: state }))(Alerts)
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#abrirDashboard">abrirDashboard</a></li><li><a href="global.html#abrirFichas">abrirFichas</a></li><li><a href="global.html#abrirLogs">abrirLogs</a></li><li><a href="global.html#abrirPainelFichas">abrirPainelFichas</a></li><li><a href="global.html#abrirPerfil">abrirPerfil</a></li><li><a href="global.html#abrirSetores">abrirSetores</a></li><li><a href="global.html#abrirUsuarios">abrirUsuarios</a></li><li><a href="global.html#adicionarAlerta">adicionarAlerta</a></li><li><a href="global.html#loginAprovado">loginAprovado</a></li><li><a href="global.html#modificarPerfil">modificarPerfil</a></li><li><a href="global.html#removerAlerta">removerAlerta</a></li><li><a href="global.html#rootReducer">rootReducer</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Mon Apr 06 2020 20:26:35 GMT-0300 (GMT-03:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

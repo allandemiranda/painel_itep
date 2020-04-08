@@ -1,0 +1,110 @@
+\hypertarget{imprimir_2ficha_2index_8php}{}\section{/var/www/chamador.itep.\+govrn/public/api/imprimir/ficha/index.php File Reference}
+\label{imprimir_2ficha_2index_8php}\index{/var/www/chamador.\+itep.\+govrn/public/api/imprimir/ficha/index.\+php@{/var/www/chamador.\+itep.\+govrn/public/api/imprimir/ficha/index.\+php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{imprimir_2ficha_2index_8php_abe4cc9788f52e49485473dc699537388}{try}
+\begin{DoxyCompactList}\small\item\em Cabeçalho com as classes e funções gerias. \end{DoxyCompactList}\item 
+if(\$\+\_\+\+G\+ET\mbox{[}\char`\"{}id\char`\"{}\mbox{]}==null) \hyperlink{imprimir_2ficha_2index_8php_a4b493c640f7b266035c18cd019fdd275}{else}
+\begin{DoxyCompactList}\small\item\em Armazena o id da ficha a ser impressa. \end{DoxyCompactList}\item 
+\hyperlink{imprimir_2ficha_2index_8php_a7388a2b9be02ae3a1a6e5bc96d972866}{\$body\+\_\+ficha\+\_\+id} = \hyperlink{_header_8php_a8909d20d656fecf83ebaa2bed0cab2c1}{input\+\_\+check}(\$temp)
+\begin{DoxyCompactList}\small\item\em Obtem número da ficha a ser impressa. \end{DoxyCompactList}\item 
+\hyperlink{imprimir_2ficha_2index_8php_aab83e7ad10d8c95fdbf231d086b83a1f}{\$ficha} = new \hyperlink{class_class_ficha}{Class\+Ficha}(\$body\+\_\+ficha\+\_\+id)
+\item 
+\hyperlink{imprimir_2ficha_2index_8php_ae4caa8044246171c958ceab2ed5374ee}{\$empresa} = new \hyperlink{class_class_company}{Class\+Company}()
+\begin{DoxyCompactList}\small\item\em Obtem ficha pelo seu id. \end{DoxyCompactList}\item 
+\hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch} (\textbackslash{}Throwable \$th)
+\begin{DoxyCompactList}\small\item\em Obter dados da empresa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{imprimir_2ficha_2index_8php_a7388a2b9be02ae3a1a6e5bc96d972866}\label{imprimir_2ficha_2index_8php_a7388a2b9be02ae3a1a6e5bc96d972866}} 
+\index{imprimir/ficha/index.\+php@{imprimir/ficha/index.\+php}!\$body\+\_\+ficha\+\_\+id@{\$body\+\_\+ficha\+\_\+id}}
+\index{\$body\+\_\+ficha\+\_\+id@{\$body\+\_\+ficha\+\_\+id}!imprimir/ficha/index.\+php@{imprimir/ficha/index.\+php}}
+\subsubsection{\texorpdfstring{\$body\+\_\+ficha\+\_\+id}{$body\_ficha\_id}}
+{\footnotesize\ttfamily \$body\+\_\+ficha\+\_\+id = \hyperlink{_header_8php_a8909d20d656fecf83ebaa2bed0cab2c1}{input\+\_\+check}(\$temp)}
+
+
+
+Obtem número da ficha a ser impressa. 
+
+
+
+Definition at line 25 of file index.\+php.
+
+\mbox{\Hypertarget{imprimir_2ficha_2index_8php_ae4caa8044246171c958ceab2ed5374ee}\label{imprimir_2ficha_2index_8php_ae4caa8044246171c958ceab2ed5374ee}} 
+\index{imprimir/ficha/index.\+php@{imprimir/ficha/index.\+php}!\$empresa@{\$empresa}}
+\index{\$empresa@{\$empresa}!imprimir/ficha/index.\+php@{imprimir/ficha/index.\+php}}
+\subsubsection{\texorpdfstring{\$empresa}{$empresa}}
+{\footnotesize\ttfamily \$empresa = new \hyperlink{class_class_company}{Class\+Company}()}
+
+
+
+Obtem ficha pelo seu id. 
+
+
+
+Definition at line 29 of file index.\+php.
+
+\mbox{\Hypertarget{imprimir_2ficha_2index_8php_aab83e7ad10d8c95fdbf231d086b83a1f}\label{imprimir_2ficha_2index_8php_aab83e7ad10d8c95fdbf231d086b83a1f}} 
+\index{imprimir/ficha/index.\+php@{imprimir/ficha/index.\+php}!\$ficha@{\$ficha}}
+\index{\$ficha@{\$ficha}!imprimir/ficha/index.\+php@{imprimir/ficha/index.\+php}}
+\subsubsection{\texorpdfstring{\$ficha}{$ficha}}
+{\footnotesize\ttfamily \$ficha = new \hyperlink{class_class_ficha}{Class\+Ficha}(\$body\+\_\+ficha\+\_\+id)}
+
+
+
+Definition at line 28 of file index.\+php.
+
+\mbox{\Hypertarget{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}\label{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}} 
+\index{imprimir/ficha/index.\+php@{imprimir/ficha/index.\+php}!catch@{catch}}
+\index{catch@{catch}!imprimir/ficha/index.\+php@{imprimir/ficha/index.\+php}}
+\subsubsection{\texorpdfstring{catch}{catch}}
+{\footnotesize\ttfamily catch(\textbackslash{}Throwable \$th)}
+
+
+
+Obter dados da empresa. 
+
+
+
+Definition at line 30 of file index.\+php.
+
+\mbox{\Hypertarget{imprimir_2ficha_2index_8php_a4b493c640f7b266035c18cd019fdd275}\label{imprimir_2ficha_2index_8php_a4b493c640f7b266035c18cd019fdd275}} 
+\index{imprimir/ficha/index.\+php@{imprimir/ficha/index.\+php}!else@{else}}
+\index{else@{else}!imprimir/ficha/index.\+php@{imprimir/ficha/index.\+php}}
+\subsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily if ( \$\+\_\+\+G\+ET\mbox{[}\char`\"{}id\char`\"{}\mbox{]}==null) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+        $temp = $\_GET[\textcolor{stringliteral}{"id"}]
+\end{DoxyCode}
+
+
+Armazena o id da ficha a ser impressa. 
+
+
+
+Definition at line 23 of file index.\+php.
+
+\mbox{\Hypertarget{imprimir_2ficha_2index_8php_abe4cc9788f52e49485473dc699537388}\label{imprimir_2ficha_2index_8php_abe4cc9788f52e49485473dc699537388}} 
+\index{imprimir/ficha/index.\+php@{imprimir/ficha/index.\+php}!try@{try}}
+\index{try@{try}!imprimir/ficha/index.\+php@{imprimir/ficha/index.\+php}}
+\subsubsection{\texorpdfstring{try}{try}}
+{\footnotesize\ttfamily try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    \hyperlink{imprimir_2ficha_2index_8php_a7388a2b9be02ae3a1a6e5bc96d972866}{$body\_ficha\_id} = null
+\end{DoxyCode}
+
+
+Cabeçalho com as classes e funções gerias. 
+
+
+
+Definition at line 18 of file index.\+php.
+

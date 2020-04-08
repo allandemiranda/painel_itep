@@ -1,0 +1,107 @@
+\hypertarget{_header_8php}{}\section{/var/www/chamador.itep.\+govrn/public/api/\+Header.php File Reference}
+\label{_header_8php}\index{/var/www/chamador.\+itep.\+govrn/public/api/\+Header.\+php@{/var/www/chamador.\+itep.\+govrn/public/api/\+Header.\+php}}
+
+
+Contem todo o cabeçalho com classes e funções gerais do sistema.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_header_8php_a5455ea8d21f7611dae58e3d4612fb3bd}{encrypt\+\_\+password} (\$value)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_class_connection}{Class\+Connection}. \end{DoxyCompactList}\item 
+\hyperlink{_header_8php_a8909d20d656fecf83ebaa2bed0cab2c1}{input\+\_\+check} (\$valor)
+\begin{DoxyCompactList}\small\item\em Validar entradas para evitar injeção de código errado. \end{DoxyCompactList}\item 
+\hyperlink{_header_8php_a8db8ce321ecc739cc840efd11c612b10}{generator\+Password} (\$tamanho=5, \$minusculas=false, \$numeros=true, \$simbolos=false)
+\begin{DoxyCompactList}\small\item\em Função para gerar senhas aleatórias. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contem todo o cabeçalho com classes e funções gerais do sistema. 
+
+Contem todo o cabeçalho necessário para página ser de conteudo json.
+
+\begin{DoxyAuthor}{Author}
+Allan de Miranda Silva (\href{mailto:allandemiranda@gmail.com}{\tt allandemiranda@gmail.\+com}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+02-\/03-\/2020
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020 D\+I\+G\+E\+TI I\+T\+E\+P/\+RN 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_header_8php_a5455ea8d21f7611dae58e3d4612fb3bd}\label{_header_8php_a5455ea8d21f7611dae58e3d4612fb3bd}} 
+\index{Header.\+php@{Header.\+php}!encrypt\+\_\+password@{encrypt\+\_\+password}}
+\index{encrypt\+\_\+password@{encrypt\+\_\+password}!Header.\+php@{Header.\+php}}
+\subsubsection{\texorpdfstring{encrypt\+\_\+password()}{encrypt\_password()}}
+{\footnotesize\ttfamily encrypt\+\_\+password (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_class_connection}{Class\+Connection}. 
+
+\hyperlink{class_class_usuario}{Class\+Usuario} \hyperlink{class_class_setor}{Class\+Setor} \hyperlink{class_class_ficha}{Class\+Ficha} \hyperlink{class_class_company}{Class\+Company} \hyperlink{class_class_credenciais}{Class\+Credenciais} \hyperlink{class_class_logs}{Class\+Logs} Criptografa a Senha do Funcionário para o padrão adotado no sistema
+
+\begin{DoxyReturn}{Returns}
+String Senha criptografada 
+\end{DoxyReturn}
+
+
+Definition at line 31 of file Header.\+php.
+
+\mbox{\Hypertarget{_header_8php_a8db8ce321ecc739cc840efd11c612b10}\label{_header_8php_a8db8ce321ecc739cc840efd11c612b10}} 
+\index{Header.\+php@{Header.\+php}!generator\+Password@{generator\+Password}}
+\index{generator\+Password@{generator\+Password}!Header.\+php@{Header.\+php}}
+\subsubsection{\texorpdfstring{generator\+Password()}{generatorPassword()}}
+{\footnotesize\ttfamily generator\+Password (\begin{DoxyParamCaption}\item[{}]{\$tamanho = {\ttfamily 5},  }\item[{}]{\$minusculas = {\ttfamily false},  }\item[{}]{\$numeros = {\ttfamily true},  }\item[{}]{\$simbolos = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Função para gerar senhas aleatórias. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tamanho} & Tamanho da senha a ser gerada \\
+\hline
+{\em minusculas} & Se terá letras minusculas \\
+\hline
+{\em numeros} & Se terá números \\
+\hline
+{\em simbolos} & Se terá símbolos\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String A senha gerada 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file Header.\+php.
+
+\mbox{\Hypertarget{_header_8php_a8909d20d656fecf83ebaa2bed0cab2c1}\label{_header_8php_a8909d20d656fecf83ebaa2bed0cab2c1}} 
+\index{Header.\+php@{Header.\+php}!input\+\_\+check@{input\+\_\+check}}
+\index{input\+\_\+check@{input\+\_\+check}!Header.\+php@{Header.\+php}}
+\subsubsection{\texorpdfstring{input\+\_\+check()}{input\_check()}}
+{\footnotesize\ttfamily input\+\_\+check (\begin{DoxyParamCaption}\item[{}]{\$valor }\end{DoxyParamCaption})}
+
+
+
+Validar entradas para evitar injeção de código errado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & Um valor de entrada a ser analisado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String Valor validado para interação 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file Header.\+php.
+

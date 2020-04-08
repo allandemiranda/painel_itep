@@ -1,0 +1,192 @@
+\hypertarget{finalizar_8php}{}\section{/var/www/chamador.itep.\+govrn/public/api/main\+Page/inicial/finalizar.php File Reference}
+\label{finalizar_8php}\index{/var/www/chamador.\+itep.\+govrn/public/api/main\+Page/inicial/finalizar.\+php@{/var/www/chamador.\+itep.\+govrn/public/api/main\+Page/inicial/finalizar.\+php}}
+
+
+Contem a lógica para finalizar uma ficha em atendimento.  
+
+
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{finalizar_8php_a252370d95039a38fa11afab784725d58}{\$dados} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Cabeçalho para conteudo json. \end{DoxyCompactList}\item 
+\hyperlink{finalizar_8php_a26b9f9373f7bb79dfcf8a86dff086b45}{\$body} = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Contem todos os dados a serem enviados. \end{DoxyCompactList}\item 
+\hyperlink{finalizar_8php_acedd13b51401130848ce18f4d5c52605}{\$json} = json\+\_\+decode(\$body, true)
+\begin{DoxyCompactList}\small\item\em Obtém todas as informações requisitadas P\+O\+ST. \end{DoxyCompactList}\item 
+\hyperlink{finalizar_8php_afc31993e855f9631572adfedcfe6f34b}{\$login} = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Decodifica as informações requisitadas. \end{DoxyCompactList}\item 
+\hyperlink{finalizar_8php_a3678c8769c9698fd30581c1016c5f475}{\$senha} = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Login do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{finalizar_8php_a6224af2851adb741887322ddb4c77102}{\$ficha\+\_\+id} = \$json\mbox{[}\textquotesingle{}ficha\+\_\+id\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Senha criptografada do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{finalizar_8php_abe4cc9788f52e49485473dc699537388}{try}
+\begin{DoxyCompactList}\small\item\em id da ficha que será finalizada \end{DoxyCompactList}\item 
+\hyperlink{finalizar_8php_aab83e7ad10d8c95fdbf231d086b83a1f}{\$ficha} = new \hyperlink{class_class_ficha}{Class\+Ficha}(\$ficha\+\_\+id)
+\item 
+\hyperlink{finalizar_8php_a9a2cf15a653aee8be437f7ae474cd494}{\$log} = new \hyperlink{class_class_logs}{Class\+Logs}(null, \$credenciais-\/$>$get\+\_\+user(), \char`\"{}F\+I\+N\+A\+L\+I\+Z\+OU F\+I\+C\+HA\char`\"{}, \$ficha)
+\item 
+\hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch}(Exception \$e) \hyperlink{finalizar_8php_a1eb47d68a4a4f73debf91b15e179d813}{finally}
+\begin{DoxyCompactList}\small\item\em Criar um log desta operação no sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contem a lógica para finalizar uma ficha em atendimento. 
+
+\begin{DoxyAuthor}{Author}
+Allan de Miranda Silva (\href{mailto:allandemiranda@gmail.com}{\tt allandemiranda@gmail.\+com}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+27-\/03-\/2020
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020 D\+I\+G\+E\+TI I\+T\+E\+P/\+RN 
+\end{DoxyCopyright}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{finalizar_8php_a26b9f9373f7bb79dfcf8a86dff086b45}\label{finalizar_8php_a26b9f9373f7bb79dfcf8a86dff086b45}} 
+\index{finalizar.\+php@{finalizar.\+php}!\$body@{\$body}}
+\index{\$body@{\$body}!finalizar.\+php@{finalizar.\+php}}
+\subsubsection{\texorpdfstring{\$body}{$body}}
+{\footnotesize\ttfamily \$body = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})}
+
+
+
+Contem todos os dados a serem enviados. 
+
+
+
+Definition at line 21 of file finalizar.\+php.
+
+\mbox{\Hypertarget{finalizar_8php_a252370d95039a38fa11afab784725d58}\label{finalizar_8php_a252370d95039a38fa11afab784725d58}} 
+\index{finalizar.\+php@{finalizar.\+php}!\$dados@{\$dados}}
+\index{\$dados@{\$dados}!finalizar.\+php@{finalizar.\+php}}
+\subsubsection{\texorpdfstring{\$dados}{$dados}}
+{\footnotesize\ttfamily \$dados = \mbox{[}$\,$\mbox{]}}
+
+
+
+Cabeçalho para conteudo json. 
+
+Cabeçalho com as classes e funções gerias 
+
+Definition at line 19 of file finalizar.\+php.
+
+\mbox{\Hypertarget{finalizar_8php_aab83e7ad10d8c95fdbf231d086b83a1f}\label{finalizar_8php_aab83e7ad10d8c95fdbf231d086b83a1f}} 
+\index{finalizar.\+php@{finalizar.\+php}!\$ficha@{\$ficha}}
+\index{\$ficha@{\$ficha}!finalizar.\+php@{finalizar.\+php}}
+\subsubsection{\texorpdfstring{\$ficha}{$ficha}}
+{\footnotesize\ttfamily \$ficha = new \hyperlink{class_class_ficha}{Class\+Ficha}(\$ficha\+\_\+id)}
+
+
+
+Definition at line 31 of file finalizar.\+php.
+
+\mbox{\Hypertarget{finalizar_8php_a6224af2851adb741887322ddb4c77102}\label{finalizar_8php_a6224af2851adb741887322ddb4c77102}} 
+\index{finalizar.\+php@{finalizar.\+php}!\$ficha\+\_\+id@{\$ficha\+\_\+id}}
+\index{\$ficha\+\_\+id@{\$ficha\+\_\+id}!finalizar.\+php@{finalizar.\+php}}
+\subsubsection{\texorpdfstring{\$ficha\+\_\+id}{$ficha\_id}}
+{\footnotesize\ttfamily \$ficha\+\_\+id = \$json\mbox{[}\textquotesingle{}ficha\+\_\+id\textquotesingle{}\mbox{]}}
+
+
+
+Senha criptografada do usuário que requisitou a informação. 
+
+
+
+Definition at line 27 of file finalizar.\+php.
+
+\mbox{\Hypertarget{finalizar_8php_acedd13b51401130848ce18f4d5c52605}\label{finalizar_8php_acedd13b51401130848ce18f4d5c52605}} 
+\index{finalizar.\+php@{finalizar.\+php}!\$json@{\$json}}
+\index{\$json@{\$json}!finalizar.\+php@{finalizar.\+php}}
+\subsubsection{\texorpdfstring{\$json}{$json}}
+{\footnotesize\ttfamily \$json = json\+\_\+decode(\$body, true)}
+
+
+
+Obtém todas as informações requisitadas P\+O\+ST. 
+
+
+
+Definition at line 22 of file finalizar.\+php.
+
+\mbox{\Hypertarget{finalizar_8php_a9a2cf15a653aee8be437f7ae474cd494}\label{finalizar_8php_a9a2cf15a653aee8be437f7ae474cd494}} 
+\index{finalizar.\+php@{finalizar.\+php}!\$log@{\$log}}
+\index{\$log@{\$log}!finalizar.\+php@{finalizar.\+php}}
+\subsubsection{\texorpdfstring{\$log}{$log}}
+{\footnotesize\ttfamily \$log = new \hyperlink{class_class_logs}{Class\+Logs}(null, \$credenciais-\/$>$get\+\_\+user(), \char`\"{}F\+I\+N\+A\+L\+I\+Z\+OU F\+I\+C\+HA\char`\"{}, \$ficha)}
+
+
+
+Definition at line 42 of file finalizar.\+php.
+
+\mbox{\Hypertarget{finalizar_8php_afc31993e855f9631572adfedcfe6f34b}\label{finalizar_8php_afc31993e855f9631572adfedcfe6f34b}} 
+\index{finalizar.\+php@{finalizar.\+php}!\$login@{\$login}}
+\index{\$login@{\$login}!finalizar.\+php@{finalizar.\+php}}
+\subsubsection{\texorpdfstring{\$login}{$login}}
+{\footnotesize\ttfamily \$login = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}}
+
+
+
+Decodifica as informações requisitadas. 
+
+
+
+Definition at line 24 of file finalizar.\+php.
+
+\mbox{\Hypertarget{finalizar_8php_a3678c8769c9698fd30581c1016c5f475}\label{finalizar_8php_a3678c8769c9698fd30581c1016c5f475}} 
+\index{finalizar.\+php@{finalizar.\+php}!\$senha@{\$senha}}
+\index{\$senha@{\$senha}!finalizar.\+php@{finalizar.\+php}}
+\subsubsection{\texorpdfstring{\$senha}{$senha}}
+{\footnotesize\ttfamily \$senha = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}}
+
+
+
+Login do usuário que requisitou a informação. 
+
+
+
+Definition at line 25 of file finalizar.\+php.
+
+\mbox{\Hypertarget{finalizar_8php_a1eb47d68a4a4f73debf91b15e179d813}\label{finalizar_8php_a1eb47d68a4a4f73debf91b15e179d813}} 
+\index{finalizar.\+php@{finalizar.\+php}!finally@{finally}}
+\index{finally@{finally}!finalizar.\+php@{finalizar.\+php}}
+\subsubsection{\texorpdfstring{finally}{finally}}
+{\footnotesize\ttfamily \hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch} (Exception \$e) finally}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    echo json\_encode(\hyperlink{finalizar_8php_a252370d95039a38fa11afab784725d58}{$dados}[0])
+\end{DoxyCode}
+
+
+Criar um log desta operação no sistema. 
+
+
+
+Definition at line 48 of file finalizar.\+php.
+
+\mbox{\Hypertarget{finalizar_8php_abe4cc9788f52e49485473dc699537388}\label{finalizar_8php_abe4cc9788f52e49485473dc699537388}} 
+\index{finalizar.\+php@{finalizar.\+php}!try@{try}}
+\index{try@{try}!finalizar.\+php@{finalizar.\+php}}
+\subsubsection{\texorpdfstring{try}{try}}
+{\footnotesize\ttfamily try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    $credenciais = \textcolor{keyword}{new} \hyperlink{class_class_credenciais}{ClassCredenciais}(\hyperlink{finalizar_8php_afc31993e855f9631572adfedcfe6f34b}{$login}, \hyperlink{finalizar_8php_a3678c8769c9698fd30581c1016c5f475}{$senha})
+\end{DoxyCode}
+
+
+id da ficha que será finalizada 
+
+
+
+Definition at line 29 of file finalizar.\+php.
+

@@ -1,0 +1,129 @@
+.TH "/var/www/chamador.itep.govrn/public/api/menu/configuracoes/usuarios/delete.php" 3 "Mon Apr 6 2020" "Chamador ITEP - API" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/var/www/chamador.itep.govrn/public/api/menu/configuracoes/usuarios/delete.php
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fB$dados\fP = []"
+.br
+.RI "Cabeçalho para conteudo json\&. "
+.ti -1c
+.RI "\fB$body\fP = file_get_contents('php://input')"
+.br
+.RI "Contem todos os dados a serem enviados\&. "
+.ti -1c
+.RI "\fB$json\fP = json_decode($body, true)"
+.br
+.RI "Obtém todas as informações requisitadas POST\&. "
+.ti -1c
+.RI "\fB$login\fP = $json['login']"
+.br
+.RI "Decodifica as informações requisitadas\&. "
+.ti -1c
+.RI "\fB$senha\fP = $json['senha']"
+.br
+.RI "Login do usuário que requisitou a informação\&. "
+.ti -1c
+.RI "\fB$id\fP = $json['id']"
+.br
+.RI "Senha criptografada do usuário que requisitou a informação\&. "
+.ti -1c
+.RI "\fBtry\fP"
+.br
+.RI "id do usuário que será deletado do sistema "
+.ti -1c
+.RI "if($credenciais\->get_user() \->get_sector() \->get_admin()==false) \fBelse\fP"
+.br
+.RI "Obter a credencial do usário\&. "
+.ti -1c
+.RI "\fB$log\fP = new \fBClassLogs\fP(null, $credenciais\->get_user(), 'EXCLUIU USUÁRIO', $usuario)"
+.br
+.ti -1c
+.RI "\fBcatch\fP(Exception $e) \fBfinally\fP"
+.br
+.RI "Criar um log desta operação no sistema\&. "
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "$body = file_get_contents('php://input')"
+
+.PP
+Contem todos os dados a serem enviados\&. 
+.PP
+Definition at line 21 of file delete\&.php\&.
+.SS "$dados = []"
+
+.PP
+Cabeçalho para conteudo json\&. Cabeçalho com as classes e funções gerias 
+.PP
+Definition at line 19 of file delete\&.php\&.
+.SS "$id = $json['id']"
+
+.PP
+Senha criptografada do usuário que requisitou a informação\&. 
+.PP
+Definition at line 27 of file delete\&.php\&.
+.SS "$json = json_decode($body, true)"
+
+.PP
+Obtém todas as informações requisitadas POST\&. 
+.PP
+Definition at line 22 of file delete\&.php\&.
+.SS "$log = new \fBClassLogs\fP(null, $credenciais\->get_user(), 'EXCLUIU USUÁRIO', $usuario)"
+
+.PP
+Definition at line 46 of file delete\&.php\&.
+.SS "$login = $json['login']"
+
+.PP
+Decodifica as informações requisitadas\&. 
+.PP
+Definition at line 24 of file delete\&.php\&.
+.SS "$senha = $json['senha']"
+
+.PP
+Login do usuário que requisitou a informação\&. 
+.PP
+Definition at line 25 of file delete\&.php\&.
+.SS "if ( $credenciais\->get_user() \->get_sector() \->get_admin()==false) else"
+\fBInitial value:\fP
+.PP
+.nf
+{
+        $usuario = new ClassUsuario($id)
+.fi
+.PP
+Obter a credencial do usário\&. 
+.PP
+Definition at line 35 of file delete\&.php\&.
+.SS "\fBcatch\fP (Exception $e) finally"
+\fBInitial value:\fP
+.PP
+.nf
+{
+    echo json_encode($dados[0])
+.fi
+.PP
+Criar um log desta operação no sistema\&. 
+.PP
+Definition at line 53 of file delete\&.php\&.
+.SS "try"
+\fBInitial value:\fP
+.PP
+.nf
+{
+    $credenciais = new ClassCredenciais($login, $senha)
+.fi
+.PP
+id do usuário que será deletado do sistema 
+.PP
+Definition at line 29 of file delete\&.php\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chamador ITEP - API from the source code\&.

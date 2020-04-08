@@ -1,0 +1,238 @@
+\hypertarget{main_page_2painel_geral_2new_8php}{}\section{/var/www/chamador.itep.\+govrn/public/api/main\+Page/painel\+Geral/new.php File Reference}
+\label{main_page_2painel_geral_2new_8php}\index{/var/www/chamador.\+itep.\+govrn/public/api/main\+Page/painel\+Geral/new.\+php@{/var/www/chamador.\+itep.\+govrn/public/api/main\+Page/painel\+Geral/new.\+php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{main_page_2painel_geral_2new_8php_a252370d95039a38fa11afab784725d58}{\$dados} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Cabeçalho para conteudo json. \end{DoxyCompactList}\item 
+\hyperlink{main_page_2painel_geral_2new_8php_a26b9f9373f7bb79dfcf8a86dff086b45}{\$body} = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Contem todos os dados a serem enviados. \end{DoxyCompactList}\item 
+\hyperlink{main_page_2painel_geral_2new_8php_acedd13b51401130848ce18f4d5c52605}{\$json} = json\+\_\+decode(\$body, true)
+\begin{DoxyCompactList}\small\item\em Obtém todas as informações requisitadas P\+O\+ST. \end{DoxyCompactList}\item 
+\hyperlink{main_page_2painel_geral_2new_8php_afc31993e855f9631572adfedcfe6f34b}{\$login} = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Decodifica as informações requisitadas. \end{DoxyCompactList}\item 
+\hyperlink{main_page_2painel_geral_2new_8php_a3678c8769c9698fd30581c1016c5f475}{\$senha} = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Login do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{main_page_2painel_geral_2new_8php_ac8c9d9dd5d90fa5854f0cb8397084ebd}{\$nome} = \hyperlink{_header_8php_a8909d20d656fecf83ebaa2bed0cab2c1}{input\+\_\+check}(\$json\mbox{[}\textquotesingle{}nome\textquotesingle{}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Senha criptografada do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{main_page_2painel_geral_2new_8php_af0677db4542a022e657eba3a67ee9c3c}{\$telefone} = \hyperlink{_header_8php_a8909d20d656fecf83ebaa2bed0cab2c1}{input\+\_\+check}(\$json\mbox{[}\textquotesingle{}telefone\textquotesingle{}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Nome da nova ficha. \end{DoxyCompactList}\item 
+int \hyperlink{main_page_2painel_geral_2new_8php_a93c5ed26f2451c1cc65c3dfe545a913b}{\$setor\+\_\+id} = intval(\$json\mbox{[}\textquotesingle{}setor\+\_\+id\textquotesingle{}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Telefone da nova ficha. \end{DoxyCompactList}\item 
+\hyperlink{main_page_2painel_geral_2new_8php_a03082e938e33de61852b47220d243e91}{\$prioridade} = \$json\mbox{[}\textquotesingle{}prioridade\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em id so setor da nova ficha \end{DoxyCompactList}\item 
+\hyperlink{main_page_2painel_geral_2new_8php_abe4cc9788f52e49485473dc699537388}{try}
+\begin{DoxyCompactList}\small\item\em se a nova ficha é do tipo prioridade \end{DoxyCompactList}\item 
+\hyperlink{main_page_2painel_geral_2new_8php_a87435a25b7cae617cf284c729b6e835c}{\$setor} = new \hyperlink{class_class_setor}{Class\+Setor}(\$setor\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Obter a credencial do usário. \end{DoxyCompactList}\item 
+\hyperlink{main_page_2painel_geral_2new_8php_aab83e7ad10d8c95fdbf231d086b83a1f}{\$ficha} = new \hyperlink{class_class_ficha}{Class\+Ficha}(null, \$nome, \$telefone, \$setor, \$prioridade)
+\begin{DoxyCompactList}\small\item\em Obter o setor pelo id. \end{DoxyCompactList}\item 
+\hyperlink{main_page_2painel_geral_2new_8php_a9a2cf15a653aee8be437f7ae474cd494}{\$log} = new \hyperlink{class_class_logs}{Class\+Logs}(null, \$credenciais-\/$>$get\+\_\+user(), \char`\"{}C\+R\+I\+OU F\+I\+C\+HA\char`\"{}, \$ficha)
+\item 
+\hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch}(Exception \$e) \hyperlink{main_page_2painel_geral_2new_8php_a1eb47d68a4a4f73debf91b15e179d813}{finally}
+\begin{DoxyCompactList}\small\item\em Criar um log desta operação no sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{main_page_2painel_geral_2new_8php_a26b9f9373f7bb79dfcf8a86dff086b45}\label{main_page_2painel_geral_2new_8php_a26b9f9373f7bb79dfcf8a86dff086b45}} 
+\index{main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}!\$body@{\$body}}
+\index{\$body@{\$body}!main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}}
+\subsubsection{\texorpdfstring{\$body}{$body}}
+{\footnotesize\ttfamily \$body = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})}
+
+
+
+Contem todos os dados a serem enviados. 
+
+
+
+Definition at line 21 of file new.\+php.
+
+\mbox{\Hypertarget{main_page_2painel_geral_2new_8php_a252370d95039a38fa11afab784725d58}\label{main_page_2painel_geral_2new_8php_a252370d95039a38fa11afab784725d58}} 
+\index{main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}!\$dados@{\$dados}}
+\index{\$dados@{\$dados}!main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}}
+\subsubsection{\texorpdfstring{\$dados}{$dados}}
+{\footnotesize\ttfamily \$dados = \mbox{[}$\,$\mbox{]}}
+
+
+
+Cabeçalho para conteudo json. 
+
+Cabeçalho com as classes e funções gerias 
+
+Definition at line 19 of file new.\+php.
+
+\mbox{\Hypertarget{main_page_2painel_geral_2new_8php_aab83e7ad10d8c95fdbf231d086b83a1f}\label{main_page_2painel_geral_2new_8php_aab83e7ad10d8c95fdbf231d086b83a1f}} 
+\index{main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}!\$ficha@{\$ficha}}
+\index{\$ficha@{\$ficha}!main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}}
+\subsubsection{\texorpdfstring{\$ficha}{$ficha}}
+{\footnotesize\ttfamily \$ficha = new \hyperlink{class_class_ficha}{Class\+Ficha}(null, \$nome, \$telefone, \$setor, \$prioridade)}
+
+
+
+Obter o setor pelo id. 
+
+
+
+Definition at line 37 of file new.\+php.
+
+\mbox{\Hypertarget{main_page_2painel_geral_2new_8php_acedd13b51401130848ce18f4d5c52605}\label{main_page_2painel_geral_2new_8php_acedd13b51401130848ce18f4d5c52605}} 
+\index{main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}!\$json@{\$json}}
+\index{\$json@{\$json}!main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}}
+\subsubsection{\texorpdfstring{\$json}{$json}}
+{\footnotesize\ttfamily \$json = json\+\_\+decode(\$body, true)}
+
+
+
+Obtém todas as informações requisitadas P\+O\+ST. 
+
+
+
+Definition at line 22 of file new.\+php.
+
+\mbox{\Hypertarget{main_page_2painel_geral_2new_8php_a9a2cf15a653aee8be437f7ae474cd494}\label{main_page_2painel_geral_2new_8php_a9a2cf15a653aee8be437f7ae474cd494}} 
+\index{main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}!\$log@{\$log}}
+\index{\$log@{\$log}!main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}}
+\subsubsection{\texorpdfstring{\$log}{$log}}
+{\footnotesize\ttfamily \$log = new \hyperlink{class_class_logs}{Class\+Logs}(null, \$credenciais-\/$>$get\+\_\+user(), \char`\"{}C\+R\+I\+OU F\+I\+C\+HA\char`\"{}, \$ficha)}
+
+
+
+Definition at line 46 of file new.\+php.
+
+\mbox{\Hypertarget{main_page_2painel_geral_2new_8php_afc31993e855f9631572adfedcfe6f34b}\label{main_page_2painel_geral_2new_8php_afc31993e855f9631572adfedcfe6f34b}} 
+\index{main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}!\$login@{\$login}}
+\index{\$login@{\$login}!main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}}
+\subsubsection{\texorpdfstring{\$login}{$login}}
+{\footnotesize\ttfamily \$login = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}}
+
+
+
+Decodifica as informações requisitadas. 
+
+
+
+Definition at line 24 of file new.\+php.
+
+\mbox{\Hypertarget{main_page_2painel_geral_2new_8php_ac8c9d9dd5d90fa5854f0cb8397084ebd}\label{main_page_2painel_geral_2new_8php_ac8c9d9dd5d90fa5854f0cb8397084ebd}} 
+\index{main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}!\$nome@{\$nome}}
+\index{\$nome@{\$nome}!main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}}
+\subsubsection{\texorpdfstring{\$nome}{$nome}}
+{\footnotesize\ttfamily \$nome = \hyperlink{_header_8php_a8909d20d656fecf83ebaa2bed0cab2c1}{input\+\_\+check}(\$json\mbox{[}\textquotesingle{}nome\textquotesingle{}\mbox{]})}
+
+
+
+Senha criptografada do usuário que requisitou a informação. 
+
+
+
+Definition at line 27 of file new.\+php.
+
+\mbox{\Hypertarget{main_page_2painel_geral_2new_8php_a03082e938e33de61852b47220d243e91}\label{main_page_2painel_geral_2new_8php_a03082e938e33de61852b47220d243e91}} 
+\index{main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}!\$prioridade@{\$prioridade}}
+\index{\$prioridade@{\$prioridade}!main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}}
+\subsubsection{\texorpdfstring{\$prioridade}{$prioridade}}
+{\footnotesize\ttfamily \$prioridade = \$json\mbox{[}\textquotesingle{}prioridade\textquotesingle{}\mbox{]}}
+
+
+
+id so setor da nova ficha 
+
+
+
+Definition at line 30 of file new.\+php.
+
+\mbox{\Hypertarget{main_page_2painel_geral_2new_8php_a3678c8769c9698fd30581c1016c5f475}\label{main_page_2painel_geral_2new_8php_a3678c8769c9698fd30581c1016c5f475}} 
+\index{main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}!\$senha@{\$senha}}
+\index{\$senha@{\$senha}!main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}}
+\subsubsection{\texorpdfstring{\$senha}{$senha}}
+{\footnotesize\ttfamily \$senha = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}}
+
+
+
+Login do usuário que requisitou a informação. 
+
+
+
+Definition at line 25 of file new.\+php.
+
+\mbox{\Hypertarget{main_page_2painel_geral_2new_8php_a87435a25b7cae617cf284c729b6e835c}\label{main_page_2painel_geral_2new_8php_a87435a25b7cae617cf284c729b6e835c}} 
+\index{main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}!\$setor@{\$setor}}
+\index{\$setor@{\$setor}!main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}}
+\subsubsection{\texorpdfstring{\$setor}{$setor}}
+{\footnotesize\ttfamily \$setor = new \hyperlink{class_class_setor}{Class\+Setor}(\$setor\+\_\+id)}
+
+
+
+Obter a credencial do usário. 
+
+
+
+Definition at line 35 of file new.\+php.
+
+\mbox{\Hypertarget{main_page_2painel_geral_2new_8php_a93c5ed26f2451c1cc65c3dfe545a913b}\label{main_page_2painel_geral_2new_8php_a93c5ed26f2451c1cc65c3dfe545a913b}} 
+\index{main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}!\$setor\+\_\+id@{\$setor\+\_\+id}}
+\index{\$setor\+\_\+id@{\$setor\+\_\+id}!main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}}
+\subsubsection{\texorpdfstring{\$setor\+\_\+id}{$setor\_id}}
+{\footnotesize\ttfamily int \$setor\+\_\+id = intval(\$json\mbox{[}\textquotesingle{}setor\+\_\+id\textquotesingle{}\mbox{]})}
+
+
+
+Telefone da nova ficha. 
+
+
+
+Definition at line 29 of file new.\+php.
+
+\mbox{\Hypertarget{main_page_2painel_geral_2new_8php_af0677db4542a022e657eba3a67ee9c3c}\label{main_page_2painel_geral_2new_8php_af0677db4542a022e657eba3a67ee9c3c}} 
+\index{main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}!\$telefone@{\$telefone}}
+\index{\$telefone@{\$telefone}!main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}}
+\subsubsection{\texorpdfstring{\$telefone}{$telefone}}
+{\footnotesize\ttfamily \$telefone = \hyperlink{_header_8php_a8909d20d656fecf83ebaa2bed0cab2c1}{input\+\_\+check}(\$json\mbox{[}\textquotesingle{}telefone\textquotesingle{}\mbox{]})}
+
+
+
+Nome da nova ficha. 
+
+
+
+Definition at line 28 of file new.\+php.
+
+\mbox{\Hypertarget{main_page_2painel_geral_2new_8php_a1eb47d68a4a4f73debf91b15e179d813}\label{main_page_2painel_geral_2new_8php_a1eb47d68a4a4f73debf91b15e179d813}} 
+\index{main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}!finally@{finally}}
+\index{finally@{finally}!main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}}
+\subsubsection{\texorpdfstring{finally}{finally}}
+{\footnotesize\ttfamily \hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch} (Exception \$e) finally}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    echo json\_encode(\hyperlink{main_page_2painel_geral_2new_8php_a252370d95039a38fa11afab784725d58}{$dados}[0])
+\end{DoxyCode}
+
+
+Criar um log desta operação no sistema. 
+
+
+
+Definition at line 52 of file new.\+php.
+
+\mbox{\Hypertarget{main_page_2painel_geral_2new_8php_abe4cc9788f52e49485473dc699537388}\label{main_page_2painel_geral_2new_8php_abe4cc9788f52e49485473dc699537388}} 
+\index{main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}!try@{try}}
+\index{try@{try}!main\+Page/painel\+Geral/new.\+php@{main\+Page/painel\+Geral/new.\+php}}
+\subsubsection{\texorpdfstring{try}{try}}
+{\footnotesize\ttfamily try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    $credenciais = \textcolor{keyword}{new} \hyperlink{class_class_credenciais}{ClassCredenciais}(\hyperlink{main_page_2painel_geral_2new_8php_afc31993e855f9631572adfedcfe6f34b}{$login}, \hyperlink{main_page_2painel_geral_2new_8php_a3678c8769c9698fd30581c1016c5f475}{$senha})
+\end{DoxyCode}
+
+
+se a nova ficha é do tipo prioridade 
+
+
+
+Definition at line 32 of file new.\+php.
+

@@ -1,0 +1,17 @@
+digraph "get_name"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node24 [label="get_name",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node24 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="set_name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_setor.html#a53e29da8f1da63502f3e13091fcb74e5",tooltip="Definir o Nome do Setor. "];
+  Node24 -> Node26 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="set_admin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_setor.html#ab31da576d6d4983080ed6ed0cc9d2ed2",tooltip="Definir se o Setor é do tipo Administrador. "];
+  Node24 -> Node27 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="set_created_on_date",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_setor.html#a792b5876e9d76a4f030e436aeec2a855",tooltip="Definir a data de criação do Setor. "];
+  Node24 -> Node28 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="set_deleted",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_setor.html#acd0a4e339896072e5515b8fdcc33344d",tooltip="Definir se o Setor foi deletado. "];
+  Node24 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="set_ficha",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_setor.html#a592f14a6c34825448b303800bf41b1bb",tooltip="Definir se o Setor gerencia as fichas. "];
+}

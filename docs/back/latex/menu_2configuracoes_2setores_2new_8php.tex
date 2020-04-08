@@ -1,0 +1,212 @@
+\hypertarget{menu_2configuracoes_2setores_2new_8php}{}\section{/var/www/chamador.itep.\+govrn/public/api/menu/configuracoes/setores/new.php File Reference}
+\label{menu_2configuracoes_2setores_2new_8php}\index{/var/www/chamador.\+itep.\+govrn/public/api/menu/configuracoes/setores/new.\+php@{/var/www/chamador.\+itep.\+govrn/public/api/menu/configuracoes/setores/new.\+php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{menu_2configuracoes_2setores_2new_8php_a252370d95039a38fa11afab784725d58}{\$dados} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Cabeçalho para conteudo json. \end{DoxyCompactList}\item 
+\hyperlink{menu_2configuracoes_2setores_2new_8php_a26b9f9373f7bb79dfcf8a86dff086b45}{\$body} = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Contem todos os dados a serem enviados. \end{DoxyCompactList}\item 
+\hyperlink{menu_2configuracoes_2setores_2new_8php_acedd13b51401130848ce18f4d5c52605}{\$json} = json\+\_\+decode(\$body, true)
+\begin{DoxyCompactList}\small\item\em Obtém todas as informações requisitadas P\+O\+ST. \end{DoxyCompactList}\item 
+\hyperlink{menu_2configuracoes_2setores_2new_8php_afc31993e855f9631572adfedcfe6f34b}{\$login} = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Decodifica as informações requisitadas. \end{DoxyCompactList}\item 
+\hyperlink{menu_2configuracoes_2setores_2new_8php_a3678c8769c9698fd30581c1016c5f475}{\$senha} = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Login do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{menu_2configuracoes_2setores_2new_8php_ac8c9d9dd5d90fa5854f0cb8397084ebd}{\$nome} = \hyperlink{_header_8php_a8909d20d656fecf83ebaa2bed0cab2c1}{input\+\_\+check}(\$json\mbox{[}\textquotesingle{}nome\textquotesingle{}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Senha criptografada do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+bool \hyperlink{menu_2configuracoes_2setores_2new_8php_a8d3ccd903d881b48bb755be5d3f314da}{\$setor\+\_\+ficha} = \$json\mbox{[}\textquotesingle{}ficha\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Nome do novo setor. \end{DoxyCompactList}\item 
+bool \hyperlink{menu_2configuracoes_2setores_2new_8php_a3ba57324c35a68927cefc5e241e29d3c}{\$setor\+\_\+admin} = \$json\mbox{[}\textquotesingle{}admin\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Se o novo setor irá criar fichas. \end{DoxyCompactList}\item 
+\hyperlink{menu_2configuracoes_2setores_2new_8php_abe4cc9788f52e49485473dc699537388}{try}
+\begin{DoxyCompactList}\small\item\em Se o novo setor será do tipo administrador. \end{DoxyCompactList}\item 
+if(\$credenciais-\/$>$get\+\_\+user() -\/$>$get\+\_\+sector() -\/$>$get\+\_\+admin()==false) \hyperlink{menu_2configuracoes_2setores_2new_8php_a8f5108ee2efdbfcd6f3d53b8abcb6c09}{else}
+\begin{DoxyCompactList}\small\item\em Obter a credencial do usário. \end{DoxyCompactList}\item 
+\hyperlink{menu_2configuracoes_2setores_2new_8php_a9a2cf15a653aee8be437f7ae474cd494}{\$log} = new \hyperlink{class_class_logs}{Class\+Logs}(null, \$credenciais-\/$>$get\+\_\+user(), \char`\"{}C\+R\+I\+OU S\+E\+T\+OR\char`\"{}, \$setor)
+\item 
+\hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch}(Exception \$e) \hyperlink{menu_2configuracoes_2setores_2new_8php_a1eb47d68a4a4f73debf91b15e179d813}{finally}
+\begin{DoxyCompactList}\small\item\em Criar um log desta operação no sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{menu_2configuracoes_2setores_2new_8php_a26b9f9373f7bb79dfcf8a86dff086b45}\label{menu_2configuracoes_2setores_2new_8php_a26b9f9373f7bb79dfcf8a86dff086b45}} 
+\index{menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}!\$body@{\$body}}
+\index{\$body@{\$body}!menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}}
+\subsubsection{\texorpdfstring{\$body}{$body}}
+{\footnotesize\ttfamily \$body = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})}
+
+
+
+Contem todos os dados a serem enviados. 
+
+
+
+Definition at line 21 of file new.\+php.
+
+\mbox{\Hypertarget{menu_2configuracoes_2setores_2new_8php_a252370d95039a38fa11afab784725d58}\label{menu_2configuracoes_2setores_2new_8php_a252370d95039a38fa11afab784725d58}} 
+\index{menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}!\$dados@{\$dados}}
+\index{\$dados@{\$dados}!menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}}
+\subsubsection{\texorpdfstring{\$dados}{$dados}}
+{\footnotesize\ttfamily \$dados = \mbox{[}$\,$\mbox{]}}
+
+
+
+Cabeçalho para conteudo json. 
+
+Cabeçalho com as classes e funções gerias 
+
+Definition at line 19 of file new.\+php.
+
+\mbox{\Hypertarget{menu_2configuracoes_2setores_2new_8php_acedd13b51401130848ce18f4d5c52605}\label{menu_2configuracoes_2setores_2new_8php_acedd13b51401130848ce18f4d5c52605}} 
+\index{menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}!\$json@{\$json}}
+\index{\$json@{\$json}!menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}}
+\subsubsection{\texorpdfstring{\$json}{$json}}
+{\footnotesize\ttfamily \$json = json\+\_\+decode(\$body, true)}
+
+
+
+Obtém todas as informações requisitadas P\+O\+ST. 
+
+
+
+Definition at line 22 of file new.\+php.
+
+\mbox{\Hypertarget{menu_2configuracoes_2setores_2new_8php_a9a2cf15a653aee8be437f7ae474cd494}\label{menu_2configuracoes_2setores_2new_8php_a9a2cf15a653aee8be437f7ae474cd494}} 
+\index{menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}!\$log@{\$log}}
+\index{\$log@{\$log}!menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}}
+\subsubsection{\texorpdfstring{\$log}{$log}}
+{\footnotesize\ttfamily \$log = new \hyperlink{class_class_logs}{Class\+Logs}(null, \$credenciais-\/$>$get\+\_\+user(), \char`\"{}C\+R\+I\+OU S\+E\+T\+OR\char`\"{}, \$setor)}
+
+
+
+Definition at line 46 of file new.\+php.
+
+\mbox{\Hypertarget{menu_2configuracoes_2setores_2new_8php_afc31993e855f9631572adfedcfe6f34b}\label{menu_2configuracoes_2setores_2new_8php_afc31993e855f9631572adfedcfe6f34b}} 
+\index{menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}!\$login@{\$login}}
+\index{\$login@{\$login}!menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}}
+\subsubsection{\texorpdfstring{\$login}{$login}}
+{\footnotesize\ttfamily \$login = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}}
+
+
+
+Decodifica as informações requisitadas. 
+
+
+
+Definition at line 24 of file new.\+php.
+
+\mbox{\Hypertarget{menu_2configuracoes_2setores_2new_8php_ac8c9d9dd5d90fa5854f0cb8397084ebd}\label{menu_2configuracoes_2setores_2new_8php_ac8c9d9dd5d90fa5854f0cb8397084ebd}} 
+\index{menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}!\$nome@{\$nome}}
+\index{\$nome@{\$nome}!menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}}
+\subsubsection{\texorpdfstring{\$nome}{$nome}}
+{\footnotesize\ttfamily \$nome = \hyperlink{_header_8php_a8909d20d656fecf83ebaa2bed0cab2c1}{input\+\_\+check}(\$json\mbox{[}\textquotesingle{}nome\textquotesingle{}\mbox{]})}
+
+
+
+Senha criptografada do usuário que requisitou a informação. 
+
+
+
+Definition at line 27 of file new.\+php.
+
+\mbox{\Hypertarget{menu_2configuracoes_2setores_2new_8php_a3678c8769c9698fd30581c1016c5f475}\label{menu_2configuracoes_2setores_2new_8php_a3678c8769c9698fd30581c1016c5f475}} 
+\index{menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}!\$senha@{\$senha}}
+\index{\$senha@{\$senha}!menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}}
+\subsubsection{\texorpdfstring{\$senha}{$senha}}
+{\footnotesize\ttfamily \$senha = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}}
+
+
+
+Login do usuário que requisitou a informação. 
+
+
+
+Definition at line 25 of file new.\+php.
+
+\mbox{\Hypertarget{menu_2configuracoes_2setores_2new_8php_a3ba57324c35a68927cefc5e241e29d3c}\label{menu_2configuracoes_2setores_2new_8php_a3ba57324c35a68927cefc5e241e29d3c}} 
+\index{menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}!\$setor\+\_\+admin@{\$setor\+\_\+admin}}
+\index{\$setor\+\_\+admin@{\$setor\+\_\+admin}!menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}}
+\subsubsection{\texorpdfstring{\$setor\+\_\+admin}{$setor\_admin}}
+{\footnotesize\ttfamily bool \$setor\+\_\+admin = \$json\mbox{[}\textquotesingle{}admin\textquotesingle{}\mbox{]}}
+
+
+
+Se o novo setor irá criar fichas. 
+
+
+
+Definition at line 29 of file new.\+php.
+
+\mbox{\Hypertarget{menu_2configuracoes_2setores_2new_8php_a8d3ccd903d881b48bb755be5d3f314da}\label{menu_2configuracoes_2setores_2new_8php_a8d3ccd903d881b48bb755be5d3f314da}} 
+\index{menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}!\$setor\+\_\+ficha@{\$setor\+\_\+ficha}}
+\index{\$setor\+\_\+ficha@{\$setor\+\_\+ficha}!menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}}
+\subsubsection{\texorpdfstring{\$setor\+\_\+ficha}{$setor\_ficha}}
+{\footnotesize\ttfamily bool \$setor\+\_\+ficha = \$json\mbox{[}\textquotesingle{}ficha\textquotesingle{}\mbox{]}}
+
+
+
+Nome do novo setor. 
+
+
+
+Definition at line 28 of file new.\+php.
+
+\mbox{\Hypertarget{menu_2configuracoes_2setores_2new_8php_a8f5108ee2efdbfcd6f3d53b8abcb6c09}\label{menu_2configuracoes_2setores_2new_8php_a8f5108ee2efdbfcd6f3d53b8abcb6c09}} 
+\index{menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}!else@{else}}
+\index{else@{else}!menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}}
+\subsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily if ( \$credenciais-\/$>$get\+\_\+user() -\/$>$get\+\_\+sector() -\/$>$get\+\_\+admin()==false) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+        \hyperlink{main_page_2painel_geral_2new_8php_a87435a25b7cae617cf284c729b6e835c}{$setor} = \textcolor{keyword}{new} \hyperlink{class_class_setor}{ClassSetor}(null, strtoupper(\hyperlink{main_page_2painel_geral_2new_8php_ac8c9d9dd5d90fa5854f0cb8397084ebd}{$nome}), 
+      \hyperlink{menu_2configuracoes_2setores_2new_8php_a8d3ccd903d881b48bb755be5d3f314da}{$setor\_ficha}, \hyperlink{menu_2configuracoes_2setores_2new_8php_a3ba57324c35a68927cefc5e241e29d3c}{$setor\_admin})
+\end{DoxyCode}
+
+
+Obter a credencial do usário. 
+
+
+
+Definition at line 37 of file new.\+php.
+
+\mbox{\Hypertarget{menu_2configuracoes_2setores_2new_8php_a1eb47d68a4a4f73debf91b15e179d813}\label{menu_2configuracoes_2setores_2new_8php_a1eb47d68a4a4f73debf91b15e179d813}} 
+\index{menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}!finally@{finally}}
+\index{finally@{finally}!menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}}
+\subsubsection{\texorpdfstring{finally}{finally}}
+{\footnotesize\ttfamily \hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch} (Exception \$e) finally}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    echo json\_encode(\hyperlink{main_page_2painel_geral_2new_8php_a252370d95039a38fa11afab784725d58}{$dados}[0])
+\end{DoxyCode}
+
+
+Criar um log desta operação no sistema. 
+
+
+
+Definition at line 53 of file new.\+php.
+
+\mbox{\Hypertarget{menu_2configuracoes_2setores_2new_8php_abe4cc9788f52e49485473dc699537388}\label{menu_2configuracoes_2setores_2new_8php_abe4cc9788f52e49485473dc699537388}} 
+\index{menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}!try@{try}}
+\index{try@{try}!menu/configuracoes/setores/new.\+php@{menu/configuracoes/setores/new.\+php}}
+\subsubsection{\texorpdfstring{try}{try}}
+{\footnotesize\ttfamily try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    $credenciais = \textcolor{keyword}{new} \hyperlink{class_class_credenciais}{ClassCredenciais}(\hyperlink{main_page_2painel_geral_2new_8php_afc31993e855f9631572adfedcfe6f34b}{$login}, \hyperlink{main_page_2painel_geral_2new_8php_a3678c8769c9698fd30581c1016c5f475}{$senha})
+\end{DoxyCode}
+
+
+Se o novo setor será do tipo administrador. 
+
+
+
+Definition at line 31 of file new.\+php.
+

@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_class_credenciais" kind="class" language="PHP" prot="public">
+    <compoundname>ClassCredenciais</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_class_credenciais_1a598ca4e71b15a1313ec95f0df1027ca5" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$user</definition>
+        <argsstring></argsstring>
+        <name>$user</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassCredenciais.php" line="16" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassCredenciais.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_class_credenciais_1ab1b1798219f1ee41a4a007a6f3cb5437" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($login, $password)</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$login</declname>
+        </param>
+        <param>
+          <declname>$password</declname>
+        </param>
+        <briefdescription>
+<para>Funcionário Logado no Sistema. </para>        </briefdescription>
+        <detaileddescription>
+<para>Construtor do Objeto <ref refid="class_class_credenciais" kindref="compound">ClassCredenciais</ref></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>login</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Login do Funcionário </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Senha do Funcionário </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassCredenciais.php" line="24" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassCredenciais.php" bodystart="24" bodyend="41"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a047170d6020a882807665812a27e2525" compoundref="atendidos_8php" startline="31">$sql</references>
+        <references refid="login_2index_8php_1afc31993e855f9631572adfedcfe6f34b" compoundref="login_2index_8php" startline="25">$login</references>
+        <references refid="menu_2configuracoes_2usuarios_2new_8php_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" compoundref="menu_2configuracoes_2usuarios_2new_8php" startline="68">$password</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_credenciais_1af0d0313a713f6caa332e53471a6e92bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_user</definition>
+        <argsstring>()</argsstring>
+        <name>get_user</name>
+        <briefdescription>
+<para>Obter Funcionário do Sistema. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="class_class_usuario" kindref="compound">ClassUsuario</ref> Duncionáriodo Sistema </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassCredenciais.php" line="58" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassCredenciais.php" bodystart="58" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_class_credenciais_1a9c71e6b0613c31fa70a6ab5af0e30a86" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_user</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_user</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir Funcionário do Sistema. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Funcionário do Sistema </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassCredenciais.php" line="48" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassCredenciais.php" bodystart="48" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/var/www/chamador.itep.govrn/public/api/ClassCredenciais.php" line="15" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassCredenciais.php" bodystart="14" bodyend="62"/>
+    <listofallmembers>
+      <member refid="class_class_credenciais_1a598ca4e71b15a1313ec95f0df1027ca5" prot="private" virt="non-virtual"><scope>ClassCredenciais</scope><name>$user</name></member>
+      <member refid="class_class_credenciais_1ab1b1798219f1ee41a4a007a6f3cb5437" prot="public" virt="non-virtual"><scope>ClassCredenciais</scope><name>__construct</name></member>
+      <member refid="class_class_credenciais_1af0d0313a713f6caa332e53471a6e92bb" prot="public" virt="non-virtual"><scope>ClassCredenciais</scope><name>get_user</name></member>
+      <member refid="class_class_credenciais_1a9c71e6b0613c31fa70a6ab5af0e30a86" prot="private" virt="non-virtual"><scope>ClassCredenciais</scope><name>set_user</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

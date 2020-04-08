@@ -1,0 +1,236 @@
+\hypertarget{nao_atendidos_proximo_8php}{}\section{/var/www/chamador.itep.\+govrn/public/api/main\+Page/inicial/nao\+Atendidos\+Proximo.php File Reference}
+\label{nao_atendidos_proximo_8php}\index{/var/www/chamador.\+itep.\+govrn/public/api/main\+Page/inicial/nao\+Atendidos\+Proximo.\+php@{/var/www/chamador.\+itep.\+govrn/public/api/main\+Page/inicial/nao\+Atendidos\+Proximo.\+php}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{nao_atendidos_proximo_8php_aa053116387f6a1dc0020775d61ef19e0}{set\+\_\+em\+Atendimento} (\$id, \$user)
+\begin{DoxyCompactList}\small\item\em Senha criptografada do usuário que requisitou a informação. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{nao_atendidos_proximo_8php_a252370d95039a38fa11afab784725d58}{\$dados} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Cabeçalho para conteudo json. \end{DoxyCompactList}\item 
+\hyperlink{nao_atendidos_proximo_8php_a26b9f9373f7bb79dfcf8a86dff086b45}{\$body} = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Contem todos os dados a serem enviados. \end{DoxyCompactList}\item 
+\hyperlink{nao_atendidos_proximo_8php_acedd13b51401130848ce18f4d5c52605}{\$json} = json\+\_\+decode(\$body, true)
+\begin{DoxyCompactList}\small\item\em Obtém todas as informações requisitadas P\+O\+ST. \end{DoxyCompactList}\item 
+\hyperlink{nao_atendidos_proximo_8php_afc31993e855f9631572adfedcfe6f34b}{\$login} = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Decodifica as informações requisitadas. \end{DoxyCompactList}\item 
+\hyperlink{nao_atendidos_proximo_8php_a3678c8769c9698fd30581c1016c5f475}{\$senha} = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Login do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{nao_atendidos_proximo_8php_abe4cc9788f52e49485473dc699537388}{try}
+\item 
+\hyperlink{nao_atendidos_proximo_8php_a1fa3127fc82f96b1436d871ef02be319}{\$db} = new \hyperlink{class_class_connection}{Class\+Connection}()
+\begin{DoxyCompactList}\small\item\em Obter a credencial do usário. \end{DoxyCompactList}\item 
+\hyperlink{nao_atendidos_proximo_8php_af1b7fb9d06cdc6d22c14741fc3cc185a}{\$today} = date(\char`\"{}Y-\/m-\/d\char`\"{})
+\item 
+\hyperlink{nao_atendidos_proximo_8php_a047170d6020a882807665812a27e2525}{\$sql} = \char`\"{}S\+E\+L\+E\+CT `ficha\+\_\+id` F\+R\+OM `fichas\+\_\+tb` W\+H\+E\+RE `ficha\+\_\+criacao\+\_\+data`$>$=\textquotesingle{}\char`\"{} . \$today . \char`\"{}\textquotesingle{} A\+ND `ficha\+\_\+setor\+\_\+id`=\char`\"{} . \$credenciais-\/$>$get\+\_\+user()-\/$>$get\+\_\+sector()-\/$>$get\+\_\+id() . \char`\"{} A\+ND (`ficha\+\_\+status`=\textquotesingle{}NÃO A\+T\+E\+N\+D\+I\+DO\textquotesingle{} OR `ficha\+\_\+status`=\textquotesingle{}E\+N\+C\+A\+M\+I\+N\+H\+A\+DO\textquotesingle{})\char`\"{}
+\begin{DoxyCompactList}\small\item\em Data do dia atual. \end{DoxyCompactList}\item 
+\hyperlink{nao_atendidos_proximo_8php_a112ef069ddc0454086e3d1e6d8d55d07}{\$result} = \$db-\/$>$request\+\_\+query(\$sql)
+\item 
+if(mysqli\+\_\+num\+\_\+rows(\$result) $>$ 0) \hyperlink{nao_atendidos_proximo_8php_aabe0fce4e8f9f822b09141ab57d918d9}{else}
+\item 
+\hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch}(Exception \$e) \hyperlink{nao_atendidos_proximo_8php_a1eb47d68a4a4f73debf91b15e179d813}{finally}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{nao_atendidos_proximo_8php_aa053116387f6a1dc0020775d61ef19e0}\label{nao_atendidos_proximo_8php_aa053116387f6a1dc0020775d61ef19e0}} 
+\index{nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}!set\+\_\+em\+Atendimento@{set\+\_\+em\+Atendimento}}
+\index{set\+\_\+em\+Atendimento@{set\+\_\+em\+Atendimento}!nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}}
+\subsubsection{\texorpdfstring{set\+\_\+em\+Atendimento()}{set\_emAtendimento()}}
+{\footnotesize\ttfamily set\+\_\+em\+Atendimento (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$user }\end{DoxyParamCaption})}
+
+
+
+Senha criptografada do usuário que requisitou a informação. 
+
+Define a ficha para C\+H\+A\+M\+AR (EM A\+T\+E\+N\+D\+I\+M\+E\+N\+TO)
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id da Ficha \\
+\hline
+{\em user} & usuário que está atendendo a ficha \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array Mensagem 
+\end{DoxyReturn}
+Criar um log desta operação no sistema 
+
+Definition at line 34 of file nao\+Atendidos\+Proximo.\+php.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{nao_atendidos_proximo_8php_a26b9f9373f7bb79dfcf8a86dff086b45}\label{nao_atendidos_proximo_8php_a26b9f9373f7bb79dfcf8a86dff086b45}} 
+\index{nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}!\$body@{\$body}}
+\index{\$body@{\$body}!nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}}
+\subsubsection{\texorpdfstring{\$body}{$body}}
+{\footnotesize\ttfamily \$body = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})}
+
+
+
+Contem todos os dados a serem enviados. 
+
+
+
+Definition at line 21 of file nao\+Atendidos\+Proximo.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_8php_a252370d95039a38fa11afab784725d58}\label{nao_atendidos_proximo_8php_a252370d95039a38fa11afab784725d58}} 
+\index{nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}!\$dados@{\$dados}}
+\index{\$dados@{\$dados}!nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}}
+\subsubsection{\texorpdfstring{\$dados}{$dados}}
+{\footnotesize\ttfamily \$dados = \mbox{[}$\,$\mbox{]}}
+
+
+
+Cabeçalho para conteudo json. 
+
+Cabeçalho com as classes e funções gerias 
+
+Definition at line 19 of file nao\+Atendidos\+Proximo.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_8php_a1fa3127fc82f96b1436d871ef02be319}\label{nao_atendidos_proximo_8php_a1fa3127fc82f96b1436d871ef02be319}} 
+\index{nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}!\$db@{\$db}}
+\index{\$db@{\$db}!nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}}
+\subsubsection{\texorpdfstring{\$db}{$db}}
+{\footnotesize\ttfamily \$db = new \hyperlink{class_class_connection}{Class\+Connection}()}
+
+
+
+Obter a credencial do usário. 
+
+
+
+Definition at line 49 of file nao\+Atendidos\+Proximo.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_8php_acedd13b51401130848ce18f4d5c52605}\label{nao_atendidos_proximo_8php_acedd13b51401130848ce18f4d5c52605}} 
+\index{nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}!\$json@{\$json}}
+\index{\$json@{\$json}!nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}}
+\subsubsection{\texorpdfstring{\$json}{$json}}
+{\footnotesize\ttfamily \$json = json\+\_\+decode(\$body, true)}
+
+
+
+Obtém todas as informações requisitadas P\+O\+ST. 
+
+
+
+Definition at line 22 of file nao\+Atendidos\+Proximo.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_8php_afc31993e855f9631572adfedcfe6f34b}\label{nao_atendidos_proximo_8php_afc31993e855f9631572adfedcfe6f34b}} 
+\index{nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}!\$login@{\$login}}
+\index{\$login@{\$login}!nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}}
+\subsubsection{\texorpdfstring{\$login}{$login}}
+{\footnotesize\ttfamily \$login = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}}
+
+
+
+Decodifica as informações requisitadas. 
+
+
+
+Definition at line 24 of file nao\+Atendidos\+Proximo.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_8php_a112ef069ddc0454086e3d1e6d8d55d07}\label{nao_atendidos_proximo_8php_a112ef069ddc0454086e3d1e6d8d55d07}} 
+\index{nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}!\$result@{\$result}}
+\index{\$result@{\$result}!nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}}
+\subsubsection{\texorpdfstring{\$result}{$result}}
+{\footnotesize\ttfamily \$result = \$db-\/$>$request\+\_\+query(\$sql)}
+
+
+
+Definition at line 55 of file nao\+Atendidos\+Proximo.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_8php_a3678c8769c9698fd30581c1016c5f475}\label{nao_atendidos_proximo_8php_a3678c8769c9698fd30581c1016c5f475}} 
+\index{nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}!\$senha@{\$senha}}
+\index{\$senha@{\$senha}!nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}}
+\subsubsection{\texorpdfstring{\$senha}{$senha}}
+{\footnotesize\ttfamily \$senha = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}}
+
+
+
+Login do usuário que requisitou a informação. 
+
+
+
+Definition at line 25 of file nao\+Atendidos\+Proximo.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_8php_a047170d6020a882807665812a27e2525}\label{nao_atendidos_proximo_8php_a047170d6020a882807665812a27e2525}} 
+\index{nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}}
+\subsubsection{\texorpdfstring{\$sql}{$sql}}
+{\footnotesize\ttfamily \$sql = \char`\"{}S\+E\+L\+E\+CT `ficha\+\_\+id` F\+R\+OM `fichas\+\_\+tb` W\+H\+E\+RE `ficha\+\_\+criacao\+\_\+data`$>$=\textquotesingle{}\char`\"{} . \$today . \char`\"{}\textquotesingle{} A\+ND `ficha\+\_\+setor\+\_\+id`=\char`\"{} . \$credenciais-\/$>$get\+\_\+user()-\/$>$get\+\_\+sector()-\/$>$get\+\_\+id() . \char`\"{} A\+ND (`ficha\+\_\+status`=\textquotesingle{}NÃO A\+T\+E\+N\+D\+I\+DO\textquotesingle{} OR `ficha\+\_\+status`=\textquotesingle{}E\+N\+C\+A\+M\+I\+N\+H\+A\+DO\textquotesingle{})\char`\"{}}
+
+
+
+Data do dia atual. 
+
+
+
+Definition at line 54 of file nao\+Atendidos\+Proximo.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_8php_af1b7fb9d06cdc6d22c14741fc3cc185a}\label{nao_atendidos_proximo_8php_af1b7fb9d06cdc6d22c14741fc3cc185a}} 
+\index{nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}!\$today@{\$today}}
+\index{\$today@{\$today}!nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}}
+\subsubsection{\texorpdfstring{\$today}{$today}}
+{\footnotesize\ttfamily \$today = date(\char`\"{}Y-\/m-\/d\char`\"{})}
+
+
+
+Definition at line 51 of file nao\+Atendidos\+Proximo.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_8php_aabe0fce4e8f9f822b09141ab57d918d9}\label{nao_atendidos_proximo_8php_aabe0fce4e8f9f822b09141ab57d918d9}} 
+\index{nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}!else@{else}}
+\index{else@{else}!nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}}
+\subsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily if (mysqli\+\_\+num\+\_\+rows( \$result) $>$ 0) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+        
+        array\_push(
+            \hyperlink{nao_atendidos_proximo_8php_a252370d95039a38fa11afab784725d58}{$dados},
+            [
+                \textcolor{stringliteral}{'tipo'} => \textcolor{stringliteral}{'warning'},
+                \textcolor{stringliteral}{'mensagem'} => \textcolor{stringliteral}{"Não existem fichas a ser chamada."}
+            ]
+        )
+\end{DoxyCode}
+
+
+Definition at line 197 of file nao\+Atendidos\+Proximo.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_8php_a1eb47d68a4a4f73debf91b15e179d813}\label{nao_atendidos_proximo_8php_a1eb47d68a4a4f73debf91b15e179d813}} 
+\index{nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}!finally@{finally}}
+\index{finally@{finally}!nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}}
+\subsubsection{\texorpdfstring{finally}{finally}}
+{\footnotesize\ttfamily \hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch} (Exception \$e) finally}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    echo json\_encode(\hyperlink{nao_atendidos_proximo_8php_a252370d95039a38fa11afab784725d58}{$dados})
+\end{DoxyCode}
+
+
+Definition at line 212 of file nao\+Atendidos\+Proximo.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_8php_abe4cc9788f52e49485473dc699537388}\label{nao_atendidos_proximo_8php_abe4cc9788f52e49485473dc699537388}} 
+\index{nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}!try@{try}}
+\index{try@{try}!nao\+Atendidos\+Proximo.\+php@{nao\+Atendidos\+Proximo.\+php}}
+\subsubsection{\texorpdfstring{try}{try}}
+{\footnotesize\ttfamily try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    $credenciais = \textcolor{keyword}{new} \hyperlink{class_class_credenciais}{ClassCredenciais}(\hyperlink{nao_atendidos_proximo_8php_afc31993e855f9631572adfedcfe6f34b}{$login}, \hyperlink{nao_atendidos_proximo_8php_a3678c8769c9698fd30581c1016c5f475}{$senha})
+\end{DoxyCode}
+
+
+Definition at line 47 of file nao\+Atendidos\+Proximo.\+php.
+

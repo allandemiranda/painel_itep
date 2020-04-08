@@ -1,0 +1,95 @@
+.TH "ClassConnection" 3 "Mon Apr 6 2020" "Chamador ITEP - API" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ClassConnection
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ()"
+.br
+.RI "Conexão com o banco de dados\&. "
+.ti -1c
+.RI "\fB__destruct\fP ()"
+.br
+.RI "Destrutor da classe dando commit em query aberta e fecha a conexão\&. "
+.ti -1c
+.RI "\fBrequest_query\fP ($sql)"
+.br
+.RI "Solicite uma SQL ao bando de dados e veja sua resposta\&. "
+.ti -1c
+.RI "\fBrollback_querys\fP ()"
+.br
+.RI "Remover todas as solicitações SQL já feitas nessa conexão\&. "
+.ti -1c
+.RI "\fBlast_insert_id\fP ()"
+.br
+.RI "Retorna o id gerado automaticamente na última consulta\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 14 of file ClassConnection\&.php\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "__construct ()"
+
+.PP
+Conexão com o banco de dados\&. Construtor da classe atribui as informações da conexão Host do servidor
+.PP
+Usuário do banco de dados
+.PP
+Senha do usuário do banco de dados
+.PP
+Nome do banco de dados
+.PP
+Conectar ao banco da dados 
+.PP
+Definition at line 26 of file ClassConnection\&.php\&.
+.SS "__destruct ()"
+
+.PP
+Destrutor da classe dando commit em query aberta e fecha a conexão\&. 
+.PP
+Definition at line 39 of file ClassConnection\&.php\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "last_insert_id ()"
+
+.PP
+Retorna o id gerado automaticamente na última consulta\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Int id gerado automaticamente na última consulta 
+.RE
+.PP
+
+.PP
+Definition at line 224 of file ClassConnection\&.php\&.
+.SS "request_query ( $sql)"
+
+.PP
+Solicite uma SQL ao bando de dados e veja sua resposta\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsql\fP Query SQL 
+.RE
+.PP
+
+.PP
+Definition at line 183 of file ClassConnection\&.php\&.
+.SS "rollback_querys ()"
+
+.PP
+Remover todas as solicitações SQL já feitas nessa conexão\&. 
+.PP
+Definition at line 197 of file ClassConnection\&.php\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chamador ITEP - API from the source code\&.

@@ -1,0 +1,13 @@
+digraph "set_attendant_sector"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node44 [label="set_attendant_sector",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node44 -> Node45 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 [label="get_attendant_sector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_ficha.html#a85465890c6a10587eabeac707aa3caf0",tooltip="Obter o Setor de atendimento da Ficha. "];
+  Node44 -> Node46 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node46 [label="get_id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_ficha.html#a8a94003b9d888b085c68d6eac44be175",tooltip="Obter o id da Ficha. "];
+  Node44 -> Node47 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node47 [label="get_number",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_ficha.html#a4f7969072fea809005ea1306a8e7ea83",tooltip="Obter o Número da Ficha. "];
+}

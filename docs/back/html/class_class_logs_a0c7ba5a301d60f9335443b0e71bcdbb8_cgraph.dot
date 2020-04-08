@@ -1,0 +1,25 @@
+digraph "__construct"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="__construct",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="get_log_usuario_nome",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_logs.html#ac8005c9321ce5ae129c81180a26a3403",tooltip="Obter o nome do Usuário que criou o Log. "];
+  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="get_log_usuario_setor_nome",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_logs.html#ac914a1afc0bfd651798dace25249610c",tooltip="Obter o nome do Setor do Usuário que criou o Log. "];
+  Node0 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="get_log_acao",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_logs.html#ab8ea2a06dc1b1809230c9bb0a5ae929b",tooltip="Obter a Ação do Log. "];
+  Node0 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="get_log_de_nome",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_logs.html#a50549ddf425a8f141dc9e05479611452",tooltip="Obter o nome do Usuário ou do Setor que sofreu a Ação. "];
+  Node0 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="get_log_de_setor_nome",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_logs.html#a2d4010eed611f258da9452e07166f475",tooltip="Obter o nome do Setor caso a Ação seja para um Usuário, se não retorna null. "];
+  Node0 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="get_log_de_numero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_logs.html#a9bc8d06ed7bddb98e3748f8692bf3082",tooltip="Obter o número da Ficha que sofreu a Ação. "];
+  Node0 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="get_log_de_telefone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_logs.html#ac099cce47c31507d7c68b27af923cabd",tooltip="Obter o Telefone da Ficha que sofreu a Ação. "];
+  Node0 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="get_log_para_nome",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_logs.html#a47f48e084a822dd6a389575e01acea00",tooltip="Obter o Nome do Setor para onde foi encaminhado a Ficha. "];
+  Node0 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="get_log_ip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_logs.html#abedfbfb863da4fa609016ce17d504ab3",tooltip="Obter ip do Usuário. "];
+}

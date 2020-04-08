@@ -1,0 +1,446 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_class_setor" kind="class" language="PHP" prot="public">
+    <compoundname>ClassSetor</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_class_setor_1ae97941710d863131c700f069b109991e" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$id</definition>
+        <argsstring></argsstring>
+        <name>$id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="16" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_setor_1ab2fc40d43824ea3e1ce5d86dee0d763b" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$name</definition>
+        <argsstring></argsstring>
+        <name>$name</name>
+        <briefdescription>
+<para>id do Setor </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="17" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_setor_1ad3b3c64b25fbbb6aec24407e4333aa71" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$admin</definition>
+        <argsstring></argsstring>
+        <name>$admin</name>
+        <briefdescription>
+<para>Nome do Setor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="18" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_setor_1aab83e7ad10d8c95fdbf231d086b83a1f" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$ficha</definition>
+        <argsstring></argsstring>
+        <name>$ficha</name>
+        <briefdescription>
+<para>Se o Setor tem acesso as configurações do sistema. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="19" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_setor_1a11310b773f3860a19892b3f681f957f1" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$deleted</definition>
+        <argsstring></argsstring>
+        <name>$deleted</name>
+        <briefdescription>
+<para>Se o Setor é quem emite fichas. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="20" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_setor_1a3c86aaf7b6b422119a459dcd69cb6605" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$created_on_date</definition>
+        <argsstring></argsstring>
+        <name>$created_on_date</name>
+        <briefdescription>
+<para>Se o Setor foi deletado do sistema. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="21" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_class_setor_1ad06a6c4ff80af97f706cf13d4e472b4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($id=null, $name=null, $ficha=null, $admin=null)</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$id</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <declname>$name</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <declname>$ficha</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <declname>$admin</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Data da criaçãodo Setor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Construtor do Objeto <ref refid="class_class_setor" kindref="compound">ClassSetor</ref></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id do Setor </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do Setor </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ficha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Se o Setor tem acesso as configurações do sistema </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>admin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Se o Setor tem acesso as configurações do sistema </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deleted</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Se o Setor foi deletado do sistema </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>created_on_date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data da criação do Setor </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="33" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="33" bodyend="80"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_setor_1a421831a265621325e1fdd19aace0c758" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__destruct</definition>
+        <argsstring>()</argsstring>
+        <name>__destruct</name>
+        <briefdescription>
+<para>Destrutor do Objeto <ref refid="class_class_setor" kindref="compound">ClassSetor</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="86" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="86" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_setor_1a8a94003b9d888b085c68d6eac44be175" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_id</definition>
+        <argsstring>()</argsstring>
+        <name>get_id</name>
+        <briefdescription>
+<para>Obter o id do Setor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>id do Setor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="101" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="101" bodyend="104"/>
+        <referencedby refid="class_class_setor_1a53e29da8f1da63502f3e13091fcb74e5" compoundref="_class_setor_8php" startline="121" endline="133">set_name</referencedby>
+        <referencedby refid="class_class_setor_1ab31da576d6d4983080ed6ed0cc9d2ed2" compoundref="_class_setor_8php" startline="150" endline="165">set_admin</referencedby>
+        <referencedby refid="class_class_setor_1a792b5876e9d76a4f030e436aeec2a855" compoundref="_class_setor_8php" startline="182" endline="194">set_created_on_date</referencedby>
+        <referencedby refid="class_class_setor_1acd0a4e339896072e5515b8fdcc33344d" compoundref="_class_setor_8php" startline="211" endline="226">set_deleted</referencedby>
+        <referencedby refid="class_class_setor_1a592f14a6c34825448b303800bf41b1bb" compoundref="_class_setor_8php" startline="243" endline="259">set_ficha</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_setor_1a4f1149ccbd69d1ac4225b7bc2dd871bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_name</definition>
+        <argsstring>()</argsstring>
+        <name>get_name</name>
+        <briefdescription>
+<para>Obter o Nome do Setor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Nome do Setor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="111" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="111" bodyend="114"/>
+        <referencedby refid="class_class_setor_1a53e29da8f1da63502f3e13091fcb74e5" compoundref="_class_setor_8php" startline="121" endline="133">set_name</referencedby>
+        <referencedby refid="class_class_setor_1ab31da576d6d4983080ed6ed0cc9d2ed2" compoundref="_class_setor_8php" startline="150" endline="165">set_admin</referencedby>
+        <referencedby refid="class_class_setor_1a792b5876e9d76a4f030e436aeec2a855" compoundref="_class_setor_8php" startline="182" endline="194">set_created_on_date</referencedby>
+        <referencedby refid="class_class_setor_1acd0a4e339896072e5515b8fdcc33344d" compoundref="_class_setor_8php" startline="211" endline="226">set_deleted</referencedby>
+        <referencedby refid="class_class_setor_1a592f14a6c34825448b303800bf41b1bb" compoundref="_class_setor_8php" startline="243" endline="259">set_ficha</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_setor_1a53e29da8f1da63502f3e13091fcb74e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_name</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_name</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir o Nome do Setor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valor do Nome a ser definido </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="121" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="121" bodyend="133"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="class_class_setor_1a4f1149ccbd69d1ac4225b7bc2dd871bb" compoundref="_class_setor_8php" startline="111" endline="114">get_name</references>
+        <references refid="class_class_setor_1a8a94003b9d888b085c68d6eac44be175" compoundref="_class_setor_8php" startline="101" endline="104">get_id</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_setor_1aae367241584b2f61c523f167cbafee01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_admin</definition>
+        <argsstring>()</argsstring>
+        <name>get_admin</name>
+        <briefdescription>
+<para>Obter se o Setor e do tipo Administrador. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Bool Se o Setor é administrador </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="140" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="140" bodyend="143"/>
+        <referencedby refid="class_class_setor_1ab31da576d6d4983080ed6ed0cc9d2ed2" compoundref="_class_setor_8php" startline="150" endline="165">set_admin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_setor_1ab31da576d6d4983080ed6ed0cc9d2ed2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_admin</definition>
+        <argsstring>(bool $value)</argsstring>
+        <name>set_admin</name>
+        <param>
+          <type>bool</type>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir se o Setor é do tipo Administrador. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Se o setor é do tipo Administrador </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="150" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="150" bodyend="165"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="class_class_setor_1aae367241584b2f61c523f167cbafee01" compoundref="_class_setor_8php" startline="140" endline="143">get_admin</references>
+        <references refid="class_class_setor_1a8a94003b9d888b085c68d6eac44be175" compoundref="_class_setor_8php" startline="101" endline="104">get_id</references>
+        <references refid="class_class_setor_1a4f1149ccbd69d1ac4225b7bc2dd871bb" compoundref="_class_setor_8php" startline="111" endline="114">get_name</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_setor_1a9a1ef394f9aef6ab037f8bb37209242f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_created_on_date</definition>
+        <argsstring>()</argsstring>
+        <name>get_created_on_date</name>
+        <briefdescription>
+<para>Obter a data de criação do Setor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Timestamp Data de criação do setor no formato TIMESTAMP </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="172" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="172" bodyend="175"/>
+        <referencedby refid="class_class_setor_1a792b5876e9d76a4f030e436aeec2a855" compoundref="_class_setor_8php" startline="182" endline="194">set_created_on_date</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_setor_1a792b5876e9d76a4f030e436aeec2a855" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_created_on_date</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_created_on_date</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir a data de criação do Setor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data de criação do Setor no formato TIMESTAMP </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="182" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="182" bodyend="194"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="class_class_setor_1a9a1ef394f9aef6ab037f8bb37209242f" compoundref="_class_setor_8php" startline="172" endline="175">get_created_on_date</references>
+        <references refid="class_class_setor_1a8a94003b9d888b085c68d6eac44be175" compoundref="_class_setor_8php" startline="101" endline="104">get_id</references>
+        <references refid="class_class_setor_1a4f1149ccbd69d1ac4225b7bc2dd871bb" compoundref="_class_setor_8php" startline="111" endline="114">get_name</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_setor_1ad6172a0f313f12f05c08efc37a9c3656" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_deleted</definition>
+        <argsstring>()</argsstring>
+        <name>get_deleted</name>
+        <briefdescription>
+<para>Obter a informação se o setor já foi deletado Setor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Bool Se o setor já foi deletado </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="201" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="201" bodyend="204"/>
+        <referencedby refid="class_class_setor_1acd0a4e339896072e5515b8fdcc33344d" compoundref="_class_setor_8php" startline="211" endline="226">set_deleted</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_setor_1acd0a4e339896072e5515b8fdcc33344d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_deleted</definition>
+        <argsstring>(bool $value)</argsstring>
+        <name>set_deleted</name>
+        <param>
+          <type>bool</type>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir se o Setor foi deletado. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Se o setor foi deletado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="211" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="211" bodyend="226"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="class_class_setor_1ad6172a0f313f12f05c08efc37a9c3656" compoundref="_class_setor_8php" startline="201" endline="204">get_deleted</references>
+        <references refid="class_class_setor_1a8a94003b9d888b085c68d6eac44be175" compoundref="_class_setor_8php" startline="101" endline="104">get_id</references>
+        <references refid="class_class_setor_1a4f1149ccbd69d1ac4225b7bc2dd871bb" compoundref="_class_setor_8php" startline="111" endline="114">get_name</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_setor_1ac2cfa14d360149ee30216aec7e50cb20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_ficha</definition>
+        <argsstring>()</argsstring>
+        <name>get_ficha</name>
+        <briefdescription>
+<para>Obter a informação se o setor gerencia as fichas. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Bool Se o setor gerencia as fichas </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="233" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="233" bodyend="236"/>
+        <referencedby refid="class_class_setor_1a592f14a6c34825448b303800bf41b1bb" compoundref="_class_setor_8php" startline="243" endline="259">set_ficha</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_setor_1a592f14a6c34825448b303800bf41b1bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_ficha</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_ficha</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir se o Setor gerencia as fichas. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Se o setor gerencia as fichas </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="243" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="243" bodyend="259"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a047170d6020a882807665812a27e2525" compoundref="atendidos_8php" startline="31">$sql</references>
+        <references refid="class_class_setor_1ac2cfa14d360149ee30216aec7e50cb20" compoundref="_class_setor_8php" startline="233" endline="236">get_ficha</references>
+        <references refid="class_class_setor_1a8a94003b9d888b085c68d6eac44be175" compoundref="_class_setor_8php" startline="101" endline="104">get_id</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="class_class_setor_1a4f1149ccbd69d1ac4225b7bc2dd871bb" compoundref="_class_setor_8php" startline="111" endline="114">get_name</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" line="15" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassSetor.php" bodystart="14" bodyend="260"/>
+    <listofallmembers>
+      <member refid="class_class_setor_1ad3b3c64b25fbbb6aec24407e4333aa71" prot="private" virt="non-virtual"><scope>ClassSetor</scope><name>$admin</name></member>
+      <member refid="class_class_setor_1a3c86aaf7b6b422119a459dcd69cb6605" prot="private" virt="non-virtual"><scope>ClassSetor</scope><name>$created_on_date</name></member>
+      <member refid="class_class_setor_1a11310b773f3860a19892b3f681f957f1" prot="private" virt="non-virtual"><scope>ClassSetor</scope><name>$deleted</name></member>
+      <member refid="class_class_setor_1aab83e7ad10d8c95fdbf231d086b83a1f" prot="private" virt="non-virtual"><scope>ClassSetor</scope><name>$ficha</name></member>
+      <member refid="class_class_setor_1ae97941710d863131c700f069b109991e" prot="private" virt="non-virtual"><scope>ClassSetor</scope><name>$id</name></member>
+      <member refid="class_class_setor_1ab2fc40d43824ea3e1ce5d86dee0d763b" prot="private" virt="non-virtual"><scope>ClassSetor</scope><name>$name</name></member>
+      <member refid="class_class_setor_1ad06a6c4ff80af97f706cf13d4e472b4f" prot="public" virt="non-virtual"><scope>ClassSetor</scope><name>__construct</name></member>
+      <member refid="class_class_setor_1a421831a265621325e1fdd19aace0c758" prot="public" virt="non-virtual"><scope>ClassSetor</scope><name>__destruct</name></member>
+      <member refid="class_class_setor_1aae367241584b2f61c523f167cbafee01" prot="public" virt="non-virtual"><scope>ClassSetor</scope><name>get_admin</name></member>
+      <member refid="class_class_setor_1a9a1ef394f9aef6ab037f8bb37209242f" prot="public" virt="non-virtual"><scope>ClassSetor</scope><name>get_created_on_date</name></member>
+      <member refid="class_class_setor_1ad6172a0f313f12f05c08efc37a9c3656" prot="public" virt="non-virtual"><scope>ClassSetor</scope><name>get_deleted</name></member>
+      <member refid="class_class_setor_1ac2cfa14d360149ee30216aec7e50cb20" prot="public" virt="non-virtual"><scope>ClassSetor</scope><name>get_ficha</name></member>
+      <member refid="class_class_setor_1a8a94003b9d888b085c68d6eac44be175" prot="public" virt="non-virtual"><scope>ClassSetor</scope><name>get_id</name></member>
+      <member refid="class_class_setor_1a4f1149ccbd69d1ac4225b7bc2dd871bb" prot="public" virt="non-virtual"><scope>ClassSetor</scope><name>get_name</name></member>
+      <member refid="class_class_setor_1ab31da576d6d4983080ed6ed0cc9d2ed2" prot="public" virt="non-virtual"><scope>ClassSetor</scope><name>set_admin</name></member>
+      <member refid="class_class_setor_1a792b5876e9d76a4f030e436aeec2a855" prot="public" virt="non-virtual"><scope>ClassSetor</scope><name>set_created_on_date</name></member>
+      <member refid="class_class_setor_1acd0a4e339896072e5515b8fdcc33344d" prot="public" virt="non-virtual"><scope>ClassSetor</scope><name>set_deleted</name></member>
+      <member refid="class_class_setor_1a592f14a6c34825448b303800bf41b1bb" prot="public" virt="non-virtual"><scope>ClassSetor</scope><name>set_ficha</name></member>
+      <member refid="class_class_setor_1a53e29da8f1da63502f3e13091fcb74e5" prot="public" virt="non-virtual"><scope>ClassSetor</scope><name>set_name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

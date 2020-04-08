@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_header_j_s_o_n_8php" kind="file" language="PHP">
+    <compoundname>HeaderJSON.php</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">?&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Header<sp/>necessário<sp/>para<sp/>converter<sp/>a<sp/>página<sp/>em<sp/>um<sp/>conteudo<sp/>JSON</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">header(</highlight><highlight class="stringliteral">&quot;Access-Control-Allow-Origin:<sp/>*&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">header(</highlight><highlight class="stringliteral">&quot;Content-type:<sp/>application/json&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">header(</highlight><highlight class="stringliteral">&apos;Access-Control-Allow-Methods:<sp/>POST,<sp/>GET,<sp/>OPTIONS,<sp/>PUT,<sp/>DELETE&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">header(</highlight><highlight class="stringliteral">&apos;Access-Control-Allow-Headers:<sp/>Access-Control-Allow-Headers,<sp/>Origin,Accept,<sp/>X-Requested-With,<sp/>Content-Type,<sp/>Access-Control-Request-Method,<sp/>Access-Control-Request-Headers&apos;</highlight><highlight class="normal">);</highlight></codeline>
+    </programlisting>
+    <location file="/var/www/chamador.itep.govrn/public/api/HeaderJSON.php"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,283 @@
+.TH "ClassUsuario" 3 "Mon Apr 6 2020" "Chamador ITEP - API" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ClassUsuario
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ($id=null, $name=null, $sector=null, $login=null, $password=null)"
+.br
+.RI "Data da criação do Funcionário no sistema\&. "
+.ti -1c
+.RI "\fB__destruct\fP ()"
+.br
+.RI "Destrutor do Objeto \fBClassUsuario\fP\&. "
+.ti -1c
+.RI "\fBget_id\fP ()"
+.br
+.RI "Obter o id do Funcionário\&. "
+.ti -1c
+.RI "\fBget_name\fP ()"
+.br
+.RI "Obter Nome do Funcionário\&. "
+.ti -1c
+.RI "\fBset_name\fP ($value)"
+.br
+.RI "Definir Nome do Funcionário\&. "
+.ti -1c
+.RI "\fBget_sector\fP ()"
+.br
+.RI "Obter Setor associado ao Funcionário\&. "
+.ti -1c
+.RI "\fBset_sector\fP ($value)"
+.br
+.RI "Definir o Setor associado ao Funcionário\&. "
+.ti -1c
+.RI "\fBget_login\fP ()"
+.br
+.RI "Obter o Login do Funcionário\&. "
+.ti -1c
+.RI "\fBset_login\fP ($value)"
+.br
+.RI "Definir o Login do Funcioário\&. "
+.ti -1c
+.RI "\fBget_password\fP ()"
+.br
+.RI "Obter a Senha do Funcionário na criptografia md5\&. "
+.ti -1c
+.RI "\fBset_password\fP ($value)"
+.br
+.RI "Definir a Senha do Funcionário na criptografia md5\&. "
+.ti -1c
+.RI "\fBget_deleted\fP ()"
+.br
+.RI "Obter a informação se o Funcionário já foi deletado\&. "
+.ti -1c
+.RI "\fBset_deleted\fP (bool $value)"
+.br
+.RI "Definir se o Funcionário foi deletado\&. "
+.ti -1c
+.RI "\fBget_created_on_date\fP ()"
+.br
+.RI "Obter a data que o Funcionário foi criado\&. "
+.ti -1c
+.RI "\fBset_created_on_date\fP ($value)"
+.br
+.RI "Definir a data que o Funcionário foi criado\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 14 of file ClassUsuario\&.php\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "__construct ( $id = \fCnull\fP,  $name = \fCnull\fP,  $sector = \fCnull\fP,  $login = \fCnull\fP,  $password = \fCnull\fP)"
+
+.PP
+Data da criação do Funcionário no sistema\&. Construtor do Objeto \fBClassUsuario\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP id do Funcionário 
+.br
+\fIname\fP Nome do Funcionário 
+.br
+\fIsector\fP Setor que o Funcionário trabalha 
+.br
+\fIlogin\fP Login do Funcionário no Sistema 
+.br
+\fIpassword\fP Senha do Funcionário no Sistema 
+.br
+\fIdeleted\fP Se o Funcionário foi deletado do sistema 
+.br
+\fIcreated_on_date\fP Data da criação do Funcionário no Sistema 
+.RE
+.PP
+
+.PP
+Definition at line 35 of file ClassUsuario\&.php\&.
+.SS "__destruct ()"
+
+.PP
+Destrutor do Objeto \fBClassUsuario\fP\&. 
+.PP
+Definition at line 90 of file ClassUsuario\&.php\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "get_created_on_date ()"
+
+.PP
+Obter a data que o Funcionário foi criado\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Timestamp Data da criação do Funcionário 
+.RE
+.PP
+
+.PP
+Definition at line 267 of file ClassUsuario\&.php\&.
+.SS "get_deleted ()"
+
+.PP
+Obter a informação se o Funcionário já foi deletado\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Bool Se o Funcionário já foi deletado 
+.RE
+.PP
+
+.PP
+Definition at line 234 of file ClassUsuario\&.php\&.
+.SS "get_id ()"
+
+.PP
+Obter o id do Funcionário\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Int id do Funcionário 
+.RE
+.PP
+
+.PP
+Definition at line 106 of file ClassUsuario\&.php\&.
+.SS "get_login ()"
+
+.PP
+Obter o Login do Funcionário\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+String Login do Funcionário 
+.RE
+.PP
+
+.PP
+Definition at line 176 of file ClassUsuario\&.php\&.
+.SS "get_name ()"
+
+.PP
+Obter Nome do Funcionário\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+String Nome do Funcionário 
+.RE
+.PP
+
+.PP
+Definition at line 116 of file ClassUsuario\&.php\&.
+.SS "get_password ()"
+
+.PP
+Obter a Senha do Funcionário na criptografia md5\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+md5 Senha do Funcionário na criptografia md5 
+.RE
+.PP
+
+.PP
+Definition at line 205 of file ClassUsuario\&.php\&.
+.SS "get_sector ()"
+
+.PP
+Obter Setor associado ao Funcionário\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+\fBClassSetor\fP Setor do Funcionário 
+.RE
+.PP
+
+.PP
+Definition at line 145 of file ClassUsuario\&.php\&.
+.SS "set_created_on_date ( $value)"
+
+.PP
+Definir a data que o Funcionário foi criado\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Data de criação do Funcionário no Sistema em TIMESTAMP 
+.RE
+.PP
+
+.PP
+Definition at line 277 of file ClassUsuario\&.php\&.
+.SS "set_deleted (bool $value)"
+
+.PP
+Definir se o Funcionário foi deletado\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Se o Funcionário foi deletado 
+.RE
+.PP
+
+.PP
+Definition at line 244 of file ClassUsuario\&.php\&.
+.SS "set_login ( $value)"
+
+.PP
+Definir o Login do Funcioário\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Novo Login do Funcionário 
+.RE
+.PP
+
+.PP
+Definition at line 186 of file ClassUsuario\&.php\&.
+.SS "set_name ( $value)"
+
+.PP
+Definir Nome do Funcionário\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Novo Nome do Funcionário 
+.RE
+.PP
+
+.PP
+Definition at line 126 of file ClassUsuario\&.php\&.
+.SS "set_password ( $value)"
+
+.PP
+Definir a Senha do Funcionário na criptografia md5\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Nova Senha do Funcionário na criptografia md5 
+.RE
+.PP
+
+.PP
+Definition at line 215 of file ClassUsuario\&.php\&.
+.SS "set_sector ( $value)"
+
+.PP
+Definir o Setor associado ao Funcionário\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Setor do Funcionário 
+.RE
+.PP
+
+.PP
+Definition at line 155 of file ClassUsuario\&.php\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chamador ITEP - API from the source code\&.

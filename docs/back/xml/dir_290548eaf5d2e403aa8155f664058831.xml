@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_290548eaf5d2e403aa8155f664058831" kind="dir">
+    <compoundname>/var/www/chamador.itep.govrn/public/api/menu/configuracoes/usuarios</compoundname>
+    <innerfile refid="usuarios_2delete_8php">delete.php</innerfile>
+    <innerfile refid="menu_2configuracoes_2usuarios_2index_8php">index.php</innerfile>
+    <innerfile refid="menu_2configuracoes_2usuarios_2new_8php">new.php</innerfile>
+    <innerfile refid="password_8php">password.php</innerfile>
+    <innerfile refid="usuarios_2update_8php">update.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/var/www/chamador.itep.govrn/public/api/menu/configuracoes/usuarios/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,130 @@
+\hypertarget{painel_2index_8php}{}\section{/var/www/chamador.itep.\+govrn/public/api/painel/index.php File Reference}
+\label{painel_2index_8php}\index{/var/www/chamador.\+itep.\+govrn/public/api/painel/index.\+php@{/var/www/chamador.\+itep.\+govrn/public/api/painel/index.\+php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{painel_2index_8php_a252370d95039a38fa11afab784725d58}{\$dados} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Cabeçalho para conteudo json. \end{DoxyCompactList}\item 
+\hyperlink{painel_2index_8php_abe4cc9788f52e49485473dc699537388}{try}
+\begin{DoxyCompactList}\small\item\em Contem todos os dados a serem enviados. \end{DoxyCompactList}\item 
+\hyperlink{painel_2index_8php_af1b7fb9d06cdc6d22c14741fc3cc185a}{\$today} = date(\char`\"{}Y-\/m-\/d\char`\"{})
+\item 
+\hyperlink{painel_2index_8php_a047170d6020a882807665812a27e2525}{\$sql} = \char`\"{}S\+E\+L\+E\+CT `ficha\+\_\+id` F\+R\+OM `fichas\+\_\+tb` W\+H\+E\+RE `ficha\+\_\+criacao\+\_\+data`$>$=\textquotesingle{}\char`\"{} . \$today . \char`\"{}\textquotesingle{} A\+ND `ficha\+\_\+status`=\textquotesingle{}C\+H\+A\+M\+AR\textquotesingle{} L\+I\+M\+IT 1\char`\"{}
+\begin{DoxyCompactList}\small\item\em Data do dia atual. \end{DoxyCompactList}\item 
+\hyperlink{painel_2index_8php_a112ef069ddc0454086e3d1e6d8d55d07}{\$result} = \$db-\/$>$request\+\_\+query(\$sql)
+\begin{DoxyCompactList}\small\item\em Lista se tem ficha para ser chamada. \end{DoxyCompactList}\item 
+if(mysqli\+\_\+num\+\_\+rows(\$result)==1) \hyperlink{painel_2index_8php_ae62fe817d36572be0d1f9c1b61c4e55c}{else}
+\item 
+\hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch}(Exception \$e) \hyperlink{painel_2index_8php_a1eb47d68a4a4f73debf91b15e179d813}{finally}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{painel_2index_8php_a252370d95039a38fa11afab784725d58}\label{painel_2index_8php_a252370d95039a38fa11afab784725d58}} 
+\index{painel/index.\+php@{painel/index.\+php}!\$dados@{\$dados}}
+\index{\$dados@{\$dados}!painel/index.\+php@{painel/index.\+php}}
+\subsubsection{\texorpdfstring{\$dados}{$dados}}
+{\footnotesize\ttfamily \$dados = \mbox{[}$\,$\mbox{]}}
+
+
+
+Cabeçalho para conteudo json. 
+
+Cabeçalho com as classes e funções gerias 
+
+Definition at line 19 of file index.\+php.
+
+\mbox{\Hypertarget{painel_2index_8php_a112ef069ddc0454086e3d1e6d8d55d07}\label{painel_2index_8php_a112ef069ddc0454086e3d1e6d8d55d07}} 
+\index{painel/index.\+php@{painel/index.\+php}!\$result@{\$result}}
+\index{\$result@{\$result}!painel/index.\+php@{painel/index.\+php}}
+\subsubsection{\texorpdfstring{\$result}{$result}}
+{\footnotesize\ttfamily \$result = \$db-\/$>$request\+\_\+query(\$sql)}
+
+
+
+Lista se tem ficha para ser chamada. 
+
+
+
+Definition at line 27 of file index.\+php.
+
+\mbox{\Hypertarget{painel_2index_8php_a047170d6020a882807665812a27e2525}\label{painel_2index_8php_a047170d6020a882807665812a27e2525}} 
+\index{painel/index.\+php@{painel/index.\+php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!painel/index.\+php@{painel/index.\+php}}
+\subsubsection{\texorpdfstring{\$sql}{$sql}}
+{\footnotesize\ttfamily \$sql = \char`\"{}S\+E\+L\+E\+CT `ficha\+\_\+id` F\+R\+OM `fichas\+\_\+tb` W\+H\+E\+RE `ficha\+\_\+criacao\+\_\+data`$>$=\textquotesingle{}\char`\"{} . \$today . \char`\"{}\textquotesingle{} A\+ND `ficha\+\_\+status`=\textquotesingle{}C\+H\+A\+M\+AR\textquotesingle{} L\+I\+M\+IT 1\char`\"{}}
+
+
+
+Data do dia atual. 
+
+
+
+Definition at line 26 of file index.\+php.
+
+\mbox{\Hypertarget{painel_2index_8php_af1b7fb9d06cdc6d22c14741fc3cc185a}\label{painel_2index_8php_af1b7fb9d06cdc6d22c14741fc3cc185a}} 
+\index{painel/index.\+php@{painel/index.\+php}!\$today@{\$today}}
+\index{\$today@{\$today}!painel/index.\+php@{painel/index.\+php}}
+\subsubsection{\texorpdfstring{\$today}{$today}}
+{\footnotesize\ttfamily \$today = date(\char`\"{}Y-\/m-\/d\char`\"{})}
+
+
+
+Definition at line 24 of file index.\+php.
+
+\mbox{\Hypertarget{painel_2index_8php_ae62fe817d36572be0d1f9c1b61c4e55c}\label{painel_2index_8php_ae62fe817d36572be0d1f9c1b61c4e55c}} 
+\index{painel/index.\+php@{painel/index.\+php}!else@{else}}
+\index{else@{else}!painel/index.\+php@{painel/index.\+php}}
+\subsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily if (mysqli\+\_\+num\+\_\+rows( \$result)==1) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+        array\_push(
+            \hyperlink{login_2index_8php_a252370d95039a38fa11afab784725d58}{$dados},
+            [
+                \textcolor{stringliteral}{'ficha'} => 0,
+                \textcolor{stringliteral}{'ficha\_numero'} => \textcolor{stringliteral}{''},
+                \textcolor{stringliteral}{'ficha\_setor\_nome'} => \textcolor{stringliteral}{''}
+            ]
+        )
+\end{DoxyCode}
+
+
+Definition at line 41 of file index.\+php.
+
+\mbox{\Hypertarget{painel_2index_8php_a1eb47d68a4a4f73debf91b15e179d813}\label{painel_2index_8php_a1eb47d68a4a4f73debf91b15e179d813}} 
+\index{painel/index.\+php@{painel/index.\+php}!finally@{finally}}
+\index{finally@{finally}!painel/index.\+php@{painel/index.\+php}}
+\subsubsection{\texorpdfstring{finally}{finally}}
+{\footnotesize\ttfamily \hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch} (Exception \$e) finally}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    echo json\_encode(\hyperlink{login_2index_8php_a252370d95039a38fa11afab784725d58}{$dados}[0])
+\end{DoxyCode}
+
+
+Definition at line 56 of file index.\+php.
+
+\mbox{\Hypertarget{painel_2index_8php_abe4cc9788f52e49485473dc699537388}\label{painel_2index_8php_abe4cc9788f52e49485473dc699537388}} 
+\index{painel/index.\+php@{painel/index.\+php}!try@{try}}
+\index{try@{try}!painel/index.\+php@{painel/index.\+php}}
+\subsubsection{\texorpdfstring{try}{try}}
+{\footnotesize\ttfamily try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    \hyperlink{main_page_2inicial_2index_8php_a1fa3127fc82f96b1436d871ef02be319}{$db} = \textcolor{keyword}{new} \hyperlink{class_class_connection}{ClassConnection}()
+\end{DoxyCode}
+
+
+Contem todos os dados a serem enviados. 
+
+
+
+Definition at line 21 of file index.\+php.
+

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_8a9a2cbd99cff96b499f64385a84db48" kind="dir">
+    <compoundname>/var/www/chamador.itep.govrn/public/api/menu/configuracoes</compoundname>
+    <innerdir refid="dir_2678f31ba3fa24ef8445904dd3523b74">/var/www/chamador.itep.govrn/public/api/menu/configuracoes/fichas</innerdir>
+    <innerdir refid="dir_804dc118a19d313bdb2a7e732596c0a0">/var/www/chamador.itep.govrn/public/api/menu/configuracoes/logs</innerdir>
+    <innerdir refid="dir_e24744a2556add85c010114ccf9b03fe">/var/www/chamador.itep.govrn/public/api/menu/configuracoes/setores</innerdir>
+    <innerdir refid="dir_290548eaf5d2e403aa8155f664058831">/var/www/chamador.itep.govrn/public/api/menu/configuracoes/usuarios</innerdir>
+    <innerfile refid="menu_2configuracoes_2index_8php">index.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/var/www/chamador.itep.govrn/public/api/menu/configuracoes/"/>
+  </compounddef>
+</doxygen>

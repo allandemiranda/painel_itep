@@ -1,0 +1,241 @@
+\hypertarget{em_atendimento_8php}{}\section{/var/www/chamador.itep.\+govrn/public/api/main\+Page/inicial/em\+Atendimento.php File Reference}
+\label{em_atendimento_8php}\index{/var/www/chamador.\+itep.\+govrn/public/api/main\+Page/inicial/em\+Atendimento.\+php@{/var/www/chamador.\+itep.\+govrn/public/api/main\+Page/inicial/em\+Atendimento.\+php}}
+
+
+Contem a lógica para gerenciar as fichas em atendimento do usuário.  
+
+
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{em_atendimento_8php_a252370d95039a38fa11afab784725d58}{\$dados} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Cabeçalho para conteudo json. \end{DoxyCompactList}\item 
+\hyperlink{em_atendimento_8php_a26b9f9373f7bb79dfcf8a86dff086b45}{\$body} = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Contem todos os dados a serem enviados. \end{DoxyCompactList}\item 
+\hyperlink{em_atendimento_8php_acedd13b51401130848ce18f4d5c52605}{\$json} = json\+\_\+decode(\$body, true)
+\begin{DoxyCompactList}\small\item\em Obtém todas as informações requisitadas P\+O\+ST. \end{DoxyCompactList}\item 
+\hyperlink{em_atendimento_8php_afc31993e855f9631572adfedcfe6f34b}{\$login} = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Decodifica as informações requisitadas. \end{DoxyCompactList}\item 
+\hyperlink{em_atendimento_8php_a3678c8769c9698fd30581c1016c5f475}{\$senha} = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Login do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{em_atendimento_8php_abe4cc9788f52e49485473dc699537388}{try}
+\begin{DoxyCompactList}\small\item\em Senha criptografada do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{em_atendimento_8php_a1fa3127fc82f96b1436d871ef02be319}{\$db} = new \hyperlink{class_class_connection}{Class\+Connection}()
+\begin{DoxyCompactList}\small\item\em Obter a credencial do usário. \end{DoxyCompactList}\item 
+\hyperlink{em_atendimento_8php_a047170d6020a882807665812a27e2525}{\$sql} = \char`\"{}S\+E\+L\+E\+CT `setor\+\_\+id`, `setor\+\_\+nome` F\+R\+OM `setores\+\_\+tb` W\+H\+E\+RE `setor\+\_\+deletado`=0\char`\"{}
+\item 
+\hyperlink{em_atendimento_8php_a112ef069ddc0454086e3d1e6d8d55d07}{\$result} = \$db-\/$>$request\+\_\+query(\$sql)
+\item 
+\hyperlink{em_atendimento_8php_af62a556436f10f703431108a1a8fc00f}{\$setores} = \mbox{[}$\,$\mbox{]}
+\item 
+if(mysqli\+\_\+num\+\_\+rows(\$result) $>$ 0) \hyperlink{em_atendimento_8php_aabe0fce4e8f9f822b09141ab57d918d9}{else}
+\item 
+\hyperlink{em_atendimento_8php_a70fe158d19ec254a3949e1d105ffe4ed}{\$fichas} = \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{em_atendimento_8php_af1b7fb9d06cdc6d22c14741fc3cc185a}{\$today} = date(\char`\"{}Y-\/m-\/d\char`\"{})
+\item 
+if(mysqli\+\_\+num\+\_\+rows(\$result) $>$ 0) \hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch}(Exception \$e) \hyperlink{em_atendimento_8php_af7cfe1f8cb9dba05c425311a444e3fb4}{finally}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contem a lógica para gerenciar as fichas em atendimento do usuário. 
+
+\begin{DoxyAuthor}{Author}
+Allan de Miranda Silva (\href{mailto:allandemiranda@gmail.com}{\tt allandemiranda@gmail.\+com}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+27-\/03-\/2020
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020 D\+I\+G\+E\+TI I\+T\+E\+P/\+RN 
+\end{DoxyCopyright}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{em_atendimento_8php_a26b9f9373f7bb79dfcf8a86dff086b45}\label{em_atendimento_8php_a26b9f9373f7bb79dfcf8a86dff086b45}} 
+\index{em\+Atendimento.\+php@{em\+Atendimento.\+php}!\$body@{\$body}}
+\index{\$body@{\$body}!em\+Atendimento.\+php@{em\+Atendimento.\+php}}
+\subsubsection{\texorpdfstring{\$body}{$body}}
+{\footnotesize\ttfamily \$body = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})}
+
+
+
+Contem todos os dados a serem enviados. 
+
+
+
+Definition at line 21 of file em\+Atendimento.\+php.
+
+\mbox{\Hypertarget{em_atendimento_8php_a252370d95039a38fa11afab784725d58}\label{em_atendimento_8php_a252370d95039a38fa11afab784725d58}} 
+\index{em\+Atendimento.\+php@{em\+Atendimento.\+php}!\$dados@{\$dados}}
+\index{\$dados@{\$dados}!em\+Atendimento.\+php@{em\+Atendimento.\+php}}
+\subsubsection{\texorpdfstring{\$dados}{$dados}}
+{\footnotesize\ttfamily \$dados = \mbox{[}$\,$\mbox{]}}
+
+
+
+Cabeçalho para conteudo json. 
+
+Cabeçalho com as classes e funções gerias 
+
+Definition at line 19 of file em\+Atendimento.\+php.
+
+\mbox{\Hypertarget{em_atendimento_8php_a1fa3127fc82f96b1436d871ef02be319}\label{em_atendimento_8php_a1fa3127fc82f96b1436d871ef02be319}} 
+\index{em\+Atendimento.\+php@{em\+Atendimento.\+php}!\$db@{\$db}}
+\index{\$db@{\$db}!em\+Atendimento.\+php@{em\+Atendimento.\+php}}
+\subsubsection{\texorpdfstring{\$db}{$db}}
+{\footnotesize\ttfamily \$db = new \hyperlink{class_class_connection}{Class\+Connection}()}
+
+
+
+Obter a credencial do usário. 
+
+
+
+Definition at line 30 of file em\+Atendimento.\+php.
+
+\mbox{\Hypertarget{em_atendimento_8php_a70fe158d19ec254a3949e1d105ffe4ed}\label{em_atendimento_8php_a70fe158d19ec254a3949e1d105ffe4ed}} 
+\index{em\+Atendimento.\+php@{em\+Atendimento.\+php}!\$fichas@{\$fichas}}
+\index{\$fichas@{\$fichas}!em\+Atendimento.\+php@{em\+Atendimento.\+php}}
+\subsubsection{\texorpdfstring{\$fichas}{$fichas}}
+{\footnotesize\ttfamily \$fichas = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line 47 of file em\+Atendimento.\+php.
+
+\mbox{\Hypertarget{em_atendimento_8php_acedd13b51401130848ce18f4d5c52605}\label{em_atendimento_8php_acedd13b51401130848ce18f4d5c52605}} 
+\index{em\+Atendimento.\+php@{em\+Atendimento.\+php}!\$json@{\$json}}
+\index{\$json@{\$json}!em\+Atendimento.\+php@{em\+Atendimento.\+php}}
+\subsubsection{\texorpdfstring{\$json}{$json}}
+{\footnotesize\ttfamily \$json = json\+\_\+decode(\$body, true)}
+
+
+
+Obtém todas as informações requisitadas P\+O\+ST. 
+
+
+
+Definition at line 22 of file em\+Atendimento.\+php.
+
+\mbox{\Hypertarget{em_atendimento_8php_afc31993e855f9631572adfedcfe6f34b}\label{em_atendimento_8php_afc31993e855f9631572adfedcfe6f34b}} 
+\index{em\+Atendimento.\+php@{em\+Atendimento.\+php}!\$login@{\$login}}
+\index{\$login@{\$login}!em\+Atendimento.\+php@{em\+Atendimento.\+php}}
+\subsubsection{\texorpdfstring{\$login}{$login}}
+{\footnotesize\ttfamily \$login = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}}
+
+
+
+Decodifica as informações requisitadas. 
+
+
+
+Definition at line 24 of file em\+Atendimento.\+php.
+
+\mbox{\Hypertarget{em_atendimento_8php_a112ef069ddc0454086e3d1e6d8d55d07}\label{em_atendimento_8php_a112ef069ddc0454086e3d1e6d8d55d07}} 
+\index{em\+Atendimento.\+php@{em\+Atendimento.\+php}!\$result@{\$result}}
+\index{\$result@{\$result}!em\+Atendimento.\+php@{em\+Atendimento.\+php}}
+\subsubsection{\texorpdfstring{\$result}{$result}}
+{\footnotesize\ttfamily \$result = \$db-\/$>$request\+\_\+query(\$sql)}
+
+
+
+Definition at line 34 of file em\+Atendimento.\+php.
+
+\mbox{\Hypertarget{em_atendimento_8php_a3678c8769c9698fd30581c1016c5f475}\label{em_atendimento_8php_a3678c8769c9698fd30581c1016c5f475}} 
+\index{em\+Atendimento.\+php@{em\+Atendimento.\+php}!\$senha@{\$senha}}
+\index{\$senha@{\$senha}!em\+Atendimento.\+php@{em\+Atendimento.\+php}}
+\subsubsection{\texorpdfstring{\$senha}{$senha}}
+{\footnotesize\ttfamily \$senha = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}}
+
+
+
+Login do usuário que requisitou a informação. 
+
+
+
+Definition at line 25 of file em\+Atendimento.\+php.
+
+\mbox{\Hypertarget{em_atendimento_8php_af62a556436f10f703431108a1a8fc00f}\label{em_atendimento_8php_af62a556436f10f703431108a1a8fc00f}} 
+\index{em\+Atendimento.\+php@{em\+Atendimento.\+php}!\$setores@{\$setores}}
+\index{\$setores@{\$setores}!em\+Atendimento.\+php@{em\+Atendimento.\+php}}
+\subsubsection{\texorpdfstring{\$setores}{$setores}}
+{\footnotesize\ttfamily \$setores = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line 35 of file em\+Atendimento.\+php.
+
+\mbox{\Hypertarget{em_atendimento_8php_a047170d6020a882807665812a27e2525}\label{em_atendimento_8php_a047170d6020a882807665812a27e2525}} 
+\index{em\+Atendimento.\+php@{em\+Atendimento.\+php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!em\+Atendimento.\+php@{em\+Atendimento.\+php}}
+\subsubsection{\texorpdfstring{\$sql}{$sql}}
+{\footnotesize\ttfamily \$sql = \char`\"{}S\+E\+L\+E\+CT `setor\+\_\+id`, `setor\+\_\+nome` F\+R\+OM `setores\+\_\+tb` W\+H\+E\+RE `setor\+\_\+deletado`=0\char`\"{}}
+
+
+
+Definition at line 33 of file em\+Atendimento.\+php.
+
+\mbox{\Hypertarget{em_atendimento_8php_af1b7fb9d06cdc6d22c14741fc3cc185a}\label{em_atendimento_8php_af1b7fb9d06cdc6d22c14741fc3cc185a}} 
+\index{em\+Atendimento.\+php@{em\+Atendimento.\+php}!\$today@{\$today}}
+\index{\$today@{\$today}!em\+Atendimento.\+php@{em\+Atendimento.\+php}}
+\subsubsection{\texorpdfstring{\$today}{$today}}
+{\footnotesize\ttfamily \$today = date(\char`\"{}Y-\/m-\/d\char`\"{})}
+
+
+
+Definition at line 48 of file em\+Atendimento.\+php.
+
+\mbox{\Hypertarget{em_atendimento_8php_aabe0fce4e8f9f822b09141ab57d918d9}\label{em_atendimento_8php_aabe0fce4e8f9f822b09141ab57d918d9}} 
+\index{em\+Atendimento.\+php@{em\+Atendimento.\+php}!else@{else}}
+\index{else@{else}!em\+Atendimento.\+php@{em\+Atendimento.\+php}}
+\subsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily if (mysqli\+\_\+num\+\_\+rows( \$result) $>$ 0) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+        \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\textcolor{stringliteral}{"Nenhum setor encontrado no banco de dados"})
+\end{DoxyCode}
+
+
+Definition at line 42 of file em\+Atendimento.\+php.
+
+\mbox{\Hypertarget{em_atendimento_8php_af7cfe1f8cb9dba05c425311a444e3fb4}\label{em_atendimento_8php_af7cfe1f8cb9dba05c425311a444e3fb4}} 
+\index{em\+Atendimento.\+php@{em\+Atendimento.\+php}!finally@{finally}}
+\index{finally@{finally}!em\+Atendimento.\+php@{em\+Atendimento.\+php}}
+\subsubsection{\texorpdfstring{finally}{finally}}
+{\footnotesize\ttfamily if (mysqli\+\_\+num\+\_\+rows( \$result) $>$ 0) \hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch} (Exception \$e) finally}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    echo json\_encode(\hyperlink{em_atendimento_8php_a252370d95039a38fa11afab784725d58}{$dados})
+\end{DoxyCode}
+
+
+Definition at line 76 of file em\+Atendimento.\+php.
+
+\mbox{\Hypertarget{em_atendimento_8php_abe4cc9788f52e49485473dc699537388}\label{em_atendimento_8php_abe4cc9788f52e49485473dc699537388}} 
+\index{em\+Atendimento.\+php@{em\+Atendimento.\+php}!try@{try}}
+\index{try@{try}!em\+Atendimento.\+php@{em\+Atendimento.\+php}}
+\subsubsection{\texorpdfstring{try}{try}}
+{\footnotesize\ttfamily try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    $credenciais = \textcolor{keyword}{new} \hyperlink{class_class_credenciais}{ClassCredenciais}(\hyperlink{em_atendimento_8php_afc31993e855f9631572adfedcfe6f34b}{$login}, \hyperlink{em_atendimento_8php_a3678c8769c9698fd30581c1016c5f475}{$senha})
+\end{DoxyCode}
+
+
+Senha criptografada do usuário que requisitou a informação. 
+
+
+
+Definition at line 27 of file em\+Atendimento.\+php.
+

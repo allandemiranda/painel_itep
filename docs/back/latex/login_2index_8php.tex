@@ -1,0 +1,126 @@
+\hypertarget{login_2index_8php}{}\section{/var/www/chamador.itep.\+govrn/public/api/login/index.php File Reference}
+\label{login_2index_8php}\index{/var/www/chamador.\+itep.\+govrn/public/api/login/index.\+php@{/var/www/chamador.\+itep.\+govrn/public/api/login/index.\+php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{login_2index_8php_a252370d95039a38fa11afab784725d58}{\$dados} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Cabeçalho para conteudo json. \end{DoxyCompactList}\item 
+\hyperlink{login_2index_8php_a26b9f9373f7bb79dfcf8a86dff086b45}{\$body} = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Contem todos os dados a serem enviados. \end{DoxyCompactList}\item 
+\hyperlink{login_2index_8php_acedd13b51401130848ce18f4d5c52605}{\$json} = json\+\_\+decode(\$body, true)
+\begin{DoxyCompactList}\small\item\em Obtém todas as informações requisitadas P\+O\+ST. \end{DoxyCompactList}\item 
+\hyperlink{login_2index_8php_afc31993e855f9631572adfedcfe6f34b}{\$login} = \hyperlink{_header_8php_a8909d20d656fecf83ebaa2bed0cab2c1}{input\+\_\+check}(\$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Decodifica as informações requisitadas. \end{DoxyCompactList}\item 
+\hyperlink{login_2index_8php_a3678c8769c9698fd30581c1016c5f475}{\$senha} = \hyperlink{_header_8php_a8909d20d656fecf83ebaa2bed0cab2c1}{input\+\_\+check}(\$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]})
+\begin{DoxyCompactList}\small\item\em login do usuário que requisitou login no sistema \end{DoxyCompactList}\item 
+\hyperlink{login_2index_8php_abe4cc9788f52e49485473dc699537388}{try}
+\begin{DoxyCompactList}\small\item\em Criptografia usada para senhas de usuários armazenadas no banco de dados. \end{DoxyCompactList}\item 
+\hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch}(Exception \$e) \hyperlink{login_2index_8php_a1eb47d68a4a4f73debf91b15e179d813}{finally}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{login_2index_8php_a26b9f9373f7bb79dfcf8a86dff086b45}\label{login_2index_8php_a26b9f9373f7bb79dfcf8a86dff086b45}} 
+\index{login/index.\+php@{login/index.\+php}!\$body@{\$body}}
+\index{\$body@{\$body}!login/index.\+php@{login/index.\+php}}
+\subsubsection{\texorpdfstring{\$body}{$body}}
+{\footnotesize\ttfamily \$body = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})}
+
+
+
+Contem todos os dados a serem enviados. 
+
+
+
+Definition at line 22 of file index.\+php.
+
+\mbox{\Hypertarget{login_2index_8php_a252370d95039a38fa11afab784725d58}\label{login_2index_8php_a252370d95039a38fa11afab784725d58}} 
+\index{login/index.\+php@{login/index.\+php}!\$dados@{\$dados}}
+\index{\$dados@{\$dados}!login/index.\+php@{login/index.\+php}}
+\subsubsection{\texorpdfstring{\$dados}{$dados}}
+{\footnotesize\ttfamily \$dados = \mbox{[}$\,$\mbox{]}}
+
+
+
+Cabeçalho para conteudo json. 
+
+Cabeçalho com as classes e funções gerias 
+
+Definition at line 20 of file index.\+php.
+
+\mbox{\Hypertarget{login_2index_8php_acedd13b51401130848ce18f4d5c52605}\label{login_2index_8php_acedd13b51401130848ce18f4d5c52605}} 
+\index{login/index.\+php@{login/index.\+php}!\$json@{\$json}}
+\index{\$json@{\$json}!login/index.\+php@{login/index.\+php}}
+\subsubsection{\texorpdfstring{\$json}{$json}}
+{\footnotesize\ttfamily \$json = json\+\_\+decode(\$body, true)}
+
+
+
+Obtém todas as informações requisitadas P\+O\+ST. 
+
+
+
+Definition at line 23 of file index.\+php.
+
+\mbox{\Hypertarget{login_2index_8php_afc31993e855f9631572adfedcfe6f34b}\label{login_2index_8php_afc31993e855f9631572adfedcfe6f34b}} 
+\index{login/index.\+php@{login/index.\+php}!\$login@{\$login}}
+\index{\$login@{\$login}!login/index.\+php@{login/index.\+php}}
+\subsubsection{\texorpdfstring{\$login}{$login}}
+{\footnotesize\ttfamily \$login = \hyperlink{_header_8php_a8909d20d656fecf83ebaa2bed0cab2c1}{input\+\_\+check}(\$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]})}
+
+
+
+Decodifica as informações requisitadas. 
+
+
+
+Definition at line 25 of file index.\+php.
+
+\mbox{\Hypertarget{login_2index_8php_a3678c8769c9698fd30581c1016c5f475}\label{login_2index_8php_a3678c8769c9698fd30581c1016c5f475}} 
+\index{login/index.\+php@{login/index.\+php}!\$senha@{\$senha}}
+\index{\$senha@{\$senha}!login/index.\+php@{login/index.\+php}}
+\subsubsection{\texorpdfstring{\$senha}{$senha}}
+{\footnotesize\ttfamily \$senha = \hyperlink{_header_8php_a8909d20d656fecf83ebaa2bed0cab2c1}{input\+\_\+check}(\$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]})}
+
+
+
+login do usuário que requisitou login no sistema 
+
+senha do usuário que requisitou login no sistema 
+
+Definition at line 26 of file index.\+php.
+
+\mbox{\Hypertarget{login_2index_8php_a1eb47d68a4a4f73debf91b15e179d813}\label{login_2index_8php_a1eb47d68a4a4f73debf91b15e179d813}} 
+\index{login/index.\+php@{login/index.\+php}!finally@{finally}}
+\index{finally@{finally}!login/index.\+php@{login/index.\+php}}
+\subsubsection{\texorpdfstring{finally}{finally}}
+{\footnotesize\ttfamily \hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch} (Exception \$e) finally}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    echo json\_encode(\hyperlink{login_2index_8php_a252370d95039a38fa11afab784725d58}{$dados}[0])
+\end{DoxyCode}
+
+
+Definition at line 43 of file index.\+php.
+
+\mbox{\Hypertarget{login_2index_8php_abe4cc9788f52e49485473dc699537388}\label{login_2index_8php_abe4cc9788f52e49485473dc699537388}} 
+\index{login/index.\+php@{login/index.\+php}!try@{try}}
+\index{try@{try}!login/index.\+php@{login/index.\+php}}
+\subsubsection{\texorpdfstring{try}{try}}
+{\footnotesize\ttfamily try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    $credenciais = \textcolor{keyword}{new} \hyperlink{class_class_credenciais}{ClassCredenciais}(\hyperlink{login_2index_8php_afc31993e855f9631572adfedcfe6f34b}{$login}, \hyperlink{login_2index_8php_a3678c8769c9698fd30581c1016c5f475}{$senha})
+\end{DoxyCode}
+
+
+Criptografia usada para senhas de usuários armazenadas no banco de dados. 
+
+
+
+Definition at line 30 of file index.\+php.
+

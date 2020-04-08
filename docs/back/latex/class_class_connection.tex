@@ -1,0 +1,119 @@
+\hypertarget{class_class_connection}{}\section{Class\+Connection Class Reference}
+\label{class_class_connection}\index{Class\+Connection@{Class\+Connection}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_class_connection_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct} ()
+\begin{DoxyCompactList}\small\item\em Conexão com o banco de dados. \end{DoxyCompactList}\item 
+\hyperlink{class_class_connection_a421831a265621325e1fdd19aace0c758}{\+\_\+\+\_\+destruct} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe dando commit em query aberta e fecha a conexão. \end{DoxyCompactList}\item 
+\hyperlink{class_class_connection_a45aa0f36cd2827c49d8341cd34b43aa0}{request\+\_\+query} (\$sql)
+\begin{DoxyCompactList}\small\item\em Solicite uma S\+QL ao bando de dados e veja sua resposta. \end{DoxyCompactList}\item 
+\hyperlink{class_class_connection_a278a7a9ce9d5327bf2af66959d9bc723}{rollback\+\_\+querys} ()
+\begin{DoxyCompactList}\small\item\em Remover todas as solicitações S\+QL já feitas nessa conexão. \end{DoxyCompactList}\item 
+\hyperlink{class_class_connection_addadc2022e9fe02f49da4f7672fb6819}{last\+\_\+insert\+\_\+id} ()
+\begin{DoxyCompactList}\small\item\em Retorna o id gerado automaticamente na última consulta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 14 of file Class\+Connection.\+php.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_class_connection_a095c5d389db211932136b53f25f39685}\label{class_class_connection_a095c5d389db211932136b53f25f39685}} 
+\index{Class\+Connection@{Class\+Connection}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!Class\+Connection@{Class\+Connection}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Conexão com o banco de dados. 
+
+Construtor da classe atribui as informações da conexão Host do servidor
+
+Usuário do banco de dados
+
+Senha do usuário do banco de dados
+
+Nome do banco de dados
+
+Conectar ao banco da dados 
+
+Definition at line 26 of file Class\+Connection.\+php.
+
+\mbox{\Hypertarget{class_class_connection_a421831a265621325e1fdd19aace0c758}\label{class_class_connection_a421831a265621325e1fdd19aace0c758}} 
+\index{Class\+Connection@{Class\+Connection}!\+\_\+\+\_\+destruct@{\+\_\+\+\_\+destruct}}
+\index{\+\_\+\+\_\+destruct@{\+\_\+\+\_\+destruct}!Class\+Connection@{Class\+Connection}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+destruct()}{\_\_destruct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe dando commit em query aberta e fecha a conexão. 
+
+
+
+Definition at line 39 of file Class\+Connection.\+php.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_class_connection_addadc2022e9fe02f49da4f7672fb6819}\label{class_class_connection_addadc2022e9fe02f49da4f7672fb6819}} 
+\index{Class\+Connection@{Class\+Connection}!last\+\_\+insert\+\_\+id@{last\+\_\+insert\+\_\+id}}
+\index{last\+\_\+insert\+\_\+id@{last\+\_\+insert\+\_\+id}!Class\+Connection@{Class\+Connection}}
+\subsubsection{\texorpdfstring{last\+\_\+insert\+\_\+id()}{last\_insert\_id()}}
+{\footnotesize\ttfamily last\+\_\+insert\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o id gerado automaticamente na última consulta. 
+
+\begin{DoxyReturn}{Returns}
+Int id gerado automaticamente na última consulta 
+\end{DoxyReturn}
+
+
+Definition at line 224 of file Class\+Connection.\+php.
+
+\mbox{\Hypertarget{class_class_connection_a45aa0f36cd2827c49d8341cd34b43aa0}\label{class_class_connection_a45aa0f36cd2827c49d8341cd34b43aa0}} 
+\index{Class\+Connection@{Class\+Connection}!request\+\_\+query@{request\+\_\+query}}
+\index{request\+\_\+query@{request\+\_\+query}!Class\+Connection@{Class\+Connection}}
+\subsubsection{\texorpdfstring{request\+\_\+query()}{request\_query()}}
+{\footnotesize\ttfamily request\+\_\+query (\begin{DoxyParamCaption}\item[{}]{\$sql }\end{DoxyParamCaption})}
+
+
+
+Solicite uma S\+QL ao bando de dados e veja sua resposta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sql} & Query S\+QL \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 183 of file Class\+Connection.\+php.
+
+\mbox{\Hypertarget{class_class_connection_a278a7a9ce9d5327bf2af66959d9bc723}\label{class_class_connection_a278a7a9ce9d5327bf2af66959d9bc723}} 
+\index{Class\+Connection@{Class\+Connection}!rollback\+\_\+querys@{rollback\+\_\+querys}}
+\index{rollback\+\_\+querys@{rollback\+\_\+querys}!Class\+Connection@{Class\+Connection}}
+\subsubsection{\texorpdfstring{rollback\+\_\+querys()}{rollback\_querys()}}
+{\footnotesize\ttfamily rollback\+\_\+querys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remover todas as solicitações S\+QL já feitas nessa conexão. 
+
+
+
+Definition at line 197 of file Class\+Connection.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/var/www/chamador.\+itep.\+govrn/public/api/\hyperlink{_class_connection_8php}{Class\+Connection.\+php}\end{DoxyCompactItemize}

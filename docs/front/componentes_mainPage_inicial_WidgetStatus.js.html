@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: componentes/mainPage/inicial/WidgetStatus.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: componentes/mainPage/inicial/WidgetStatus.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file WidgetStatus.js
+ * @author Allan de Miranda Silva (allandemiranda@gmail.com)
+ * @brief Contem a classe com os widget do status do chamador
+ * @version 1.0.0
+ * @date 10-02-2020
+ *
+ * @copyright Copyright (c) 2020 DIGETI ITEP/RN
+ *
+ */
+
+import React, { Component } from 'react'    //! Componente básico
+import { connect } from 'react-redux'       //! Componente Redux
+import axios from 'axios'                   //! Componente Axios
+
+class WidgetStatus extends Component {
+    constructor() {
+        super()
+        this.state = {
+            naoAtendidos: 0,
+            encaminhado: 0,
+            emAtendimento: 0,
+            finalizado: 0
+        }
+        this.tick = this.tick.bind(this)
+    }
+
+    /**
+     * @brief Recupera números para os indicadores do componente
+     * 
+     */
+    tick() {
+        // Requisuta a API a quantidade de fichas para cada indicador
+        axios.post(this.props.modules.apiPage.host + "/api/mainPage/inicial/",
+            {
+                login: this.props.modules.perfil.login, // Credencial de login do usuário
+                senha: this.props.modules.perfil.senha  // Credencial de senha criptografada do usuário
+            }, { method: 'POST' })
+            .then(response => {
+                this.setState(prevState => ({
+                    ...prevState,
+                    naoAtendidos: response.data.naoAtendidos,
+                    encaminhado: response.data.encaminhado,
+                    emAtendimento: response.data.emAtendimento,
+                    finalizado: response.data.finalizado
+                }))
+            })
+    }
+
+    /**
+     * @brief Carrega os números dos indicadores antes do componente ser carregado
+     * 
+     */
+    componentDidMount() {
+        this.tick()
+
+        // Atualiza os dados do componente a cada 5 segundos
+        this.intervalID = setInterval(
+            () => {
+                this.tick()
+            },
+            5000
+        )
+    }
+
+    /**
+     * @breif Destroi o objeto que atualiza os indicadores assim que o componente é fechado
+     * 
+     */
+    componentWillUnmount() {
+        clearInterval(this.intervalID);
+    }
+
+    /**
+     * @brief Renderiza os indicadores do chamador
+     * 
+     * @return {string} HTML dos indicadores do chamador
+     */
+    render() {
+        return (
+            &lt;div className="col_3">
+                &lt;div className="col-md-3 widget-shadow">
+                    &lt;div className="r3_counter_box">
+                        &lt;i className="pull-left fa fa-exclamation-triangle user1 icon-rounded">&lt;/i>
+                        &lt;div className="stats">
+                            &lt;h5>&lt;strong>{this.state.naoAtendidos}&lt;/strong>&lt;/h5>
+                            &lt;span>Não Atendidos&lt;/span>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div className="col-md-3 widget-shadow">
+                    &lt;div className="r3_counter_box">
+                        &lt;i className="pull-left fa fa-flag dollar1 icon-rounded">&lt;/i>
+                        &lt;div className="stats">
+                            &lt;h5>&lt;strong>{this.state.encaminhado}&lt;/strong>&lt;/h5>
+                            &lt;span>Encaminhados&lt;/span>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div className="col-md-3 widget-shadow">
+                    &lt;div className="r3_counter_box">
+                        &lt;i className="pull-left fa fa-pencil-square-o dollar2 icon-rounded">&lt;/i>
+
+                        &lt;div className="stats">
+                            &lt;h5>&lt;strong>{this.state.emAtendimento}&lt;/strong>&lt;/h5>
+                            &lt;span>Em Atendimento&lt;/span>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div className="col-md-3 widget-shadow">
+                    &lt;div className="r3_counter_box">
+                        &lt;i className="pull-left fa fa-check-square-o user2 icon-rounded">&lt;/i>
+                        &lt;div className="stats">
+                            &lt;h5>&lt;strong>{this.state.finalizado}&lt;/strong>&lt;/h5>
+                            &lt;span>Atendidos&lt;/span>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div className="clearfix"> &lt;/div>
+            &lt;/div>
+        )
+    };
+}
+
+export default connect(state => ({ modules: state }))(WidgetStatus)</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#abrirDashboard">abrirDashboard</a></li><li><a href="global.html#abrirFichas">abrirFichas</a></li><li><a href="global.html#abrirLogs">abrirLogs</a></li><li><a href="global.html#abrirPainelFichas">abrirPainelFichas</a></li><li><a href="global.html#abrirPerfil">abrirPerfil</a></li><li><a href="global.html#abrirSetores">abrirSetores</a></li><li><a href="global.html#abrirUsuarios">abrirUsuarios</a></li><li><a href="global.html#adicionarAlerta">adicionarAlerta</a></li><li><a href="global.html#loginAprovado">loginAprovado</a></li><li><a href="global.html#modificarPerfil">modificarPerfil</a></li><li><a href="global.html#removerAlerta">removerAlerta</a></li><li><a href="global.html#rootReducer">rootReducer</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Mon Apr 06 2020 20:26:35 GMT-0300 (GMT-03:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

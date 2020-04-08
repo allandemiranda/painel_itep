@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: componentes/login/Login.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: componentes/login/Login.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file Login.js
+ * @author Allan de Miranda Silva (allandemiranda@gmail.com)
+ * @brief Contem a classe do componente que efetua o login no sistema
+ * @version 1.0.0
+ * @date 17-02-2020
+ *
+ * @copyright Copyright (c) 2020 DIGETI ITEP/RN
+ *
+ */
+
+import React, { Component } from 'react'    //! Componente básico
+import { connect } from 'react-redux'       //! Componente Redux
+import axios from 'axios'                   //! Componente Axios
+
+class Login extends Component {
+    constructor() {
+        super()
+        this.state = {
+            formulario: {
+                login: "",
+                senha: ""
+            },
+            status: "AGUARDANDO LOGIN"
+        }
+        this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+    }
+
+    /**
+     * @brief Modifica status dos input's do formulário de login
+     * 
+     * @param {object} event Evento do onChanger
+     */
+    handleChange(event) {
+        const { name, value } = event.target
+        this.setState(prevState => ({
+            ...prevState,
+            formulario: {
+                ...prevState.formulario,
+                [name]: value
+            }
+        }))
+    }
+
+    /**
+     * @brief Envia formulário para validação do login
+     * 
+     * @param {object} event Evento do formulário
+     */
+    handleSubmit(event) {
+
+        // Modifica o estado dos componentes para visualização de página solicitando o login
+        this.setState(prevState => ({
+            ...prevState,
+            status: "SOLICITANDO LOGIN"
+        }))
+
+        // Requisita a API o login
+        axios.post(this.props.modules.apiPage.host + "/api/login/", {
+            login: this.state.formulario.login, // Login informado no formulário de login
+            senha: this.state.formulario.senha  // Senha informada no formulário de login
+        }, { method: 'POST' })
+            .then(response => {
+
+                // Verifica se o login foi efetuado
+                if (response.data.mensagem === 'LOGIN EFETUADO') {
+
+                    // Modifica o estado dos componentes para um login aprovado
+                    this.setState(prevState => ({
+                        ...prevState,
+                        status: "LOGIN FEITO COM SUCESSO"
+                    }))
+
+                    // Verifica o tipo de usuário para abrir corretamente o componente Dashboard
+                    if (response.data.ficha) {
+                        this.props.dispatch({
+                            type: "ABRIR_PAINEL_FICHA"
+                        })
+                    } else {
+                        this.props.dispatch({
+                            type: "ABRIR_DASHBOARD"
+                        })
+                    }
+
+                    // Salva no Local Storage as credenciais do usuário
+                    this.props.dispatch({
+                        type: "LOGIN_APROVADO",
+                        formulario: {
+                            login: response.data.login,
+                            senha: response.data.senha
+                        }
+                    })
+                } else {
+                    // Modifica o estado dos componentes para um login ou senha errado
+                    this.setState(prevState => ({
+                        ...prevState,
+                        status: "ERRO AO FAZER LOGIN"
+                    }))
+                }
+            })
+
+        event.preventDefault() //! Cancela o evento do formulário
+    }
+
+    /**
+     * @brief Renderiza formulário de login da página de login
+     * 
+     * @return {string} HTML do formulário de login
+     */
+    render() {
+        return (
+            &lt;div className="main-page login-page ">
+                {this.state.status === "ERRO AO FAZER LOGIN" ?
+                    &lt;div className="alert alert-danger" role="alert">
+                        &lt;strong>Erro!&lt;/strong> Login ou senha incoreto.
+                    &lt;/div> : null}
+                {(this.state.status === "AGUARDANDO LOGIN" || this.state.status === "SOLICITANDO LOGIN") ?
+                    &lt;div className="alert alert-info" role="alert">
+                        &lt;strong>Atenção!&lt;/strong> Digite corretamente seu login e senha para acessar o chamador.
+                    &lt;/div> : null}
+                {this.state.status === "LOGIN FEITO COM SUCESSO" ?
+                    &lt;div className="alert alert-success" role="alert">
+                        &lt;strong>Muito bem!&lt;/strong> Você fez o login com sucesso.
+                    &lt;/div> : null}
+                &lt;h2 className="title1">Login Chamador {this.props.modules.menu.nomeEmpresa}&lt;/h2>
+                &lt;div className="widget-shadow">
+                    &lt;div className="login-body">
+                        &lt;form onSubmit={this.handleSubmit}>
+                            &lt;div className="col-md-12 row">
+                                &lt;div className="input-group">
+                                    {(this.state.status === "AGUARDANDO LOGIN" || this.state.status === "LOGIN FEITO COM SUCESSO") ?
+                                        &lt;span className="input-group-addon">
+                                            &lt;i className="fa fa-user">&lt;/i>
+                                        &lt;/span> : null}
+                                    {this.state.status === "SOLICITANDO LOGIN" ?
+                                        &lt;span className="input-group-addon">
+                                            &lt;i className="fa fa-fw fa-spin fa-spinner">&lt;/i>
+                                        &lt;/span> : null}
+                                    {this.state.status === "ERRO AO FAZER LOGIN" ?
+                                        &lt;span className="input-group-addon" style={{ backgroundColor: "rgb(242, 222, 222)" }}>
+                                            &lt;i className="fa fa-user" >&lt;/i>
+                                        &lt;/span> : null}
+                                    &lt;input type="text" className="form-control1" name="login" placeholder="Login" required="" value={this.state.login} onChange={this.handleChange} />
+                                &lt;/div>
+                            &lt;/div>
+                            &lt;div className="col-md-12 row" >
+                                &lt;div className="input-group" >
+                                    {(this.state.status === "AGUARDANDO LOGIN" || this.state.status === "LOGIN FEITO COM SUCESSO") ?
+                                        &lt;span className="input-group-addon">
+                                            &lt;i className="fa fa-key">&lt;/i>
+                                        &lt;/span> : null}
+                                    {this.state.status === "SOLICITANDO LOGIN" ?
+                                        &lt;span className="input-group-addon">
+                                            &lt;i className="fa fa-fw fa-spin fa-spinner">&lt;/i>
+                                        &lt;/span> : null}
+                                    {this.state.status === "ERRO AO FAZER LOGIN" ?
+                                        &lt;span className="input-group-addon" style={{ backgroundColor: "rgb(242, 222, 222)" }}>
+                                            &lt;i className="fa fa-key" >&lt;/i>
+                                        &lt;/span> : null}
+                                    &lt;input type="password" name="senha" className="form-control1" placeholder="Senha" required="" value={this.state.senha} onChange={this.handleChange} />
+                                &lt;/div>
+                            &lt;/div>
+                            &lt;input type="submit" name="Entrar" value="Entrar" />
+                        &lt;/form>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        )
+    }
+}
+
+export default connect(state => ({ modules: state }))(Login)</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#abrirDashboard">abrirDashboard</a></li><li><a href="global.html#abrirFichas">abrirFichas</a></li><li><a href="global.html#abrirLogs">abrirLogs</a></li><li><a href="global.html#abrirPainelFichas">abrirPainelFichas</a></li><li><a href="global.html#abrirPerfil">abrirPerfil</a></li><li><a href="global.html#abrirSetores">abrirSetores</a></li><li><a href="global.html#abrirUsuarios">abrirUsuarios</a></li><li><a href="global.html#adicionarAlerta">adicionarAlerta</a></li><li><a href="global.html#loginAprovado">loginAprovado</a></li><li><a href="global.html#modificarPerfil">modificarPerfil</a></li><li><a href="global.html#removerAlerta">removerAlerta</a></li><li><a href="global.html#rootReducer">rootReducer</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Mon Apr 06 2020 20:26:35 GMT-0300 (GMT-03:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

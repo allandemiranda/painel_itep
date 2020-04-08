@@ -1,0 +1,687 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_class_ficha" kind="class" language="PHP" prot="public">
+    <compoundname>ClassFicha</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_class_ficha_1ae97941710d863131c700f069b109991e" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$id</definition>
+        <argsstring></argsstring>
+        <name>$id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="16" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ficha_1a1b649fd4bc5bd3d48575e2059dd93fb8" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$number</definition>
+        <argsstring></argsstring>
+        <name>$number</name>
+        <briefdescription>
+<para>id da Ficha </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="17" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ficha_1ab2fc40d43824ea3e1ce5d86dee0d763b" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$name</definition>
+        <argsstring></argsstring>
+        <name>$name</name>
+        <briefdescription>
+<para>Número da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="18" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ficha_1afca642079313f7c6c3f8d4368f779882" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$phone</definition>
+        <argsstring></argsstring>
+        <name>$phone</name>
+        <briefdescription>
+<para>Nome da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="19" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ficha_1a2f6fec8b049055c38f17a4e6fcdebf2e" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$attendant_status</definition>
+        <argsstring></argsstring>
+        <name>$attendant_status</name>
+        <briefdescription>
+<para>Telefone da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="20" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ficha_1a24a7a638b2350b3dc888551d1a677841" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$attendant_sector</definition>
+        <argsstring></argsstring>
+        <name>$attendant_sector</name>
+        <briefdescription>
+<para>Status da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="21" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ficha_1a0fb37e6836cb5c48349d94791572b3fc" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$attendant_user</definition>
+        <argsstring></argsstring>
+        <name>$attendant_user</name>
+        <briefdescription>
+<para>Setor a ser atendido. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="22" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ficha_1a2677e505e860db863720ac4e216fd3f2" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$priority</definition>
+        <argsstring></argsstring>
+        <name>$priority</name>
+        <briefdescription>
+<para>Funcionário responsável pelo atendimento. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="23" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ficha_1a481c918f8d853749e00b5942cabf599a" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$date</definition>
+        <argsstring></argsstring>
+        <name>$date</name>
+        <briefdescription>
+<para>Se a Ficha tem prioridade na chamada. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="24" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ficha_1acbfbda1543e06414c4506af61f7e4c95" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$date_update</definition>
+        <argsstring></argsstring>
+        <name>$date_update</name>
+        <briefdescription>
+<para>Data de criação da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="25" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_class_ficha_1a3a06b9d4c5367aa8594f8b8a280ba4af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($id=null, $name=null, $phone=null, $attendant_sector=null, $priority=null)</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$id</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <declname>$name</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <declname>$phone</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <declname>$attendant_sector</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <declname>$priority</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Data da última atualização da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para>Construtor do Objeto <ref refid="class_class_ficha" kindref="compound">ClassFicha</ref></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id da Ficha </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número da Ficha </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome da Ficha </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Telefone da Ficha </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attendant_status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Status da Ficha </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attendant_sector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Setor a ser atendido </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attendant_user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Funcionário responsável pelo atendimento </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Se a Ficha tem prioridade na chamada </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data de criação da Ficha </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>date_update</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data da ultima atualização da Ficha </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="41" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="41" bodyend="101"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1a421831a265621325e1fdd19aace0c758" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__destruct</definition>
+        <argsstring>()</argsstring>
+        <name>__destruct</name>
+        <briefdescription>
+<para>Destrutor do Objeto <ref refid="class_class_ficha" kindref="compound">ClassFicha</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="107" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="107" bodyend="119"/>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1a8a94003b9d888b085c68d6eac44be175" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_id</definition>
+        <argsstring>()</argsstring>
+        <name>get_id</name>
+        <briefdescription>
+<para>Obter o id da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Int id da Ficha </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="165" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="165" bodyend="168"/>
+        <referencedby refid="class_class_ficha_1a2d73b58ab74d3f4449797ce66855ba12" compoundref="_class_ficha_8php" startline="185" endline="197">set_number</referencedby>
+        <referencedby refid="class_class_ficha_1a53e29da8f1da63502f3e13091fcb74e5" compoundref="_class_ficha_8php" startline="214" endline="226">set_name</referencedby>
+        <referencedby refid="class_class_ficha_1a62e5af292b272f5b6ffd4606bafe7104" compoundref="_class_ficha_8php" startline="243" endline="255">set_phone</referencedby>
+        <referencedby refid="class_class_ficha_1a0d789f7b74b448e59b675b7860f614a4" compoundref="_class_ficha_8php" startline="272" endline="284">set_attendant_status</referencedby>
+        <referencedby refid="class_class_ficha_1ab2f464eda89675298cebd70c29a5fe63" compoundref="_class_ficha_8php" startline="301" endline="315">set_attendant_sector</referencedby>
+        <referencedby refid="class_class_ficha_1a0aca98dbfbc3b9580208f2ca5690aca3" compoundref="_class_ficha_8php" startline="332" endline="346">set_attendant_user</referencedby>
+        <referencedby refid="class_class_ficha_1ab92929a73f7f8e23561ad86f989a6c80" compoundref="_class_ficha_8php" startline="363" endline="377">set_priority</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1a4f7969072fea809005ea1306a8e7ea83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_number</definition>
+        <argsstring>()</argsstring>
+        <name>get_number</name>
+        <briefdescription>
+<para>Obter o Número da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Int Número da Ficha </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="175" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="175" bodyend="178"/>
+        <referencedby refid="class_class_ficha_1a2d73b58ab74d3f4449797ce66855ba12" compoundref="_class_ficha_8php" startline="185" endline="197">set_number</referencedby>
+        <referencedby refid="class_class_ficha_1a53e29da8f1da63502f3e13091fcb74e5" compoundref="_class_ficha_8php" startline="214" endline="226">set_name</referencedby>
+        <referencedby refid="class_class_ficha_1a62e5af292b272f5b6ffd4606bafe7104" compoundref="_class_ficha_8php" startline="243" endline="255">set_phone</referencedby>
+        <referencedby refid="class_class_ficha_1a0d789f7b74b448e59b675b7860f614a4" compoundref="_class_ficha_8php" startline="272" endline="284">set_attendant_status</referencedby>
+        <referencedby refid="class_class_ficha_1ab2f464eda89675298cebd70c29a5fe63" compoundref="_class_ficha_8php" startline="301" endline="315">set_attendant_sector</referencedby>
+        <referencedby refid="class_class_ficha_1a0aca98dbfbc3b9580208f2ca5690aca3" compoundref="_class_ficha_8php" startline="332" endline="346">set_attendant_user</referencedby>
+        <referencedby refid="class_class_ficha_1ab92929a73f7f8e23561ad86f989a6c80" compoundref="_class_ficha_8php" startline="363" endline="377">set_priority</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1a2d73b58ab74d3f4449797ce66855ba12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_number</definition>
+        <argsstring>(int $value)</argsstring>
+        <name>set_number</name>
+        <param>
+          <type>int</type>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir o Número da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número da Ficha </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="185" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="185" bodyend="197"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="class_class_ficha_1a4f7969072fea809005ea1306a8e7ea83" compoundref="_class_ficha_8php" startline="175" endline="178">get_number</references>
+        <references refid="class_class_ficha_1a8a94003b9d888b085c68d6eac44be175" compoundref="_class_ficha_8php" startline="165" endline="168">get_id</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1a4f1149ccbd69d1ac4225b7bc2dd871bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_name</definition>
+        <argsstring>()</argsstring>
+        <name>get_name</name>
+        <briefdescription>
+<para>Obter o Nome da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Nome da Ficha </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="204" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="204" bodyend="207"/>
+        <referencedby refid="class_class_ficha_1a53e29da8f1da63502f3e13091fcb74e5" compoundref="_class_ficha_8php" startline="214" endline="226">set_name</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1a53e29da8f1da63502f3e13091fcb74e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_name</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_name</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir o Nome da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome da Ficha </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="214" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="214" bodyend="226"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="class_class_ficha_1a4f1149ccbd69d1ac4225b7bc2dd871bb" compoundref="_class_ficha_8php" startline="204" endline="207">get_name</references>
+        <references refid="class_class_ficha_1a8a94003b9d888b085c68d6eac44be175" compoundref="_class_ficha_8php" startline="165" endline="168">get_id</references>
+        <references refid="class_class_ficha_1a4f7969072fea809005ea1306a8e7ea83" compoundref="_class_ficha_8php" startline="175" endline="178">get_number</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1a34c85b5b59e155044c316cb139684934" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_phone</definition>
+        <argsstring>()</argsstring>
+        <name>get_phone</name>
+        <briefdescription>
+<para>Obter o número do Telefone da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Número do Telefone da Ficha </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="233" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="233" bodyend="236"/>
+        <referencedby refid="class_class_ficha_1a62e5af292b272f5b6ffd4606bafe7104" compoundref="_class_ficha_8php" startline="243" endline="255">set_phone</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1a62e5af292b272f5b6ffd4606bafe7104" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_phone</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_phone</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir o Número do Telefone da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número do Telefone da Ficha </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="243" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="243" bodyend="255"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="class_class_ficha_1a34c85b5b59e155044c316cb139684934" compoundref="_class_ficha_8php" startline="233" endline="236">get_phone</references>
+        <references refid="class_class_ficha_1a8a94003b9d888b085c68d6eac44be175" compoundref="_class_ficha_8php" startline="165" endline="168">get_id</references>
+        <references refid="class_class_ficha_1a4f7969072fea809005ea1306a8e7ea83" compoundref="_class_ficha_8php" startline="175" endline="178">get_number</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1af0d76aee9d27ee2d61843cd94825ee88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_attendant_status</definition>
+        <argsstring>()</argsstring>
+        <name>get_attendant_status</name>
+        <briefdescription>
+<para>Obter o Status da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Status da Ficha </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="262" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="262" bodyend="265"/>
+        <referencedby refid="class_class_ficha_1a0d789f7b74b448e59b675b7860f614a4" compoundref="_class_ficha_8php" startline="272" endline="284">set_attendant_status</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1a0d789f7b74b448e59b675b7860f614a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_attendant_status</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_attendant_status</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir o Status da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Status da Ficha [NÃO ATENDIDO, EM ATENDIMENTO, ENCAMINHADO, FINALIZADO, CHAMAR] </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="272" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="272" bodyend="284"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="class_class_ficha_1af0d76aee9d27ee2d61843cd94825ee88" compoundref="_class_ficha_8php" startline="262" endline="265">get_attendant_status</references>
+        <references refid="class_class_ficha_1a8a94003b9d888b085c68d6eac44be175" compoundref="_class_ficha_8php" startline="165" endline="168">get_id</references>
+        <references refid="class_class_ficha_1a4f7969072fea809005ea1306a8e7ea83" compoundref="_class_ficha_8php" startline="175" endline="178">get_number</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1a85465890c6a10587eabeac707aa3caf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_attendant_sector</definition>
+        <argsstring>()</argsstring>
+        <name>get_attendant_sector</name>
+        <briefdescription>
+<para>Obter o Setor de atendimento da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="class_class_setor" kindref="compound">ClassSetor</ref> Setor de atendimento da Ficha </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="291" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="291" bodyend="294"/>
+        <referencedby refid="class_class_ficha_1ab2f464eda89675298cebd70c29a5fe63" compoundref="_class_ficha_8php" startline="301" endline="315">set_attendant_sector</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1ab2f464eda89675298cebd70c29a5fe63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_attendant_sector</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_attendant_sector</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir o Setor de atendimento da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_class_setor" kindref="compound">ClassSetor</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Setor de atendimento da Ficha </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="301" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="301" bodyend="315"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="class_class_ficha_1a85465890c6a10587eabeac707aa3caf0" compoundref="_class_ficha_8php" startline="291" endline="294">get_attendant_sector</references>
+        <references refid="class_class_ficha_1a8a94003b9d888b085c68d6eac44be175" compoundref="_class_ficha_8php" startline="165" endline="168">get_id</references>
+        <references refid="class_class_ficha_1a4f7969072fea809005ea1306a8e7ea83" compoundref="_class_ficha_8php" startline="175" endline="178">get_number</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1a29c1686664048f7cd94c207fde913589" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_attendant_user</definition>
+        <argsstring>()</argsstring>
+        <name>get_attendant_user</name>
+        <briefdescription>
+<para>Obter o Funcionário de Atendimento da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="class_class_usuario" kindref="compound">ClassUsuario</ref> Funcionário de Atendimento da Ficha </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="322" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="322" bodyend="325"/>
+        <referencedby refid="class_class_ficha_1a0aca98dbfbc3b9580208f2ca5690aca3" compoundref="_class_ficha_8php" startline="332" endline="346">set_attendant_user</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1a0aca98dbfbc3b9580208f2ca5690aca3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_attendant_user</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_attendant_user</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir o Funcionário de Atendimento da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_class_usuario" kindref="compound">ClassUsuario</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Funcionário de Atendimento da Ficha </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="332" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="332" bodyend="346"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="class_class_ficha_1a29c1686664048f7cd94c207fde913589" compoundref="_class_ficha_8php" startline="322" endline="325">get_attendant_user</references>
+        <references refid="class_class_ficha_1a8a94003b9d888b085c68d6eac44be175" compoundref="_class_ficha_8php" startline="165" endline="168">get_id</references>
+        <references refid="class_class_ficha_1a4f7969072fea809005ea1306a8e7ea83" compoundref="_class_ficha_8php" startline="175" endline="178">get_number</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1a806364a3a299a2b99db62a4393c92855" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_priority</definition>
+        <argsstring>()</argsstring>
+        <name>get_priority</name>
+        <briefdescription>
+<para>Obter a Prioridade da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Bool Se a Ficha é do tipo prioritária </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="353" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="353" bodyend="356"/>
+        <referencedby refid="class_class_ficha_1ab92929a73f7f8e23561ad86f989a6c80" compoundref="_class_ficha_8php" startline="363" endline="377">set_priority</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1ab92929a73f7f8e23561ad86f989a6c80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_priority</definition>
+        <argsstring>(bool $value)</argsstring>
+        <name>set_priority</name>
+        <param>
+          <type>bool</type>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir a Prioridade da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Se a Ficha é do tipo prioritária </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="363" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="363" bodyend="377"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+        <references refid="class_class_ficha_1a806364a3a299a2b99db62a4393c92855" compoundref="_class_ficha_8php" startline="353" endline="356">get_priority</references>
+        <references refid="class_class_ficha_1a8a94003b9d888b085c68d6eac44be175" compoundref="_class_ficha_8php" startline="165" endline="168">get_id</references>
+        <references refid="class_class_ficha_1a4f7969072fea809005ea1306a8e7ea83" compoundref="_class_ficha_8php" startline="175" endline="178">get_number</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1a848589b82df6900da2764018f69cd8c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_date</definition>
+        <argsstring>()</argsstring>
+        <name>get_date</name>
+        <briefdescription>
+<para>Obter a Data de criação da Ficha em TIMESTAMP. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Timestamp Data de criação da Ficha em TIMESTAMP </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="384" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="384" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ficha_1ab88c852c9268bc8bf4f41240068dc81e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_date_update</definition>
+        <argsstring>()</argsstring>
+        <name>get_date_update</name>
+        <briefdescription>
+<para>Obter a data da última atualização da Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Timestamp Data da última atualização da Ficha em TIMESTAMP </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="394" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="394" bodyend="397"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_class_ficha_1acf5fbaf0472de5af1fcc0c7550c87afc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_next_number</definition>
+        <argsstring>($conn)</argsstring>
+        <name>get_next_number</name>
+        <param>
+          <declname>$conn</declname>
+        </param>
+        <briefdescription>
+<para>Obter próximo número da Ficha do chamador. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>conn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Conexão com o Banco de Dados já aberta </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="126" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="126" bodyend="158"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" line="15" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassFicha.php" bodystart="14" bodyend="398"/>
+    <listofallmembers>
+      <member refid="class_class_ficha_1a24a7a638b2350b3dc888551d1a677841" prot="private" virt="non-virtual"><scope>ClassFicha</scope><name>$attendant_sector</name></member>
+      <member refid="class_class_ficha_1a2f6fec8b049055c38f17a4e6fcdebf2e" prot="private" virt="non-virtual"><scope>ClassFicha</scope><name>$attendant_status</name></member>
+      <member refid="class_class_ficha_1a0fb37e6836cb5c48349d94791572b3fc" prot="private" virt="non-virtual"><scope>ClassFicha</scope><name>$attendant_user</name></member>
+      <member refid="class_class_ficha_1a481c918f8d853749e00b5942cabf599a" prot="private" virt="non-virtual"><scope>ClassFicha</scope><name>$date</name></member>
+      <member refid="class_class_ficha_1acbfbda1543e06414c4506af61f7e4c95" prot="private" virt="non-virtual"><scope>ClassFicha</scope><name>$date_update</name></member>
+      <member refid="class_class_ficha_1ae97941710d863131c700f069b109991e" prot="private" virt="non-virtual"><scope>ClassFicha</scope><name>$id</name></member>
+      <member refid="class_class_ficha_1ab2fc40d43824ea3e1ce5d86dee0d763b" prot="private" virt="non-virtual"><scope>ClassFicha</scope><name>$name</name></member>
+      <member refid="class_class_ficha_1a1b649fd4bc5bd3d48575e2059dd93fb8" prot="private" virt="non-virtual"><scope>ClassFicha</scope><name>$number</name></member>
+      <member refid="class_class_ficha_1afca642079313f7c6c3f8d4368f779882" prot="private" virt="non-virtual"><scope>ClassFicha</scope><name>$phone</name></member>
+      <member refid="class_class_ficha_1a2677e505e860db863720ac4e216fd3f2" prot="private" virt="non-virtual"><scope>ClassFicha</scope><name>$priority</name></member>
+      <member refid="class_class_ficha_1a3a06b9d4c5367aa8594f8b8a280ba4af" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>__construct</name></member>
+      <member refid="class_class_ficha_1a421831a265621325e1fdd19aace0c758" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>__destruct</name></member>
+      <member refid="class_class_ficha_1a85465890c6a10587eabeac707aa3caf0" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>get_attendant_sector</name></member>
+      <member refid="class_class_ficha_1af0d76aee9d27ee2d61843cd94825ee88" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>get_attendant_status</name></member>
+      <member refid="class_class_ficha_1a29c1686664048f7cd94c207fde913589" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>get_attendant_user</name></member>
+      <member refid="class_class_ficha_1a848589b82df6900da2764018f69cd8c4" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>get_date</name></member>
+      <member refid="class_class_ficha_1ab88c852c9268bc8bf4f41240068dc81e" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>get_date_update</name></member>
+      <member refid="class_class_ficha_1a8a94003b9d888b085c68d6eac44be175" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>get_id</name></member>
+      <member refid="class_class_ficha_1a4f1149ccbd69d1ac4225b7bc2dd871bb" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>get_name</name></member>
+      <member refid="class_class_ficha_1acf5fbaf0472de5af1fcc0c7550c87afc" prot="private" virt="non-virtual"><scope>ClassFicha</scope><name>get_next_number</name></member>
+      <member refid="class_class_ficha_1a4f7969072fea809005ea1306a8e7ea83" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>get_number</name></member>
+      <member refid="class_class_ficha_1a34c85b5b59e155044c316cb139684934" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>get_phone</name></member>
+      <member refid="class_class_ficha_1a806364a3a299a2b99db62a4393c92855" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>get_priority</name></member>
+      <member refid="class_class_ficha_1ab2f464eda89675298cebd70c29a5fe63" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>set_attendant_sector</name></member>
+      <member refid="class_class_ficha_1a0d789f7b74b448e59b675b7860f614a4" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>set_attendant_status</name></member>
+      <member refid="class_class_ficha_1a0aca98dbfbc3b9580208f2ca5690aca3" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>set_attendant_user</name></member>
+      <member refid="class_class_ficha_1a53e29da8f1da63502f3e13091fcb74e5" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>set_name</name></member>
+      <member refid="class_class_ficha_1a2d73b58ab74d3f4449797ce66855ba12" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>set_number</name></member>
+      <member refid="class_class_ficha_1a62e5af292b272f5b6ffd4606bafe7104" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>set_phone</name></member>
+      <member refid="class_class_ficha_1ab92929a73f7f8e23561ad86f989a6c80" prot="public" virt="non-virtual"><scope>ClassFicha</scope><name>set_priority</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

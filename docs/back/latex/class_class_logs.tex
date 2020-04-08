@@ -1,0 +1,299 @@
+\hypertarget{class_class_logs}{}\section{Class\+Logs Class Reference}
+\label{class_class_logs}\index{Class\+Logs@{Class\+Logs}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_class_logs_a0c7ba5a301d60f9335443b0e71bcdbb8}{\+\_\+\+\_\+construct} (\$id, \$user=null, \$action=null, \$first=null, \$second=null)
+\begin{DoxyCompactList}\small\item\em Data de criação do Log. \end{DoxyCompactList}\item 
+\hyperlink{class_class_logs_a421831a265621325e1fdd19aace0c758}{\+\_\+\+\_\+destruct} ()
+\begin{DoxyCompactList}\small\item\em Destrutor do Objeto \hyperlink{class_class_logs}{Class\+Logs}. \end{DoxyCompactList}\item 
+\hyperlink{class_class_logs_a46fd12a969be663423a41d6320ab1d4a}{get\+\_\+log\+\_\+id} ()
+\begin{DoxyCompactList}\small\item\em Obter o id do Log. \end{DoxyCompactList}\item 
+\hyperlink{class_class_logs_ab8ea2a06dc1b1809230c9bb0a5ae929b}{get\+\_\+log\+\_\+acao} ()
+\begin{DoxyCompactList}\small\item\em Obter a Ação do Log. \end{DoxyCompactList}\item 
+\hyperlink{class_class_logs_ac8005c9321ce5ae129c81180a26a3403}{get\+\_\+log\+\_\+usuario\+\_\+nome} ()
+\begin{DoxyCompactList}\small\item\em Obter o nome do Usuário que criou o Log. \end{DoxyCompactList}\item 
+\hyperlink{class_class_logs_ac914a1afc0bfd651798dace25249610c}{get\+\_\+log\+\_\+usuario\+\_\+setor\+\_\+nome} ()
+\begin{DoxyCompactList}\small\item\em Obter o nome do Setor do Usuário que criou o Log. \end{DoxyCompactList}\item 
+\hyperlink{class_class_logs_a407b29a24c5deb4125384b32f92b17db}{get\+\_\+log\+\_\+data\+\_\+criacao} ()
+\begin{DoxyCompactList}\small\item\em Obter a data de criação do Log. \end{DoxyCompactList}\item 
+\hyperlink{class_class_logs_a50549ddf425a8f141dc9e05479611452}{get\+\_\+log\+\_\+de\+\_\+nome} ()
+\begin{DoxyCompactList}\small\item\em Obter o nome do Usuário ou do Setor que sofreu a Ação. \end{DoxyCompactList}\item 
+\hyperlink{class_class_logs_a2d4010eed611f258da9452e07166f475}{get\+\_\+log\+\_\+de\+\_\+setor\+\_\+nome} ()
+\begin{DoxyCompactList}\small\item\em Obter o nome do Setor caso a Ação seja para um Usuário, se não retorna null. \end{DoxyCompactList}\item 
+\hyperlink{class_class_logs_a9bc8d06ed7bddb98e3748f8692bf3082}{get\+\_\+log\+\_\+de\+\_\+numero} ()
+\begin{DoxyCompactList}\small\item\em Obter o número da Ficha que sofreu a Ação. \end{DoxyCompactList}\item 
+\hyperlink{class_class_logs_ac099cce47c31507d7c68b27af923cabd}{get\+\_\+log\+\_\+de\+\_\+telefone} ()
+\begin{DoxyCompactList}\small\item\em Obter o Telefone da Ficha que sofreu a Ação. \end{DoxyCompactList}\item 
+\hyperlink{class_class_logs_a47f48e084a822dd6a389575e01acea00}{get\+\_\+log\+\_\+para\+\_\+nome} ()
+\begin{DoxyCompactList}\small\item\em Obter o Nome do Setor para onde foi encaminhado a Ficha. \end{DoxyCompactList}\item 
+\hyperlink{class_class_logs_abedfbfb863da4fa609016ce17d504ab3}{get\+\_\+log\+\_\+ip} ()
+\begin{DoxyCompactList}\small\item\em Obter ip do Usuário. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 14 of file Class\+Logs.\+php.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_class_logs_a0c7ba5a301d60f9335443b0e71bcdbb8}\label{class_class_logs_a0c7ba5a301d60f9335443b0e71bcdbb8}} 
+\index{Class\+Logs@{Class\+Logs}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!Class\+Logs@{Class\+Logs}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$user = {\ttfamily null},  }\item[{}]{\$action = {\ttfamily null},  }\item[{}]{\$first = {\ttfamily null},  }\item[{}]{\$second = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Data de criação do Log. 
+
+Construtor do Objeto \hyperlink{class_class_logs}{Class\+Logs}
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id do Log \\
+\hline
+{\em user} & Usuário que gerou o log \\
+\hline
+{\em action} & Ação aplicada pelo Usuário que gerou o log \mbox{[}\char`\"{}\+C\+R\+I\+O\+U U\+S\+UÁ\+R\+I\+O\char`\"{},\char`\"{}\+C\+R\+I\+O\+U S\+E\+T\+O\+R\char`\"{},\char`\"{}\+E\+X\+C\+L\+U\+I\+U U\+S\+UÁ\+R\+I\+O\char`\"{}, \char`\"{}\+E\+X\+C\+L\+U\+I\+U S\+E\+T\+O\+R\char`\"{},\char`\"{}\+A\+T\+U\+A\+L\+I\+Z\+O\+U U\+S\+UÁ\+R\+I\+O\char`\"{},\char`\"{}\+A\+T\+U\+A\+L\+I\+Z\+O\+U S\+E\+T\+O\+R\char`\"{},\char`\"{}\+A\+T\+U\+A\+L\+I\+Z\+O\+U P\+E\+R\+F\+I\+L\char`\"{},\char`\"{}\+C\+R\+I\+O\+U F\+I\+C\+H\+A\char`\"{}, \char`\"{}\+C\+H\+A\+M\+O\+U F\+I\+C\+H\+A\char`\"{},\char`\"{}\+E\+N\+C\+A\+M\+I\+N\+H\+O\+U F\+I\+C\+H\+A\char`\"{},\char`\"{}\+F\+I\+N\+A\+L\+I\+Z\+O\+U F\+I\+C\+H\+A\char`\"{}\mbox{]} \\
+\hline
+{\em first} & Sujeito que sofreu a ação \\
+\hline
+{\em second} & Possivel segundo Sujeito que sofreu a ação \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file Class\+Logs.\+php.
+
+Here is the call graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{class_class_logs_a421831a265621325e1fdd19aace0c758}\label{class_class_logs_a421831a265621325e1fdd19aace0c758}} 
+\index{Class\+Logs@{Class\+Logs}!\+\_\+\+\_\+destruct@{\+\_\+\+\_\+destruct}}
+\index{\+\_\+\+\_\+destruct@{\+\_\+\+\_\+destruct}!Class\+Logs@{Class\+Logs}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+destruct()}{\_\_destruct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrutor do Objeto \hyperlink{class_class_logs}{Class\+Logs}. 
+
+
+
+Definition at line 132 of file Class\+Logs.\+php.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_class_logs_ab8ea2a06dc1b1809230c9bb0a5ae929b}\label{class_class_logs_ab8ea2a06dc1b1809230c9bb0a5ae929b}} 
+\index{Class\+Logs@{Class\+Logs}!get\+\_\+log\+\_\+acao@{get\+\_\+log\+\_\+acao}}
+\index{get\+\_\+log\+\_\+acao@{get\+\_\+log\+\_\+acao}!Class\+Logs@{Class\+Logs}}
+\subsubsection{\texorpdfstring{get\+\_\+log\+\_\+acao()}{get\_log\_acao()}}
+{\footnotesize\ttfamily get\+\_\+log\+\_\+acao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obter a Ação do Log. 
+
+\begin{DoxyReturn}{Returns}
+String Ação do Log 
+\end{DoxyReturn}
+
+
+Definition at line 203 of file Class\+Logs.\+php.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{class_class_logs_a407b29a24c5deb4125384b32f92b17db}\label{class_class_logs_a407b29a24c5deb4125384b32f92b17db}} 
+\index{Class\+Logs@{Class\+Logs}!get\+\_\+log\+\_\+data\+\_\+criacao@{get\+\_\+log\+\_\+data\+\_\+criacao}}
+\index{get\+\_\+log\+\_\+data\+\_\+criacao@{get\+\_\+log\+\_\+data\+\_\+criacao}!Class\+Logs@{Class\+Logs}}
+\subsubsection{\texorpdfstring{get\+\_\+log\+\_\+data\+\_\+criacao()}{get\_log\_data\_criacao()}}
+{\footnotesize\ttfamily get\+\_\+log\+\_\+data\+\_\+criacao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obter a data de criação do Log. 
+
+\begin{DoxyReturn}{Returns}
+String Data de criação do Log 
+\end{DoxyReturn}
+
+
+Definition at line 271 of file Class\+Logs.\+php.
+
+\mbox{\Hypertarget{class_class_logs_a50549ddf425a8f141dc9e05479611452}\label{class_class_logs_a50549ddf425a8f141dc9e05479611452}} 
+\index{Class\+Logs@{Class\+Logs}!get\+\_\+log\+\_\+de\+\_\+nome@{get\+\_\+log\+\_\+de\+\_\+nome}}
+\index{get\+\_\+log\+\_\+de\+\_\+nome@{get\+\_\+log\+\_\+de\+\_\+nome}!Class\+Logs@{Class\+Logs}}
+\subsubsection{\texorpdfstring{get\+\_\+log\+\_\+de\+\_\+nome()}{get\_log\_de\_nome()}}
+{\footnotesize\ttfamily get\+\_\+log\+\_\+de\+\_\+nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obter o nome do Usuário ou do Setor que sofreu a Ação. 
+
+\begin{DoxyReturn}{Returns}
+String Nome do Usuário ou do Setor que sofreu a Ação 
+\end{DoxyReturn}
+
+
+Definition at line 291 of file Class\+Logs.\+php.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_class_logs_a9bc8d06ed7bddb98e3748f8692bf3082}\label{class_class_logs_a9bc8d06ed7bddb98e3748f8692bf3082}} 
+\index{Class\+Logs@{Class\+Logs}!get\+\_\+log\+\_\+de\+\_\+numero@{get\+\_\+log\+\_\+de\+\_\+numero}}
+\index{get\+\_\+log\+\_\+de\+\_\+numero@{get\+\_\+log\+\_\+de\+\_\+numero}!Class\+Logs@{Class\+Logs}}
+\subsubsection{\texorpdfstring{get\+\_\+log\+\_\+de\+\_\+numero()}{get\_log\_de\_numero()}}
+{\footnotesize\ttfamily get\+\_\+log\+\_\+de\+\_\+numero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obter o número da Ficha que sofreu a Ação. 
+
+\begin{DoxyReturn}{Returns}
+String Número da Ficha que sofreu a Ação 
+\end{DoxyReturn}
+
+
+Definition at line 331 of file Class\+Logs.\+php.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_class_logs_a2d4010eed611f258da9452e07166f475}\label{class_class_logs_a2d4010eed611f258da9452e07166f475}} 
+\index{Class\+Logs@{Class\+Logs}!get\+\_\+log\+\_\+de\+\_\+setor\+\_\+nome@{get\+\_\+log\+\_\+de\+\_\+setor\+\_\+nome}}
+\index{get\+\_\+log\+\_\+de\+\_\+setor\+\_\+nome@{get\+\_\+log\+\_\+de\+\_\+setor\+\_\+nome}!Class\+Logs@{Class\+Logs}}
+\subsubsection{\texorpdfstring{get\+\_\+log\+\_\+de\+\_\+setor\+\_\+nome()}{get\_log\_de\_setor\_nome()}}
+{\footnotesize\ttfamily get\+\_\+log\+\_\+de\+\_\+setor\+\_\+nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obter o nome do Setor caso a Ação seja para um Usuário, se não retorna null. 
+
+\begin{DoxyReturn}{Returns}
+String Nome do Setor 
+\end{DoxyReturn}
+
+
+Definition at line 311 of file Class\+Logs.\+php.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_class_logs_ac099cce47c31507d7c68b27af923cabd}\label{class_class_logs_ac099cce47c31507d7c68b27af923cabd}} 
+\index{Class\+Logs@{Class\+Logs}!get\+\_\+log\+\_\+de\+\_\+telefone@{get\+\_\+log\+\_\+de\+\_\+telefone}}
+\index{get\+\_\+log\+\_\+de\+\_\+telefone@{get\+\_\+log\+\_\+de\+\_\+telefone}!Class\+Logs@{Class\+Logs}}
+\subsubsection{\texorpdfstring{get\+\_\+log\+\_\+de\+\_\+telefone()}{get\_log\_de\_telefone()}}
+{\footnotesize\ttfamily get\+\_\+log\+\_\+de\+\_\+telefone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obter o Telefone da Ficha que sofreu a Ação. 
+
+\begin{DoxyReturn}{Returns}
+String Telefone da Ficha que sofreu a Ação 
+\end{DoxyReturn}
+
+
+Definition at line 351 of file Class\+Logs.\+php.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_class_logs_a46fd12a969be663423a41d6320ab1d4a}\label{class_class_logs_a46fd12a969be663423a41d6320ab1d4a}} 
+\index{Class\+Logs@{Class\+Logs}!get\+\_\+log\+\_\+id@{get\+\_\+log\+\_\+id}}
+\index{get\+\_\+log\+\_\+id@{get\+\_\+log\+\_\+id}!Class\+Logs@{Class\+Logs}}
+\subsubsection{\texorpdfstring{get\+\_\+log\+\_\+id()}{get\_log\_id()}}
+{\footnotesize\ttfamily get\+\_\+log\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obter o id do Log. 
+
+\begin{DoxyReturn}{Returns}
+Int id do Log 
+\end{DoxyReturn}
+
+
+Definition at line 152 of file Class\+Logs.\+php.
+
+\mbox{\Hypertarget{class_class_logs_abedfbfb863da4fa609016ce17d504ab3}\label{class_class_logs_abedfbfb863da4fa609016ce17d504ab3}} 
+\index{Class\+Logs@{Class\+Logs}!get\+\_\+log\+\_\+ip@{get\+\_\+log\+\_\+ip}}
+\index{get\+\_\+log\+\_\+ip@{get\+\_\+log\+\_\+ip}!Class\+Logs@{Class\+Logs}}
+\subsubsection{\texorpdfstring{get\+\_\+log\+\_\+ip()}{get\_log\_ip()}}
+{\footnotesize\ttfamily get\+\_\+log\+\_\+ip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obter ip do Usuário. 
+
+\begin{DoxyReturn}{Returns}
+String ip do Usuário 
+\end{DoxyReturn}
+
+
+Definition at line 391 of file Class\+Logs.\+php.
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{class_class_logs_a47f48e084a822dd6a389575e01acea00}\label{class_class_logs_a47f48e084a822dd6a389575e01acea00}} 
+\index{Class\+Logs@{Class\+Logs}!get\+\_\+log\+\_\+para\+\_\+nome@{get\+\_\+log\+\_\+para\+\_\+nome}}
+\index{get\+\_\+log\+\_\+para\+\_\+nome@{get\+\_\+log\+\_\+para\+\_\+nome}!Class\+Logs@{Class\+Logs}}
+\subsubsection{\texorpdfstring{get\+\_\+log\+\_\+para\+\_\+nome()}{get\_log\_para\_nome()}}
+{\footnotesize\ttfamily get\+\_\+log\+\_\+para\+\_\+nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obter o Nome do Setor para onde foi encaminhado a Ficha. 
+
+\begin{DoxyReturn}{Returns}
+String Nome do Setor para onde foi encaminhado a Ficha 
+\end{DoxyReturn}
+
+
+Definition at line 371 of file Class\+Logs.\+php.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{class_class_logs_ac8005c9321ce5ae129c81180a26a3403}\label{class_class_logs_ac8005c9321ce5ae129c81180a26a3403}} 
+\index{Class\+Logs@{Class\+Logs}!get\+\_\+log\+\_\+usuario\+\_\+nome@{get\+\_\+log\+\_\+usuario\+\_\+nome}}
+\index{get\+\_\+log\+\_\+usuario\+\_\+nome@{get\+\_\+log\+\_\+usuario\+\_\+nome}!Class\+Logs@{Class\+Logs}}
+\subsubsection{\texorpdfstring{get\+\_\+log\+\_\+usuario\+\_\+nome()}{get\_log\_usuario\_nome()}}
+{\footnotesize\ttfamily get\+\_\+log\+\_\+usuario\+\_\+nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obter o nome do Usuário que criou o Log. 
+
+\begin{DoxyReturn}{Returns}
+String Nome do Usuário que criou o Log 
+\end{DoxyReturn}
+
+
+Definition at line 231 of file Class\+Logs.\+php.
+
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{class_class_logs_ac914a1afc0bfd651798dace25249610c}\label{class_class_logs_ac914a1afc0bfd651798dace25249610c}} 
+\index{Class\+Logs@{Class\+Logs}!get\+\_\+log\+\_\+usuario\+\_\+setor\+\_\+nome@{get\+\_\+log\+\_\+usuario\+\_\+setor\+\_\+nome}}
+\index{get\+\_\+log\+\_\+usuario\+\_\+setor\+\_\+nome@{get\+\_\+log\+\_\+usuario\+\_\+setor\+\_\+nome}!Class\+Logs@{Class\+Logs}}
+\subsubsection{\texorpdfstring{get\+\_\+log\+\_\+usuario\+\_\+setor\+\_\+nome()}{get\_log\_usuario\_setor\_nome()}}
+{\footnotesize\ttfamily get\+\_\+log\+\_\+usuario\+\_\+setor\+\_\+nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obter o nome do Setor do Usuário que criou o Log. 
+
+\begin{DoxyReturn}{Returns}
+String Nome do Setor do Usuário que criou o Log 
+\end{DoxyReturn}
+
+
+Definition at line 251 of file Class\+Logs.\+php.
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/var/www/chamador.\+itep.\+govrn/public/api/\hyperlink{_class_logs_8php}{Class\+Logs.\+php}\end{DoxyCompactItemize}

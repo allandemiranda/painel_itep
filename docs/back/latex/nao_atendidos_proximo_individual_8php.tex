@@ -1,0 +1,213 @@
+\hypertarget{nao_atendidos_proximo_individual_8php}{}\section{/var/www/chamador.itep.\+govrn/public/api/main\+Page/inicial/nao\+Atendidos\+Proximo\+Individual.php File Reference}
+\label{nao_atendidos_proximo_individual_8php}\index{/var/www/chamador.\+itep.\+govrn/public/api/main\+Page/inicial/nao\+Atendidos\+Proximo\+Individual.\+php@{/var/www/chamador.\+itep.\+govrn/public/api/main\+Page/inicial/nao\+Atendidos\+Proximo\+Individual.\+php}}
+
+
+Contem a lógica para gerenciar uma chamada de ficha individual.  
+
+
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{nao_atendidos_proximo_individual_8php_a252370d95039a38fa11afab784725d58}{\$dados} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Cabeçalho para conteudo json. \end{DoxyCompactList}\item 
+\hyperlink{nao_atendidos_proximo_individual_8php_a26b9f9373f7bb79dfcf8a86dff086b45}{\$body} = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Contem todos os dados a serem enviados. \end{DoxyCompactList}\item 
+\hyperlink{nao_atendidos_proximo_individual_8php_acedd13b51401130848ce18f4d5c52605}{\$json} = json\+\_\+decode(\$body, true)
+\begin{DoxyCompactList}\small\item\em Obtém todas as informações requisitadas P\+O\+ST. \end{DoxyCompactList}\item 
+\hyperlink{nao_atendidos_proximo_individual_8php_afc31993e855f9631572adfedcfe6f34b}{\$login} = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Decodifica as informações requisitadas. \end{DoxyCompactList}\item 
+\hyperlink{nao_atendidos_proximo_individual_8php_a3678c8769c9698fd30581c1016c5f475}{\$senha} = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Login do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{nao_atendidos_proximo_individual_8php_a6224af2851adb741887322ddb4c77102}{\$ficha\+\_\+id} = \$json\mbox{[}\textquotesingle{}ficha\+\_\+id\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Senha criptografada do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{nao_atendidos_proximo_individual_8php_abe4cc9788f52e49485473dc699537388}{try}
+\begin{DoxyCompactList}\small\item\em id da ficha a ser chamada \end{DoxyCompactList}\item 
+\hyperlink{nao_atendidos_proximo_individual_8php_aab83e7ad10d8c95fdbf231d086b83a1f}{\$ficha} = new \hyperlink{class_class_ficha}{Class\+Ficha}(\$ficha\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Obter a credencial do usário. \end{DoxyCompactList}\item 
+if((\$ficha-\/$>$get\+\_\+attendant\+\_\+status()==\char`\"{}EM A\+T\+E\+N\+D\+I\+M\+E\+N\+TO\char`\"{})$\vert$$\vert$(\$ficha-\/$>$get\+\_\+attendant\+\_\+status()==\char`\"{}C\+H\+A\+M\+AR\char`\"{})) \hyperlink{nao_atendidos_proximo_individual_8php_a78fd13ad9c6e0bbd8b5273273c4e2724}{else}
+\item 
+\hyperlink{nao_atendidos_proximo_individual_8php_a9a2cf15a653aee8be437f7ae474cd494}{\$log} = new \hyperlink{class_class_logs}{Class\+Logs}(null, \$credenciais-\/$>$get\+\_\+user(), \char`\"{}C\+H\+A\+M\+OU F\+I\+C\+HA\char`\"{}, \$ficha)
+\item 
+\hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch}(Exception \$e) \hyperlink{nao_atendidos_proximo_individual_8php_a1eb47d68a4a4f73debf91b15e179d813}{finally}
+\begin{DoxyCompactList}\small\item\em Criar um log desta operação no sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contem a lógica para gerenciar uma chamada de ficha individual. 
+
+\begin{DoxyAuthor}{Author}
+Allan de Miranda Silva (\href{mailto:allandemiranda@gmail.com}{\tt allandemiranda@gmail.\+com}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+27-\/03-\/2020
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020 D\+I\+G\+E\+TI I\+T\+E\+P/\+RN 
+\end{DoxyCopyright}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{nao_atendidos_proximo_individual_8php_a26b9f9373f7bb79dfcf8a86dff086b45}\label{nao_atendidos_proximo_individual_8php_a26b9f9373f7bb79dfcf8a86dff086b45}} 
+\index{nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}!\$body@{\$body}}
+\index{\$body@{\$body}!nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}}
+\subsubsection{\texorpdfstring{\$body}{$body}}
+{\footnotesize\ttfamily \$body = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})}
+
+
+
+Contem todos os dados a serem enviados. 
+
+
+
+Definition at line 21 of file nao\+Atendidos\+Proximo\+Individual.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_individual_8php_a252370d95039a38fa11afab784725d58}\label{nao_atendidos_proximo_individual_8php_a252370d95039a38fa11afab784725d58}} 
+\index{nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}!\$dados@{\$dados}}
+\index{\$dados@{\$dados}!nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}}
+\subsubsection{\texorpdfstring{\$dados}{$dados}}
+{\footnotesize\ttfamily \$dados = \mbox{[}$\,$\mbox{]}}
+
+
+
+Cabeçalho para conteudo json. 
+
+Cabeçalho com as classes e funções gerias 
+
+Definition at line 19 of file nao\+Atendidos\+Proximo\+Individual.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_individual_8php_aab83e7ad10d8c95fdbf231d086b83a1f}\label{nao_atendidos_proximo_individual_8php_aab83e7ad10d8c95fdbf231d086b83a1f}} 
+\index{nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}!\$ficha@{\$ficha}}
+\index{\$ficha@{\$ficha}!nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}}
+\subsubsection{\texorpdfstring{\$ficha}{$ficha}}
+{\footnotesize\ttfamily \$ficha = new \hyperlink{class_class_ficha}{Class\+Ficha}(\$ficha\+\_\+id)}
+
+
+
+Obter a credencial do usário. 
+
+
+
+Definition at line 32 of file nao\+Atendidos\+Proximo\+Individual.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_individual_8php_a6224af2851adb741887322ddb4c77102}\label{nao_atendidos_proximo_individual_8php_a6224af2851adb741887322ddb4c77102}} 
+\index{nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}!\$ficha\+\_\+id@{\$ficha\+\_\+id}}
+\index{\$ficha\+\_\+id@{\$ficha\+\_\+id}!nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}}
+\subsubsection{\texorpdfstring{\$ficha\+\_\+id}{$ficha\_id}}
+{\footnotesize\ttfamily \$ficha\+\_\+id = \$json\mbox{[}\textquotesingle{}ficha\+\_\+id\textquotesingle{}\mbox{]}}
+
+
+
+Senha criptografada do usuário que requisitou a informação. 
+
+
+
+Definition at line 27 of file nao\+Atendidos\+Proximo\+Individual.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_individual_8php_acedd13b51401130848ce18f4d5c52605}\label{nao_atendidos_proximo_individual_8php_acedd13b51401130848ce18f4d5c52605}} 
+\index{nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}!\$json@{\$json}}
+\index{\$json@{\$json}!nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}}
+\subsubsection{\texorpdfstring{\$json}{$json}}
+{\footnotesize\ttfamily \$json = json\+\_\+decode(\$body, true)}
+
+
+
+Obtém todas as informações requisitadas P\+O\+ST. 
+
+
+
+Definition at line 22 of file nao\+Atendidos\+Proximo\+Individual.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_individual_8php_a9a2cf15a653aee8be437f7ae474cd494}\label{nao_atendidos_proximo_individual_8php_a9a2cf15a653aee8be437f7ae474cd494}} 
+\index{nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}!\$log@{\$log}}
+\index{\$log@{\$log}!nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}}
+\subsubsection{\texorpdfstring{\$log}{$log}}
+{\footnotesize\ttfamily \$log = new \hyperlink{class_class_logs}{Class\+Logs}(null, \$credenciais-\/$>$get\+\_\+user(), \char`\"{}C\+H\+A\+M\+OU F\+I\+C\+HA\char`\"{}, \$ficha)}
+
+
+
+Definition at line 52 of file nao\+Atendidos\+Proximo\+Individual.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_individual_8php_afc31993e855f9631572adfedcfe6f34b}\label{nao_atendidos_proximo_individual_8php_afc31993e855f9631572adfedcfe6f34b}} 
+\index{nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}!\$login@{\$login}}
+\index{\$login@{\$login}!nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}}
+\subsubsection{\texorpdfstring{\$login}{$login}}
+{\footnotesize\ttfamily \$login = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}}
+
+
+
+Decodifica as informações requisitadas. 
+
+
+
+Definition at line 24 of file nao\+Atendidos\+Proximo\+Individual.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_individual_8php_a3678c8769c9698fd30581c1016c5f475}\label{nao_atendidos_proximo_individual_8php_a3678c8769c9698fd30581c1016c5f475}} 
+\index{nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}!\$senha@{\$senha}}
+\index{\$senha@{\$senha}!nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}}
+\subsubsection{\texorpdfstring{\$senha}{$senha}}
+{\footnotesize\ttfamily \$senha = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}}
+
+
+
+Login do usuário que requisitou a informação. 
+
+
+
+Definition at line 25 of file nao\+Atendidos\+Proximo\+Individual.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_individual_8php_a78fd13ad9c6e0bbd8b5273273c4e2724}\label{nao_atendidos_proximo_individual_8php_a78fd13ad9c6e0bbd8b5273273c4e2724}} 
+\index{nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}!else@{else}}
+\index{else@{else}!nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}}
+\subsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily if (( \$ficha-\/$>$get\+\_\+attendant\+\_\+status()==\char`\"{}EM A\+T\+E\+N\+D\+I\+M\+E\+N\+TO\char`\"{})$\vert$$\vert$( \$ficha-\/$>$get\+\_\+attendant\+\_\+status()==\char`\"{}C\+H\+A\+M\+AR\char`\"{})) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+        \hyperlink{nao_atendidos_proximo_individual_8php_aab83e7ad10d8c95fdbf231d086b83a1f}{$ficha}->set\_attendant\_status(\textcolor{stringliteral}{"CHAMAR"})
+\end{DoxyCode}
+
+
+Definition at line 41 of file nao\+Atendidos\+Proximo\+Individual.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_individual_8php_a1eb47d68a4a4f73debf91b15e179d813}\label{nao_atendidos_proximo_individual_8php_a1eb47d68a4a4f73debf91b15e179d813}} 
+\index{nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}!finally@{finally}}
+\index{finally@{finally}!nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}}
+\subsubsection{\texorpdfstring{finally}{finally}}
+{\footnotesize\ttfamily \hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch} (Exception \$e) finally}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    echo json\_encode(\hyperlink{nao_atendidos_proximo_individual_8php_a252370d95039a38fa11afab784725d58}{$dados}[0])
+\end{DoxyCode}
+
+
+Criar um log desta operação no sistema. 
+
+
+
+Definition at line 59 of file nao\+Atendidos\+Proximo\+Individual.\+php.
+
+\mbox{\Hypertarget{nao_atendidos_proximo_individual_8php_abe4cc9788f52e49485473dc699537388}\label{nao_atendidos_proximo_individual_8php_abe4cc9788f52e49485473dc699537388}} 
+\index{nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}!try@{try}}
+\index{try@{try}!nao\+Atendidos\+Proximo\+Individual.\+php@{nao\+Atendidos\+Proximo\+Individual.\+php}}
+\subsubsection{\texorpdfstring{try}{try}}
+{\footnotesize\ttfamily try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    $credenciais = \textcolor{keyword}{new} \hyperlink{class_class_credenciais}{ClassCredenciais}(\hyperlink{nao_atendidos_proximo_individual_8php_afc31993e855f9631572adfedcfe6f34b}{$login}, \hyperlink{nao_atendidos_proximo_individual_8php_a3678c8769c9698fd30581c1016c5f475}{$senha})
+\end{DoxyCode}
+
+
+id da ficha a ser chamada 
+
+
+
+Definition at line 29 of file nao\+Atendidos\+Proximo\+Individual.\+php.
+

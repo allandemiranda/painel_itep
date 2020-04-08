@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="imprimir_2ficha_2index_8php" kind="file" language="PHP">
+    <compoundname>index.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="imprimir_2ficha_2index_8php_1abe4cc9788f52e49485473dc699537388" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>try</definition>
+        <argsstring></argsstring>
+        <name>try</name>
+        <initializer>{
+    $body_ficha_id = null</initializer>
+        <briefdescription>
+<para>Cabeçalho com as classes e funções gerias. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/imprimir/ficha/index.php" line="18" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/imprimir/ficha/index.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="imprimir_2ficha_2index_8php_1a4b493c640f7b266035c18cd019fdd275" prot="public" static="no" mutable="no">
+        <type>if($_GET[&quot;id&quot;]==null)</type>
+        <definition>if ( $_GET[&quot;id&quot;]==null) else</definition>
+        <argsstring></argsstring>
+        <name>else</name>
+        <initializer>{
+        $temp = $_GET[&quot;id&quot;]</initializer>
+        <briefdescription>
+<para>Armazena o id da ficha a ser impressa. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/imprimir/ficha/index.php" line="23" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/imprimir/ficha/index.php" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="imprimir_2ficha_2index_8php_1a7388a2b9be02ae3a1a6e5bc96d972866" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$body_ficha_id</definition>
+        <argsstring></argsstring>
+        <name>$body_ficha_id</name>
+        <initializer>= <ref refid="_header_8php_1a8909d20d656fecf83ebaa2bed0cab2c1" kindref="member">input_check</ref>($temp)</initializer>
+        <briefdescription>
+<para>Obtem número da ficha a ser impressa. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/imprimir/ficha/index.php" line="25" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/imprimir/ficha/index.php" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="imprimir_2ficha_2index_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$ficha</definition>
+        <argsstring></argsstring>
+        <name>$ficha</name>
+        <initializer>= new <ref refid="class_class_ficha" kindref="compound">ClassFicha</ref>($body_ficha_id)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/imprimir/ficha/index.php" line="28" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/imprimir/ficha/index.php" bodystart="28" bodyend="-1"/>
+        <referencedby refid="nao_atendidos_proximo_8php_1aa053116387f6a1dc0020775d61ef19e0" compoundref="nao_atendidos_proximo_8php" startline="34" endline="212">set_emAtendimento</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="imprimir_2ficha_2index_8php_1ae4caa8044246171c958ceab2ed5374ee" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$empresa</definition>
+        <argsstring></argsstring>
+        <name>$empresa</name>
+        <initializer>= new <ref refid="class_class_company" kindref="compound">ClassCompany</ref>()</initializer>
+        <briefdescription>
+<para>Obtem ficha pelo seu id. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/imprimir/ficha/index.php" line="29" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/imprimir/ficha/index.php" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="imprimir_2ficha_2index_8php_1a8104793004944f01dd070fc8b1ade3c4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>catch(\Throwable $th)</definition>
+        <argsstring>(\Throwable $th)</argsstring>
+        <name>catch</name>
+        <briefdescription>
+<para>Obter dados da empresa. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/imprimir/ficha/index.php" line="30" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/imprimir/ficha/index.php" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">?&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">include($_SERVER[</highlight><highlight class="stringliteral">&apos;DOCUMENT_ROOT&apos;</highlight><highlight class="normal">]<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/api/Header.php&apos;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="imprimir_2ficha_2index_8php_1abe4cc9788f52e49485473dc699537388" refkind="member"><highlight class="normal"></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="imprimir_2ficha_2index_8php_1a7388a2b9be02ae3a1a6e5bc96d972866" kindref="member">$body_ficha_id</ref><sp/>=<sp/>null;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($_GET[</highlight><highlight class="stringliteral">&quot;id&quot;</highlight><highlight class="normal">]<sp/>==<sp/>null)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Exception(</highlight><highlight class="stringliteral">&quot;Tentativa<sp/>de<sp/>injeção<sp/>de<sp/>código&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="23" refid="imprimir_2ficha_2index_8php_1a4b493c640f7b266035c18cd019fdd275" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$temp<sp/>=<sp/>$_GET[</highlight><highlight class="stringliteral">&quot;id&quot;</highlight><highlight class="normal">];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25" refid="imprimir_2ficha_2index_8php_1a7388a2b9be02ae3a1a6e5bc96d972866" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="imprimir_2ficha_2index_8php_1a7388a2b9be02ae3a1a6e5bc96d972866" kindref="member">$body_ficha_id</ref><sp/>=<sp/><ref refid="_header_8php_1a8909d20d656fecf83ebaa2bed0cab2c1" kindref="member">input_check</ref>($temp);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="imprimir_2ficha_2index_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="imprimir_2ficha_2index_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" kindref="member">$ficha</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_class_ficha" kindref="compound">ClassFicha</ref>(<ref refid="imprimir_2ficha_2index_8php_1a7388a2b9be02ae3a1a6e5bc96d972866" kindref="member">$body_ficha_id</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="imprimir_2ficha_2index_8php_1ae4caa8044246171c958ceab2ed5374ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="imprimir_2ficha_2index_8php_1ae4caa8044246171c958ceab2ed5374ee" kindref="member">$empresa</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_class_company" kindref="compound">ClassCompany</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30" refid="imprimir_2ficha_2index_8php_1a8104793004944f01dd070fc8b1ade3c4" refkind="member"><highlight class="normal">}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(\Throwable<sp/>$th)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>echo<sp/>$th;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;Erro<sp/>ao<sp/>imprimir<sp/>a<sp/>ficha!<sp/>Não<sp/>tente<sp/>imprimir<sp/>novamente.<sp/>Feche<sp/>a<sp/>aba<sp/>e<sp/>contacte<sp/>a<sp/>DIGETI<sp/>-<sp/>ITEP/RN.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Página<sp/>HTML<sp/>no<sp/>formato<sp/>necessário<sp/>para<sp/>impressão<sp/>da<sp/>ficha</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">?&gt;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">&lt;!DOCTYPE<sp/>HTML&gt;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">&lt;html&gt;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">&lt;head&gt;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;title&gt;IMPRIMIR<sp/>FICHA&lt;/title&gt;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;meta<sp/>name=</highlight><highlight class="stringliteral">&quot;viewport&quot;</highlight><highlight class="normal"><sp/>content=</highlight><highlight class="stringliteral">&quot;width=device-width,<sp/>initial-scale=1&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;meta<sp/>http-equiv=</highlight><highlight class="stringliteral">&quot;Content-Type&quot;</highlight><highlight class="normal"><sp/>content=</highlight><highlight class="stringliteral">&quot;text/html;<sp/>charset=utf-8&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;style&gt;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>body<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>background-color:<sp/>#ffffff;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color:<sp/>#000000;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font-family:<sp/></highlight><highlight class="stringliteral">&apos;Times<sp/>New<sp/>Roman&apos;</highlight><highlight class="normal">,<sp/>Times,<sp/>serif;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font-size:<sp/>15pt;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line-height:<sp/>1.1;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>margin-top:<sp/>1%;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>width:<sp/>71mm;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>height:<sp/>100%;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>text-align:<sp/>center;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>word-wrap:<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">-word;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/style&gt;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;script&gt;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>ClosePrint()<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setTimeout(</highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.print();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/>500);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.onfocus<sp/>=<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setTimeout(</highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.close();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/>500);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/script&gt;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">&lt;/head&gt;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">&lt;body<sp/>onload=</highlight><highlight class="stringliteral">&quot;ClosePrint()&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;div&gt;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div&gt;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p&gt;&lt;?php<sp/>echo<sp/>date(</highlight><highlight class="stringliteral">&quot;d-m-Y<sp/>H:i:s&quot;</highlight><highlight class="normal">,<sp/>strtotime(<ref refid="imprimir_2ficha_2index_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" kindref="member">$ficha</ref>-&gt;get_date()));<sp/>?&gt;&lt;/p&gt;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div&gt;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;h1&gt;Senha:<sp/>&lt;?php<sp/>echo<sp/><ref refid="imprimir_2ficha_2index_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" kindref="member">$ficha</ref>-&gt;get_number();<sp/>?&gt;&lt;/h1&gt;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div&gt;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p&gt;Nome:<sp/>&lt;?php<sp/>echo<sp/><ref refid="imprimir_2ficha_2index_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" kindref="member">$ficha</ref>-&gt;get_name();<sp/>?&gt;&lt;/p&gt;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div&gt;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p&gt;Tel.:<sp/>&lt;?php<sp/>echo<sp/><ref refid="imprimir_2ficha_2index_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" kindref="member">$ficha</ref>-&gt;get_phone();<sp/>?&gt;&lt;/p&gt;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div&gt;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p&gt;Atendimento:<sp/>&lt;?php<sp/>echo<sp/><ref refid="imprimir_2ficha_2index_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" kindref="member">$ficha</ref>-&gt;get_attendant_sector()-&gt;get_name();<sp/>?&gt;&lt;/p&gt;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div&gt;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p<sp/>style=</highlight><highlight class="stringliteral">&quot;font-size:<sp/>70%&quot;</highlight><highlight class="normal">&gt;&lt;?php<sp/>echo<sp/><ref refid="imprimir_2ficha_2index_8php_1ae4caa8044246171c958ceab2ed5374ee" kindref="member">$empresa</ref>-&gt;get_footer_print();<sp/>?&gt;&lt;/p&gt;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">&lt;/body&gt;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">&lt;/html&gt;</highlight></codeline>
+    </programlisting>
+    <location file="/var/www/chamador.itep.govrn/public/api/imprimir/ficha/index.php"/>
+  </compounddef>
+</doxygen>

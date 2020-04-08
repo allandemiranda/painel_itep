@@ -1,0 +1,114 @@
+.TH "/var/www/chamador.itep.govrn/public/api/Header.php" 3 "Mon Apr 6 2020" "Chamador ITEP - API" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/var/www/chamador.itep.govrn/public/api/Header.php \- Contem todo o cabeçalho com classes e funções gerais do sistema\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBencrypt_password\fP ($value)"
+.br
+.RI "\fBClassConnection\fP\&. "
+.ti -1c
+.RI "\fBinput_check\fP ($valor)"
+.br
+.RI "Validar entradas para evitar injeção de código errado\&. "
+.ti -1c
+.RI "\fBgeneratorPassword\fP ($tamanho=5, $minusculas=false, $numeros=true, $simbolos=false)"
+.br
+.RI "Função para gerar senhas aleatórias\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contem todo o cabeçalho com classes e funções gerais do sistema\&. 
+
+Contem todo o cabeçalho necessário para página ser de conteudo json\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Allan de Miranda Silva (allandemiranda@gmail.com) 
+.RE
+.PP
+\fBVersion:\fP
+.RS 4
+1\&.0\&.0 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+02-03-2020
+.RE
+.PP
+\fBCopyright:\fP
+.RS 4
+Copyright (c) 2020 DIGETI ITEP/RN 
+.RE
+.PP
+
+.PP
+Definition in file \fBHeader\&.php\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "encrypt_password ( $value)"
+
+.PP
+\fBClassConnection\fP\&. \fBClassUsuario\fP \fBClassSetor\fP \fBClassFicha\fP \fBClassCompany\fP \fBClassCredenciais\fP \fBClassLogs\fP Criptografa a Senha do Funcionário para o padrão adotado no sistema
+.PP
+\fBReturns:\fP
+.RS 4
+String Senha criptografada 
+.RE
+.PP
+
+.PP
+Definition at line 31 of file Header\&.php\&.
+.SS "generatorPassword ( $tamanho = \fC5\fP,  $minusculas = \fCfalse\fP,  $numeros = \fCtrue\fP,  $simbolos = \fCfalse\fP)"
+
+.PP
+Função para gerar senhas aleatórias\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItamanho\fP Tamanho da senha a ser gerada 
+.br
+\fIminusculas\fP Se terá letras minusculas 
+.br
+\fInumeros\fP Se terá números 
+.br
+\fIsimbolos\fP Se terá símbolos
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String A senha gerada 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file Header\&.php\&.
+.SS "input_check ( $valor)"
+
+.PP
+Validar entradas para evitar injeção de código errado\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalor\fP Um valor de entrada a ser analisado 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String Valor validado para interação 
+.RE
+.PP
+
+.PP
+Definition at line 46 of file Header\&.php\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chamador ITEP - API from the source code\&.

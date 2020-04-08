@@ -1,0 +1,756 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_class_logs" kind="class" language="PHP" prot="public">
+    <compoundname>ClassLogs</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_class_logs_1ae97941710d863131c700f069b109991e" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$id</definition>
+        <argsstring></argsstring>
+        <name>$id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="16" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_logs_1a02185010a350a136ec7fd6eeee5811af" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$log_usuario_nome</definition>
+        <argsstring></argsstring>
+        <name>$log_usuario_nome</name>
+        <briefdescription>
+<para>id do log registrado </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="17" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_logs_1ac3787034f6e907c21e41a67226dd1c19" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$log_usuario_setor_nome</definition>
+        <argsstring></argsstring>
+        <name>$log_usuario_setor_nome</name>
+        <briefdescription>
+<para>Nome do Usuário que criou o Log. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="18" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_logs_1ae9e279752db8bf5c8b2f6e91a15d5fdd" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$log_acao</definition>
+        <argsstring></argsstring>
+        <name>$log_acao</name>
+        <briefdescription>
+<para>Nome do Setor do Usuário que criou o Log. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="19" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_logs_1a51c38952aef5c81e4d707f585127b80b" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$log_de_nome</definition>
+        <argsstring></argsstring>
+        <name>$log_de_nome</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Ação do Log. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="20" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_logs_1aed35997d711f037d08c6fe95229a4347" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$log_de_setor_nome</definition>
+        <argsstring></argsstring>
+        <name>$log_de_setor_nome</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Nome do Usuário ou do Setor que sofreu a Ação. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="21" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_logs_1aff2faf16aae6a9cac8305269de43476c" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$log_de_numero</definition>
+        <argsstring></argsstring>
+        <name>$log_de_numero</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Caso a Ação seja para um Usuário, este é o nome do Setor dele. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="22" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_logs_1af389b73266594d90cce61096f464e1fe" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$log_de_telefone</definition>
+        <argsstring></argsstring>
+        <name>$log_de_telefone</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Número da Ficha que sofreu a Ação. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="23" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_logs_1ae229155aecd77f2cc23a893be6da7572" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$log_para_nome</definition>
+        <argsstring></argsstring>
+        <name>$log_para_nome</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Telefone da Ficha que sofreu a Ação. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="24" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_logs_1a16cade2b31a07d052b03cd36396e8590" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$log_ip</definition>
+        <argsstring></argsstring>
+        <name>$log_ip</name>
+        <briefdescription>
+<para>Nome do Setor para onde foi encaminhado a Ficha. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="25" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_logs_1a9c10ebace209320b039c89d0b6fb4fd8" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$log_data_criacao</definition>
+        <argsstring></argsstring>
+        <name>$log_data_criacao</name>
+        <briefdescription>
+<para>ip do Usuário </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="26" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_class_logs_1a0c7ba5a301d60f9335443b0e71bcdbb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($id, $user=null, $action=null, $first=null, $second=null)</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <param>
+          <declname>$user</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <declname>$action</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <declname>$first</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <declname>$second</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Data de criação do Log. </para>        </briefdescription>
+        <detaileddescription>
+<para>Construtor do Objeto <ref refid="class_class_logs" kindref="compound">ClassLogs</ref></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id do Log </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Usuário que gerou o log </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ação aplicada pelo Usuário que gerou o log [&quot;CRIOU USUÁRIO&quot;,&quot;CRIOU SETOR&quot;,&quot;EXCLUIU USUÁRIO&quot;, &quot;EXCLUIU SETOR&quot;,&quot;ATUALIZOU USUÁRIO&quot;,&quot;ATUALIZOU SETOR&quot;,&quot;ATUALIZOU PERFIL&quot;,&quot;CRIOU FICHA&quot;, &quot;CHAMOU FICHA&quot;,&quot;ENCAMINHOU FICHA&quot;,&quot;FINALIZOU FICHA&quot;] </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sujeito que sofreu a ação </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>second</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Possivel segundo Sujeito que sofreu a ação </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="39" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="39" bodyend="126"/>
+        <references refid="atendidos_8php_1a1fa3127fc82f96b1436d871ef02be319" compoundref="atendidos_8php" startline="29">$db</references>
+        <references refid="atendidos_8php_1a047170d6020a882807665812a27e2525" compoundref="atendidos_8php" startline="31">$sql</references>
+        <references refid="class_class_logs_1ac8005c9321ce5ae129c81180a26a3403" compoundref="_class_logs_8php" startline="231" endline="234">get_log_usuario_nome</references>
+        <references refid="class_class_logs_1ac914a1afc0bfd651798dace25249610c" compoundref="_class_logs_8php" startline="251" endline="254">get_log_usuario_setor_nome</references>
+        <references refid="class_class_logs_1ab8ea2a06dc1b1809230c9bb0a5ae929b" compoundref="_class_logs_8php" startline="203" endline="206">get_log_acao</references>
+        <references refid="class_class_logs_1a50549ddf425a8f141dc9e05479611452" compoundref="_class_logs_8php" startline="291" endline="294">get_log_de_nome</references>
+        <references refid="class_class_logs_1a2d4010eed611f258da9452e07166f475" compoundref="_class_logs_8php" startline="311" endline="314">get_log_de_setor_nome</references>
+        <references refid="class_class_logs_1a9bc8d06ed7bddb98e3748f8692bf3082" compoundref="_class_logs_8php" startline="331" endline="334">get_log_de_numero</references>
+        <references refid="class_class_logs_1ac099cce47c31507d7c68b27af923cabd" compoundref="_class_logs_8php" startline="351" endline="354">get_log_de_telefone</references>
+        <references refid="class_class_logs_1a47f48e084a822dd6a389575e01acea00" compoundref="_class_logs_8php" startline="371" endline="374">get_log_para_nome</references>
+        <references refid="class_class_logs_1abedfbfb863da4fa609016ce17d504ab3" compoundref="_class_logs_8php" startline="391" endline="394">get_log_ip</references>
+        <references refid="atendidos_8php_1a112ef069ddc0454086e3d1e6d8d55d07" compoundref="atendidos_8php" startline="32">$result</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1a421831a265621325e1fdd19aace0c758" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__destruct</definition>
+        <argsstring>()</argsstring>
+        <name>__destruct</name>
+        <briefdescription>
+<para>Destrutor do Objeto <ref refid="class_class_logs" kindref="compound">ClassLogs</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="132" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="132" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1a46fd12a969be663423a41d6320ab1d4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_log_id</definition>
+        <argsstring>()</argsstring>
+        <name>get_log_id</name>
+        <briefdescription>
+<para>Obter o id do Log. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Int id do Log </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="152" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="152" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1ab8ea2a06dc1b1809230c9bb0a5ae929b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_log_acao</definition>
+        <argsstring>()</argsstring>
+        <name>get_log_acao</name>
+        <briefdescription>
+<para>Obter a Ação do Log. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Ação do Log </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="203" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="203" bodyend="206"/>
+        <referencedby refid="class_class_logs_1a0c7ba5a301d60f9335443b0e71bcdbb8" compoundref="_class_logs_8php" startline="39" endline="126">__construct</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1ac8005c9321ce5ae129c81180a26a3403" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_log_usuario_nome</definition>
+        <argsstring>()</argsstring>
+        <name>get_log_usuario_nome</name>
+        <briefdescription>
+<para>Obter o nome do Usuário que criou o Log. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Nome do Usuário que criou o Log </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="231" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="231" bodyend="234"/>
+        <referencedby refid="class_class_logs_1a0c7ba5a301d60f9335443b0e71bcdbb8" compoundref="_class_logs_8php" startline="39" endline="126">__construct</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1ac914a1afc0bfd651798dace25249610c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_log_usuario_setor_nome</definition>
+        <argsstring>()</argsstring>
+        <name>get_log_usuario_setor_nome</name>
+        <briefdescription>
+<para>Obter o nome do Setor do Usuário que criou o Log. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Nome do Setor do Usuário que criou o Log </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="251" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="251" bodyend="254"/>
+        <referencedby refid="class_class_logs_1a0c7ba5a301d60f9335443b0e71bcdbb8" compoundref="_class_logs_8php" startline="39" endline="126">__construct</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1a407b29a24c5deb4125384b32f92b17db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_log_data_criacao</definition>
+        <argsstring>()</argsstring>
+        <name>get_log_data_criacao</name>
+        <briefdescription>
+<para>Obter a data de criação do Log. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Data de criação do Log </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="271" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="271" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1a50549ddf425a8f141dc9e05479611452" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_log_de_nome</definition>
+        <argsstring>()</argsstring>
+        <name>get_log_de_nome</name>
+        <briefdescription>
+<para>Obter o nome do Usuário ou do Setor que sofreu a Ação. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Nome do Usuário ou do Setor que sofreu a Ação </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="291" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="291" bodyend="294"/>
+        <referencedby refid="class_class_logs_1a0c7ba5a301d60f9335443b0e71bcdbb8" compoundref="_class_logs_8php" startline="39" endline="126">__construct</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1a2d4010eed611f258da9452e07166f475" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_log_de_setor_nome</definition>
+        <argsstring>()</argsstring>
+        <name>get_log_de_setor_nome</name>
+        <briefdescription>
+<para>Obter o nome do Setor caso a Ação seja para um Usuário, se não retorna null. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Nome do Setor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="311" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="311" bodyend="314"/>
+        <referencedby refid="class_class_logs_1a0c7ba5a301d60f9335443b0e71bcdbb8" compoundref="_class_logs_8php" startline="39" endline="126">__construct</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1a9bc8d06ed7bddb98e3748f8692bf3082" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_log_de_numero</definition>
+        <argsstring>()</argsstring>
+        <name>get_log_de_numero</name>
+        <briefdescription>
+<para>Obter o número da Ficha que sofreu a Ação. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Número da Ficha que sofreu a Ação </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="331" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="331" bodyend="334"/>
+        <referencedby refid="class_class_logs_1a0c7ba5a301d60f9335443b0e71bcdbb8" compoundref="_class_logs_8php" startline="39" endline="126">__construct</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1ac099cce47c31507d7c68b27af923cabd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_log_de_telefone</definition>
+        <argsstring>()</argsstring>
+        <name>get_log_de_telefone</name>
+        <briefdescription>
+<para>Obter o Telefone da Ficha que sofreu a Ação. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Telefone da Ficha que sofreu a Ação </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="351" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="351" bodyend="354"/>
+        <referencedby refid="class_class_logs_1a0c7ba5a301d60f9335443b0e71bcdbb8" compoundref="_class_logs_8php" startline="39" endline="126">__construct</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1a47f48e084a822dd6a389575e01acea00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_log_para_nome</definition>
+        <argsstring>()</argsstring>
+        <name>get_log_para_nome</name>
+        <briefdescription>
+<para>Obter o Nome do Setor para onde foi encaminhado a Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Nome do Setor para onde foi encaminhado a Ficha </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="371" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="371" bodyend="374"/>
+        <referencedby refid="class_class_logs_1a0c7ba5a301d60f9335443b0e71bcdbb8" compoundref="_class_logs_8php" startline="39" endline="126">__construct</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1abedfbfb863da4fa609016ce17d504ab3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_log_ip</definition>
+        <argsstring>()</argsstring>
+        <name>get_log_ip</name>
+        <briefdescription>
+<para>Obter ip do Usuário. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String ip do Usuário </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="391" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="391" bodyend="394"/>
+        <referencedby refid="class_class_logs_1a0c7ba5a301d60f9335443b0e71bcdbb8" compoundref="_class_logs_8php" startline="39" endline="126">__construct</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_class_logs_1af3d5752cb8752ba5cf073170b1f6e92c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_log_id</definition>
+        <argsstring>($id)</argsstring>
+        <name>set_log_id</name>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <briefdescription>
+<para>definir o id do Log </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id do Log </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="162" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="162" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1a5e80a8d6f07811fa9b8106a7f9b19bdb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>check_action</definition>
+        <argsstring>($action)</argsstring>
+        <name>check_action</name>
+        <param>
+          <declname>$action</declname>
+        </param>
+        <briefdescription>
+<para>Verificar se a Ação é válida. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ação gerada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Boolean Se a Ação é válida </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>messenger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contem todas as possiveis ações do sistema</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="173" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="173" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1acab89f6172952e7cd93743b754e83632" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_log_acao</definition>
+        <argsstring>($action)</argsstring>
+        <name>set_log_acao</name>
+        <param>
+          <declname>$action</declname>
+        </param>
+        <briefdescription>
+<para>Definir a Ação do Log. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ação gerada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="213" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="213" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1af0e39b8f2341e07cb80ca87b9fbd5ac5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_log_usuario_nome</definition>
+        <argsstring>($name)</argsstring>
+        <name>set_log_usuario_nome</name>
+        <param>
+          <declname>$name</declname>
+        </param>
+        <briefdescription>
+<para>Definir o nome do Usuário que criou o Log. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do Usuário que criou o Log </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="241" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="241" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1a458929241dfa9623fd78924aa8a39464" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_log_usuario_setor_nome</definition>
+        <argsstring>($name)</argsstring>
+        <name>set_log_usuario_setor_nome</name>
+        <param>
+          <declname>$name</declname>
+        </param>
+        <briefdescription>
+<para>Definir o nome do Setor do Usuário que criou o Log. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do Setor do Usuário que criou o Log </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="261" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="261" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1a009c68907d60bebe24a101e354286ca7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_log_data_criacao</definition>
+        <argsstring>($date)</argsstring>
+        <name>set_log_data_criacao</name>
+        <param>
+          <declname>$date</declname>
+        </param>
+        <briefdescription>
+<para>Definir a data de criação do Log. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data de criação do Log </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="281" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="281" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1abbed71b52c4f7935610c07747eecde0d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_log_de_nome</definition>
+        <argsstring>($name)</argsstring>
+        <name>set_log_de_nome</name>
+        <param>
+          <declname>$name</declname>
+        </param>
+        <briefdescription>
+<para>Definir o nome do Usuário ou do Setor que sofreu a Ação. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do Usuário ou do Setor que sofreu a Ação </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="301" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="301" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1abfafdc46beafce8d9d84687b73aabd92" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_log_de_setor_nome</definition>
+        <argsstring>($name)</argsstring>
+        <name>set_log_de_setor_nome</name>
+        <param>
+          <declname>$name</declname>
+        </param>
+        <briefdescription>
+<para>Definir o nome do Setor caso a Ação seja para um Usuário, se não retorna null. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do Setor </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="321" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="321" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1ab6cc9c7385e884c55fb26eefb980ea79" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_log_de_numero</definition>
+        <argsstring>($number)</argsstring>
+        <name>set_log_de_numero</name>
+        <param>
+          <declname>$number</declname>
+        </param>
+        <briefdescription>
+<para>Definir o número da Ficha que sofreu a Ação. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número da Ficha que sofreu a Ação </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="341" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="341" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1ae895d704b7ac5523978b3cd3b4d60faf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_log_de_telefone</definition>
+        <argsstring>($phone)</argsstring>
+        <name>set_log_de_telefone</name>
+        <param>
+          <declname>$phone</declname>
+        </param>
+        <briefdescription>
+<para>Definir o Telefone da Ficha que sofreu a Ação. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>phone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Telefone da Ficha que sofreu a Ação </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="361" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="361" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1ada8f81d33ce15864d4897ecfa7e5ec7e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_log_para_nome</definition>
+        <argsstring>($name)</argsstring>
+        <name>set_log_para_nome</name>
+        <param>
+          <declname>$name</declname>
+        </param>
+        <briefdescription>
+<para>Definir o Nome do Setor para onde foi encaminhado a Ficha. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do Setor para onde foi encaminhado a Ficha </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="381" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="381" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_logs_1a80625fac20d689dab29800c0c999b181" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_log_ip</definition>
+        <argsstring>($ip)</argsstring>
+        <name>set_log_ip</name>
+        <param>
+          <declname>$ip</declname>
+        </param>
+        <briefdescription>
+<para>Definir o ip do Usuário. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ip do Usuário </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="401" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="401" bodyend="404"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" line="15" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassLogs.php" bodystart="14" bodyend="405"/>
+    <listofallmembers>
+      <member refid="class_class_logs_1ae97941710d863131c700f069b109991e" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>$id</name></member>
+      <member refid="class_class_logs_1ae9e279752db8bf5c8b2f6e91a15d5fdd" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>$log_acao</name></member>
+      <member refid="class_class_logs_1a9c10ebace209320b039c89d0b6fb4fd8" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>$log_data_criacao</name></member>
+      <member refid="class_class_logs_1a51c38952aef5c81e4d707f585127b80b" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>$log_de_nome</name></member>
+      <member refid="class_class_logs_1aff2faf16aae6a9cac8305269de43476c" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>$log_de_numero</name></member>
+      <member refid="class_class_logs_1aed35997d711f037d08c6fe95229a4347" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>$log_de_setor_nome</name></member>
+      <member refid="class_class_logs_1af389b73266594d90cce61096f464e1fe" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>$log_de_telefone</name></member>
+      <member refid="class_class_logs_1a16cade2b31a07d052b03cd36396e8590" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>$log_ip</name></member>
+      <member refid="class_class_logs_1ae229155aecd77f2cc23a893be6da7572" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>$log_para_nome</name></member>
+      <member refid="class_class_logs_1a02185010a350a136ec7fd6eeee5811af" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>$log_usuario_nome</name></member>
+      <member refid="class_class_logs_1ac3787034f6e907c21e41a67226dd1c19" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>$log_usuario_setor_nome</name></member>
+      <member refid="class_class_logs_1a0c7ba5a301d60f9335443b0e71bcdbb8" prot="public" virt="non-virtual"><scope>ClassLogs</scope><name>__construct</name></member>
+      <member refid="class_class_logs_1a421831a265621325e1fdd19aace0c758" prot="public" virt="non-virtual"><scope>ClassLogs</scope><name>__destruct</name></member>
+      <member refid="class_class_logs_1a5e80a8d6f07811fa9b8106a7f9b19bdb" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>check_action</name></member>
+      <member refid="class_class_logs_1ab8ea2a06dc1b1809230c9bb0a5ae929b" prot="public" virt="non-virtual"><scope>ClassLogs</scope><name>get_log_acao</name></member>
+      <member refid="class_class_logs_1a407b29a24c5deb4125384b32f92b17db" prot="public" virt="non-virtual"><scope>ClassLogs</scope><name>get_log_data_criacao</name></member>
+      <member refid="class_class_logs_1a50549ddf425a8f141dc9e05479611452" prot="public" virt="non-virtual"><scope>ClassLogs</scope><name>get_log_de_nome</name></member>
+      <member refid="class_class_logs_1a9bc8d06ed7bddb98e3748f8692bf3082" prot="public" virt="non-virtual"><scope>ClassLogs</scope><name>get_log_de_numero</name></member>
+      <member refid="class_class_logs_1a2d4010eed611f258da9452e07166f475" prot="public" virt="non-virtual"><scope>ClassLogs</scope><name>get_log_de_setor_nome</name></member>
+      <member refid="class_class_logs_1ac099cce47c31507d7c68b27af923cabd" prot="public" virt="non-virtual"><scope>ClassLogs</scope><name>get_log_de_telefone</name></member>
+      <member refid="class_class_logs_1a46fd12a969be663423a41d6320ab1d4a" prot="public" virt="non-virtual"><scope>ClassLogs</scope><name>get_log_id</name></member>
+      <member refid="class_class_logs_1abedfbfb863da4fa609016ce17d504ab3" prot="public" virt="non-virtual"><scope>ClassLogs</scope><name>get_log_ip</name></member>
+      <member refid="class_class_logs_1a47f48e084a822dd6a389575e01acea00" prot="public" virt="non-virtual"><scope>ClassLogs</scope><name>get_log_para_nome</name></member>
+      <member refid="class_class_logs_1ac8005c9321ce5ae129c81180a26a3403" prot="public" virt="non-virtual"><scope>ClassLogs</scope><name>get_log_usuario_nome</name></member>
+      <member refid="class_class_logs_1ac914a1afc0bfd651798dace25249610c" prot="public" virt="non-virtual"><scope>ClassLogs</scope><name>get_log_usuario_setor_nome</name></member>
+      <member refid="class_class_logs_1acab89f6172952e7cd93743b754e83632" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>set_log_acao</name></member>
+      <member refid="class_class_logs_1a009c68907d60bebe24a101e354286ca7" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>set_log_data_criacao</name></member>
+      <member refid="class_class_logs_1abbed71b52c4f7935610c07747eecde0d" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>set_log_de_nome</name></member>
+      <member refid="class_class_logs_1ab6cc9c7385e884c55fb26eefb980ea79" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>set_log_de_numero</name></member>
+      <member refid="class_class_logs_1abfafdc46beafce8d9d84687b73aabd92" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>set_log_de_setor_nome</name></member>
+      <member refid="class_class_logs_1ae895d704b7ac5523978b3cd3b4d60faf" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>set_log_de_telefone</name></member>
+      <member refid="class_class_logs_1af3d5752cb8752ba5cf073170b1f6e92c" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>set_log_id</name></member>
+      <member refid="class_class_logs_1a80625fac20d689dab29800c0c999b181" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>set_log_ip</name></member>
+      <member refid="class_class_logs_1ada8f81d33ce15864d4897ecfa7e5ec7e" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>set_log_para_nome</name></member>
+      <member refid="class_class_logs_1af0e39b8f2341e07cb80ca87b9fbd5ac5" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>set_log_usuario_nome</name></member>
+      <member refid="class_class_logs_1a458929241dfa9623fd78924aa8a39464" prot="private" virt="non-virtual"><scope>ClassLogs</scope><name>set_log_usuario_setor_nome</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

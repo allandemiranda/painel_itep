@@ -1,0 +1,179 @@
+\hypertarget{setores_2delete_8php}{}\section{/var/www/chamador.itep.\+govrn/public/api/menu/configuracoes/setores/delete.php File Reference}
+\label{setores_2delete_8php}\index{/var/www/chamador.\+itep.\+govrn/public/api/menu/configuracoes/setores/delete.\+php@{/var/www/chamador.\+itep.\+govrn/public/api/menu/configuracoes/setores/delete.\+php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{setores_2delete_8php_a252370d95039a38fa11afab784725d58}{\$dados} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Cabeçalho para conteudo json. \end{DoxyCompactList}\item 
+\hyperlink{setores_2delete_8php_a26b9f9373f7bb79dfcf8a86dff086b45}{\$body} = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Contem todos os dados a serem enviados. \end{DoxyCompactList}\item 
+\hyperlink{setores_2delete_8php_acedd13b51401130848ce18f4d5c52605}{\$json} = json\+\_\+decode(\$body, true)
+\begin{DoxyCompactList}\small\item\em Obtém todas as informações requisitadas P\+O\+ST. \end{DoxyCompactList}\item 
+\hyperlink{setores_2delete_8php_afc31993e855f9631572adfedcfe6f34b}{\$login} = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Decodifica as informações requisitadas. \end{DoxyCompactList}\item 
+\hyperlink{setores_2delete_8php_a3678c8769c9698fd30581c1016c5f475}{\$senha} = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Login do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{setores_2delete_8php_ae97941710d863131c700f069b109991e}{\$id} = \$json\mbox{[}\textquotesingle{}id\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Senha criptografada do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{setores_2delete_8php_abe4cc9788f52e49485473dc699537388}{try}
+\begin{DoxyCompactList}\small\item\em id do setor que será deletado \end{DoxyCompactList}\item 
+if(\$credenciais-\/$>$get\+\_\+user() -\/$>$get\+\_\+sector() -\/$>$get\+\_\+admin()==false) \hyperlink{setores_2delete_8php_a8f5108ee2efdbfcd6f3d53b8abcb6c09}{else}
+\begin{DoxyCompactList}\small\item\em Obter a credencial do usário. \end{DoxyCompactList}\item 
+\hyperlink{setores_2delete_8php_a9a2cf15a653aee8be437f7ae474cd494}{\$log} = new \hyperlink{class_class_logs}{Class\+Logs}(null, \$credenciais-\/$>$get\+\_\+user(), \char`\"{}E\+X\+C\+L\+U\+IU S\+E\+T\+OR\char`\"{}, \$setor)
+\item 
+\hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch}(Exception \$e) \hyperlink{setores_2delete_8php_a1eb47d68a4a4f73debf91b15e179d813}{finally}
+\begin{DoxyCompactList}\small\item\em Criar um log desta operação no sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{setores_2delete_8php_a26b9f9373f7bb79dfcf8a86dff086b45}\label{setores_2delete_8php_a26b9f9373f7bb79dfcf8a86dff086b45}} 
+\index{setores/delete.\+php@{setores/delete.\+php}!\$body@{\$body}}
+\index{\$body@{\$body}!setores/delete.\+php@{setores/delete.\+php}}
+\subsubsection{\texorpdfstring{\$body}{$body}}
+{\footnotesize\ttfamily \$body = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})}
+
+
+
+Contem todos os dados a serem enviados. 
+
+
+
+Definition at line 21 of file delete.\+php.
+
+\mbox{\Hypertarget{setores_2delete_8php_a252370d95039a38fa11afab784725d58}\label{setores_2delete_8php_a252370d95039a38fa11afab784725d58}} 
+\index{setores/delete.\+php@{setores/delete.\+php}!\$dados@{\$dados}}
+\index{\$dados@{\$dados}!setores/delete.\+php@{setores/delete.\+php}}
+\subsubsection{\texorpdfstring{\$dados}{$dados}}
+{\footnotesize\ttfamily \$dados = \mbox{[}$\,$\mbox{]}}
+
+
+
+Cabeçalho para conteudo json. 
+
+Cabeçalho com as classes e funções gerias 
+
+Definition at line 19 of file delete.\+php.
+
+\mbox{\Hypertarget{setores_2delete_8php_ae97941710d863131c700f069b109991e}\label{setores_2delete_8php_ae97941710d863131c700f069b109991e}} 
+\index{setores/delete.\+php@{setores/delete.\+php}!\$id@{\$id}}
+\index{\$id@{\$id}!setores/delete.\+php@{setores/delete.\+php}}
+\subsubsection{\texorpdfstring{\$id}{$id}}
+{\footnotesize\ttfamily \$id = \$json\mbox{[}\textquotesingle{}id\textquotesingle{}\mbox{]}}
+
+
+
+Senha criptografada do usuário que requisitou a informação. 
+
+
+
+Definition at line 27 of file delete.\+php.
+
+\mbox{\Hypertarget{setores_2delete_8php_acedd13b51401130848ce18f4d5c52605}\label{setores_2delete_8php_acedd13b51401130848ce18f4d5c52605}} 
+\index{setores/delete.\+php@{setores/delete.\+php}!\$json@{\$json}}
+\index{\$json@{\$json}!setores/delete.\+php@{setores/delete.\+php}}
+\subsubsection{\texorpdfstring{\$json}{$json}}
+{\footnotesize\ttfamily \$json = json\+\_\+decode(\$body, true)}
+
+
+
+Obtém todas as informações requisitadas P\+O\+ST. 
+
+
+
+Definition at line 22 of file delete.\+php.
+
+\mbox{\Hypertarget{setores_2delete_8php_a9a2cf15a653aee8be437f7ae474cd494}\label{setores_2delete_8php_a9a2cf15a653aee8be437f7ae474cd494}} 
+\index{setores/delete.\+php@{setores/delete.\+php}!\$log@{\$log}}
+\index{\$log@{\$log}!setores/delete.\+php@{setores/delete.\+php}}
+\subsubsection{\texorpdfstring{\$log}{$log}}
+{\footnotesize\ttfamily \$log = new \hyperlink{class_class_logs}{Class\+Logs}(null, \$credenciais-\/$>$get\+\_\+user(), \char`\"{}E\+X\+C\+L\+U\+IU S\+E\+T\+OR\char`\"{}, \$setor)}
+
+
+
+Definition at line 46 of file delete.\+php.
+
+\mbox{\Hypertarget{setores_2delete_8php_afc31993e855f9631572adfedcfe6f34b}\label{setores_2delete_8php_afc31993e855f9631572adfedcfe6f34b}} 
+\index{setores/delete.\+php@{setores/delete.\+php}!\$login@{\$login}}
+\index{\$login@{\$login}!setores/delete.\+php@{setores/delete.\+php}}
+\subsubsection{\texorpdfstring{\$login}{$login}}
+{\footnotesize\ttfamily \$login = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}}
+
+
+
+Decodifica as informações requisitadas. 
+
+
+
+Definition at line 24 of file delete.\+php.
+
+\mbox{\Hypertarget{setores_2delete_8php_a3678c8769c9698fd30581c1016c5f475}\label{setores_2delete_8php_a3678c8769c9698fd30581c1016c5f475}} 
+\index{setores/delete.\+php@{setores/delete.\+php}!\$senha@{\$senha}}
+\index{\$senha@{\$senha}!setores/delete.\+php@{setores/delete.\+php}}
+\subsubsection{\texorpdfstring{\$senha}{$senha}}
+{\footnotesize\ttfamily \$senha = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}}
+
+
+
+Login do usuário que requisitou a informação. 
+
+
+
+Definition at line 25 of file delete.\+php.
+
+\mbox{\Hypertarget{setores_2delete_8php_a8f5108ee2efdbfcd6f3d53b8abcb6c09}\label{setores_2delete_8php_a8f5108ee2efdbfcd6f3d53b8abcb6c09}} 
+\index{setores/delete.\+php@{setores/delete.\+php}!else@{else}}
+\index{else@{else}!setores/delete.\+php@{setores/delete.\+php}}
+\subsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily if ( \$credenciais-\/$>$get\+\_\+user() -\/$>$get\+\_\+sector() -\/$>$get\+\_\+admin()==false) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+        \hyperlink{encaminhar_8php_a87435a25b7cae617cf284c729b6e835c}{$setor} = \textcolor{keyword}{new} \hyperlink{class_class_setor}{ClassSetor}(\hyperlink{setores_2delete_8php_ae97941710d863131c700f069b109991e}{$id})
+\end{DoxyCode}
+
+
+Obter a credencial do usário. 
+
+
+
+Definition at line 35 of file delete.\+php.
+
+\mbox{\Hypertarget{setores_2delete_8php_a1eb47d68a4a4f73debf91b15e179d813}\label{setores_2delete_8php_a1eb47d68a4a4f73debf91b15e179d813}} 
+\index{setores/delete.\+php@{setores/delete.\+php}!finally@{finally}}
+\index{finally@{finally}!setores/delete.\+php@{setores/delete.\+php}}
+\subsubsection{\texorpdfstring{finally}{finally}}
+{\footnotesize\ttfamily \hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch} (Exception \$e) finally}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    echo json\_encode(\hyperlink{setores_2delete_8php_a252370d95039a38fa11afab784725d58}{$dados}[0])
+\end{DoxyCode}
+
+
+Criar um log desta operação no sistema. 
+
+
+
+Definition at line 53 of file delete.\+php.
+
+\mbox{\Hypertarget{setores_2delete_8php_abe4cc9788f52e49485473dc699537388}\label{setores_2delete_8php_abe4cc9788f52e49485473dc699537388}} 
+\index{setores/delete.\+php@{setores/delete.\+php}!try@{try}}
+\index{try@{try}!setores/delete.\+php@{setores/delete.\+php}}
+\subsubsection{\texorpdfstring{try}{try}}
+{\footnotesize\ttfamily try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    $credenciais = \textcolor{keyword}{new} \hyperlink{class_class_credenciais}{ClassCredenciais}(\hyperlink{setores_2delete_8php_afc31993e855f9631572adfedcfe6f34b}{$login}, \hyperlink{setores_2delete_8php_a3678c8769c9698fd30581c1016c5f475}{$senha})
+\end{DoxyCode}
+
+
+id do setor que será deletado 
+
+
+
+Definition at line 29 of file delete.\+php.
+

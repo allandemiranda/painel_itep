@@ -1,0 +1,357 @@
+.TH "ClassFicha" 3 "Mon Apr 6 2020" "Chamador ITEP - API" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ClassFicha
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ($id=null, $name=null, $phone=null, $attendant_sector=null, $priority=null)"
+.br
+.RI "Data da última atualização da Ficha\&. "
+.ti -1c
+.RI "\fB__destruct\fP ()"
+.br
+.RI "Destrutor do Objeto \fBClassFicha\fP\&. "
+.ti -1c
+.RI "\fBget_id\fP ()"
+.br
+.RI "Obter o id da Ficha\&. "
+.ti -1c
+.RI "\fBget_number\fP ()"
+.br
+.RI "Obter o Número da Ficha\&. "
+.ti -1c
+.RI "\fBset_number\fP (int $value)"
+.br
+.RI "Definir o Número da Ficha\&. "
+.ti -1c
+.RI "\fBget_name\fP ()"
+.br
+.RI "Obter o Nome da Ficha\&. "
+.ti -1c
+.RI "\fBset_name\fP ($value)"
+.br
+.RI "Definir o Nome da Ficha\&. "
+.ti -1c
+.RI "\fBget_phone\fP ()"
+.br
+.RI "Obter o número do Telefone da Ficha\&. "
+.ti -1c
+.RI "\fBset_phone\fP ($value)"
+.br
+.RI "Definir o Número do Telefone da Ficha\&. "
+.ti -1c
+.RI "\fBget_attendant_status\fP ()"
+.br
+.RI "Obter o Status da Ficha\&. "
+.ti -1c
+.RI "\fBset_attendant_status\fP ($value)"
+.br
+.RI "Definir o Status da Ficha\&. "
+.ti -1c
+.RI "\fBget_attendant_sector\fP ()"
+.br
+.RI "Obter o Setor de atendimento da Ficha\&. "
+.ti -1c
+.RI "\fBset_attendant_sector\fP ($value)"
+.br
+.RI "Definir o Setor de atendimento da Ficha\&. "
+.ti -1c
+.RI "\fBget_attendant_user\fP ()"
+.br
+.RI "Obter o Funcionário de Atendimento da Ficha\&. "
+.ti -1c
+.RI "\fBset_attendant_user\fP ($value)"
+.br
+.RI "Definir o Funcionário de Atendimento da Ficha\&. "
+.ti -1c
+.RI "\fBget_priority\fP ()"
+.br
+.RI "Obter a Prioridade da Ficha\&. "
+.ti -1c
+.RI "\fBset_priority\fP (bool $value)"
+.br
+.RI "Definir a Prioridade da Ficha\&. "
+.ti -1c
+.RI "\fBget_date\fP ()"
+.br
+.RI "Obter a Data de criação da Ficha em TIMESTAMP\&. "
+.ti -1c
+.RI "\fBget_date_update\fP ()"
+.br
+.RI "Obter a data da última atualização da Ficha\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 14 of file ClassFicha\&.php\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "__construct ( $id = \fCnull\fP,  $name = \fCnull\fP,  $phone = \fCnull\fP,  $attendant_sector = \fCnull\fP,  $priority = \fCnull\fP)"
+
+.PP
+Data da última atualização da Ficha\&. Construtor do Objeto \fBClassFicha\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP id da Ficha 
+.br
+\fInumber\fP Número da Ficha 
+.br
+\fIname\fP Nome da Ficha 
+.br
+\fIphone\fP Telefone da Ficha 
+.br
+\fIattendant_status\fP Status da Ficha 
+.br
+\fIattendant_sector\fP Setor a ser atendido 
+.br
+\fIattendant_user\fP Funcionário responsável pelo atendimento 
+.br
+\fIpriority\fP Se a Ficha tem prioridade na chamada 
+.br
+\fIdate\fP Data de criação da Ficha 
+.br
+\fIdate_update\fP Data da ultima atualização da Ficha 
+.RE
+.PP
+
+.PP
+Definition at line 41 of file ClassFicha\&.php\&.
+.SS "__destruct ()"
+
+.PP
+Destrutor do Objeto \fBClassFicha\fP\&. 
+.PP
+Definition at line 107 of file ClassFicha\&.php\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "get_attendant_sector ()"
+
+.PP
+Obter o Setor de atendimento da Ficha\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+\fBClassSetor\fP Setor de atendimento da Ficha 
+.RE
+.PP
+
+.PP
+Definition at line 291 of file ClassFicha\&.php\&.
+.SS "get_attendant_status ()"
+
+.PP
+Obter o Status da Ficha\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+String Status da Ficha 
+.RE
+.PP
+
+.PP
+Definition at line 262 of file ClassFicha\&.php\&.
+.SS "get_attendant_user ()"
+
+.PP
+Obter o Funcionário de Atendimento da Ficha\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+\fBClassUsuario\fP Funcionário de Atendimento da Ficha 
+.RE
+.PP
+
+.PP
+Definition at line 322 of file ClassFicha\&.php\&.
+.SS "get_date ()"
+
+.PP
+Obter a Data de criação da Ficha em TIMESTAMP\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Timestamp Data de criação da Ficha em TIMESTAMP 
+.RE
+.PP
+
+.PP
+Definition at line 384 of file ClassFicha\&.php\&.
+.SS "get_date_update ()"
+
+.PP
+Obter a data da última atualização da Ficha\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Timestamp Data da última atualização da Ficha em TIMESTAMP 
+.RE
+.PP
+
+.PP
+Definition at line 394 of file ClassFicha\&.php\&.
+.SS "get_id ()"
+
+.PP
+Obter o id da Ficha\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Int id da Ficha 
+.RE
+.PP
+
+.PP
+Definition at line 165 of file ClassFicha\&.php\&.
+.SS "get_name ()"
+
+.PP
+Obter o Nome da Ficha\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+String Nome da Ficha 
+.RE
+.PP
+
+.PP
+Definition at line 204 of file ClassFicha\&.php\&.
+.SS "get_number ()"
+
+.PP
+Obter o Número da Ficha\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Int Número da Ficha 
+.RE
+.PP
+
+.PP
+Definition at line 175 of file ClassFicha\&.php\&.
+.SS "get_phone ()"
+
+.PP
+Obter o número do Telefone da Ficha\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+String Número do Telefone da Ficha 
+.RE
+.PP
+
+.PP
+Definition at line 233 of file ClassFicha\&.php\&.
+.SS "get_priority ()"
+
+.PP
+Obter a Prioridade da Ficha\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Bool Se a Ficha é do tipo prioritária 
+.RE
+.PP
+
+.PP
+Definition at line 353 of file ClassFicha\&.php\&.
+.SS "set_attendant_sector ( $value)"
+
+.PP
+Definir o Setor de atendimento da Ficha\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fBClassSetor\fP\fP Setor de atendimento da Ficha 
+.RE
+.PP
+
+.PP
+Definition at line 301 of file ClassFicha\&.php\&.
+.SS "set_attendant_status ( $value)"
+
+.PP
+Definir o Status da Ficha\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Status da Ficha [NÃO ATENDIDO, EM ATENDIMENTO, ENCAMINHADO, FINALIZADO, CHAMAR] 
+.RE
+.PP
+
+.PP
+Definition at line 272 of file ClassFicha\&.php\&.
+.SS "set_attendant_user ( $value)"
+
+.PP
+Definir o Funcionário de Atendimento da Ficha\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fBClassUsuario\fP\fP Funcionário de Atendimento da Ficha 
+.RE
+.PP
+
+.PP
+Definition at line 332 of file ClassFicha\&.php\&.
+.SS "set_name ( $value)"
+
+.PP
+Definir o Nome da Ficha\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Nome da Ficha 
+.RE
+.PP
+
+.PP
+Definition at line 214 of file ClassFicha\&.php\&.
+.SS "set_number (int $value)"
+
+.PP
+Definir o Número da Ficha\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Número da Ficha 
+.RE
+.PP
+
+.PP
+Definition at line 185 of file ClassFicha\&.php\&.
+.SS "set_phone ( $value)"
+
+.PP
+Definir o Número do Telefone da Ficha\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Número do Telefone da Ficha 
+.RE
+.PP
+
+.PP
+Definition at line 243 of file ClassFicha\&.php\&.
+.SS "set_priority (bool $value)"
+
+.PP
+Definir a Prioridade da Ficha\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Se a Ficha é do tipo prioritária 
+.RE
+.PP
+
+.PP
+Definition at line 363 of file ClassFicha\&.php\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chamador ITEP - API from the source code\&.

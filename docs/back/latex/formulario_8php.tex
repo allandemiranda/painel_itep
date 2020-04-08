@@ -1,0 +1,180 @@
+\hypertarget{formulario_8php}{}\section{/var/www/chamador.itep.\+govrn/public/api/main\+Page/perfil/formulario.php File Reference}
+\label{formulario_8php}\index{/var/www/chamador.\+itep.\+govrn/public/api/main\+Page/perfil/formulario.\+php@{/var/www/chamador.\+itep.\+govrn/public/api/main\+Page/perfil/formulario.\+php}}
+
+
+Contem a lógica para modificar senha do usuário logado.  
+
+
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{formulario_8php_a252370d95039a38fa11afab784725d58}{\$dados} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Cabeçalho para conteudo json. \end{DoxyCompactList}\item 
+\hyperlink{formulario_8php_a26b9f9373f7bb79dfcf8a86dff086b45}{\$body} = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Contem todos os dados a serem enviados. \end{DoxyCompactList}\item 
+\hyperlink{formulario_8php_acedd13b51401130848ce18f4d5c52605}{\$json} = json\+\_\+decode(\$body, true)
+\begin{DoxyCompactList}\small\item\em Obtém todas as informações requisitadas P\+O\+ST. \end{DoxyCompactList}\item 
+\hyperlink{formulario_8php_afc31993e855f9631572adfedcfe6f34b}{\$login} = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Decodifica as informações requisitadas. \end{DoxyCompactList}\item 
+\hyperlink{formulario_8php_a3678c8769c9698fd30581c1016c5f475}{\$senha} = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Login do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{formulario_8php_aab85c4ba1c96b0ff4b909aa956efd450}{\$nova\+\_\+senha} = \hyperlink{_header_8php_a5455ea8d21f7611dae58e3d4612fb3bd}{encrypt\+\_\+password}(\$json\mbox{[}\textquotesingle{}nova\+Senha\textquotesingle{}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Senha criptografada do usuário que requisitou a informação. \end{DoxyCompactList}\item 
+\hyperlink{formulario_8php_abe4cc9788f52e49485473dc699537388}{try}
+\begin{DoxyCompactList}\small\item\em Nova senha do usuário já criptografada. \end{DoxyCompactList}\item 
+\hyperlink{formulario_8php_a9a2cf15a653aee8be437f7ae474cd494}{\$log} = new \hyperlink{class_class_logs}{Class\+Logs}(null, \$credenciais-\/$>$get\+\_\+user(), \char`\"{}A\+T\+U\+A\+L\+I\+Z\+OU P\+E\+R\+F\+IL\char`\"{}, null, null)
+\item 
+\hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch}(Exception \$e) \hyperlink{formulario_8php_a1eb47d68a4a4f73debf91b15e179d813}{finally}
+\begin{DoxyCompactList}\small\item\em Criar um log desta operação no sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contem a lógica para modificar senha do usuário logado. 
+
+\begin{DoxyAuthor}{Author}
+Allan de Miranda Silva (\href{mailto:allandemiranda@gmail.com}{\tt allandemiranda@gmail.\+com}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+05-\/03-\/2020
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020 D\+I\+G\+E\+TI I\+T\+E\+P/\+RN 
+\end{DoxyCopyright}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{formulario_8php_a26b9f9373f7bb79dfcf8a86dff086b45}\label{formulario_8php_a26b9f9373f7bb79dfcf8a86dff086b45}} 
+\index{formulario.\+php@{formulario.\+php}!\$body@{\$body}}
+\index{\$body@{\$body}!formulario.\+php@{formulario.\+php}}
+\subsubsection{\texorpdfstring{\$body}{$body}}
+{\footnotesize\ttfamily \$body = file\+\_\+get\+\_\+contents(\textquotesingle{}php\+://input\textquotesingle{})}
+
+
+
+Contem todos os dados a serem enviados. 
+
+
+
+Definition at line 21 of file formulario.\+php.
+
+\mbox{\Hypertarget{formulario_8php_a252370d95039a38fa11afab784725d58}\label{formulario_8php_a252370d95039a38fa11afab784725d58}} 
+\index{formulario.\+php@{formulario.\+php}!\$dados@{\$dados}}
+\index{\$dados@{\$dados}!formulario.\+php@{formulario.\+php}}
+\subsubsection{\texorpdfstring{\$dados}{$dados}}
+{\footnotesize\ttfamily \$dados = \mbox{[}$\,$\mbox{]}}
+
+
+
+Cabeçalho para conteudo json. 
+
+Cabeçalho com as classes e funções gerias 
+
+Definition at line 19 of file formulario.\+php.
+
+\mbox{\Hypertarget{formulario_8php_acedd13b51401130848ce18f4d5c52605}\label{formulario_8php_acedd13b51401130848ce18f4d5c52605}} 
+\index{formulario.\+php@{formulario.\+php}!\$json@{\$json}}
+\index{\$json@{\$json}!formulario.\+php@{formulario.\+php}}
+\subsubsection{\texorpdfstring{\$json}{$json}}
+{\footnotesize\ttfamily \$json = json\+\_\+decode(\$body, true)}
+
+
+
+Obtém todas as informações requisitadas P\+O\+ST. 
+
+
+
+Definition at line 22 of file formulario.\+php.
+
+\mbox{\Hypertarget{formulario_8php_a9a2cf15a653aee8be437f7ae474cd494}\label{formulario_8php_a9a2cf15a653aee8be437f7ae474cd494}} 
+\index{formulario.\+php@{formulario.\+php}!\$log@{\$log}}
+\index{\$log@{\$log}!formulario.\+php@{formulario.\+php}}
+\subsubsection{\texorpdfstring{\$log}{$log}}
+{\footnotesize\ttfamily \$log = new \hyperlink{class_class_logs}{Class\+Logs}(null, \$credenciais-\/$>$get\+\_\+user(), \char`\"{}A\+T\+U\+A\+L\+I\+Z\+OU P\+E\+R\+F\+IL\char`\"{}, null, null)}
+
+
+
+Definition at line 40 of file formulario.\+php.
+
+\mbox{\Hypertarget{formulario_8php_afc31993e855f9631572adfedcfe6f34b}\label{formulario_8php_afc31993e855f9631572adfedcfe6f34b}} 
+\index{formulario.\+php@{formulario.\+php}!\$login@{\$login}}
+\index{\$login@{\$login}!formulario.\+php@{formulario.\+php}}
+\subsubsection{\texorpdfstring{\$login}{$login}}
+{\footnotesize\ttfamily \$login = \$json\mbox{[}\textquotesingle{}login\textquotesingle{}\mbox{]}}
+
+
+
+Decodifica as informações requisitadas. 
+
+
+
+Definition at line 24 of file formulario.\+php.
+
+\mbox{\Hypertarget{formulario_8php_aab85c4ba1c96b0ff4b909aa956efd450}\label{formulario_8php_aab85c4ba1c96b0ff4b909aa956efd450}} 
+\index{formulario.\+php@{formulario.\+php}!\$nova\+\_\+senha@{\$nova\+\_\+senha}}
+\index{\$nova\+\_\+senha@{\$nova\+\_\+senha}!formulario.\+php@{formulario.\+php}}
+\subsubsection{\texorpdfstring{\$nova\+\_\+senha}{$nova\_senha}}
+{\footnotesize\ttfamily \$nova\+\_\+senha = \hyperlink{_header_8php_a5455ea8d21f7611dae58e3d4612fb3bd}{encrypt\+\_\+password}(\$json\mbox{[}\textquotesingle{}nova\+Senha\textquotesingle{}\mbox{]})}
+
+
+
+Senha criptografada do usuário que requisitou a informação. 
+
+
+
+Definition at line 27 of file formulario.\+php.
+
+\mbox{\Hypertarget{formulario_8php_a3678c8769c9698fd30581c1016c5f475}\label{formulario_8php_a3678c8769c9698fd30581c1016c5f475}} 
+\index{formulario.\+php@{formulario.\+php}!\$senha@{\$senha}}
+\index{\$senha@{\$senha}!formulario.\+php@{formulario.\+php}}
+\subsubsection{\texorpdfstring{\$senha}{$senha}}
+{\footnotesize\ttfamily \$senha = \$json\mbox{[}\textquotesingle{}senha\textquotesingle{}\mbox{]}}
+
+
+
+Login do usuário que requisitou a informação. 
+
+
+
+Definition at line 25 of file formulario.\+php.
+
+\mbox{\Hypertarget{formulario_8php_a1eb47d68a4a4f73debf91b15e179d813}\label{formulario_8php_a1eb47d68a4a4f73debf91b15e179d813}} 
+\index{formulario.\+php@{formulario.\+php}!finally@{finally}}
+\index{finally@{finally}!formulario.\+php@{formulario.\+php}}
+\subsubsection{\texorpdfstring{finally}{finally}}
+{\footnotesize\ttfamily \hyperlink{imprimir_2ficha_2index_8php_a8104793004944f01dd070fc8b1ade3c4}{catch} (Exception \$e) finally}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    echo json\_encode(\hyperlink{formulario_8php_a252370d95039a38fa11afab784725d58}{$dados}[0])
+\end{DoxyCode}
+
+
+Criar um log desta operação no sistema. 
+
+
+
+Definition at line 46 of file formulario.\+php.
+
+\mbox{\Hypertarget{formulario_8php_abe4cc9788f52e49485473dc699537388}\label{formulario_8php_abe4cc9788f52e49485473dc699537388}} 
+\index{formulario.\+php@{formulario.\+php}!try@{try}}
+\index{try@{try}!formulario.\+php@{formulario.\+php}}
+\subsubsection{\texorpdfstring{try}{try}}
+{\footnotesize\ttfamily try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    $credenciais = \textcolor{keyword}{new} \hyperlink{class_class_credenciais}{ClassCredenciais}(\hyperlink{formulario_8php_afc31993e855f9631572adfedcfe6f34b}{$login}, \hyperlink{formulario_8php_a3678c8769c9698fd30581c1016c5f475}{$senha})
+\end{DoxyCode}
+
+
+Nova senha do usuário já criptografada. 
+
+
+
+Definition at line 29 of file formulario.\+php.
+

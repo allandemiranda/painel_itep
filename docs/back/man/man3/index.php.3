@@ -1,0 +1,100 @@
+.TH "/var/www/chamador.itep.govrn/public/api/painel/index.php" 3 "Mon Apr 6 2020" "Chamador ITEP - API" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/var/www/chamador.itep.govrn/public/api/painel/index.php
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fB$dados\fP = []"
+.br
+.RI "Cabeçalho para conteudo json\&. "
+.ti -1c
+.RI "\fBtry\fP"
+.br
+.RI "Contem todos os dados a serem enviados\&. "
+.ti -1c
+.RI "\fB$today\fP = date('Y\-m\-d')"
+.br
+.ti -1c
+.RI "\fB$sql\fP = 'SELECT `ficha_id` FROM `fichas_tb` WHERE `ficha_criacao_data`>='' \&. $today \&. '' AND `ficha_status`='CHAMAR' LIMIT 1'"
+.br
+.RI "Data do dia atual\&. "
+.ti -1c
+.RI "\fB$result\fP = $db\->request_query($sql)"
+.br
+.RI "Lista se tem ficha para ser chamada\&. "
+.ti -1c
+.RI "if(mysqli_num_rows($result)==1) \fBelse\fP"
+.br
+.ti -1c
+.RI "\fBcatch\fP(Exception $e) \fBfinally\fP"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "$dados = []"
+
+.PP
+Cabeçalho para conteudo json\&. Cabeçalho com as classes e funções gerias 
+.PP
+Definition at line 19 of file index\&.php\&.
+.SS "$result = $db\->request_query($sql)"
+
+.PP
+Lista se tem ficha para ser chamada\&. 
+.PP
+Definition at line 27 of file index\&.php\&.
+.SS "$sql = 'SELECT `ficha_id` FROM `fichas_tb` WHERE `ficha_criacao_data`>='' \&. $today \&. '' AND `ficha_status`='CHAMAR' LIMIT 1'"
+
+.PP
+Data do dia atual\&. 
+.PP
+Definition at line 26 of file index\&.php\&.
+.SS "$today = date('Y\-m\-d')"
+
+.PP
+Definition at line 24 of file index\&.php\&.
+.SS "if (mysqli_num_rows( $result)==1) else"
+\fBInitial value:\fP
+.PP
+.nf
+{
+        array_push(
+            $dados,
+            [
+                'ficha' => 0,
+                'ficha_numero' => '',
+                'ficha_setor_nome' => ''
+            ]
+        )
+.fi
+.PP
+Definition at line 41 of file index\&.php\&.
+.SS "\fBcatch\fP (Exception $e) finally"
+\fBInitial value:\fP
+.PP
+.nf
+{
+    echo json_encode($dados[0])
+.fi
+.PP
+Definition at line 56 of file index\&.php\&.
+.SS "try"
+\fBInitial value:\fP
+.PP
+.nf
+{
+    $db = new ClassConnection()
+.fi
+.PP
+Contem todos os dados a serem enviados\&. 
+.PP
+Definition at line 21 of file index\&.php\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chamador ITEP - API from the source code\&.

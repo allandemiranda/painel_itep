@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_class_company" kind="class" language="PHP" prot="public">
+    <compoundname>ClassCompany</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_class_company_1ab2fc40d43824ea3e1ce5d86dee0d763b" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$name</definition>
+        <argsstring></argsstring>
+        <name>$name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" line="16" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_company_1afdcfec3b920e6c03649cae64d4d82996" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$company_logo</definition>
+        <argsstring></argsstring>
+        <name>$company_logo</name>
+        <briefdescription>
+<para>Nome da empresa. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" line="17" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_company_1a1f2dc5ebdbf37c0ffcc65fdc6cd1f14d" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$footer_print</definition>
+        <argsstring></argsstring>
+        <name>$footer_print</name>
+        <briefdescription>
+<para>Logo da Empresa. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" line="18" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_class_company_1a095c5d389db211932136b53f25f39685" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>()</argsstring>
+        <name>__construct</name>
+        <briefdescription>
+<para>Rodapé de impressão. </para>        </briefdescription>
+        <detaileddescription>
+<para>Construtor da class atribuindo os valores </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" line="24" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" bodystart="24" bodyend="29"/>
+        <references refid="class_class_company_1acab5f801a524d772516bd8632dd54cc7" compoundref="_class_company_8php" startline="96" endline="99">set_footer_print</references>
+      </memberdef>
+      <memberdef kind="function" id="class_class_company_1a421831a265621325e1fdd19aace0c758" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__destruct</definition>
+        <argsstring>()</argsstring>
+        <name>__destruct</name>
+        <briefdescription>
+<para>Destrutor da class atribuindo os valores. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" line="35" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" bodystart="35" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_company_1a4f1149ccbd69d1ac4225b7bc2dd871bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_name</definition>
+        <argsstring>()</argsstring>
+        <name>get_name</name>
+        <briefdescription>
+<para>Obter nome da Empresa. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String Nomde da Empresa </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" line="46" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_company_1ad4563c95e8eb9b9728663cf81f67156d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_company_logo</definition>
+        <argsstring>()</argsstring>
+        <name>get_company_logo</name>
+        <briefdescription>
+<para>Obter Logo da Empresa. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Object Logo da Empresa </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" line="66" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_company_1a9e4139240e682431b7c0dc4c2b642cea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_footer_print</definition>
+        <argsstring>()</argsstring>
+        <name>get_footer_print</name>
+        <briefdescription>
+<para>Obter texto de rodapé da impressão. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Object Texto de rodapé da impressão </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" line="86" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" bodystart="86" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_company_1acab5f801a524d772516bd8632dd54cc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_footer_print</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_footer_print</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir texto de rodapé da impressão. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objeto com o texto de rodapé da impressão </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" line="96" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" bodystart="96" bodyend="99"/>
+        <referencedby refid="class_class_company_1a095c5d389db211932136b53f25f39685" compoundref="_class_company_8php" startline="24" endline="29">__construct</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_class_company_1a53e29da8f1da63502f3e13091fcb74e5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_name</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_name</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir nome da Empresa. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Novo Nome da Empresa </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" line="56" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_company_1aca000bc289b09dba047b8b68e694682f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_company_logo</definition>
+        <argsstring>($value)</argsstring>
+        <name>set_company_logo</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para>Definir Logo da Empresa. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objeto com a logo da empresa </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" line="76" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" bodystart="76" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" line="15" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/ClassCompany.php" bodystart="14" bodyend="100"/>
+    <listofallmembers>
+      <member refid="class_class_company_1afdcfec3b920e6c03649cae64d4d82996" prot="private" virt="non-virtual"><scope>ClassCompany</scope><name>$company_logo</name></member>
+      <member refid="class_class_company_1a1f2dc5ebdbf37c0ffcc65fdc6cd1f14d" prot="private" virt="non-virtual"><scope>ClassCompany</scope><name>$footer_print</name></member>
+      <member refid="class_class_company_1ab2fc40d43824ea3e1ce5d86dee0d763b" prot="private" virt="non-virtual"><scope>ClassCompany</scope><name>$name</name></member>
+      <member refid="class_class_company_1a095c5d389db211932136b53f25f39685" prot="public" virt="non-virtual"><scope>ClassCompany</scope><name>__construct</name></member>
+      <member refid="class_class_company_1a421831a265621325e1fdd19aace0c758" prot="public" virt="non-virtual"><scope>ClassCompany</scope><name>__destruct</name></member>
+      <member refid="class_class_company_1ad4563c95e8eb9b9728663cf81f67156d" prot="public" virt="non-virtual"><scope>ClassCompany</scope><name>get_company_logo</name></member>
+      <member refid="class_class_company_1a9e4139240e682431b7c0dc4c2b642cea" prot="public" virt="non-virtual"><scope>ClassCompany</scope><name>get_footer_print</name></member>
+      <member refid="class_class_company_1a4f1149ccbd69d1ac4225b7bc2dd871bb" prot="public" virt="non-virtual"><scope>ClassCompany</scope><name>get_name</name></member>
+      <member refid="class_class_company_1aca000bc289b09dba047b8b68e694682f" prot="private" virt="non-virtual"><scope>ClassCompany</scope><name>set_company_logo</name></member>
+      <member refid="class_class_company_1acab5f801a524d772516bd8632dd54cc7" prot="public" virt="non-virtual"><scope>ClassCompany</scope><name>set_footer_print</name></member>
+      <member refid="class_class_company_1a53e29da8f1da63502f3e13091fcb74e5" prot="private" virt="non-virtual"><scope>ClassCompany</scope><name>set_name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

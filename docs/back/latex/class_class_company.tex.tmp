@@ -1,0 +1,137 @@
+\hypertarget{class_class_company}{}\section{Class\+Company Class Reference}
+\label{class_class_company}\index{Class\+Company@{Class\+Company}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_class_company_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct} ()
+\begin{DoxyCompactList}\small\item\em Rodapé de impressão. \end{DoxyCompactList}\item 
+\hyperlink{class_class_company_a421831a265621325e1fdd19aace0c758}{\+\_\+\+\_\+destruct} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da class atribuindo os valores. \end{DoxyCompactList}\item 
+\hyperlink{class_class_company_a4f1149ccbd69d1ac4225b7bc2dd871bb}{get\+\_\+name} ()
+\begin{DoxyCompactList}\small\item\em Obter nome da Empresa. \end{DoxyCompactList}\item 
+\hyperlink{class_class_company_ad4563c95e8eb9b9728663cf81f67156d}{get\+\_\+company\+\_\+logo} ()
+\begin{DoxyCompactList}\small\item\em Obter Logo da Empresa. \end{DoxyCompactList}\item 
+\hyperlink{class_class_company_a9e4139240e682431b7c0dc4c2b642cea}{get\+\_\+footer\+\_\+print} ()
+\begin{DoxyCompactList}\small\item\em Obter texto de rodapé da impressão. \end{DoxyCompactList}\item 
+\hyperlink{class_class_company_acab5f801a524d772516bd8632dd54cc7}{set\+\_\+footer\+\_\+print} (\$value)
+\begin{DoxyCompactList}\small\item\em Definir texto de rodapé da impressão. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 14 of file Class\+Company.\+php.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_class_company_a095c5d389db211932136b53f25f39685}\label{class_class_company_a095c5d389db211932136b53f25f39685}} 
+\index{Class\+Company@{Class\+Company}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!Class\+Company@{Class\+Company}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rodapé de impressão. 
+
+Construtor da class atribuindo os valores 
+
+Definition at line 24 of file Class\+Company.\+php.
+
+Here is the call graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{class_class_company_a421831a265621325e1fdd19aace0c758}\label{class_class_company_a421831a265621325e1fdd19aace0c758}} 
+\index{Class\+Company@{Class\+Company}!\+\_\+\+\_\+destruct@{\+\_\+\+\_\+destruct}}
+\index{\+\_\+\+\_\+destruct@{\+\_\+\+\_\+destruct}!Class\+Company@{Class\+Company}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+destruct()}{\_\_destruct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrutor da class atribuindo os valores. 
+
+
+
+Definition at line 35 of file Class\+Company.\+php.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_class_company_ad4563c95e8eb9b9728663cf81f67156d}\label{class_class_company_ad4563c95e8eb9b9728663cf81f67156d}} 
+\index{Class\+Company@{Class\+Company}!get\+\_\+company\+\_\+logo@{get\+\_\+company\+\_\+logo}}
+\index{get\+\_\+company\+\_\+logo@{get\+\_\+company\+\_\+logo}!Class\+Company@{Class\+Company}}
+\subsubsection{\texorpdfstring{get\+\_\+company\+\_\+logo()}{get\_company\_logo()}}
+{\footnotesize\ttfamily get\+\_\+company\+\_\+logo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obter Logo da Empresa. 
+
+\begin{DoxyReturn}{Returns}
+Object Logo da Empresa 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file Class\+Company.\+php.
+
+\mbox{\Hypertarget{class_class_company_a9e4139240e682431b7c0dc4c2b642cea}\label{class_class_company_a9e4139240e682431b7c0dc4c2b642cea}} 
+\index{Class\+Company@{Class\+Company}!get\+\_\+footer\+\_\+print@{get\+\_\+footer\+\_\+print}}
+\index{get\+\_\+footer\+\_\+print@{get\+\_\+footer\+\_\+print}!Class\+Company@{Class\+Company}}
+\subsubsection{\texorpdfstring{get\+\_\+footer\+\_\+print()}{get\_footer\_print()}}
+{\footnotesize\ttfamily get\+\_\+footer\+\_\+print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obter texto de rodapé da impressão. 
+
+\begin{DoxyReturn}{Returns}
+Object Texto de rodapé da impressão 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file Class\+Company.\+php.
+
+\mbox{\Hypertarget{class_class_company_a4f1149ccbd69d1ac4225b7bc2dd871bb}\label{class_class_company_a4f1149ccbd69d1ac4225b7bc2dd871bb}} 
+\index{Class\+Company@{Class\+Company}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!Class\+Company@{Class\+Company}}
+\subsubsection{\texorpdfstring{get\+\_\+name()}{get\_name()}}
+{\footnotesize\ttfamily get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obter nome da Empresa. 
+
+\begin{DoxyReturn}{Returns}
+String Nomde da Empresa 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file Class\+Company.\+php.
+
+\mbox{\Hypertarget{class_class_company_acab5f801a524d772516bd8632dd54cc7}\label{class_class_company_acab5f801a524d772516bd8632dd54cc7}} 
+\index{Class\+Company@{Class\+Company}!set\+\_\+footer\+\_\+print@{set\+\_\+footer\+\_\+print}}
+\index{set\+\_\+footer\+\_\+print@{set\+\_\+footer\+\_\+print}!Class\+Company@{Class\+Company}}
+\subsubsection{\texorpdfstring{set\+\_\+footer\+\_\+print()}{set\_footer\_print()}}
+{\footnotesize\ttfamily set\+\_\+footer\+\_\+print (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+
+Definir texto de rodapé da impressão. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Objeto com o texto de rodapé da impressão \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 96 of file Class\+Company.\+php.
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/var/www/chamador.\+itep.\+govrn/public/api/\hyperlink{_class_company_8php}{Class\+Company.\+php}\end{DoxyCompactItemize}

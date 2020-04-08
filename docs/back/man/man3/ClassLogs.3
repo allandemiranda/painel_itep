@@ -1,0 +1,245 @@
+.TH "ClassLogs" 3 "Mon Apr 6 2020" "Chamador ITEP - API" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ClassLogs
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ($id, $user=null, $action=null, $first=null, $second=null)"
+.br
+.RI "Data de criação do Log\&. "
+.ti -1c
+.RI "\fB__destruct\fP ()"
+.br
+.RI "Destrutor do Objeto \fBClassLogs\fP\&. "
+.ti -1c
+.RI "\fBget_log_id\fP ()"
+.br
+.RI "Obter o id do Log\&. "
+.ti -1c
+.RI "\fBget_log_acao\fP ()"
+.br
+.RI "Obter a Ação do Log\&. "
+.ti -1c
+.RI "\fBget_log_usuario_nome\fP ()"
+.br
+.RI "Obter o nome do Usuário que criou o Log\&. "
+.ti -1c
+.RI "\fBget_log_usuario_setor_nome\fP ()"
+.br
+.RI "Obter o nome do Setor do Usuário que criou o Log\&. "
+.ti -1c
+.RI "\fBget_log_data_criacao\fP ()"
+.br
+.RI "Obter a data de criação do Log\&. "
+.ti -1c
+.RI "\fBget_log_de_nome\fP ()"
+.br
+.RI "Obter o nome do Usuário ou do Setor que sofreu a Ação\&. "
+.ti -1c
+.RI "\fBget_log_de_setor_nome\fP ()"
+.br
+.RI "Obter o nome do Setor caso a Ação seja para um Usuário, se não retorna null\&. "
+.ti -1c
+.RI "\fBget_log_de_numero\fP ()"
+.br
+.RI "Obter o número da Ficha que sofreu a Ação\&. "
+.ti -1c
+.RI "\fBget_log_de_telefone\fP ()"
+.br
+.RI "Obter o Telefone da Ficha que sofreu a Ação\&. "
+.ti -1c
+.RI "\fBget_log_para_nome\fP ()"
+.br
+.RI "Obter o Nome do Setor para onde foi encaminhado a Ficha\&. "
+.ti -1c
+.RI "\fBget_log_ip\fP ()"
+.br
+.RI "Obter ip do Usuário\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 14 of file ClassLogs\&.php\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "__construct ( $id,  $user = \fCnull\fP,  $action = \fCnull\fP,  $first = \fCnull\fP,  $second = \fCnull\fP)"
+
+.PP
+Data de criação do Log\&. Construtor do Objeto \fBClassLogs\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP id do Log 
+.br
+\fIuser\fP Usuário que gerou o log 
+.br
+\fIaction\fP Ação aplicada pelo Usuário que gerou o log ['CRIOU USUÁRIO','CRIOU SETOR','EXCLUIU USUÁRIO', 'EXCLUIU SETOR','ATUALIZOU USUÁRIO','ATUALIZOU SETOR','ATUALIZOU PERFIL','CRIOU FICHA', 'CHAMOU FICHA','ENCAMINHOU FICHA','FINALIZOU FICHA'] 
+.br
+\fIfirst\fP Sujeito que sofreu a ação 
+.br
+\fIsecond\fP Possivel segundo Sujeito que sofreu a ação 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file ClassLogs\&.php\&.
+.SS "__destruct ()"
+
+.PP
+Destrutor do Objeto \fBClassLogs\fP\&. 
+.PP
+Definition at line 132 of file ClassLogs\&.php\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "get_log_acao ()"
+
+.PP
+Obter a Ação do Log\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+String Ação do Log 
+.RE
+.PP
+
+.PP
+Definition at line 203 of file ClassLogs\&.php\&.
+.SS "get_log_data_criacao ()"
+
+.PP
+Obter a data de criação do Log\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+String Data de criação do Log 
+.RE
+.PP
+
+.PP
+Definition at line 271 of file ClassLogs\&.php\&.
+.SS "get_log_de_nome ()"
+
+.PP
+Obter o nome do Usuário ou do Setor que sofreu a Ação\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+String Nome do Usuário ou do Setor que sofreu a Ação 
+.RE
+.PP
+
+.PP
+Definition at line 291 of file ClassLogs\&.php\&.
+.SS "get_log_de_numero ()"
+
+.PP
+Obter o número da Ficha que sofreu a Ação\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+String Número da Ficha que sofreu a Ação 
+.RE
+.PP
+
+.PP
+Definition at line 331 of file ClassLogs\&.php\&.
+.SS "get_log_de_setor_nome ()"
+
+.PP
+Obter o nome do Setor caso a Ação seja para um Usuário, se não retorna null\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+String Nome do Setor 
+.RE
+.PP
+
+.PP
+Definition at line 311 of file ClassLogs\&.php\&.
+.SS "get_log_de_telefone ()"
+
+.PP
+Obter o Telefone da Ficha que sofreu a Ação\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+String Telefone da Ficha que sofreu a Ação 
+.RE
+.PP
+
+.PP
+Definition at line 351 of file ClassLogs\&.php\&.
+.SS "get_log_id ()"
+
+.PP
+Obter o id do Log\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Int id do Log 
+.RE
+.PP
+
+.PP
+Definition at line 152 of file ClassLogs\&.php\&.
+.SS "get_log_ip ()"
+
+.PP
+Obter ip do Usuário\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+String ip do Usuário 
+.RE
+.PP
+
+.PP
+Definition at line 391 of file ClassLogs\&.php\&.
+.SS "get_log_para_nome ()"
+
+.PP
+Obter o Nome do Setor para onde foi encaminhado a Ficha\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+String Nome do Setor para onde foi encaminhado a Ficha 
+.RE
+.PP
+
+.PP
+Definition at line 371 of file ClassLogs\&.php\&.
+.SS "get_log_usuario_nome ()"
+
+.PP
+Obter o nome do Usuário que criou o Log\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+String Nome do Usuário que criou o Log 
+.RE
+.PP
+
+.PP
+Definition at line 231 of file ClassLogs\&.php\&.
+.SS "get_log_usuario_setor_nome ()"
+
+.PP
+Obter o nome do Setor do Usuário que criou o Log\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+String Nome do Setor do Usuário que criou o Log 
+.RE
+.PP
+
+.PP
+Definition at line 251 of file ClassLogs\&.php\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chamador ITEP - API from the source code\&.

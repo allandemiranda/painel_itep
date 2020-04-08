@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_header_8php" kind="file" language="PHP">
+    <compoundname>Header.php</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_header_8php_1a5455ea8d21f7611dae58e3d4612fb3bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>encrypt_password</definition>
+        <argsstring>($value)</argsstring>
+        <name>encrypt_password</name>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_class_connection" kindref="compound">ClassConnection</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_class_usuario" kindref="compound">ClassUsuario</ref> <ref refid="class_class_setor" kindref="compound">ClassSetor</ref> <ref refid="class_class_ficha" kindref="compound">ClassFicha</ref> <ref refid="class_class_company" kindref="compound">ClassCompany</ref> <ref refid="class_class_credenciais" kindref="compound">ClassCredenciais</ref> <ref refid="class_class_logs" kindref="compound">ClassLogs</ref> Criptografa a Senha do Funcionário para o padrão adotado no sistema</para><para><simplesect kind="return"><para>String Senha criptografada </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/Header.php" line="31" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/Header.php" bodystart="31" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="_header_8php_1a8909d20d656fecf83ebaa2bed0cab2c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>input_check</definition>
+        <argsstring>($valor)</argsstring>
+        <name>input_check</name>
+        <param>
+          <declname>$valor</declname>
+        </param>
+        <briefdescription>
+<para>Validar entradas para evitar injeção de código errado. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>valor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Um valor de entrada a ser analisado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String Valor validado para interação </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/Header.php" line="46" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/Header.php" bodystart="46" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="_header_8php_1a8db8ce321ecc739cc840efd11c612b10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>generatorPassword</definition>
+        <argsstring>($tamanho=5, $minusculas=false, $numeros=true, $simbolos=false)</argsstring>
+        <name>generatorPassword</name>
+        <param>
+          <declname>$tamanho</declname>
+          <defval>5</defval>
+        </param>
+        <param>
+          <declname>$minusculas</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <declname>$numeros</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <declname>$simbolos</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Função para gerar senhas aleatórias. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tamanho</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tamanho da senha a ser gerada </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minusculas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Se terá letras minusculas </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numeros</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Se terá números </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>simbolos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Se terá símbolos</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String A senha gerada </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/Header.php" line="68" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/Header.php" bodystart="68" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contem todo o cabeçalho com classes e funções gerais do sistema. </para>    </briefdescription>
+    <detaileddescription>
+<para>Contem todo o cabeçalho necessário para página ser de conteudo json.</para><para><simplesect kind="author"><para>Allan de Miranda Silva (<ulink url="mailto:allandemiranda@gmail.com">allandemiranda@gmail.com</ulink>) </para></simplesect>
+<simplesect kind="version"><para>1.0.0 </para></simplesect>
+<simplesect kind="date"><para>02-03-2020</para></simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2020 DIGETI ITEP/RN </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">?&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Classes<sp/>existentes<sp/>no<sp/>sistema</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">include($_SERVER[</highlight><highlight class="stringliteral">&apos;DOCUMENT_ROOT&apos;</highlight><highlight class="normal">]<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/api/ClassConnection.php&apos;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">include($_SERVER[</highlight><highlight class="stringliteral">&apos;DOCUMENT_ROOT&apos;</highlight><highlight class="normal">]<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/api/ClassUsuario.php&apos;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">include($_SERVER[</highlight><highlight class="stringliteral">&apos;DOCUMENT_ROOT&apos;</highlight><highlight class="normal">]<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/api/ClassSetor.php&apos;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">include($_SERVER[</highlight><highlight class="stringliteral">&apos;DOCUMENT_ROOT&apos;</highlight><highlight class="normal">]<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/api/ClassFicha.php&apos;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">include($_SERVER[</highlight><highlight class="stringliteral">&apos;DOCUMENT_ROOT&apos;</highlight><highlight class="normal">]<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/api/ClassCompany.php&apos;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">include($_SERVER[</highlight><highlight class="stringliteral">&apos;DOCUMENT_ROOT&apos;</highlight><highlight class="normal">]<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/api/ClassCredenciais.php&apos;</highlight><highlight class="normal">);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">include($_SERVER[</highlight><highlight class="stringliteral">&apos;DOCUMENT_ROOT&apos;</highlight><highlight class="normal">]<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/api/ClassLogs.php&apos;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="_header_8php_1a5455ea8d21f7611dae58e3d4612fb3bd" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="_header_8php_1a5455ea8d21f7611dae58e3d4612fb3bd" kindref="member">encrypt_password</ref>($value)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>md5($value);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>$e)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Exception($e);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="_header_8php_1a8909d20d656fecf83ebaa2bed0cab2c1" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="_header_8php_1a8909d20d656fecf83ebaa2bed0cab2c1" kindref="member">input_check</ref>($valor)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$valor<sp/>=<sp/>trim($valor);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$valor<sp/>=<sp/>stripslashes($valor);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$valor<sp/>=<sp/>htmlspecialchars($valor);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$valor;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>$e)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Exception($e);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="_header_8php_1a8db8ce321ecc739cc840efd11c612b10" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="_header_8php_1a8db8ce321ecc739cc840efd11c612b10" kindref="member">generatorPassword</ref>($tamanho<sp/>=<sp/>5,<sp/>$minusculas<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>$numeros<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>$simbolos<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>$lmin<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;abcdefghijklmnopqrstuvwxyz&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>$lmai<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;ABCDEFGHIJKLMNOPQRSTUVWXYZ&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>$num<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;1234567890&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>$simb<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;!@#$%*-&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>$retorno<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>$caracteres<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>$caracteres<sp/>.=<sp/>$lmai;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($minusculas)<sp/>$caracteres<sp/>.=<sp/>$lmin;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($numeros)<sp/>$caracteres<sp/>.=<sp/>$num;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($simbolos)<sp/>$caracteres<sp/>.=<sp/>$simb;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>$len<sp/>=<sp/>strlen($caracteres);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>($n<sp/>=<sp/>1;<sp/>$n<sp/>&lt;=<sp/>$tamanho;<sp/>$n++)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$rand<sp/>=<sp/>mt_rand(1,<sp/>$len);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$retorno<sp/>.=<sp/>$caracteres[$rand<sp/>-<sp/>1];</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$retorno;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/var/www/chamador.itep.govrn/public/api/Header.php"/>
+  </compounddef>
+</doxygen>

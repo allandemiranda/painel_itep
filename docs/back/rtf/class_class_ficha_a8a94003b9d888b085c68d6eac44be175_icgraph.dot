@@ -1,0 +1,21 @@
+digraph "get_id"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node18 [label="get_id",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="set_number",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_ficha.html#a2d73b58ab74d3f4449797ce66855ba12",tooltip="Definir o Número da Ficha. "];
+  Node18 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="set_name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_ficha.html#a53e29da8f1da63502f3e13091fcb74e5",tooltip="Definir o Nome da Ficha. "];
+  Node18 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="set_phone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_ficha.html#a62e5af292b272f5b6ffd4606bafe7104",tooltip="Definir o Número do Telefone da Ficha. "];
+  Node18 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="set_attendant_status",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_ficha.html#a0d789f7b74b448e59b675b7860f614a4",tooltip="Definir o Status da Ficha. "];
+  Node18 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="set_attendant_sector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_ficha.html#ab2f464eda89675298cebd70c29a5fe63",tooltip="Definir o Setor de atendimento da Ficha. "];
+  Node18 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="set_attendant_user",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_ficha.html#a0aca98dbfbc3b9580208f2ca5690aca3",tooltip="Definir o Funcionário de Atendimento da Ficha. "];
+  Node18 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="set_priority",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_ficha.html#ab92929a73f7f8e23561ad86f989a6c80",tooltip="Definir a Prioridade da Ficha. "];
+}

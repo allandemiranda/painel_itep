@@ -1,0 +1,430 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="nao_atendidos_proximo_8php" kind="file" language="PHP">
+    <compoundname>naoAtendidosProximo.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="nao_atendidos_proximo_8php_1a252370d95039a38fa11afab784725d58" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$dados</definition>
+        <argsstring></argsstring>
+        <name>$dados</name>
+        <initializer>= []</initializer>
+        <briefdescription>
+<para>Cabeçalho para conteudo json. </para>        </briefdescription>
+        <detaileddescription>
+<para>Cabeçalho com as classes e funções gerias </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" line="19" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="nao_atendidos_proximo_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$body</definition>
+        <argsstring></argsstring>
+        <name>$body</name>
+        <initializer>= file_get_contents(&apos;php://input&apos;)</initializer>
+        <briefdescription>
+<para>Contem todos os dados a serem enviados. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" line="21" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="nao_atendidos_proximo_8php_1acedd13b51401130848ce18f4d5c52605" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$json</definition>
+        <argsstring></argsstring>
+        <name>$json</name>
+        <initializer>= json_decode($body, true)</initializer>
+        <briefdescription>
+<para>Obtém todas as informações requisitadas POST. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" line="22" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="nao_atendidos_proximo_8php_1afc31993e855f9631572adfedcfe6f34b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$login</definition>
+        <argsstring></argsstring>
+        <name>$login</name>
+        <initializer>= $json[&apos;login&apos;]</initializer>
+        <briefdescription>
+<para>Decodifica as informações requisitadas. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" line="24" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="nao_atendidos_proximo_8php_1a3678c8769c9698fd30581c1016c5f475" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$senha</definition>
+        <argsstring></argsstring>
+        <name>$senha</name>
+        <initializer>= $json[&apos;senha&apos;]</initializer>
+        <briefdescription>
+<para>Login do usuário que requisitou a informação. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" line="25" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="nao_atendidos_proximo_8php_1abe4cc9788f52e49485473dc699537388" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>try</definition>
+        <argsstring></argsstring>
+        <name>try</name>
+        <initializer>{
+    $credenciais = new <ref refid="class_class_credenciais" kindref="compound">ClassCredenciais</ref>($login, $senha)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" line="47" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="nao_atendidos_proximo_8php_1a1fa3127fc82f96b1436d871ef02be319" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$db</definition>
+        <argsstring></argsstring>
+        <name>$db</name>
+        <initializer>= new <ref refid="class_class_connection" kindref="compound">ClassConnection</ref>()</initializer>
+        <briefdescription>
+<para>Obter a credencial do usário. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" line="49" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="nao_atendidos_proximo_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$today</definition>
+        <argsstring></argsstring>
+        <name>$today</name>
+        <initializer>= date(&quot;Y-m-d&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" line="51" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$sql</definition>
+        <argsstring></argsstring>
+        <name>$sql</name>
+        <initializer>= &quot;SELECT `ficha_id` FROM `fichas_tb` WHERE `ficha_criacao_data`&gt;=&apos;&quot; . $today . &quot;&apos; AND `ficha_setor_id`=&quot; . $credenciais-&gt;get_user()-&gt;get_sector()-&gt;get_id() . &quot; AND (`ficha_status`=&apos;NÃO ATENDIDO&apos; OR  `ficha_status`=&apos;ENCAMINHADO&apos;)&quot;</initializer>
+        <briefdescription>
+<para>Data do dia atual. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" line="54" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$result</definition>
+        <argsstring></argsstring>
+        <name>$result</name>
+        <initializer>= $db-&gt;request_query($sql)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" line="55" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="nao_atendidos_proximo_8php_1aabe0fce4e8f9f822b09141ab57d918d9" prot="public" static="no" mutable="no">
+        <type>if(mysqli_num_rows($result) &gt; 0)</type>
+        <definition>if (mysqli_num_rows( $result) &gt; 0) else</definition>
+        <argsstring></argsstring>
+        <name>else</name>
+        <initializer>{
+        
+        array_push(
+            $dados,
+            [
+                &apos;tipo&apos; =&gt; &apos;warning&apos;,
+                &apos;mensagem&apos; =&gt; &quot;Não existem fichas a ser chamada.&quot;
+            ]
+        )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" line="197" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="nao_atendidos_proximo_8php_1a1eb47d68a4a4f73debf91b15e179d813" prot="public" static="no" mutable="no">
+        <type><ref refid="imprimir_2ficha_2index_8php_1a8104793004944f01dd070fc8b1ade3c4" kindref="member">catch</ref>(Exception $e)</type>
+        <definition>catch (Exception $e) finally</definition>
+        <argsstring></argsstring>
+        <name>finally</name>
+        <initializer>{
+    echo json_encode($dados)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" line="212" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="nao_atendidos_proximo_8php_1aa053116387f6a1dc0020775d61ef19e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_emAtendimento</definition>
+        <argsstring>($id, $user)</argsstring>
+        <name>set_emAtendimento</name>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <param>
+          <declname>$user</declname>
+        </param>
+        <briefdescription>
+<para>Senha criptografada do usuário que requisitou a informação. </para>        </briefdescription>
+        <detaileddescription>
+<para>Define a ficha para CHAMAR (EM ATENDIMENTO)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id da Ficha </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>usuário que está atendendo a ficha </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Array Mensagem </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>Criar um log desta operação no sistema </para>        </inbodydescription>
+        <location file="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" line="34" column="1" bodyfile="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php" bodystart="34" bodyend="212"/>
+        <references refid="imprimir_2ficha_2index_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" compoundref="imprimir_2ficha_2index_8php" startline="28">$ficha</references>
+        <references refid="setores_2delete_8php_1ae97941710d863131c700f069b109991e" compoundref="setores_2delete_8php" startline="27">$id</references>
+        <references refid="encaminhar_8php_1a9a2cf15a653aee8be437f7ae474cd494" compoundref="encaminhar_8php" startline="46">$log</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">?&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">include($_SERVER[</highlight><highlight class="stringliteral">&apos;DOCUMENT_ROOT&apos;</highlight><highlight class="normal">]<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/api/HeaderJSON.php&apos;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">include($_SERVER[</highlight><highlight class="stringliteral">&apos;DOCUMENT_ROOT&apos;</highlight><highlight class="normal">]<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/api/Header.php&apos;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="nao_atendidos_proximo_8php_1a252370d95039a38fa11afab784725d58" refkind="member"><highlight class="normal"><ref refid="nao_atendidos_proximo_8php_1a252370d95039a38fa11afab784725d58" kindref="member">$dados</ref><sp/>=<sp/>[];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="nao_atendidos_proximo_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" refkind="member"><highlight class="normal"><ref refid="nao_atendidos_proximo_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kindref="member">$body</ref><sp/>=<sp/>file_get_contents(</highlight><highlight class="stringliteral">&apos;php://input&apos;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22" refid="nao_atendidos_proximo_8php_1acedd13b51401130848ce18f4d5c52605" refkind="member"><highlight class="normal"><ref refid="nao_atendidos_proximo_8php_1acedd13b51401130848ce18f4d5c52605" kindref="member">$json</ref><sp/>=<sp/>json_decode(<ref refid="nao_atendidos_proximo_8php_1a26b9f9373f7bb79dfcf8a86dff086b45" kindref="member">$body</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="nao_atendidos_proximo_8php_1afc31993e855f9631572adfedcfe6f34b" refkind="member"><highlight class="normal"><ref refid="nao_atendidos_proximo_8php_1afc31993e855f9631572adfedcfe6f34b" kindref="member">$login</ref><sp/>=<sp/><ref refid="nao_atendidos_proximo_8php_1acedd13b51401130848ce18f4d5c52605" kindref="member">$json</ref>[</highlight><highlight class="stringliteral">&apos;login&apos;</highlight><highlight class="normal">];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25" refid="nao_atendidos_proximo_8php_1a3678c8769c9698fd30581c1016c5f475" refkind="member"><highlight class="normal"><ref refid="nao_atendidos_proximo_8php_1a3678c8769c9698fd30581c1016c5f475" kindref="member">$senha</ref><sp/>=<sp/><ref refid="nao_atendidos_proximo_8php_1acedd13b51401130848ce18f4d5c52605" kindref="member">$json</ref>[</highlight><highlight class="stringliteral">&apos;senha&apos;</highlight><highlight class="normal">];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="nao_atendidos_proximo_8php_1aa053116387f6a1dc0020775d61ef19e0" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="nao_atendidos_proximo_8php_1aa053116387f6a1dc0020775d61ef19e0" kindref="member">set_emAtendimento</ref>(<ref refid="setores_2delete_8php_1ae97941710d863131c700f069b109991e" kindref="member">$id</ref>,<sp/>$user)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="imprimir_2ficha_2index_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" kindref="member">$ficha</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_class_ficha" kindref="compound">ClassFicha</ref>(<ref refid="setores_2delete_8php_1ae97941710d863131c700f069b109991e" kindref="member">$id</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="imprimir_2ficha_2index_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" kindref="member">$ficha</ref>-&gt;set_attendant_status(</highlight><highlight class="stringliteral">&quot;CHAMAR&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="imprimir_2ficha_2index_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" kindref="member">$ficha</ref>-&gt;set_attendant_user($user);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>$msg<sp/>=<sp/>[</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tipo&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;success&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;mensagem&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&quot;Fichas<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="imprimir_2ficha_2index_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" kindref="member">$ficha</ref>-&gt;get_number()<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>foi<sp/>chamada.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="encaminhar_8php_1a9a2cf15a653aee8be437f7ae474cd494" kindref="member">$log</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_class_logs" kindref="compound">ClassLogs</ref>(null,<sp/>$user,<sp/></highlight><highlight class="stringliteral">&quot;CHAMOU<sp/>FICHA&quot;</highlight><highlight class="normal">,<sp/><ref refid="imprimir_2ficha_2index_8php_1aab83e7ad10d8c95fdbf231d086b83a1f" kindref="member">$ficha</ref>);<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$msg;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="nao_atendidos_proximo_8php_1abe4cc9788f52e49485473dc699537388" refkind="member"><highlight class="normal"></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>$credenciais<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_class_credenciais" kindref="compound">ClassCredenciais</ref>(<ref refid="nao_atendidos_proximo_8php_1afc31993e855f9631572adfedcfe6f34b" kindref="member">$login</ref>,<sp/><ref refid="nao_atendidos_proximo_8php_1a3678c8769c9698fd30581c1016c5f475" kindref="member">$senha</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="nao_atendidos_proximo_8php_1a1fa3127fc82f96b1436d871ef02be319" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a1fa3127fc82f96b1436d871ef02be319" kindref="member">$db</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_class_connection" kindref="compound">ClassConnection</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="nao_atendidos_proximo_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kindref="member">$today</ref><sp/>=<sp/>date(</highlight><highlight class="stringliteral">&quot;Y-m-d&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Verifique<sp/>se<sp/>exitem<sp/>fichas<sp/>disponíveis<sp/>para<sp/>serem<sp/>chamadas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>`ficha_id`<sp/>FROM<sp/>`fichas_tb`<sp/>WHERE<sp/>`ficha_criacao_data`&gt;=&apos;&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="nao_atendidos_proximo_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kindref="member">$today</ref><sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>AND<sp/>`ficha_setor_id`=&quot;</highlight><highlight class="normal"><sp/>.<sp/>$credenciais-&gt;get_user()-&gt;get_sector()-&gt;get_id()<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>AND<sp/>(`ficha_status`=&apos;NÃO<sp/>ATENDIDO&apos;<sp/>OR<sp/><sp/>`ficha_status`=&apos;ENCAMINHADO&apos;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55" refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref><sp/>=<sp/><ref refid="nao_atendidos_proximo_8php_1a1fa3127fc82f96b1436d871ef02be319" kindref="member">$db</ref>-&gt;request_query(<ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysqli_num_rows(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>tiver<sp/>ficha<sp/>em<sp/>espera<sp/>verifique<sp/>o<sp/>tipo<sp/>de<sp/>prioridade<sp/>da<sp/>última<sp/>ficha<sp/>que<sp/>está<sp/>em<sp/>atendimento</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>`ficha_prioridade`<sp/>FROM<sp/>`fichas_tb`<sp/>WHERE<sp/>`ficha_criacao_data`&gt;=&apos;&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="nao_atendidos_proximo_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kindref="member">$today</ref><sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>AND<sp/>`ficha_setor_id`=&quot;</highlight><highlight class="normal"><sp/>.<sp/>$credenciais-&gt;get_user()-&gt;get_sector()-&gt;get_id()<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>AND<sp/>`ficha_status`=&apos;EM<sp/>ATENDIMENTO&apos;<sp/>ORDER<sp/>BY<sp/>`ficha_atualizacao_data`<sp/>DESC<sp/>LIMIT<sp/>1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref><sp/>=<sp/><ref refid="nao_atendidos_proximo_8php_1a1fa3127fc82f96b1436d871ef02be319" kindref="member">$db</ref>-&gt;request_query(<ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysqli_num_rows(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>houver<sp/>ficha<sp/>em<sp/>atendimento</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysqli_fetch_assoc(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)[</highlight><highlight class="stringliteral">&apos;ficha_prioridade&apos;</highlight><highlight class="normal">]<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>a<sp/>última<sp/>ficha<sp/>em<sp/>atendimento<sp/>foi<sp/>com<sp/>prioridade,<sp/>selecione<sp/>a<sp/>próxima<sp/>sem<sp/>prioridade<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>`ficha_id`<sp/>FROM<sp/>`fichas_tb`<sp/>WHERE<sp/>`ficha_criacao_data`&gt;=&apos;&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="nao_atendidos_proximo_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kindref="member">$today</ref><sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>AND<sp/>`ficha_setor_id`=&quot;</highlight><highlight class="normal"><sp/>.<sp/>$credenciais-&gt;get_user()-&gt;get_sector()-&gt;get_id()<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>AND<sp/>(`ficha_status`=&apos;NÃO<sp/>ATENDIDO&apos;<sp/>OR<sp/><sp/>`ficha_status`=&apos;ENCAMINHADO&apos;)<sp/>AND<sp/>`ficha_prioridade`=0<sp/>ORDER<sp/>BY<sp/>`ficha_atualizacao_data`<sp/>ASC<sp/>LIMIT<sp/>1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref><sp/>=<sp/><ref refid="nao_atendidos_proximo_8php_1a1fa3127fc82f96b1436d871ef02be319" kindref="member">$db</ref>-&gt;request_query(<ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysqli_num_rows(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>houver<sp/>ficha<sp/>sem<sp/>prioridade<sp/>adicione<sp/>ao<sp/>vetor<sp/>de<sp/>dados<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_push(</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a252370d95039a38fa11afab784725d58" kindref="member">$dados</ref>,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1aa053116387f6a1dc0020775d61ef19e0" kindref="member">set_emAtendimento</ref>(mysqli_fetch_assoc(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)[</highlight><highlight class="stringliteral">&apos;ficha_id&apos;</highlight><highlight class="normal">],<sp/>$credenciais-&gt;get_user())</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>não<sp/>houver<sp/>ficha<sp/>sem<sp/>prioridade,<sp/>chame<sp/>uma<sp/>com<sp/>prioridade<sp/>mesmo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>`ficha_id`<sp/>FROM<sp/>`fichas_tb`<sp/>WHERE<sp/>`ficha_criacao_data`&gt;=&apos;&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="nao_atendidos_proximo_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kindref="member">$today</ref><sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>AND<sp/>`ficha_setor_id`=&quot;</highlight><highlight class="normal"><sp/>.<sp/>$credenciais-&gt;get_user()-&gt;get_sector()-&gt;get_id()<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>AND<sp/>(`ficha_status`=&apos;NÃO<sp/>ATENDIDO&apos;<sp/>OR<sp/><sp/>`ficha_status`=&apos;ENCAMINHADO&apos;)<sp/>AND<sp/>`ficha_prioridade`=1<sp/>ORDER<sp/>BY<sp/>`ficha_atualizacao_data`<sp/>ASC<sp/>LIMIT<sp/>1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref><sp/>=<sp/><ref refid="nao_atendidos_proximo_8php_1a1fa3127fc82f96b1436d871ef02be319" kindref="member">$db</ref>-&gt;request_query(<ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Tratar<sp/>possiveis<sp/>erros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysqli_num_rows(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Adicione<sp/>ao<sp/>vetor<sp/>de<sp/>dados</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_push(</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a252370d95039a38fa11afab784725d58" kindref="member">$dados</ref>,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1aa053116387f6a1dc0020775d61ef19e0" kindref="member">set_emAtendimento</ref>(mysqli_fetch_assoc(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)[</highlight><highlight class="stringliteral">&apos;ficha_id&apos;</highlight><highlight class="normal">],<sp/>$credenciais-&gt;get_user())</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Exception(</highlight><highlight class="stringliteral">&quot;Erro<sp/>ao<sp/>tentar<sp/>chamar<sp/>próxima<sp/>ficha&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>a<sp/>última<sp/>ficha<sp/>em<sp/>atendimento<sp/>foi<sp/>sem<sp/>prioridade,<sp/>selecione<sp/>a<sp/>próxima<sp/>com<sp/>prioridade<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>`ficha_id`<sp/>FROM<sp/>`fichas_tb`<sp/>WHERE<sp/>`ficha_criacao_data`&gt;=&apos;&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="nao_atendidos_proximo_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kindref="member">$today</ref><sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>AND<sp/>`ficha_setor_id`=&quot;</highlight><highlight class="normal"><sp/>.<sp/>$credenciais-&gt;get_user()-&gt;get_sector()-&gt;get_id()<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>AND<sp/>(`ficha_status`=&apos;NÃO<sp/>ATENDIDO&apos;<sp/>OR<sp/><sp/>`ficha_status`=&apos;ENCAMINHADO&apos;)<sp/>AND<sp/>`ficha_prioridade`=1<sp/>ORDER<sp/>BY<sp/>`ficha_atualizacao_data`<sp/>ASC<sp/>LIMIT<sp/>1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref><sp/>=<sp/><ref refid="nao_atendidos_proximo_8php_1a1fa3127fc82f96b1436d871ef02be319" kindref="member">$db</ref>-&gt;request_query(<ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysqli_num_rows(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>houver<sp/>ficha<sp/>com<sp/>prioridade<sp/>adicione<sp/>ao<sp/>vetor<sp/>de<sp/>dados</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_push(</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a252370d95039a38fa11afab784725d58" kindref="member">$dados</ref>,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1aa053116387f6a1dc0020775d61ef19e0" kindref="member">set_emAtendimento</ref>(mysqli_fetch_assoc(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)[</highlight><highlight class="stringliteral">&apos;ficha_id&apos;</highlight><highlight class="normal">],<sp/>$credenciais-&gt;get_user())</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>não<sp/>houver<sp/>ficha<sp/>com<sp/>prioridade,<sp/>chame<sp/>uma<sp/>sem<sp/>prioridade<sp/>mesmo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>`ficha_id`<sp/>FROM<sp/>`fichas_tb`<sp/>WHERE<sp/>`ficha_criacao_data`&gt;=&apos;&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="nao_atendidos_proximo_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kindref="member">$today</ref><sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>AND<sp/>`ficha_setor_id`=&quot;</highlight><highlight class="normal"><sp/>.<sp/>$credenciais-&gt;get_user()-&gt;get_sector()-&gt;get_id()<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>AND<sp/>(`ficha_status`=&apos;NÃO<sp/>ATENDIDO&apos;<sp/>OR<sp/><sp/>`ficha_status`=&apos;ENCAMINHADO&apos;)<sp/>AND<sp/>`ficha_prioridade`=0<sp/>ORDER<sp/>BY<sp/>`ficha_atualizacao_data`<sp/>ASC<sp/>LIMIT<sp/>1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref><sp/>=<sp/><ref refid="nao_atendidos_proximo_8php_1a1fa3127fc82f96b1436d871ef02be319" kindref="member">$db</ref>-&gt;request_query(<ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Tratar<sp/>possiveis<sp/>erros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysqli_num_rows(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Adicione<sp/>ao<sp/>vetor<sp/>de<sp/>dados</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_push(</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a252370d95039a38fa11afab784725d58" kindref="member">$dados</ref>,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1aa053116387f6a1dc0020775d61ef19e0" kindref="member">set_emAtendimento</ref>(mysqli_fetch_assoc(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)[</highlight><highlight class="stringliteral">&apos;ficha_id&apos;</highlight><highlight class="normal">],<sp/>$credenciais-&gt;get_user())</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Exception(</highlight><highlight class="stringliteral">&quot;Erro<sp/>ao<sp/>tentar<sp/>chamar<sp/>próxima<sp/>ficha&quot;</highlight><highlight class="normal">,<sp/>2);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Já<sp/>que<sp/>não<sp/>tem<sp/>ficha<sp/>em<sp/>atendimento,<sp/>verifique<sp/>nas<sp/>fichas<sp/>finalizadas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>`ficha_prioridade`<sp/>FROM<sp/>`fichas_tb`<sp/>WHERE<sp/>`ficha_criacao_data`&gt;=&apos;&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="nao_atendidos_proximo_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kindref="member">$today</ref><sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>AND<sp/>`ficha_setor_id`=&quot;</highlight><highlight class="normal"><sp/>.<sp/>$credenciais-&gt;get_user()-&gt;get_sector()-&gt;get_id()<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>AND<sp/>`ficha_status`=&apos;FINALIZADO&apos;<sp/>ORDER<sp/>BY<sp/>`ficha_atualizacao_data`<sp/>DESC<sp/>LIMIT<sp/>1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref><sp/>=<sp/><ref refid="nao_atendidos_proximo_8php_1a1fa3127fc82f96b1436d871ef02be319" kindref="member">$db</ref>-&gt;request_query(<ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysqli_num_rows(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>houver<sp/>ficha<sp/>finalizada</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysqli_fetch_assoc(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)[</highlight><highlight class="stringliteral">&apos;ficha_prioridade&apos;</highlight><highlight class="normal">]<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>a<sp/>última<sp/>ficha<sp/>finalizada<sp/>foi<sp/>com<sp/>prioridade,<sp/>selecione<sp/>a<sp/>próxima<sp/>sem<sp/>prioridade<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>`ficha_id`<sp/>FROM<sp/>`fichas_tb`<sp/>WHERE<sp/>`ficha_criacao_data`&gt;=&apos;&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="nao_atendidos_proximo_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kindref="member">$today</ref><sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>AND<sp/>`ficha_setor_id`=&quot;</highlight><highlight class="normal"><sp/>.<sp/>$credenciais-&gt;get_user()-&gt;get_sector()-&gt;get_id()<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>AND<sp/>(`ficha_status`=&apos;NÃO<sp/>ATENDIDO&apos;<sp/>OR<sp/><sp/>`ficha_status`=&apos;ENCAMINHADO&apos;)<sp/>AND<sp/>`ficha_prioridade`=0<sp/>ORDER<sp/>BY<sp/>`ficha_atualizacao_data`<sp/>ASC<sp/>LIMIT<sp/>1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref><sp/>=<sp/><ref refid="nao_atendidos_proximo_8php_1a1fa3127fc82f96b1436d871ef02be319" kindref="member">$db</ref>-&gt;request_query(<ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysqli_num_rows(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>houver<sp/>ficha<sp/>sem<sp/>prioridade<sp/>adicione<sp/>ao<sp/>vetor<sp/>de<sp/>dados<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_push(</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a252370d95039a38fa11afab784725d58" kindref="member">$dados</ref>,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1aa053116387f6a1dc0020775d61ef19e0" kindref="member">set_emAtendimento</ref>(mysqli_fetch_assoc(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)[</highlight><highlight class="stringliteral">&apos;ficha_id&apos;</highlight><highlight class="normal">],<sp/>$credenciais-&gt;get_user())</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>não<sp/>houver<sp/>ficha<sp/>sem<sp/>prioridade,<sp/>chame<sp/>uma<sp/>com<sp/>prioridade<sp/>mesmo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>`ficha_id`<sp/>FROM<sp/>`fichas_tb`<sp/>WHERE<sp/>`ficha_criacao_data`&gt;=&apos;&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="nao_atendidos_proximo_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kindref="member">$today</ref><sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>AND<sp/>`ficha_setor_id`=&quot;</highlight><highlight class="normal"><sp/>.<sp/>$credenciais-&gt;get_user()-&gt;get_sector()-&gt;get_id()<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>AND<sp/>(`ficha_status`=&apos;NÃO<sp/>ATENDIDO&apos;<sp/>OR<sp/><sp/>`ficha_status`=&apos;ENCAMINHADO&apos;)<sp/>AND<sp/>`ficha_prioridade`=1<sp/>ORDER<sp/>BY<sp/>`ficha_atualizacao_data`<sp/>ASC<sp/>LIMIT<sp/>1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref><sp/>=<sp/><ref refid="nao_atendidos_proximo_8php_1a1fa3127fc82f96b1436d871ef02be319" kindref="member">$db</ref>-&gt;request_query(<ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Tratar<sp/>possiveis<sp/>erros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysqli_num_rows(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Adicione<sp/>ao<sp/>vetor<sp/>de<sp/>dados</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_push(</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a252370d95039a38fa11afab784725d58" kindref="member">$dados</ref>,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1aa053116387f6a1dc0020775d61ef19e0" kindref="member">set_emAtendimento</ref>(mysqli_fetch_assoc(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)[</highlight><highlight class="stringliteral">&apos;ficha_id&apos;</highlight><highlight class="normal">],<sp/>$credenciais-&gt;get_user())</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Exception(</highlight><highlight class="stringliteral">&quot;Erro<sp/>ao<sp/>tentar<sp/>chamar<sp/>próxima<sp/>ficha&quot;</highlight><highlight class="normal">,<sp/>3);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>a<sp/>última<sp/>ficha<sp/>finalizada<sp/>foi<sp/>sem<sp/>prioridade,<sp/>selecione<sp/>a<sp/>próxima<sp/>com<sp/>prioridade<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>`ficha_id`<sp/>FROM<sp/>`fichas_tb`<sp/>WHERE<sp/>`ficha_criacao_data`&gt;=&apos;&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="nao_atendidos_proximo_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kindref="member">$today</ref><sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>AND<sp/>`ficha_setor_id`=&quot;</highlight><highlight class="normal"><sp/>.<sp/>$credenciais-&gt;get_user()-&gt;get_sector()-&gt;get_id()<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>AND<sp/>(`ficha_status`=&apos;NÃO<sp/>ATENDIDO&apos;<sp/>OR<sp/><sp/>`ficha_status`=&apos;ENCAMINHADO&apos;)<sp/>AND<sp/>`ficha_prioridade`=1<sp/>ORDER<sp/>BY<sp/>`ficha_atualizacao_data`<sp/>ASC<sp/>LIMIT<sp/>1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref><sp/>=<sp/><ref refid="nao_atendidos_proximo_8php_1a1fa3127fc82f96b1436d871ef02be319" kindref="member">$db</ref>-&gt;request_query(<ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysqli_num_rows(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>houver<sp/>ficha<sp/>com<sp/>prioridade<sp/>adicione<sp/>ao<sp/>vetor<sp/>de<sp/>dados</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_push(</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a252370d95039a38fa11afab784725d58" kindref="member">$dados</ref>,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1aa053116387f6a1dc0020775d61ef19e0" kindref="member">set_emAtendimento</ref>(mysqli_fetch_assoc(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)[</highlight><highlight class="stringliteral">&apos;ficha_id&apos;</highlight><highlight class="normal">],<sp/>$credenciais-&gt;get_user())</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>não<sp/>houver<sp/>ficha<sp/>com<sp/>prioridade,<sp/>chame<sp/>uma<sp/>sem<sp/>prioridade<sp/>mesmo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>`ficha_id`<sp/>FROM<sp/>`fichas_tb`<sp/>WHERE<sp/>`ficha_criacao_data`&gt;=&apos;&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="nao_atendidos_proximo_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kindref="member">$today</ref><sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>AND<sp/>`ficha_setor_id`=&quot;</highlight><highlight class="normal"><sp/>.<sp/>$credenciais-&gt;get_user()-&gt;get_sector()-&gt;get_id()<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>AND<sp/>(`ficha_status`=&apos;NÃO<sp/>ATENDIDO&apos;<sp/>OR<sp/><sp/>`ficha_status`=&apos;ENCAMINHADO&apos;)<sp/>AND<sp/>`ficha_prioridade`=0<sp/>ORDER<sp/>BY<sp/>`ficha_atualizacao_data`<sp/>ASC<sp/>LIMIT<sp/>1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref><sp/>=<sp/><ref refid="nao_atendidos_proximo_8php_1a1fa3127fc82f96b1436d871ef02be319" kindref="member">$db</ref>-&gt;request_query(<ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Tratar<sp/>possiveis<sp/>erros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysqli_num_rows(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Adicione<sp/>ao<sp/>vetor<sp/>de<sp/>dados</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_push(</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a252370d95039a38fa11afab784725d58" kindref="member">$dados</ref>,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1aa053116387f6a1dc0020775d61ef19e0" kindref="member">set_emAtendimento</ref>(mysqli_fetch_assoc(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)[</highlight><highlight class="stringliteral">&apos;ficha_id&apos;</highlight><highlight class="normal">],<sp/>$credenciais-&gt;get_user())</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Exception(</highlight><highlight class="stringliteral">&quot;Erro<sp/>ao<sp/>tentar<sp/>chamar<sp/>próxima<sp/>ficha&quot;</highlight><highlight class="normal">,<sp/>4);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>não<sp/>tiver<sp/>chamado<sp/>nenhum<sp/>ficha<sp/>no<sp/>dia<sp/>atual,<sp/>então<sp/>chame<sp/>o<sp/>primeiro<sp/>com<sp/>prioridade</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>`ficha_id`<sp/>FROM<sp/>`fichas_tb`<sp/>WHERE<sp/>`ficha_criacao_data`&gt;=&apos;&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="nao_atendidos_proximo_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kindref="member">$today</ref><sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>AND<sp/>`ficha_setor_id`=&quot;</highlight><highlight class="normal"><sp/>.<sp/>$credenciais-&gt;get_user()-&gt;get_sector()-&gt;get_id()<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>AND<sp/>(`ficha_status`=&apos;NÃO<sp/>ATENDIDO&apos;<sp/>OR<sp/><sp/>`ficha_status`=&apos;ENCAMINHADO&apos;)<sp/>AND<sp/>`ficha_prioridade`=1<sp/>ORDER<sp/>BY<sp/>`ficha_atualizacao_data`<sp/>ASC<sp/>LIMIT<sp/>1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref><sp/>=<sp/><ref refid="nao_atendidos_proximo_8php_1a1fa3127fc82f96b1436d871ef02be319" kindref="member">$db</ref>-&gt;request_query(<ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysqli_num_rows(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>houver<sp/>uma<sp/>ficha<sp/>com<sp/>prioridade,<sp/>adicione<sp/>ao<sp/>vetor<sp/>de<sp/>dados</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_push(</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a252370d95039a38fa11afab784725d58" kindref="member">$dados</ref>,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1aa053116387f6a1dc0020775d61ef19e0" kindref="member">set_emAtendimento</ref>(mysqli_fetch_assoc(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)[</highlight><highlight class="stringliteral">&apos;ficha_id&apos;</highlight><highlight class="normal">],<sp/>$credenciais-&gt;get_user())</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Como<sp/>não<sp/>tem<sp/>ficha<sp/>com<sp/>prioridade,<sp/>chame<sp/>uma<sp/>sem<sp/>prioridade</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>`ficha_id`<sp/>FROM<sp/>`fichas_tb`<sp/>WHERE<sp/>`ficha_criacao_data`&gt;=&apos;&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="nao_atendidos_proximo_8php_1af1b7fb9d06cdc6d22c14741fc3cc185a" kindref="member">$today</ref><sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>AND<sp/>`ficha_setor_id`=&quot;</highlight><highlight class="normal"><sp/>.<sp/>$credenciais-&gt;get_user()-&gt;get_sector()-&gt;get_id()<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>AND<sp/>(`ficha_status`=&apos;NÃO<sp/>ATENDIDO&apos;<sp/>OR<sp/><sp/>`ficha_status`=&apos;ENCAMINHADO&apos;)<sp/>AND<sp/>`ficha_prioridade`=0<sp/>ORDER<sp/>BY<sp/>`ficha_atualizacao_data`<sp/>ASC<sp/>LIMIT<sp/>1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref><sp/>=<sp/><ref refid="nao_atendidos_proximo_8php_1a1fa3127fc82f96b1436d871ef02be319" kindref="member">$db</ref>-&gt;request_query(<ref refid="nao_atendidos_proximo_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Tratar<sp/>possiveis<sp/>erros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysqli_num_rows(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Adicione<sp/>ao<sp/>vetor<sp/>de<sp/>dados</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_push(</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a252370d95039a38fa11afab784725d58" kindref="member">$dados</ref>,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1aa053116387f6a1dc0020775d61ef19e0" kindref="member">set_emAtendimento</ref>(mysqli_fetch_assoc(<ref refid="nao_atendidos_proximo_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)[</highlight><highlight class="stringliteral">&apos;ficha_id&apos;</highlight><highlight class="normal">],<sp/>$credenciais-&gt;get_user())</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Exception(</highlight><highlight class="stringliteral">&quot;Erro<sp/>ao<sp/>tentar<sp/>chamar<sp/>próxima<sp/>ficha&quot;</highlight><highlight class="normal">,<sp/>5);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197" refid="nao_atendidos_proximo_8php_1aabe0fce4e8f9f822b09141ab57d918d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Não<sp/>existe<sp/>nenhuma<sp/>ficha<sp/>na<sp/>fila<sp/>de<sp/>espera</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_push(</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nao_atendidos_proximo_8php_1a252370d95039a38fa11afab784725d58" kindref="member">$dados</ref>,</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tipo&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;warning&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;mensagem&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&quot;Não<sp/>existem<sp/>fichas<sp/>a<sp/>ser<sp/>chamada.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>]</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>$e)<sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>$msg<sp/>=<sp/>$e-&gt;getMessage();</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>array_push(<ref refid="nao_atendidos_proximo_8php_1a252370d95039a38fa11afab784725d58" kindref="member">$dados</ref>,<sp/>[</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;mensagem&quot;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$msg</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>]);</highlight></codeline>
+<codeline lineno="212" refid="nao_atendidos_proximo_8php_1a1eb47d68a4a4f73debf91b15e179d813" refkind="member"><highlight class="normal">}<sp/></highlight><highlight class="keywordflow">finally</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>json_encode(<ref refid="nao_atendidos_proximo_8php_1a252370d95039a38fa11afab784725d58" kindref="member">$dados</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/var/www/chamador.itep.govrn/public/api/mainPage/inicial/naoAtendidosProximo.php"/>
+  </compounddef>
+</doxygen>

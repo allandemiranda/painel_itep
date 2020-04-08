@@ -1,0 +1,247 @@
+.TH "ClassSetor" 3 "Mon Apr 6 2020" "Chamador ITEP - API" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ClassSetor
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ($id=null, $name=null, $ficha=null, $admin=null)"
+.br
+.RI "Data da criaçãodo Setor\&. "
+.ti -1c
+.RI "\fB__destruct\fP ()"
+.br
+.RI "Destrutor do Objeto \fBClassSetor\fP\&. "
+.ti -1c
+.RI "\fBget_id\fP ()"
+.br
+.RI "Obter o id do Setor\&. "
+.ti -1c
+.RI "\fBget_name\fP ()"
+.br
+.RI "Obter o Nome do Setor\&. "
+.ti -1c
+.RI "\fBset_name\fP ($value)"
+.br
+.RI "Definir o Nome do Setor\&. "
+.ti -1c
+.RI "\fBget_admin\fP ()"
+.br
+.RI "Obter se o Setor e do tipo Administrador\&. "
+.ti -1c
+.RI "\fBset_admin\fP (bool $value)"
+.br
+.RI "Definir se o Setor é do tipo Administrador\&. "
+.ti -1c
+.RI "\fBget_created_on_date\fP ()"
+.br
+.RI "Obter a data de criação do Setor\&. "
+.ti -1c
+.RI "\fBset_created_on_date\fP ($value)"
+.br
+.RI "Definir a data de criação do Setor\&. "
+.ti -1c
+.RI "\fBget_deleted\fP ()"
+.br
+.RI "Obter a informação se o setor já foi deletado Setor\&. "
+.ti -1c
+.RI "\fBset_deleted\fP (bool $value)"
+.br
+.RI "Definir se o Setor foi deletado\&. "
+.ti -1c
+.RI "\fBget_ficha\fP ()"
+.br
+.RI "Obter a informação se o setor gerencia as fichas\&. "
+.ti -1c
+.RI "\fBset_ficha\fP ($value)"
+.br
+.RI "Definir se o Setor gerencia as fichas\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 14 of file ClassSetor\&.php\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "__construct ( $id = \fCnull\fP,  $name = \fCnull\fP,  $ficha = \fCnull\fP,  $admin = \fCnull\fP)"
+
+.PP
+Data da criaçãodo Setor\&. Construtor do Objeto \fBClassSetor\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP id do Setor 
+.br
+\fIname\fP Nome do Setor 
+.br
+\fIficha\fP Se o Setor tem acesso as configurações do sistema 
+.br
+\fIadmin\fP Se o Setor tem acesso as configurações do sistema 
+.br
+\fIdeleted\fP Se o Setor foi deletado do sistema 
+.br
+\fIcreated_on_date\fP Data da criação do Setor 
+.RE
+.PP
+
+.PP
+Definition at line 33 of file ClassSetor\&.php\&.
+.SS "__destruct ()"
+
+.PP
+Destrutor do Objeto \fBClassSetor\fP\&. 
+.PP
+Definition at line 86 of file ClassSetor\&.php\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "get_admin ()"
+
+.PP
+Obter se o Setor e do tipo Administrador\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Bool Se o Setor é administrador 
+.RE
+.PP
+
+.PP
+Definition at line 140 of file ClassSetor\&.php\&.
+.SS "get_created_on_date ()"
+
+.PP
+Obter a data de criação do Setor\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Timestamp Data de criação do setor no formato TIMESTAMP 
+.RE
+.PP
+
+.PP
+Definition at line 172 of file ClassSetor\&.php\&.
+.SS "get_deleted ()"
+
+.PP
+Obter a informação se o setor já foi deletado Setor\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Bool Se o setor já foi deletado 
+.RE
+.PP
+
+.PP
+Definition at line 201 of file ClassSetor\&.php\&.
+.SS "get_ficha ()"
+
+.PP
+Obter a informação se o setor gerencia as fichas\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Bool Se o setor gerencia as fichas 
+.RE
+.PP
+
+.PP
+Definition at line 233 of file ClassSetor\&.php\&.
+.SS "get_id ()"
+
+.PP
+Obter o id do Setor\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+id do Setor 
+.RE
+.PP
+
+.PP
+Definition at line 101 of file ClassSetor\&.php\&.
+.SS "get_name ()"
+
+.PP
+Obter o Nome do Setor\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Nome do Setor 
+.RE
+.PP
+
+.PP
+Definition at line 111 of file ClassSetor\&.php\&.
+.SS "set_admin (bool $value)"
+
+.PP
+Definir se o Setor é do tipo Administrador\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Se o setor é do tipo Administrador 
+.RE
+.PP
+
+.PP
+Definition at line 150 of file ClassSetor\&.php\&.
+.SS "set_created_on_date ( $value)"
+
+.PP
+Definir a data de criação do Setor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Data de criação do Setor no formato TIMESTAMP 
+.RE
+.PP
+
+.PP
+Definition at line 182 of file ClassSetor\&.php\&.
+.SS "set_deleted (bool $value)"
+
+.PP
+Definir se o Setor foi deletado\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Se o setor foi deletado 
+.RE
+.PP
+
+.PP
+Definition at line 211 of file ClassSetor\&.php\&.
+.SS "set_ficha ( $value)"
+
+.PP
+Definir se o Setor gerencia as fichas\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Se o setor gerencia as fichas 
+.RE
+.PP
+
+.PP
+Definition at line 243 of file ClassSetor\&.php\&.
+.SS "set_name ( $value)"
+
+.PP
+Definir o Nome do Setor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Valor do Nome a ser definido 
+.RE
+.PP
+
+.PP
+Definition at line 121 of file ClassSetor\&.php\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chamador ITEP - API from the source code\&.
