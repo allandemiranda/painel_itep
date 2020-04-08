@@ -1,4 +1,4 @@
-# Manual
+# Manual de utilização do sistema
 
 Aqui você encontra toda a descrição de funcionalidades e campos do sistema.
 
@@ -6,18 +6,64 @@ Aqui você encontra toda a descrição de funcionalidades e campos do sistema.
 
 > Por padrão, após a instalação do sistema, é criado um usuário administrador de login `itep.digeti` e senha `senha123`. Utilize este usuário para acessar e configurar o ambiente inicial, deletando este usuário assim que possível.
 
+## Índice
+
+- [Painel Monitor do Chamador](#painel-monitor-do-chamador)
+    - [Acessar o painel](#acessar-o-painel)
+- [Logs do Sistema](#logs-do-sistema)
+    - [Pesquisar informações](#pesquisar-informações)
+    - [Exportar informações](#exportar-informações)
+- [Fichas do Sistema](#fichas-do-sistema)
+    - [Pesquisar informações](#pesquisar-informações-1)
+    - [Exportar informações](#exportar-informações-1)
+- [Setores do Sistema](#setores-do-sistema)
+    - [Adicionar](#adicionar)
+    - [Editar](#editar)
+    - [Deletar](#deletar)
+    - [Pesquisar informações](#pesquisar-informações-2)
+- [Usuários do Sistema](#usuários-do-sistema)
+    - [Adicionar](#adicionar-1)
+    - [Editar](#editar-1)
+    - [Deletar](#deletar-1)
+    - [Modificar senha](#modificar-senha)
+    - [Pesquisar informações](#pesquisar-informações-3)
+- [Perfil](#perfil)
+    - [Modificar senha](#modificar-senha-1)
+- [Logout](#logout) 
+- [Login Chamador](#login-chamador)
+- [Dashboard](#dashboard)
+    - [Gerenciador de criação de ficha](#gerenciador-de-criação-de-ficha)
+        - [Criar](#criar)
+        - [Imprimir](#imprimir)
+        - [Pesquisar](#pesquisar)
+    - [Gerenciador para chamar fichas]()
+        - [Indicadores](#indicadores)
+        - [Painel do Setor](#painel-do-setor)
+        - [Atendimento individual](#atendimento-individual)
+        - [Chamar próximo da fila](#chamar-próximo-da-fila)
+        - [Encaminhar ficha para outro setor](#encaminhar-ficha-para-outro-setor)
+        - [Finalizar atendimento da ficha](#finalizar-atendimento-da-ficha)
+- [Erros e soluções](#erros-e-soluções)
+    - [Painel não reproduz o som da ficha ao chamar uma nova ficha](#painel-não-reproduz-o-som-da-ficha-ao-chamar-uma-nova-ficha)
+    - [Navegador não faz login ou não carrega nenhuma informação](#navegador-não-faz-login-ou-não-carrega-nenhuma-informação)
+    - [Demora ao chamar uma ficha](#demora-ao-chamar-uma-ficha)
+    - [Notificações de novas fichas disponível não aparece em meu navegador](#notificações-de-novas-fichas-disponível-não-aparece-em-meu-navegador)
+    - [Ficha não abre aba de impressão](#ficha-não-abre-aba-de-impressão)
+    - [Erro de certificado](#erro-de-certificado)
+
 ## Painel Monitor do Chamador
 
 Aconselhamos somente o uso do ***Google Chrome*** para a visualização do Painel Monitor do Chamador.
 
 ### Acessar o painel
 Para acessar o [painel do chamador](https://chamador.itep.govrn/painel) digite na barra de endereço do navegador ***Google Chrome*** `https://chamador.itep.govrn/painel`
+
 > O chamador sempre inicia zerado. A medida que as fichas são chamadas por cada setor, ele irá preenchendo seus espaços.
 
 ## Logs do Sistema
 No menu principal, na aba `Configurações`, na opção `Logs`, você terá acesso a lista de todos os registros de eventos relevantes do sistema.  
 
->Esta função somente é visível para usuários que o setor seja do tipo Administrador.
+> Esta função somente é visível para usuários que o setor seja do tipo Administrador.
 
 ### Pesquisar informações
 É possível fazer a pesquisa global da tabela de qualquer informação de qualquer coluna utilizando a barra de `Procurar`. 
@@ -28,7 +74,7 @@ Também é possível fazer o download das informações da tabela clicando no bo
 ## Fichas do Sistema
 No menu principal, na aba `Configurações`, na opção `Fichas`, você terá acesso a lista de todas as fichas registras no sistema e seu último status.  
 
->Esta função somente é visível para usuários que o setor seja do tipo Administrador.
+> Esta função somente é visível para usuários que o setor seja do tipo Administrador.
 
 >**Dados de usuários de atendimento armazenados no sistema são de uso interno e exclusivo da instituição, não podendo ser usados para fins externos a esta pela Instituição ou por qualquer outro usuário o qual manipule estes dados.** Verifique as políticas de segurança da Instituição para mais detalhes.
 
@@ -41,27 +87,33 @@ Também é possível fazer o download das informações da tabela clicando no bo
 ## Setores do Sistema
 No menu principal, na aba `Configurações`, na opção `Setores`, você terá acesso a lista de todos os setores registras no sistema e suas configurações.  
 
->Esta função somente é visível para usuários que o setor seja do tipo Administrador.
+> Esta função somente é visível para usuários que o setor seja do tipo Administrador.
 
 ### Adicionar
 1. Para adicionar um novo setor ao sistema clique no botão `Adicionar`.
 2. Preencha o nome do novo Setor.
 3. Indique se este setor será do tipo `Gerador de Fichas`.
+
 > Um setor do tipo `Gerador de Fichas` é aquele setor responsável pelo atendimento ao usuário que irá preencher os dados e entregar uma ficha ao usuário, que irá aguardar ser chamado.
+
 4. Indique se este setor será do tipo `Administrador` .
+
 > Um setor do tipo `Administrador` é responsável pelo gerenciamento do sistema da criação, edição e remoção de Setores ou Usuários do sistema e verificações de informações globais do sistema.
+
 5. Clique em `Salvar`.
 
 ### Editar
 1. Para editar um setor específico do sistema, selecione a opção `Editar` da coluna Ação correspondente ao setor desejado.  
 2. Edite as informações que deseja.
 3. Clique em `Salvar`.
+
 > A edição do tipo `Gerador de Fichas` não surte o efeito imediato em usuários do setor o qual já estão logados no sistema, sendo necessário que estes façam logout para que as modificações surtam o efeito.
 
 ### Deletar
 1. Para deletar um setor específico do sistema, selecione a opção `Deletar` da coluna Ação correspondente ao setor desejado. 
 2. Confirme a operação.
-> Ao deletar um setor, caso este ainda exista usuários vinculados, visualmente na [lista de usuários do sistema](##Usuários_do_sistema) ele aparecerá sem setor (campo em branco) , porem estes usuários ainda permaneceram com as mesmas credenciais do setor setadas antes dele ser deletado, assim como continuarão ativos no sistema.
+
+> Ao deletar um setor, caso este ainda exista usuários vinculados, visualmente na [lista de usuários do sistema](#usu%C3%A1rios-do-sistema) ele aparecerá sem setor (campo em branco) , porem estes usuários ainda permaneceram com as mesmas credenciais do setor setadas antes dele ser deletado, assim como continuarão ativos no sistema.
 
 ### Pesquisar informações
 É possível fazer a pesquisa global da tabela de qualquer informação de qualquer coluna utilizando a barra de `Procurar`.   
@@ -69,31 +121,39 @@ No menu principal, na aba `Configurações`, na opção `Setores`, você terá a
 ## Usuários do Sistema
 No menu principal, na aba `Configurações`, na opção `Usuários`, você terá acesso a lista de todos os usuários registras no sistema e suas configurações.  
 
->Esta função somente é visível para usuários que o setor seja do tipo Administrador.
+> Esta função somente é visível para usuários que o setor seja do tipo Administrador.
 
 ### Adicionar
 1. Para adicionar um novo usuário ao sistema clique no botão `Adicionar`.
 2. Preencha o nome do novo Usuário.
 3. Indique a qual Setor este Usuário irá pertencer.
+
 > Lembre-se que as funcionalidades de um usuário herda de seu setor.
+
 4. Clique em `Salvar`.
+
 > Ao salvar será gerado um Login e Senha para o usuário que ficará visível em uma notificação de sucesso. Ex: **Sucesso!** Usuário **allan.miranda** com senha **KGNBR**
 
 ### Editar
 1. Para editar um usuário específico do sistema, selecione a opção `Editar` da coluna Ação correspondente ao usuário desejado.  
 2. Edite as informações que deseja.
 3. Clique em `Salvar`.
+
 > A edição do `Setor` surte o efeito imediato no usuários mesmo que este esteja logados no sistema.
 
 ### Deletar
 1. Para deletar um usuário específico do sistema, selecione a opção `Deletar` da coluna Ação correspondente ao usuário desejado. 
 2. Confirme a operação.
+
 > O deletar de um usuário surte o efeito imediato, mesmo que este esteja logado no sistema. Se este usuário estiver em operação, em seu terminal, apresentará falhas críticas levando ao logout automático, podendo gerar operações não finalizadas por este usuário. Ex: Usuário chamou uma ficha, mas nunca finalizou ou encaminhou para atendimento aquela ficha.
 
 ### Modificar senha
 1. Para modificar a senha de um usuário específico do sistema, selecione a opção `Modificar Senha` da coluna Ação correspondente ao usuário desejado. 
-> Esta operação somente é permitido para demais usuários. Para você, usuário logado, modificar a senha, utilize as configurações do seu [`Perfil`](##Perfil) 
+
+> Esta operação somente é permitido para demais usuários. Para você, usuário logado, modificar a senha, utilize as configurações do seu [`Perfil`](#perfil) 
+
 2. Confirme a operação.
+
 > Ao `Modificar Senha` será gerado uma nova senha para o usuário que ficará visível em uma notificação de sucesso. Ex: **Sucesso!** Usuário **ALLAN DE MIRANDA** restaurou a senha para **C0FCN**
 
 > ***Solicite ao usuário que no primeiro acesso ao sistema sempre modifique a senha.***
@@ -119,20 +179,23 @@ Aqui é possível o usuário verificar todas as informações de sua credencial 
 ### Modificar senha
 1. Para modificar a senha digite a nova senha no campo `Senha` do formulário do usuário.
 2. Clique em modificar.
+
 > Em um futuro login utilize sua nova senha.
 
 > Caso tenha perdido sua senha, contacte um administrador do sistema para que ele crie uma nova senha.
 
 ## Logout
 Esta opção irá fazer seu usuário sair do sistema, apagando sua credencial armazenada na seção ativa.
+
 > Nunca deixe sua seção ativa quando não estiver presente no computador.
 
-> Caso tenha deixado sua seção ativa e não tem certeza de que a seção não foi manipulada por outro usuário, modifique sua senha em [perfil](##Perfil) e contacte o responsável pelo seu setor. 
+> Caso tenha deixado sua seção ativa e não tem certeza de que a seção não foi manipulada por outro usuário, modifique sua senha em [`Perfil`](#perfil)  e contacte o responsável pelo seu setor. 
 
 ## Login Chamador
 Esta tela te dará acesso ao sistema.
 
 Digite sua senha e login e clique em Entrar para acessar o sistema.
+
 > Nunca deixe seu login e senha salvos em um computador compartilhado.
 
 > ***No primeiro acesso ao sistema sempre modifique a senha.***
@@ -157,13 +220,15 @@ Este painel é dedicado a criação de fichas para o sistema. Nele também é po
 3. Digite o telefone dele.
 4. Selecione para qual setor ele será direcionado.
 5. Se o usuário é do tipo prioridade.
-> O atendimento Prioritário é lei. ![Qual o termo correto? Atendimento Prioritário ou Preferencial ...](https://sindepat.com.br/wp-content/uploads/2019/10/placa-tamanho-certo-2-1200x480.jpg)
+
+> O atendimento Prioritário é lei. ![Atendimento Prioritário](https://sindepat.com.br/wp-content/uploads/2019/10/placa-tamanho-certo-2-1200x480.jpg)
+
 6. Clique em `Salvar` para gerar a ficha.
 
-### Imprimir
+#### Imprimir
 Para imprimir uma ficha de um usuário específico, selecione a opção `Imprimir` da coluna Ação correspondente a ficha desejada. 
 
-### Pesquisar
+#### Pesquisar
 É possível fazer a pesquisa global da tabela de qualquer informação de qualquer coluna utilizando a barra de `Procurar`. 
 
 ### Gerenciador para chamar fichas
@@ -238,11 +303,11 @@ Para solucionar este problema limpe todas as informações do `https://chamador.
 A limpeza do ***Local Storage*** pode ser facilmente feita pelas ferramentas de desenvolvedor disponíveis nos navegadores.
 
 ### Demora ao chamar uma ficha
-Para que a ficha chamada apareça no aba `Em Atendimento` é necessário que ela seja chamada no [Monitor Painel](##Painel_Monitor_do_Chamador). 
+Para que a ficha chamada apareça no aba `Em Atendimento` é necessário que ela seja chamada no [Painel Monitor do Chamador](#painel-monitor-do-chamador). 
 
 Pode ocorrer de haver várias fichas sendo chamadas ao mesmo tempo e este processo demorar alguns segundos a mais do tempo usual. 
 
-Certifique-se que o [Monitor Painel](##Painel_Monitor_do_Chamador) esteja habilitado com o responsável pelo setor caso a ficha não venha a aparecer na aba `Em Atendimento`.
+Certifique-se que o [Painel Monitor do Chamador](#painel-monitor-do-chamador) esteja habilitado com o responsável pelo setor caso a ficha não venha a aparecer na aba `Em Atendimento`.
 
 ### Notificações de novas fichas disponível não aparece em meu navegador
 Por medidas de segurança os navegadores desabilitam por padrão a reprodução de conteúdos. 
@@ -296,7 +361,7 @@ Portanto é necessário ativar a abertura de janelas automática no seu navegado
 
 ### Erro de certificado
 Por medidas de segurança os navegadores bloqueiam certificados SSL não registrados em CA's. 
->Em sistemas internos, geralmente, a equipe de suporte não registra este tipo de certificado.
+> Em sistemas internos, geralmente, a equipe de suporte não registra este tipo de certificado.
 
 > Verifique a política de segurança com a equipe de suporte.
 

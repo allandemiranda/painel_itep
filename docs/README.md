@@ -14,17 +14,9 @@ Tecnologia | Documentação
  ![enter image description here](https://img.shields.io/badge/node-v12.16.1-green`?style=for-the-badge&logo=appveyor`)  | https://nodejs.org/en/docs/
  ![enter image description here](https://img.shields.io/badge/npm-v6.14.4-green`?style=for-the-badge&logo=appveyor`)  | https://docs.npmjs.com/
 
-## Utilização do sistema para usuários criadores de fichas
+## Manual de utilização do sistema
 
-Confira [aqui]() a documentação das funcionalidades do sistema para usuários dos setores criadores de fichas, assim como utilização do monitor painel
-
-## Utilização do sistema para usuários chamadores de fichas
-
-Confira [aqui]() a documentação das funcionalidades do sistema para usuários que irão chamar as fichas a ser atendidas, assim como encaminhar as fichas entre setores.
-
-## Utilização do sistema para administradores
-
-Confira [aqui]() a documentação das funcionalidades do sistema para usuários que estão em um setor administrador.
+Confira [aqui](system/README.md) o manual de utilização do sistema.
 
 ### Instalação do Sistema
 
