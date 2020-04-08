@@ -18,31 +18,31 @@ De vez em quando alguém quase que gritar: o próximo da fila, por favor!
 
 Esta situação, geralmente, tumultuam o ambiente e, pior, tira a atenção do funcionário que precisa parar o que está fazendo para orientar a pessoa necessitada.
 
-Com o uso do totem de senha esse problema tende a desaparecer.
+Com o uso do da senha digital esse problema tende a desaparecer.
 
-Vário setores, já há algum tempo, aderiram ao totem de senha para melhor atender e direcionar os seus usuários, o que vem funcionando com muita eficiência. 
+Vário setores, já há algum tempo, aderiram a este modelo para melhor atender e direcionar os seus usuários, o que vem funcionando com muita eficiência. 
 
 Ao chegar em um estabelecimento, o usuário informa a atividade que deseja realizar e recebe a sua senha direcionada para o departamento competente, o que agiliza todo o processo de atendimento.
 
-### Como funciona o totem?
+### Como funciona?
 
-O totem de senha é um sistema moderno e de fácil uso. Ele serve para emissão de senhas para gerenciar as filas em estabelecimentos com atendimento ao público.
+O Sistema Chamador de Senhas é um sistema moderno e de fácil uso. Ele serve para emissão de senhas para gerenciar as filas em estabelecimentos com atendimento ao público.
 
 Dirigindo-se a recepção do ITEP, o usuário recebe uma senha com o serviço solicitado, a data e hora da emissão. 
 
 No período em que permanecer no interior do ITEP, poderá acompanhar a chegada da sua vez por meio de um monitor painel informativo. 
 
-Além de ser excelente para o usuário, o totem de atendimento também proporciona uma série de vantagens ao ITEP.
+Além de ser excelente para o usuário, o Sistema Chamador de Senhas também proporciona uma série de vantagens ao ITEP.
 
 O sistema de senha tem uma tela de fácil acesso e entendimento, o que proporciona condições de usabilidade para todas os usuários.
 
 ### Acompanhamento real de dados de atendimento
 
-O usuário consegue, através do sistema do totem de senha, perceber a situação de atendimento desde o momento em que chega, bem como o acompanhamento até que chegue sua vez.
+O usuário consegue, através do sistema de senha, perceber a situação de atendimento desde o momento em que chega, bem como o acompanhamento até que chegue sua vez.
 
 Por outro lado, a gerência também consegue observar quais setores têm mais atendimento diariamente. Assim, consegue direcionar esforços, remanejar colaboradores e manter o equilíbrio no atendimento em todas as áreas.
 
-Como se pode observar, o totem de senha tem importante papel na organização de filas e na otimização de atendimentos de serviços com grande fluxo de público.
+Como se pode observar, o Sistema Chamador de Senhas tem importante papel na organização de filas e na otimização de atendimentos de serviços com grande fluxo de público.
 
 Por meio dele é possível promover maior produtividade no atendimento e mais qualidade para o usuário.
 
@@ -66,7 +66,7 @@ Tecnologia | Documentação
  ![enter image description here](https://img.shields.io/badge/node-v12.16.1-green`?style=for-the-badge&logo=appveyor`)  | https://nodejs.org/en/docs/
  ![enter image description here](https://img.shields.io/badge/npm-v6.14.4-green`?style=for-the-badge&logo=appveyor`)  | https://docs.npmjs.com/
 
-### Manual de utilização do sistema
+## Manual de utilização do sistema
 
 Confira [aqui](docs/system/README.md) o manual de utilização do sistema.
 

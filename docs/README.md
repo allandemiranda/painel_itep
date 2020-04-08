@@ -14,7 +14,7 @@ Tecnologia | Documentação
  ![enter image description here](https://img.shields.io/badge/node-v12.16.1-green`?style=for-the-badge&logo=appveyor`)  | https://nodejs.org/en/docs/
  ![enter image description here](https://img.shields.io/badge/npm-v6.14.4-green`?style=for-the-badge&logo=appveyor`)  | https://docs.npmjs.com/
 
-## Manual de utilização do sistema
+### Manual de utilização do sistema
 
 Confira [aqui](system/README.md) o manual de utilização do sistema.
 
