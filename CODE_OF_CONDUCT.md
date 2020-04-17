@@ -34,7 +34,7 @@ Este Código de Conduta se aplica aos espaços do projeto e aos espaços públic
 
 ## Execução
 
-Instâncias de comportamento abusivo, assediador ou inaceitável podem ser relatadas entrando em contato com a equipe do projeto em [digeti@itep.rn.gov.br](mail:digeti@itep.rn.gov.br). Todas as reclamações serão analisadas e investigadas e resultarão em uma resposta considerada necessária e apropriada às circunstâncias. A equipe do projeto é obrigada a manter a confidencialidade em relação ao relator de um incidente. Detalhes adicionais de políticas específicas de aplicação podem ser publicados de forma independente.
+Instâncias de comportamento abusivo ou assediador podem ser relatadas entrando em contato com a equipe do projeto em [digeti@itep.rn.gov.br](mail:digeti@itep.rn.gov.br). Todas as reclamações serão analisadas e investigadas e resultarão em uma resposta considerada necessária e apropriada às circunstâncias. A equipe do projeto é obrigada a manter a confidencialidade em relação ao relator de um incidente. Detalhes adicionais de políticas específicas de aplicação podem ser publicados de forma independente.
 
 Os mantenedores do projeto que não seguem ou aplicam o Código de Conduta de boa fé podem enfrentar repercussões temporárias ou permanentes, conforme determinado por outros membros da liderança do projeto.
 
